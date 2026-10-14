@@ -216,11 +216,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .about[data-mode="mob"] .ab-work-head{flex-direction:column;align-items:flex-start;gap:18px}
 .about[data-mode="mob"] .ab-work-head h2{font-size:32px;line-height:1.2}
 .about[data-mode="mob"] .ab-work-head .btn{height:44px;padding:0 20px;font-size:14px}
-.about[data-mode="mob"] .ab-logos{flex-wrap:wrap;height:auto;gap:16px 22px}
+.about[data-mode="mob"] .ab-logos{flex-wrap:wrap;height:auto;gap:22px 26px}
 .about[data-mode="mob"] .ab-work-head+.ab-logos{margin-top:34px}
-.about[data-mode="mob"] .ab-logos+.ab-logos{margin-top:16px}
-.about[data-mode="mob"] .ab-logos img{height:24px}
-.about[data-mode="mob"] .ab-logos img.tall{height:29px}
+.about[data-mode="mob"] .ab-logos+.ab-logos{margin-top:22px}
+.about[data-mode="mob"] .ab-logos img{height:32px}
+.about[data-mode="mob"] .ab-logos img.tall{height:38px}
 
 /* ---------- screenshot galleries grid ---------- */
 .galleries{background:linear-gradient(180deg,#f8f8f8 0%,#fff 100%);color:var(--dark);padding:calc(180px * var(--s)) clamp(16px, 3.5vw, 60px) calc(140px * var(--s))}
