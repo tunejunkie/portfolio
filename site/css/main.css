@@ -380,3 +380,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .an-head{position:static;margin-bottom:32px}
 }
 @media (max-width:640px){ .an-grid{grid-template-columns:1fr;gap:44px} }
+
+/* ---------- site footer (every page) ---------- */
+.site-foot{display:flex;justify-content:space-between;align-items:center;gap:16px 32px;flex-wrap:wrap;background:#f9f5f7;color:var(--dark);
+  padding:40px clamp(20px, 3.1vw, 53px);font:400 18px/1.02 var(--f-head);font-feature-settings:"lnum" 1,"pnum" 1}
+@media (max-width:640px){.site-foot{flex-direction:column;align-items:flex-start;padding:28px 20px;font-size:16px}}

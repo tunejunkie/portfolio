@@ -54,6 +54,8 @@ def nav(base, light=False):
   <h3>About</h3><a href="{base}#about" data-about>About me</a><a href="{base}#anecdotes" data-jump="anecdotes">Anecdotes</a><a href="{base}work-history/">Work History</a><a href="{LINKEDIN}" target="_blank" rel="noopener">Contact</a><a href="{GITHUB}" target="_blank" rel="noopener">GitHub</a>
 </nav>'''
 
+SITE_FOOTER = '<footer class="site-foot"><p>Vibe-coded by Natalie &amp; Claude</p><p>© Natalie Rose Taylor, 2026</p></footer>'
+
 def head(title, base, desc='Natalie Rose Taylor — staff product designer in Brooklyn.'):
     return f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -158,6 +160,7 @@ def index():
     <div class="wave" aria-label="Legal to work in the United States, Canada and Great Britain"><div class="wave-track"><span class="wave-item wave-label">Legal to work in</span><span class="wave-item wave-flag"><img src="assets/svg/flag-usa.svg" alt="United States" width="120" height="120"></span><span class="wave-item wave-label">Legal to work in</span><span class="wave-item wave-flag"><img src="assets/svg/flag-canada.svg" alt="Canada" width="120" height="120"></span><span class="wave-item wave-label">Legal to work in</span><span class="wave-item wave-flag"><img src="assets/svg/flag-gb.svg" alt="Great Britain" width="120" height="120"></span></div></div>
   </section>
 </main>
+{SITE_FOOTER}
 <script src="js/vendor/gsap.min.js"></script>
 <script src="js/vendor/ScrollTrigger.min.js"></script>
 <script src="js/vendor/lenis.min.js"></script>
@@ -226,6 +229,7 @@ def gallery_page(slug, manifest):
     <a class="btn btn--stroke" href="{base}screenshots/{nxt[0]}/">{nxt[1]}{CHEV_R}</a>
   </div></footer>
 </main>
+{SITE_FOOTER}
 <script>(function(){{function f(){{document.documentElement.style.setProperty('--s',Math.max(.55,Math.min(innerWidth/1728,innerHeight/1117)).toFixed(4))}}f();addEventListener('resize',f)}})()</script>
 <script type="module" src="{base}js/gallery.js"></script>
 </body></html>'''

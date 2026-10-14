@@ -51,7 +51,7 @@ _ARROW_UNUSED = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d
 
 
 def work_history():
-    from build import head, nav, LINKEDIN
+    from build import head, nav, LINKEDIN, SITE_FOOTER
     base = '../'; e = html.escape
     def co_link(r):
         return (f'<a href="{base}{r["link"][0]}">{e(r["co"])}</a>' if r.get('link') else e(r['co']))
@@ -82,5 +82,6 @@ def work_history():
     </aside>
   </div>
 </main>
+{SITE_FOOTER}
 <script type="module" src="{base}js/gallery.js"></script>
 </body></html>'''
