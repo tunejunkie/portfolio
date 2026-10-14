@@ -1,0 +1,4 @@
+__pycache__/
+site/_preview.html
+site/_test.html
+.DS_Store

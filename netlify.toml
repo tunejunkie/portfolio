@@ -1,0 +1,53 @@
+# Netlify: the site is pre-built into ./site by `python3 build.py`; Netlify just publishes it.
+[build]
+  publish = "site"
+  command = ""
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# old Squarespace addresses → new pages
+[[redirects]]
+  from = "/saturn-screenshots"
+  to = "/screenshots/saturn/"
+[[redirects]]
+  from = "/trovy-screenshots"
+  to = "/screenshots/trovy/"
+[[redirects]]
+  from = "/monstro-screenshots"
+  to = "/screenshots/monstro/"
+[[redirects]]
+  from = "/transforce-screenshots"
+  to = "/screenshots/transforce/"
+[[redirects]]
+  from = "/wherei"
+  to = "/screenshots/wherei/"
+[[redirects]]
+  from = "/kyn-screenshots"
+  to = "/screenshots/kyn/"
+[[redirects]]
+  from = "/honored-screenshots"
+  to = "/screenshots/honored/"
+[[redirects]]
+  from = "/candleapp-screenshots"
+  to = "/screenshots/candle/"
+[[redirects]]
+  from = "/monster-screenshots"
+  to = "/screenshots/monster/"
+[[redirects]]
+  from = "/monster-ux-ui-design"
+  to = "/screenshots/monster/"
+[[redirects]]
+  from = "/adecco-screenshots"
+  to = "/screenshots/adecco/"
+[[redirects]]
+  from = "/upclose-screenshots"
+  to = "/screenshots/upclose/"
+[[redirects]]
+  from = "/bcg-abbott-screenshots"
+  to = "/screenshots/abbott/"
+[[redirects]]
+  from = "/gigmo-screenshots"
+  to = "/screenshots/gigmo/"

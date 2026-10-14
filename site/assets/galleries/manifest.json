@@ -1,0 +1,5641 @@
+{
+ "saturn": [
+  {
+   "src": "001.webp",
+   "title": "Superlatives - Shareable Winner Card",
+   "caption": "Daily superlative result card (\"Most likely to sleep through an earthquake\") built to post to Snap, IG or Messages.",
+   "notes": "Selects; superlatives; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1376,
+   "orig": "screenshots/_SELECTS/017 Superlatives - Shareable Winner Card.png",
+   "alpha": true
+  },
+  {
+   "src": "002.webp",
+   "title": "Superlatives - Final Podium and Leaderboard",
+   "caption": "Top-3 podium, ranks 4-10, and a winners carousel by grade.",
+   "notes": "Selects; Pitched concept (not shipped)",
+   "kind": "tall",
+   "w": 700,
+   "h": 2684,
+   "orig": "screenshots/_SELECTS/018 Superlatives - Final Podium and Leaderboard.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "Superlatives - Vote",
+   "caption": "Prompt, opt-in to be nominated, and suggested classmates with Vote, Shuffle and Search.",
+   "notes": "Selects; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/019 Superlatives - Vote.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "New Event - Dune Watch Party",
+   "caption": "Full create form: cover, all-day, private toggle, host and guests, description, advanced.",
+   "notes": "Selects; 2024 dark era",
+   "kind": "tall",
+   "w": 700,
+   "h": 2135,
+   "orig": "screenshots/_SELECTS/020 New Event - Dune Watch Party.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "Nike Sponsored Team - Drop Access",
+   "caption": "Nike-sponsored private group showing This Week in SNKRS with a timed early-access drop.",
+   "notes": "Selects; Nike",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/021 Nike Sponsored Team - Drop Access.png",
+   "alpha": true
+  },
+  {
+   "src": "006.webp",
+   "title": "Nike Sponsored Team - Exclusive Sale",
+   "caption": "Sponsored group variant leading with a 30% off Mercurial event and Nike-tagged upcoming events.",
+   "notes": "Selects; Nike",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/022 Nike Sponsored Team - Exclusive Sale.png",
+   "alpha": true
+  },
+  {
+   "src": "007.webp",
+   "title": "Explore - Spotify Tour Dates",
+   "caption": "Concerts filtered by Spotify listening, showing which friends are interested.",
+   "notes": "Selects; Spotify concept; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/023 Explore - Spotify Tour Dates.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "Status Concept - Hot Today at UPenn",
+   "caption": "Home header carousel of campus-wide top Spotify plays above the greeting and timeline.",
+   "notes": "Selects; Status concept; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/024 Status Concept - Hot Today at UPenn.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "Status Concept - Events at UPenn",
+   "caption": "Same header swapped to campus events (Holi Party) with Events/Today/This week chips.",
+   "notes": "Selects; Status concept; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/025 Status Concept - Events at UPenn.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "Status Concept - Friend Status Chips",
+   "caption": "Header swapped to friends with status emoji and time remaining, so availability is visible at a glance.",
+   "notes": "Selects; Status concept; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/026 Status Concept - Friend Status Chips.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "Active Class - Who's Here",
+   "caption": "Live class detail: ring timer, room, up next, and the classmates and friends in the room.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/027 Active Class - Who's Here.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "Friend Profile over Their Calendar",
+   "caption": "Friend sheet with Today/Compare toggle, current status, quote bubble, Message/Plan and now playing.",
+   "notes": "Selects; Calendar Compare",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/028 Friend Profile over Their Calendar.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "Calendar Compare - Select a Free Slot",
+   "caption": "Drag-select a gap on a friend's day to send a bubble, comment, or create an event.",
+   "notes": "Selects; Calendar Compare",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/029 Calendar Compare - Select a Free Slot.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "Bubble on a Friend's Calendar",
+   "caption": "A \"wanna hang out\" bubble attached to a friend's event, with View Profile and Chat.",
+   "notes": "Selects; Bubbles; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/030 Bubble on a Friend's Calendar.png"
+  },
+  {
+   "src": "015.webp",
+   "title": "Comment on a Friend's Event",
+   "caption": "Commenting directly on a friend's calendar event, keyboard up.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/031 Comment on a Friend's Event.png"
+  },
+  {
+   "src": "016.webp",
+   "title": "Reactions on a Friend's Event",
+   "caption": "Emoji reaction bar on a friend's event.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/032 Reactions on a Friend's Event.png"
+  },
+  {
+   "src": "017.webp",
+   "title": "Reaction Burst",
+   "caption": "Clap reaction animating over the friend's calendar.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/033 Reaction Burst.png"
+  },
+  {
+   "src": "018.webp",
+   "title": "Who's Free for This Slot",
+   "caption": "Selecting 3-4pm opens Create Event or a Friends tab ranking friends by free until.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/034 Who's Free for This Slot.png"
+  },
+  {
+   "src": "019.webp",
+   "title": "Day View with Event Sheet",
+   "caption": "All-day items, birthdays and to-dos above the timeline, with a selected event's photo sheet.",
+   "notes": "Selects; 2024 dark era",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/035 Day View with Event Sheet.png"
+  },
+  {
+   "src": "020.webp",
+   "title": "Event Sheet Expanded - Orange Theme",
+   "caption": "Expanded event detail over an orange personal theme (32 going).",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/036 Event Sheet Expanded - Orange Theme.png"
+  },
+  {
+   "src": "021.webp",
+   "title": "Schedule List with A/B Days",
+   "caption": "Schedule list marking rotating A/B days under dates, classes with rooms and inline to-dos.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/037 Schedule List with AB Days.png"
+  },
+  {
+   "src": "022.webp",
+   "title": "Overlapping Events and Tentative",
+   "caption": "Day view handling overlaps; striped block marks a tentative/maybe event.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/038 Overlapping Events and Tentative.png"
+  },
+  {
+   "src": "023.webp",
+   "title": "Select Time - Create or Friends",
+   "caption": "Time selection sheet that forks to create an event or check friends.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/039 Select Time - Create or Friends.png"
+  },
+  {
+   "src": "024.webp",
+   "title": "Light Era School Feed",
+   "caption": "Long scroll of the 2023 light app: A/B/C schedule banners, due items, birthdays, school events and a day progress bar.",
+   "notes": "Selects; 2022-23 light era",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "screenshots/_SELECTS/040 Light Era School Feed.png"
+  },
+  {
+   "src": "025.webp",
+   "title": "Bubbles over Calendar",
+   "caption": "Concept where to-dos and plans float as bubbles sized by priority, with friends attached.",
+   "notes": "Selects; Bubbles concept; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/041 Bubbles over Calendar.png"
+  },
+  {
+   "src": "026.webp",
+   "title": "Multi-Friend Compare",
+   "caption": "Columns per friend for one day, add more friends, and a friend sheet with Chat/Make plans/Profile.",
+   "notes": "Selects; Calendar Compare",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/042 Multi-Friend Compare.png"
+  },
+  {
+   "src": "027.webp",
+   "title": "Who's Free - Send a Comment",
+   "caption": "Free friends for a selected slot, pick several, write one message.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/043 Who's Free - Send a Comment.png"
+  },
+  {
+   "src": "028.webp",
+   "title": "Reactions on My Calendar",
+   "caption": "Friends' emoji reactions pinned to my own events.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/044 Reactions on My Calendar.png"
+  },
+  {
+   "src": "029.webp",
+   "title": "Reaction List",
+   "caption": "Who reacted, with grade and emoji.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/045 Reaction List.png"
+  },
+  {
+   "src": "030.webp",
+   "title": "Calendar with Friend Dock and AI Button",
+   "caption": "Friend avatars docked at the bottom to start a compare, with a magic-wand create button.",
+   "notes": "Selects; 2024 dark era",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/046 Calendar with Friend Dock and AI Button.png"
+  },
+  {
+   "src": "031.webp",
+   "title": "DM - Comment on a Time Slot",
+   "caption": "\"You commented on Chloe's calendar\" card carried into chat so the plan continues there.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/047 DM - Comment on a Time Slot.png"
+  },
+  {
+   "src": "032.webp",
+   "title": "DM - Attach an Event",
+   "caption": "Sharing an event card into a DM (\"can i come\").",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/048 DM - Attach an Event.png"
+  },
+  {
+   "src": "033.webp",
+   "title": "DM - Reaction Notice",
+   "caption": "Calendar reaction surfaced as a DM card.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/049 DM - Reaction Notice.png"
+  },
+  {
+   "src": "034.webp",
+   "title": "Chilling - Status Picker",
+   "caption": "Free/Chill/Busy status sheet with playful copy (\"with what???\") and status chips.",
+   "notes": "Selects; Chilling concept; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/050 Chilling - Status Picker.png"
+  },
+  {
+   "src": "035.webp",
+   "title": "Chilling - Session Timer",
+   "caption": "\"Chilling with Kelsey\" 59:59 timer with nearby friends marked CHILL or Free.",
+   "notes": "Selects; Chilling; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/051 Chilling - Session Timer.png"
+  },
+  {
+   "src": "036.webp",
+   "title": "Chilling - Confirmation",
+   "caption": "\"See who else is chilling rn\" pairs list, with the home card turning into a chill countdown.",
+   "notes": "Selects; Chilling; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/052 Chilling - Confirmation.png"
+  },
+  {
+   "src": "037.webp",
+   "title": "Chilling - Invite to Chill",
+   "caption": "Invite a friend to chill; it lands on both calendars.",
+   "notes": "Selects; Chilling; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/053 Chilling - Invite to Chill.png"
+  },
+  {
+   "src": "038.webp",
+   "title": "Chilling in the Calendar",
+   "caption": "Friend avatars plotted on the timeline to show overlaps.",
+   "notes": "Selects; Chilling; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/054 Chilling in the Calendar.png"
+  },
+  {
+   "src": "039.webp",
+   "title": "Compare with Nike Ad in Free Slot",
+   "caption": "Side-by-side compare where the shared free slot carries a Nike Air Max Day placement.",
+   "notes": "Selects; Nike + Compare",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/055 Compare with Nike Ad in Free Slot.png",
+   "alpha": true
+  },
+  {
+   "src": "040.webp",
+   "title": "Spotify Daylist in Calendar Header",
+   "caption": "The Spotify daylist name (\"rage angelic monday morning\") shown as the day's header.",
+   "notes": "Selects; Spotify; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/056 Spotify Daylist in Calendar Header.png",
+   "alpha": true
+  },
+  {
+   "src": "041.webp",
+   "title": "Now Tab with School Playlist",
+   "caption": "School playlist bubble and friend statuses above the current class countdown and today.",
+   "notes": "Selects; Spotify; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/057 Now Tab with School Playlist.png",
+   "alpha": true
+  },
+  {
+   "src": "042.webp",
+   "title": "Digest - Did You See These?",
+   "caption": "Story-style digest card surfacing an event with View/Add.",
+   "notes": "Selects; Digest; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/058 Digest - Did You See These.png"
+  },
+  {
+   "src": "043.webp",
+   "title": "Digest - School Mood",
+   "caption": "\"Biggest mood at school is Tired\" with top moods for the school.",
+   "notes": "Selects; Digest; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/059 Digest - School Mood.png"
+  },
+  {
+   "src": "044.webp",
+   "title": "Digest - Share Your Mood",
+   "caption": "Personal mood card with Bitmoji, shareable.",
+   "notes": "Selects; Digest; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/060 Digest - Share Your Mood.png"
+  },
+  {
+   "src": "045.webp",
+   "title": "Digest - Mood Check-In",
+   "caption": "\"How do you feel about your day?\" emoji grid that feeds the school mood.",
+   "notes": "Selects; Digest; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/061 Digest - Mood Check-In.png"
+  },
+  {
+   "src": "046.webp",
+   "title": "Digest - 6AM Club",
+   "caption": "Badge for early risers plus today's other members.",
+   "notes": "Selects; Digest; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/062 Digest - 6AM Club.png"
+  },
+  {
+   "src": "047.webp",
+   "title": "Digest - Today Is",
+   "caption": "Date card with a fun holiday (National Pasta Day).",
+   "notes": "Selects; Digest; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/063 Digest - Today Is.png"
+  },
+  {
+   "src": "048.webp",
+   "title": "Digest - Forecast",
+   "caption": "Weather card with Bitmoji.",
+   "notes": "Selects; Digest; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/064 Digest - Forecast.png"
+  },
+  {
+   "src": "049.webp",
+   "title": "Nike Drops Calendar",
+   "caption": "Explore > Nike drops as a month grid of sneakers with today's drop and an access countdown.",
+   "notes": "Selects; Nike Drops",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/065 Nike Drops Calendar.png"
+  },
+  {
+   "src": "050.webp",
+   "title": "Nike Drop on Home and Calendar",
+   "caption": "Drop banner on home plus a pinned SNKRS card in the calendar.",
+   "notes": "Selects; Nike Drops",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/066 Nike Drop on Home and Calendar.png",
+   "alpha": true
+  },
+  {
+   "src": "051.webp",
+   "title": "Nike Drop Block on Calendar",
+   "caption": "Drop rendered as a red Nike block in the timeline.",
+   "notes": "Selects; Nike Drops",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/067 Nike Drop Block on Calendar.png"
+  },
+  {
+   "src": "052.webp",
+   "title": "Nike SNKRS Sponsored Event",
+   "caption": "Sponsored drop event: 12.2k interested, Nike host, locked CTA until the drop.",
+   "notes": "Selects; Nike",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/068 Nike SNKRS Sponsored Event.png",
+   "alpha": true
+  },
+  {
+   "src": "053.webp",
+   "title": "Now Tab 2024",
+   "caption": "Friend status row, current class card with progress, calendar and task completion.",
+   "notes": "Selects; 2024 dark era",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/069 Now Tab 2024.png"
+  },
+  {
+   "src": "054.webp",
+   "title": "Nike - Submit Your Team",
+   "caption": "Pick sport and clothing preference, then invite; first 1000 teams.",
+   "notes": "Selects; Nike sponsored teams",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/070 Nike - Submit Your Team.png",
+   "alpha": true
+  },
+  {
+   "src": "055.webp",
+   "title": "Nike Promo in Calendar",
+   "caption": "In-feed card \"Become a Nike Sponsored Team\" placed in the calendar.",
+   "notes": "Selects; Nike",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/071 Nike Promo in Calendar.png",
+   "alpha": true
+  },
+  {
+   "src": "056.webp",
+   "title": "Light Era Calendar Dec 2022",
+   "caption": "Day chips with photos, events with attendee avatars, group bubbles row.",
+   "notes": "Selects; 2022-23 light era",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/072 Light Era Calendar Dec 2022.png"
+  },
+  {
+   "src": "057.webp",
+   "title": "McDonald's FryDay Sponsored Event",
+   "caption": "Sponsored event with discount code CTA.",
+   "notes": "Selects; McDonald's; Pitched concept (not shipped)",
+   "kind": "phone",
+   "w": 700,
+   "h": 1467,
+   "orig": "screenshots/_SELECTS/073 McDonald's FryDay Sponsored Event.png",
+   "alpha": true
+  },
+  {
+   "src": "058.webp",
+   "title": "Now Tab - Full School Day",
+   "caption": "Class countdown ring, B-Day, class chat and new task, Later/Today widgets, bulletin, tasks and options.",
+   "notes": "Selects; Now tab",
+   "kind": "tall",
+   "w": 700,
+   "h": 3888,
+   "orig": "screenshots/_SELECTS/074 Now Tab - Full School Day.png"
+  },
+  {
+   "src": "059.webp",
+   "title": "Multi-Compare with Suggested Times",
+   "caption": "Three-person compare with a Suggested times pill.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/075 Multi-Compare with Suggested Times.png"
+  },
+  {
+   "src": "060.webp",
+   "title": "Compare - Make a Plan",
+   "caption": "Selecting a shared gap turns into \"Make a plan\".",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/076 Compare - Make a Plan.png"
+  },
+  {
+   "src": "061.webp",
+   "title": "Compare - Suggested Times",
+   "caption": "Two-person compare with the magic-wand Suggested times pill.",
+   "notes": "Selects",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/077 Compare - Suggested Times.png"
+  },
+  {
+   "src": "062.webp",
+   "title": "Nike - Create Your Team",
+   "caption": "Variant of the team submission sheet.",
+   "notes": "Selects; Nike",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/078 Nike - Create Your Team.png"
+  },
+  {
+   "src": "063.webp",
+   "title": "Nike Promo Card - Get Sponsored",
+   "caption": "Variant of the calendar promo card.",
+   "notes": "Selects; Nike",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/_SELECTS/079 Nike Promo Card - Get Sponsored.png"
+  },
+  {
+   "src": "064.webp",
+   "title": "Suggested Times",
+   "caption": "Pick people, duration and day/time filters; Saturn proposes slots everyone is free.",
+   "notes": "Selects; Calendar Compare",
+   "kind": "phone",
+   "w": 700,
+   "h": 1406,
+   "orig": "screenshots/_SELECTS/080 Suggested Times.png",
+   "alpha": true
+  }
+ ],
+ "trovy": [
+  {
+   "src": "001.webp",
+   "title": "Trovy Card - Physical Card Design",
+   "caption": "The gold Trovy Mastercard with a tonal embossed logo pattern: a HELOC you can carry in your wallet. Designed the physical card and the brand look and feel.",
+   "notes": "Brand / card",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1800,
+   "orig": "01 Trovy Card - Physical Card Design.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "Card and House Hero Asset",
+   "caption": "Cutout of the gold card next to a 3D house, used across the site and ads to say \"your home equity, as a card.\"",
+   "notes": "Marketing asset",
+   "kind": "wide",
+   "w": 1065,
+   "h": 384,
+   "orig": "02 Card and House Hero Asset.png",
+   "alpha": true
+  },
+  {
+   "src": "003.webp",
+   "title": "Mobile Dashboard Hero Asset",
+   "caption": "Tilted phone showing the card-first account view: credit available, balance, APR and due date at a glance.",
+   "notes": "Marketing asset",
+   "kind": "wide",
+   "w": 1422,
+   "h": 1660,
+   "orig": "03 Mobile Dashboard Hero Asset.png",
+   "alpha": true
+  },
+  {
+   "src": "004.webp",
+   "title": "Homepage - The Smart, Flexible HELOC",
+   "caption": "Marketing homepage: rate and speed proof up top, trust badges, use-case carousel, a comparison against a traditional HELOC and credit card, and FAQ.",
+   "notes": "Marketing site; current live homepage",
+   "kind": "tall",
+   "w": 1600,
+   "h": 10352,
+   "orig": "screenshots/04 Homepage - The Smart, Flexible HELOC.png",
+   "alpha": true
+  },
+  {
+   "src": "005.webp",
+   "title": "Homepage - Most Flexible HELOC (earlier)",
+   "caption": "Earlier homepage direction: bold yellow/orange/purple color blocks per feature (card, FixedPay, cash back), $0-fee proof, and a gold vs Sunburst card choice.",
+   "notes": "Marketing site; earlier version (retired)",
+   "kind": "tall",
+   "w": 1600,
+   "h": 12000,
+   "orig": "screenshots/06 Homepage - Most Flexible HELOC (earlier).png"
+  },
+  {
+   "src": "006.webp",
+   "title": "Mobile Landing - Equity in Your Wallet",
+   "caption": "Mobile hero: \"Your home's equity, in your wallet,\" a 2-minute soft-pull rate check, and Trustpilot proof.",
+   "notes": "Marketing site; mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1514,
+   "orig": "07 Mobile Landing - Equity in Your Wallet.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "Application - Find Your Property",
+   "caption": "Start of the application: address lookup with manual fallback and an \"I don't own a property\" exit, with testimonials and a named support contact alongside.",
+   "notes": "Application",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1257,
+   "orig": "screenshots/11 Application - Find Your Property.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "Application - How Do You Use This Property?",
+   "caption": "Primary vs secondary home vs investment property, which drives eligibility.",
+   "notes": "Application",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1257,
+   "orig": "screenshots/12 Application - How Do You Use This Property.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "Application - Homeowner and Credit Score",
+   "caption": "Self-reported homeownership and credit band with a clear \"does NOT affect your credit score\" promise.",
+   "notes": "Application",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1238,
+   "orig": "screenshots/13 Application - Homeowner and Credit Score.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "Pre-Qualified Celebration",
+   "caption": "\"You're pre-qualified for up to $75,000\": a celebration moment before the offer step.",
+   "notes": "Application",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1170,
+   "orig": "screenshots/14 Pre-Qualified Celebration.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "Select an Offer - Packaged Offers",
+   "caption": "Four named offers (Debt Payoff, Most Flexible, Lowest Rate, Most Access) so homeowners pick a goal, not a spreadsheet; a donut shows where the line goes.",
+   "notes": "Application; offer selection",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1880,
+   "orig": "screenshots/15 Select an Offer - Packaged Offers.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "Select an Offer - Build Your Own",
+   "caption": "Custom offer builder: slide the credit line, toggle debt consolidation, and watch APR, upfront draw and fees update live.",
+   "notes": "Application; offer selection",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1979,
+   "orig": "screenshots/16 Select an Offer - Build Your Own.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "Review Your Offer",
+   "caption": "Line-by-line offer review, including the math behind the minimum cash draw, plus video explainers from the team and a perks list.",
+   "notes": "Application",
+   "kind": "wide",
+   "w": 1800,
+   "h": 2147,
+   "orig": "screenshots/17 Review Your Offer.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "Mobile - Choose a Repayment Option",
+   "caption": "Pick a fixed-rate monthly plan for a $24,000 draw by term, with the payment shown first.",
+   "notes": "Mobile mockup; FixedPay",
+   "kind": "wide",
+   "w": 1204,
+   "h": 1274,
+   "orig": "18 Mobile - Choose a Repayment Option.png",
+   "alpha": true
+  },
+  {
+   "src": "015.webp",
+   "title": "Mobile - Pay Off Debt",
+   "caption": "Select the outside lenders you want paid off as part of the application.",
+   "notes": "Mobile mockup; debt payoff",
+   "kind": "wide",
+   "w": 1208,
+   "h": 1274,
+   "orig": "19 Mobile - Pay Off Debt.png",
+   "alpha": true
+  },
+  {
+   "src": "016.webp",
+   "title": "Application - Spouse Information",
+   "caption": "Asks only what's needed, with \"Why do we need this?\" disclosed inline; the offer summary bar stays pinned.",
+   "notes": "Application",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1257,
+   "orig": "screenshots/20 Application - Spouse Information.png"
+  },
+  {
+   "src": "017.webp",
+   "title": "Application - Certificate of Trust",
+   "caption": "Handles properties held in trust, explaining in plain English what a certificate of trust is and why.",
+   "notes": "Application; edge case",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1257,
+   "orig": "screenshots/21 Application - Certificate of Trust.png"
+  },
+  {
+   "src": "018.webp",
+   "title": "Link Your Bank",
+   "caption": "Plaid (fastest) or manual entry, with FAQs answering the trust questions up front.",
+   "notes": "Onboarding",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1136,
+   "orig": "screenshots/25 Link Your Bank.png"
+  },
+  {
+   "src": "019.webp",
+   "title": "Bank Account Added",
+   "caption": "Success state that hands straight back to the cash withdrawal the user started.",
+   "notes": "Onboarding",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/26 Bank Account Added.png"
+  },
+  {
+   "src": "020.webp",
+   "title": "Activate Cards",
+   "caption": "Activate your own and household authorized-user cards from one list.",
+   "notes": "Onboarding; cards",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/27 Activate Cards.png"
+  },
+  {
+   "src": "021.webp",
+   "title": "Withdraw Cash",
+   "caption": "Choose amount, destination account, and whether it revolves or becomes a fixed-rate FixedPay plan; promo applied automatically.",
+   "notes": "Cash advance",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1397,
+   "orig": "screenshots/34 Withdraw Cash.png"
+  },
+  {
+   "src": "022.webp",
+   "title": "Balance Transfers Hub",
+   "caption": "All outside debt in one view, by type and over time, with APR and potential savings per account and one-click Transfer.",
+   "notes": "Balance transfer",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/35 Balance Transfers Hub.png"
+  },
+  {
+   "src": "023.webp",
+   "title": "New Balance Transfer",
+   "caption": "Pick linked balances (or add one manually) and choose standard or FixedPay repayment.",
+   "notes": "Balance transfer",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1377,
+   "orig": "screenshots/36 New Balance Transfer.png"
+  },
+  {
+   "src": "024.webp",
+   "title": "Make a Payment",
+   "caption": "Payment amount options (minimum, statement, current, other), date and source, with AutoPay status alongside.",
+   "notes": "Payments",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/37 Make a Payment.png"
+  },
+  {
+   "src": "025.webp",
+   "title": "Submit Payment",
+   "caption": "Final review tiles plus ACH authorization and the same-day cutoff time.",
+   "notes": "Payments",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/38 Submit Payment.png"
+  },
+  {
+   "src": "026.webp",
+   "title": "AutoPay Settings",
+   "caption": "AutoPay off state with the rate discount you're missing made explicit.",
+   "notes": "Payments",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/39 AutoPay Settings.png"
+  },
+  {
+   "src": "027.webp",
+   "title": "Activity - Filter by Date",
+   "caption": "Transactions with search, a date-range filter, and Convert to FixedPay on any eligible purchase.",
+   "notes": "Activity",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/activity filtered by date range/40 Activity - Filter by Date.png"
+  },
+  {
+   "src": "028.webp",
+   "title": "Mobile Activity - Filter by Date",
+   "caption": "Mobile version of activity with a month-picker sheet.",
+   "notes": "Activity; mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "screenshots/41 Mobile Activity - Filter by Date.png"
+  },
+  {
+   "src": "029.webp",
+   "title": "Statements",
+   "caption": "Statement archive by year with download.",
+   "notes": "Activity",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1360,
+   "orig": "screenshots/42 Statements.png"
+  },
+  {
+   "src": "030.webp",
+   "title": "Card Management",
+   "caption": "Household cards side by side: spend and rewards per card, freeze, replace, lost/stolen, PIN, add a user.",
+   "notes": "Cards",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1600,
+   "orig": "screenshots/43 Card Management.png"
+  },
+  {
+   "src": "031.webp",
+   "title": "Replace Card",
+   "caption": "Choose which household card to replace, then confirm shipping.",
+   "notes": "Cards",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1082,
+   "orig": "screenshots/44 Replace Card.png",
+   "alpha": true
+  },
+  {
+   "src": "032.webp",
+   "title": "Authorized User Spending Limit",
+   "caption": "Set a per-billing-cycle limit for a household member.",
+   "notes": "Cards",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/L2_ Set/45 Authorized User Spending Limit.png"
+  },
+  {
+   "src": "033.webp",
+   "title": "Manage Bank Accounts",
+   "caption": "Connected accounts with clear status (disconnected, eligible, action required) and a reconnect prompt.",
+   "notes": "Settings",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/46 Manage Bank Accounts.png"
+  },
+  {
+   "src": "034.webp",
+   "title": "Verify a Bank Account",
+   "caption": "Additional documents required to prove ownership, with an upload progress state.",
+   "notes": "Settings",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/47 Verify a Bank Account.png"
+  },
+  {
+   "src": "035.webp",
+   "title": "Rewards and Perks",
+   "caption": "Points, tier progress, card perks, and Home Credits that reimburse home-service spending.",
+   "notes": "Rewards",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/48 Rewards and Perks.png"
+  },
+  {
+   "src": "036.webp",
+   "title": "Profile and Settings",
+   "caption": "Settings hub: personal details, authorized users, support, alerts and referrals.",
+   "notes": "Settings",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/49 Profile and Settings.png"
+  }
+ ],
+ "honored": [
+  {
+   "src": "001.webp",
+   "title": "Sketch: the course timeline",
+   "caption": "Early concept organising each class into Do Before, Today's Session and Do After, so students always know what comes next.",
+   "notes": "Low-fi wireframe",
+   "kind": "wide",
+   "w": 1566,
+   "h": 1632,
+   "orig": "01 Sketch - the course timeline.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "Sketch: doing the work",
+   "caption": "A 'Do Some Work' button, a focus timer with breaks, and 'When will you finish this task?' \u2014 the seeds of the daily queue.",
+   "notes": "Low-fi wireframe",
+   "kind": "wide",
+   "w": 1740,
+   "h": 1704,
+   "orig": "02 Sketch - doing the work.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "Sketch: watch highlights",
+   "caption": "Replaying a moment from class, with private notes that can be posted to the discussion.",
+   "notes": "Low-fi wireframe",
+   "kind": "wide",
+   "w": 1220,
+   "h": 1742,
+   "orig": "03 Sketch - watch highlights.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "Sketch: stats and leaderboard",
+   "caption": "End-of-session summary with an engagement graph, 'most a-ha' moments and badges like Most Helpful. Later scaled back.",
+   "notes": "Low-fi wireframe",
+   "kind": "wide",
+   "w": 1786,
+   "h": 1738,
+   "orig": "04 Sketch - stats and leaderboard.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "Sketch: in-session quizzes",
+   "caption": "Live polls during class, with everyone's answers revealed together.",
+   "notes": "Low-fi wireframe",
+   "kind": "wide",
+   "w": 1640,
+   "h": 1638,
+   "orig": "05 Sketch - in-session quizzes.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "Sketch: swipe through a live class",
+   "caption": "Notes, content and audience as three swipeable panels.",
+   "notes": "Low-fi wireframe",
+   "kind": "wide",
+   "w": 1740,
+   "h": 1596,
+   "orig": "06 Sketch - swipe through a live class.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "Sketch: watching live",
+   "caption": "The full live-class flow: attendee grid, leaderboard, a radial reaction menu, asking a question, notes and discussion.",
+   "notes": "Best single wireframe",
+   "kind": "wide",
+   "w": 1800,
+   "h": 958,
+   "orig": "07 Sketch - watching live.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "From sketch to shipped product",
+   "caption": "Wireframes, the student app and the instructor builder side by side: two audiences, one platform.",
+   "notes": "Hero image; 19MB, compress before use",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1200,
+   "orig": "08 From sketch to shipped product.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "Today, in minutes",
+   "caption": "The student dashboard turns deadlines into daily effort: 'Read for 20 min to stay on track'. Warns when a day is over-scheduled and shows who's studying now.",
+   "notes": "Dark direction",
+   "kind": "tall",
+   "w": 700,
+   "h": 4219,
+   "orig": "09 Today, in minutes.png",
+   "alpha": true
+  },
+  {
+   "src": "010.webp",
+   "title": "Move work with a swipe",
+   "caption": "Swipe a task to move it or view details, so rescheduling takes one gesture.",
+   "notes": "Dark direction",
+   "kind": "tall",
+   "w": 700,
+   "h": 2888,
+   "orig": "11 Move work with a swipe.png",
+   "alpha": true
+  },
+  {
+   "src": "011.webp",
+   "title": "Important dates",
+   "caption": "A calendar sheet of sessions, deadlines, tests and heavy days, filterable by course.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "13 Important dates.png",
+   "alpha": true
+  },
+  {
+   "src": "012.webp",
+   "title": "Important dates, filtered",
+   "caption": "The same calendar narrowed to one course or one kind of date.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "14 Important dates, filtered.png",
+   "alpha": true
+  },
+  {
+   "src": "013.webp",
+   "title": "Spotting heavy days",
+   "caption": "The calendar flags days with too much due, before they arrive.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "15 Spotting heavy days.png",
+   "alpha": true
+  },
+  {
+   "src": "014.webp",
+   "title": "The semester calendar",
+   "caption": "Full-page calendar by day, week or month.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "16 The semester calendar.png",
+   "alpha": true
+  },
+  {
+   "src": "015.webp",
+   "title": "The semester calendar",
+   "caption": "Calendar view with a different filter applied.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "18 The semester calendar.png",
+   "alpha": true
+  },
+  {
+   "src": "016.webp",
+   "title": "The semester calendar",
+   "caption": "Calendar state variant.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "20 The semester calendar.png",
+   "alpha": true
+  },
+  {
+   "src": "017.webp",
+   "title": "The semester calendar",
+   "caption": "Calendar state variant.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "22 The semester calendar.png",
+   "alpha": true
+  },
+  {
+   "src": "018.webp",
+   "title": "Morning check-in",
+   "caption": "'Happy Monday!' A bubble chart of class, work and personal hours, plus a quick mood check.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "24 Morning check-in.png",
+   "alpha": true
+  },
+  {
+   "src": "019.webp",
+   "title": "What's your focus today?",
+   "caption": "Students choose to get ahead, catch up, stay on track or scale back, and the plan re-sorts to match.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "25 What's your focus today.png",
+   "alpha": true
+  },
+  {
+   "src": "020.webp",
+   "title": "See the heavy week coming",
+   "caption": "Thursday is over-scheduled. Fixed, flexible and personal hours are split out, with a 'Balance Me!' button.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "26 See the heavy week coming.png",
+   "alpha": true
+  },
+  {
+   "src": "021.webp",
+   "title": "A manageable day",
+   "caption": "Tuesday is fine. The same view, a calmer state, and a link to the queue.",
+   "notes": "Dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "28 A manageable day.png",
+   "alpha": true
+  },
+  {
+   "src": "022.webp",
+   "title": "On track",
+   "caption": "'It's Tuesday. Meh.' Today is 64% done, the week is balanced, and the next session is two minutes away.",
+   "notes": "Light direction",
+   "kind": "tall",
+   "w": 700,
+   "h": 2380,
+   "orig": "30 On track.png",
+   "alpha": true
+  },
+  {
+   "src": "023.webp",
+   "title": "Off track",
+   "caption": "'It's Monday. Again.' The same layout when a student is behind and the week is heavy.",
+   "notes": "Light direction",
+   "kind": "tall",
+   "w": 700,
+   "h": 2380,
+   "orig": "31 Off track.png",
+   "alpha": true
+  },
+  {
+   "src": "024.webp",
+   "title": "All done",
+   "caption": "'It's Wednesday. How?' The queue is empty. One layout handles every state, with a voice that has some personality.",
+   "notes": "Light direction; typo 'No mare items'",
+   "kind": "phone",
+   "w": 700,
+   "h": 1618,
+   "orig": "32 All done.png",
+   "alpha": true
+  },
+  {
+   "src": "025.webp",
+   "title": "My week",
+   "caption": "Totals for fixed, flexible and personal hours, with View Queue and Balance Week.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "33 My week.png",
+   "alpha": true
+  },
+  {
+   "src": "026.webp",
+   "title": "Before balancing",
+   "caption": "A lopsided week, day by day.",
+   "notes": "Pair with myWeek307",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "34 Before balancing.png",
+   "alpha": true
+  },
+  {
+   "src": "027.webp",
+   "title": "After balancing",
+   "caption": "The same week after 'Balance Week' spreads flexible work evenly.",
+   "notes": "Pair with myWeek110",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "35 After balancing.png",
+   "alpha": true
+  },
+  {
+   "src": "028.webp",
+   "title": "When will you do it?",
+   "caption": "Moving a task is a one-tap choice of day.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "36 When will you do it.png",
+   "alpha": true
+  },
+  {
+   "src": "029.webp",
+   "title": "Today's queue",
+   "caption": "Three tasks, one due today, with a clear first step.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2641,
+   "orig": "38 Today's queue.png"
+  },
+  {
+   "src": "030.webp",
+   "title": "Triage, one card at a time",
+   "caption": "Accept or push each task, like sorting a deck. Planning becomes a 30-second ritual.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "39 Triage, one card at a time.png"
+  },
+  {
+   "src": "031.webp",
+   "title": "Triage, one card at a time",
+   "caption": "The next card in the morning queue.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "40 Triage, one card at a time.png"
+  },
+  {
+   "src": "032.webp",
+   "title": "All queued up",
+   "caption": "'You're all queue'd up! Have a great Monday!'",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "41 All queued up.png"
+  },
+  {
+   "src": "033.webp",
+   "title": "How are you joining?",
+   "caption": "Every class is hybrid: choose to join virtually or in person.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "42 How are you joining.png",
+   "alpha": true
+  },
+  {
+   "src": "034.webp",
+   "title": "Session overview",
+   "caption": "Instructor, description and scenes, with reaction counts per scene so you can see which parts landed.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2475,
+   "orig": "43 Session overview.png",
+   "alpha": true
+  },
+  {
+   "src": "035.webp",
+   "title": "What to do before and after",
+   "caption": "Readings due before class and assignments set after it, with progress.",
+   "notes": "Author names wrong; fix before use",
+   "kind": "phone",
+   "w": 700,
+   "h": 1590,
+   "orig": "44 What to do before and after.png",
+   "alpha": true
+  },
+  {
+   "src": "036.webp",
+   "title": "Session assets",
+   "caption": "Every image the instructor uses, saved for later.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2374,
+   "orig": "45 Session assets.png",
+   "alpha": true
+  },
+  {
+   "src": "037.webp",
+   "title": "Live class",
+   "caption": "Live timer, attendee and comment counts, live captions and your own video.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "46 Live class.png",
+   "alpha": true
+  },
+  {
+   "src": "038.webp",
+   "title": "Immersive view",
+   "caption": "The interface steps back so the class fills the screen.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "47 Immersive view.png",
+   "alpha": true
+  },
+  {
+   "src": "039.webp",
+   "title": "Reactions that teach the teacher",
+   "caption": "Confused, a-ha, raise hand and applause float over the video: learning signals, not likes.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "48 Reactions that teach the teacher.png",
+   "alpha": true
+  },
+  {
+   "src": "040.webp",
+   "title": "The room, on screen",
+   "caption": "Classmates' comments and reactions appear in real time, so studying alone doesn't feel alone.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "49 The room, on screen.png",
+   "alpha": true
+  },
+  {
+   "src": "041.webp",
+   "title": "The room, on screen",
+   "caption": "Live reactions and comments during class.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "50 The room, on screen.png",
+   "alpha": true
+  },
+  {
+   "src": "042.webp",
+   "title": "Class controls",
+   "caption": "Mic, camera and tools in one tray.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "51 Class controls.png",
+   "alpha": true
+  },
+  {
+   "src": "043.webp",
+   "title": "Rewind a live class",
+   "caption": "Missed something? Jump back 15 seconds to 2 minutes without leaving the session.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "52 Rewind a live class.png",
+   "alpha": true
+  },
+  {
+   "src": "044.webp",
+   "title": "Rewind a live class",
+   "caption": "The rewind tray in context.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "53 Rewind a live class.png",
+   "alpha": true
+  },
+  {
+   "src": "045.webp",
+   "title": "React without interrupting",
+   "caption": "The reaction tray.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "54 React without interrupting.png",
+   "alpha": true
+  },
+  {
+   "src": "046.webp",
+   "title": "Ask without interrupting",
+   "caption": "Hold to record a question. It's queued for the end of the scene, and class audio mutes while you speak.",
+   "notes": "Typo 'address' to fix",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "55 Ask without interrupting.png",
+   "alpha": true
+  },
+  {
+   "src": "047.webp",
+   "title": "Question submitted",
+   "caption": "Confirmation that your question is in the queue.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "56 Question submitted.png",
+   "alpha": true
+  },
+  {
+   "src": "048.webp",
+   "title": "Your video",
+   "caption": "Self-view controls.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "57 Your video.png",
+   "alpha": true
+  },
+  {
+   "src": "049.webp",
+   "title": "Hide my video",
+   "caption": "Students can hide their own feed.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "58 Hide my video.png",
+   "alpha": true
+  },
+  {
+   "src": "050.webp",
+   "title": "The instructor shares an image",
+   "caption": "Shared images appear as a card over the video.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "59 The instructor shares an image.png",
+   "alpha": true
+  },
+  {
+   "src": "051.webp",
+   "title": "The instructor shares an image",
+   "caption": "Shared image card state.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "60 The instructor shares an image.png",
+   "alpha": true
+  },
+  {
+   "src": "052.webp",
+   "title": "The instructor shares an image",
+   "caption": "Shared image card state.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "61 The instructor shares an image.png",
+   "alpha": true
+  },
+  {
+   "src": "053.webp",
+   "title": "About this image",
+   "caption": "Tap a shared image to learn more about it.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1413,
+   "orig": "62 About this image.png",
+   "alpha": true
+  },
+  {
+   "src": "054.webp",
+   "title": "Notes on this image",
+   "caption": "Private notes attached to the moment.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1413,
+   "orig": "63 Notes on this image.png",
+   "alpha": true
+  },
+  {
+   "src": "055.webp",
+   "title": "Discuss this image",
+   "caption": "A discussion thread for the image.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1413,
+   "orig": "64 Discuss this image.png",
+   "alpha": true
+  },
+  {
+   "src": "056.webp",
+   "title": "Notes and discussion",
+   "caption": "Timestamped notes are private by default and can be published to the class discussion in one tap.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 1794,
+   "orig": "65 Notes and discussion.png",
+   "alpha": true
+  },
+  {
+   "src": "057.webp",
+   "title": "Class discussion",
+   "caption": "Threaded comments with upvotes and reactions.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "66 Class discussion.png",
+   "alpha": true
+  },
+  {
+   "src": "058.webp",
+   "title": "Who's here",
+   "caption": "An attendee grid with a leaderboard tab.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "67 Who's here.png",
+   "alpha": true
+  },
+  {
+   "src": "059.webp",
+   "title": "Build a class in scenes",
+   "caption": "The session builder: add a scene, poll or quiz; the filmstrip and running time sit along the bottom.",
+   "notes": "Instructor experience \u2014 shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "68 Build a class in scenes.png"
+  },
+  {
+   "src": "060.webp",
+   "title": "Two questions instead of a control room",
+   "caption": "An empty scene with the settings that matter: Select the Star and Your Role.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "69 Two questions instead of a control room.png"
+  },
+  {
+   "src": "061.webp",
+   "title": "Pick from your assets",
+   "caption": "An asset library with upload and search.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "70 Pick from your assets.png"
+  },
+  {
+   "src": "062.webp",
+   "title": "The instructor as the star",
+   "caption": "With no image selected, the instructor fills the frame.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "71 The instructor as the star.png"
+  },
+  {
+   "src": "063.webp",
+   "title": "Role: picture-in-picture",
+   "caption": "The artwork fills the screen and the instructor sits in the corner.",
+   "notes": "Shipped; show as trio with IN04, IN05",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "72 Role - picture-in-picture.png"
+  },
+  {
+   "src": "064.webp",
+   "title": "Role: presenter",
+   "caption": "The instructor leads, with the artwork beside them.",
+   "notes": "Shipped; trio",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "73 Role - presenter.png"
+  },
+  {
+   "src": "065.webp",
+   "title": "Role: greenscreen",
+   "caption": "The instructor appears in front of the artwork. TV production, without a producer.",
+   "notes": "Shipped; trio",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "74 Role - greenscreen.png"
+  },
+  {
+   "src": "066.webp",
+   "title": "Choosing the image",
+   "caption": "Selecting artwork from the library in picture-in-picture.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "75 Choosing the image.png"
+  },
+  {
+   "src": "067.webp",
+   "title": "Choosing the image",
+   "caption": "Selecting artwork in presenter mode.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "76 Choosing the image.png"
+  },
+  {
+   "src": "068.webp",
+   "title": "Choosing the image",
+   "caption": "Selecting artwork in greenscreen mode.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "77 Choosing the image.png"
+  },
+  {
+   "src": "069.webp",
+   "title": "Presenter notes",
+   "caption": "Speaker notes slide up under the preview, with per-scene toggles for reactions, comments and Q&A.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "78 Presenter notes.png"
+  },
+  {
+   "src": "070.webp",
+   "title": "Presenter notes",
+   "caption": "Notes open with the instructor on camera.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "79 Presenter notes.png"
+  },
+  {
+   "src": "071.webp",
+   "title": "Presenter notes",
+   "caption": "Notes open in presenter mode.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "80 Presenter notes.png"
+  },
+  {
+   "src": "072.webp",
+   "title": "Presenter notes",
+   "caption": "Notes open in greenscreen mode.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "81 Presenter notes.png"
+  },
+  {
+   "src": "073.webp",
+   "title": "Preview on a phone",
+   "caption": "Instructors see exactly what a student will see on mobile, with Fill and Fit.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "82 Preview on a phone.png"
+  },
+  {
+   "src": "074.webp",
+   "title": "Preview on a phone",
+   "caption": "Mobile preview with the instructor on camera.",
+   "notes": "Shipped; header says 'Save Draft' unlike others",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "83 Preview on a phone.png"
+  },
+  {
+   "src": "075.webp",
+   "title": "Preview on a phone",
+   "caption": "Mobile preview in presenter mode.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "84 Preview on a phone.png"
+  },
+  {
+   "src": "076.webp",
+   "title": "Preview on a phone",
+   "caption": "Mobile preview in greenscreen mode.",
+   "notes": "Shipped",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1153,
+   "orig": "85 Preview on a phone.png"
+  }
+ ],
+ "abbott": [
+  {
+   "src": "001.webp",
+   "title": "Neurosphere MyPath",
+   "caption": "The companion app for patients trialling an Abbott spinal cord or DRG stimulator. Redesigned from a pain-only MVP and launched as NeuroSphere myPath.",
+   "notes": "Patient; 'Version xx.xx.xx' visible",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/01 Neurosphere MyPath.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "Four ways in",
+   "caption": "Patients, physicians, Abbott reps and the simply curious each get a different app from the first tap.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/02 Four ways in.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "Create your account",
+   "caption": "A short sign-up with clear consent.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1637,
+   "orig": "patient/03 Create your account.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "Welcome back",
+   "caption": "Returning patients sign in with a phone number.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/04 Welcome back.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "Let's learn about you",
+   "caption": "Connects the patient to their physician, or helps them invite one if they're not listed yet.",
+   "notes": "Patient; typo 'physican'",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/05 Let's learn about you.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "Find your physician",
+   "caption": "Search by name and hospital, with a way out if they're not listed.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/06 Find your physician.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "Map where it hurts",
+   "caption": "A left/right body map. The areas chosen here shape every survey, goal and report that follows.",
+   "notes": "Patient; best screen for personalisation",
+   "kind": "tall",
+   "w": 700,
+   "h": 4907,
+   "orig": "patient/07 Map where it hurts.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "Physical function",
+   "caption": "Baseline questions about everyday tasks like chores and yard work.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/08 Physical function.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "Physical function",
+   "caption": "Can you run errands and shop?",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/09 Physical function.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "Section complete",
+   "caption": "Short, finishable sections with progress and a way to review answers.",
+   "notes": "Patient; typo 'continiue'",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/10 Section complete.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "How you've been feeling",
+   "caption": "Anxiety over the past seven days, captured before the trial starts.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/11 How you've been feeling.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "Two down, one to go",
+   "caption": "Section progress before the pain baseline.",
+   "notes": "Patient; typo 'continiue'",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/12 Two down, one to go.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "A 4 means the same to everyone",
+   "caption": "A swipeable 0\u201310 scale where every number has a plain description, so ratings are consistent between patients.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/13 A 4 means the same to everyone.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "Your pain level",
+   "caption": "Sets expectations: why this survey matters and how long it takes.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/14 Your pain level.png"
+  },
+  {
+   "src": "015.webp",
+   "title": "Pain, area by area",
+   "caption": "The survey asks about each area the patient chose, by name.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/15 Pain, area by area.png"
+  },
+  {
+   "src": "016.webp",
+   "title": "Pain, area by area",
+   "caption": "Rating the pelvis, with the description for a 9.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/16 Pain, area by area.png"
+  },
+  {
+   "src": "017.webp",
+   "title": "Pain, area by area",
+   "caption": "Rating the lower back.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/17 Pain, area by area.png"
+  },
+  {
+   "src": "018.webp",
+   "title": "Overall pain",
+   "caption": "One number for the whole week.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/18 Overall pain.png"
+  },
+  {
+   "src": "019.webp",
+   "title": "Sleep and well-being",
+   "caption": "Introducing the quality-of-life questions that sit alongside pain.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/19 Sleep and well-being.png"
+  },
+  {
+   "src": "020.webp",
+   "title": "Sleep",
+   "caption": "Rated 1\u20135 over the past week.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/20 Sleep.png"
+  },
+  {
+   "src": "021.webp",
+   "title": "Mood",
+   "caption": "Rated 1\u20135 over the past week.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/21 Mood.png"
+  },
+  {
+   "src": "022.webp",
+   "title": "Activity goals",
+   "caption": "Patients choose what they want to get better at: standing, walking or sitting.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/22 Activity goals.png"
+  },
+  {
+   "src": "023.webp",
+   "title": "Sitting",
+   "caption": "Baseline rating for a chosen activity.",
+   "notes": "Patient; copy says 'sleep' \u2014 fix",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/23 Sitting.png"
+  },
+  {
+   "src": "024.webp",
+   "title": "My avatar",
+   "caption": "Choose an illustrated avatar.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/24 My avatar.png"
+  },
+  {
+   "src": "025.webp",
+   "title": "My photo",
+   "caption": "Or use a photo.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/25 My photo.png"
+  },
+  {
+   "src": "026.webp",
+   "title": "My goals, mid-trial",
+   "caption": "Each goal shows change against pre-trial and a day-by-day record.",
+   "notes": "Patient; shorter crop of the next screen",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/26 My goals, mid-trial.png"
+  },
+  {
+   "src": "027.webp",
+   "title": "My goals, mid-trial",
+   "caption": "Walking, standing, sleep, sitting and mood against pre-trial, with Apple Health tracking.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 2173,
+   "orig": "patient/27 My goals, mid-trial.png"
+  },
+  {
+   "src": "028.webp",
+   "title": "Day one",
+   "caption": "Goals waiting for their first report.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 2173,
+   "orig": "patient/28 Day one.png"
+  },
+  {
+   "src": "029.webp",
+   "title": "Tips for each goal",
+   "caption": "Advice for sleep, mood, walking, standing and sitting.",
+   "notes": "Patient; lorem ipsum",
+   "kind": "tall",
+   "w": 700,
+   "h": 4043,
+   "orig": "patient/29 Tips for each goal.png"
+  },
+  {
+   "src": "030.webp",
+   "title": "Has your mood improved?",
+   "caption": "Every goal check compares against the patient's own pre-trial rating.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/30 Has your mood improved.png"
+  },
+  {
+   "src": "031.webp",
+   "title": "Has your sleep improved?",
+   "caption": "A lot better, a little better, or none.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/31 Has your sleep improved.png"
+  },
+  {
+   "src": "032.webp",
+   "title": "Has your standing improved?",
+   "caption": "Compared to before the trial.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/32 Has your standing improved.png"
+  },
+  {
+   "src": "033.webp",
+   "title": "Has your walking improved?",
+   "caption": "Compared to before the trial.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/33 Has your walking improved.png"
+  },
+  {
+   "src": "034.webp",
+   "title": "Has your sitting improved?",
+   "caption": "Compared to before the trial.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/34 Has your sitting improved.png"
+  },
+  {
+   "src": "035.webp",
+   "title": "Set a walking goal",
+   "caption": "15, 30 or 45 minutes a day, with a reason it helps.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/35 Set a walking goal.png"
+  },
+  {
+   "src": "036.webp",
+   "title": "Did you practise mindfulness?",
+   "caption": "A one-tap yes or no.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/36 Did you practise mindfulness.png"
+  },
+  {
+   "src": "037.webp",
+   "title": "Eight hours' sleep?",
+   "caption": "Yes or no, or let Apple Health answer.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/37 Eight hours' sleep.png"
+  },
+  {
+   "src": "038.webp",
+   "title": "Stand once an hour?",
+   "caption": "Yes or no, or track automatically.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/38 Stand once an hour.png"
+  },
+  {
+   "src": "039.webp",
+   "title": "Walk for 30 minutes?",
+   "caption": "Yes or no, or track automatically.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/39 Walk for 30 minutes.png"
+  },
+  {
+   "src": "040.webp",
+   "title": "Edit goals",
+   "caption": "Add your own goal or choose from presets.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 1811,
+   "orig": "patient/40 Edit goals.png"
+  },
+  {
+   "src": "041.webp",
+   "title": "Daily check-in",
+   "caption": "Has your pain changed since before the trial?",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/41 Daily check-in.png"
+  },
+  {
+   "src": "042.webp",
+   "title": "Read back before you submit",
+   "caption": "Yesterday's answer is shown, and today's is restated as a sentence so mistakes are caught before they reach the doctor.",
+   "notes": "Patient; '20% better' should be 50%",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/42 Read back before you submit.png"
+  },
+  {
+   "src": "043.webp",
+   "title": "Relief, as a percentage",
+   "caption": "Daily relief per body area against pre-trial \u2014 the number physicians and insurers need.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/43 Relief, as a percentage.png"
+  },
+  {
+   "src": "044.webp",
+   "title": "Very significant relief",
+   "caption": "80% relief in the right knee, nudged up or down from yesterday's answer.",
+   "notes": "Patient; hero candidate",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/44 Very significant relief.png"
+  },
+  {
+   "src": "045.webp",
+   "title": "Ready to submit?",
+   "caption": "'My right knee feels 10% better than yesterday.'",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/45 Ready to submit.png"
+  },
+  {
+   "src": "046.webp",
+   "title": "Goals in the daily check-in",
+   "caption": "Activity goals folded into the same flow.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/46 Goals in the daily check-in.png"
+  },
+  {
+   "src": "047.webp",
+   "title": "Done for today",
+   "caption": "A one-tap rating of the trial so far, which also alerts the care team.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/47 Done for today.png"
+  },
+  {
+   "src": "048.webp",
+   "title": "My data",
+   "caption": "Overall relief, relief per body area and well-being, with a report to download and share.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 3289,
+   "orig": "patient/48 My data.png"
+  },
+  {
+   "src": "049.webp",
+   "title": "Well-being over the trial",
+   "caption": "Sleep, mood and activity trends by day.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 3173,
+   "orig": "patient/49 Well-being over the trial.png"
+  },
+  {
+   "src": "050.webp",
+   "title": "Relief over the trial",
+   "caption": "Relief per area by day, with the pain baseline alongside.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 3476,
+   "orig": "patient/50 Relief over the trial.png"
+  },
+  {
+   "src": "051.webp",
+   "title": "Stories from people like me",
+   "caption": "Short videos from patients with the same kind of pain, sorted by where it hurts.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 2774,
+   "orig": "patient/51 Stories from people like me.png"
+  },
+  {
+   "src": "052.webp",
+   "title": "All stories",
+   "caption": "Every story, grouped by pain area.",
+   "notes": "Patient; story descriptions repeat placeholder text",
+   "kind": "tall",
+   "w": 700,
+   "h": 4245,
+   "orig": "patient/52 All stories.png"
+  },
+  {
+   "src": "053.webp",
+   "title": "Watching a story",
+   "caption": "Captioned video from a patient who's been through it.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/53 Watching a story.png"
+  },
+  {
+   "src": "054.webp",
+   "title": "About this story",
+   "caption": "Paused, with the story's summary.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/54 About this story.png"
+  },
+  {
+   "src": "055.webp",
+   "title": "FAQs",
+   "caption": "Common questions about neurostimulation, ranked by how many people found them helpful.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "patient/55 FAQs.png"
+  },
+  {
+   "src": "056.webp",
+   "title": "What to expect",
+   "caption": "FAQs filtered to where the patient is in the process.",
+   "notes": "Patient",
+   "kind": "tall",
+   "w": 700,
+   "h": 2160,
+   "orig": "patient/56 What to expect.png"
+  },
+  {
+   "src": "057.webp",
+   "title": "Menu",
+   "caption": "Profile with trial dates, preferences, reminders and support.",
+   "notes": "Patient",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "patient/57 Menu.png"
+  },
+  {
+   "src": "058.webp",
+   "title": "Learn first, sign up later",
+   "caption": "Stories for people considering the therapy, ending in an invitation to create an account.",
+   "notes": "Education track",
+   "kind": "tall",
+   "w": 700,
+   "h": 2919,
+   "orig": "patient/59 Learn first, sign up later.png"
+  },
+  {
+   "src": "059.webp",
+   "title": "The care team's dashboard",
+   "caption": "Trial patients, guests waiting to start, permanent patients by time since implant, and anyone flagged.",
+   "notes": "Physician / rep; tiles all say 'Pain Down'",
+   "kind": "tall",
+   "w": 700,
+   "h": 3446,
+   "orig": "physician/60 The care team's dashboard.png"
+  },
+  {
+   "src": "060.webp",
+   "title": "Who are you looking for?",
+   "caption": "Filter by patients, providers or Abbott reps.",
+   "notes": "Physician / rep",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "physician/61 Who are you looking for.png"
+  },
+  {
+   "src": "061.webp",
+   "title": "Patients by stage",
+   "caption": "All, trial, permanent or guests.",
+   "notes": "Physician / rep",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "physician/62 Patients by stage.png"
+  },
+  {
+   "src": "062.webp",
+   "title": "Every patient at a glance",
+   "caption": "Therapy type, trial stage, pain trend and satisfaction score on each card.",
+   "notes": "Physician / rep",
+   "kind": "tall",
+   "w": 700,
+   "h": 2975,
+   "orig": "physician/63 Every patient at a glance.png"
+  },
+  {
+   "src": "063.webp",
+   "title": "Guests",
+   "caption": "Invited and waiting patients, so nobody stalls before their trial.",
+   "notes": "Physician / rep",
+   "kind": "tall",
+   "w": 700,
+   "h": 2964,
+   "orig": "physician/64 Guests.png"
+  },
+  {
+   "src": "064.webp",
+   "title": "Trial patients",
+   "caption": "Who's ending their trial and who's asked for a permanent implant.",
+   "notes": "Physician / rep",
+   "kind": "tall",
+   "w": 700,
+   "h": 2964,
+   "orig": "physician/65 Trial patients.png"
+  },
+  {
+   "src": "065.webp",
+   "title": "Trial patients",
+   "caption": "All trial patients with their pain trend.",
+   "notes": "Physician / rep",
+   "kind": "tall",
+   "w": 700,
+   "h": 2975,
+   "orig": "physician/66 Trial patients.png"
+  },
+  {
+   "src": "066.webp",
+   "title": "Permanent patients",
+   "caption": "Patients with an implant, and how satisfied they are.",
+   "notes": "Physician / rep",
+   "kind": "tall",
+   "w": 700,
+   "h": 2975,
+   "orig": "physician/67 Permanent patients.png"
+  },
+  {
+   "src": "067.webp",
+   "title": "Permanent patients",
+   "caption": "The permanent list, continued.",
+   "notes": "Physician / rep",
+   "kind": "tall",
+   "w": 700,
+   "h": 2975,
+   "orig": "physician/68 Permanent patients.png"
+  },
+  {
+   "src": "068.webp",
+   "title": "Flagged",
+   "caption": "Low-satisfaction patients surface automatically for follow-up, with Mark Resolved.",
+   "notes": "Physician / rep",
+   "kind": "tall",
+   "w": 700,
+   "h": 4417,
+   "orig": "physician/69 Flagged.png"
+  },
+  {
+   "src": "069.webp",
+   "title": "One shared patient log",
+   "caption": "Rep notes on device settings and patient feedback in one timeline for the whole care team.",
+   "notes": "Physician / rep",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "physician/70 One shared patient log.png"
+  }
+ ],
+ "kyn": [
+  {
+   "src": "001.webp",
+   "title": "Kyn",
+   "caption": "A contact book that helps you keep up with the people who matter.",
+   "notes": "Hero image; goal caption says 2x but picker says 4",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1800,
+   "orig": "01 Kyn.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "Never lose touch",
+   "caption": "Set goals to stay connected with the people you care about most.",
+   "notes": "First intro page",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "02 Never lose touch.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "Be a better friend",
+   "caption": "Reminders for birthdays and big moments.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "03 Be a better friend.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "Stay organized",
+   "caption": "Sort contacts into lists that are actually useful.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "04 Stay organized.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "Sign up",
+   "caption": "Email, Google or Apple.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "OB - Sign Up/05 Sign up.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "Add an email and password",
+   "caption": "A simple account step.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "06 Add an email and password.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "Your name",
+   "caption": "One field at a time.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "07 Your name.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "Tell us about yourself",
+   "caption": "Birthday and gender, with room to self-describe.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "OB - DOB/08 Tell us about yourself.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "Secure your account",
+   "caption": "Two-step verification, with a promise never to misuse your number.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "09 Secure your account.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "Your phone number",
+   "caption": "Phone entry.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "10 Your phone number.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "Your phone number",
+   "caption": "Phone entry, filled.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "11 Your phone number.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "Enter your code",
+   "caption": "Verification code.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "12 Enter your code.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "Protecting your data",
+   "caption": "Privacy consent in plain language.",
+   "notes": "Awkward 'the US' California' phrasing",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "13 Protecting your data.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "Before we ask for your contacts",
+   "caption": "A priming screen explains why Kyn needs access and promises nothing is sent to anyone.",
+   "notes": "'Concept A' \u2014 confirm if tested",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "14 Before we ask for your contacts.png"
+  },
+  {
+   "src": "015.webp",
+   "title": "Contacts imported",
+   "caption": "One step away from staying closer to friends.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "15 Contacts imported.png"
+  },
+  {
+   "src": "016.webp",
+   "title": "Thanks for signing up",
+   "caption": "Straight into making your first list.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "16 Thanks for signing up.png"
+  },
+  {
+   "src": "017.webp",
+   "title": "Kyn",
+   "caption": "Loading screen.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "17 Kyn.png"
+  },
+  {
+   "src": "018.webp",
+   "title": "Getting started",
+   "caption": "Create your first goal, reminder and tag.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1615,
+   "orig": "18 Getting started.png"
+  },
+  {
+   "src": "019.webp",
+   "title": "Reach out now",
+   "caption": "The home screen tells you who to contact today, with progress rings on each face.",
+   "notes": "Hero candidate",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "19 Reach out now.png"
+  },
+  {
+   "src": "020.webp",
+   "title": "Skip without guilt",
+   "caption": "New contacts to review, and a gentle note when you skip a reminder.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "20 Skip without guilt.png"
+  },
+  {
+   "src": "021.webp",
+   "title": "Today, this month, missed",
+   "caption": "Every upcoming goal, birthday and missed date in one list.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2412,
+   "orig": "21 Today, this month, missed.png"
+  },
+  {
+   "src": "022.webp",
+   "title": "Log it in one tap",
+   "caption": "We met, we talked, call or text.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "22 Log it in one tap.png"
+  },
+  {
+   "src": "023.webp",
+   "title": "When did you connect?",
+   "caption": "Back-date a catch-up.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "23 When did you connect.png"
+  },
+  {
+   "src": "024.webp",
+   "title": "Great job!",
+   "caption": "Encouragement when you're on track with a goal.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "24 Great job!.png"
+  },
+  {
+   "src": "025.webp",
+   "title": "Contacts",
+   "caption": "Your contact list, starting with your own Kyn Card.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "25 Contacts.png"
+  },
+  {
+   "src": "026.webp",
+   "title": "Review duplicates",
+   "caption": "Kyn spots duplicate contacts for you.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "26 Review duplicates.png"
+  },
+  {
+   "src": "027.webp",
+   "title": "New contacts",
+   "caption": "Recently added people surface at the top.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "27 New contacts.png"
+  },
+  {
+   "src": "028.webp",
+   "title": "Search",
+   "caption": "Search people, tags and locations.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "28 Search.png"
+  },
+  {
+   "src": "029.webp",
+   "title": "Filter by place",
+   "caption": "Everyone in New York.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "29 Filter by place.png"
+  },
+  {
+   "src": "030.webp",
+   "title": "Filter by tag",
+   "caption": "Everyone in 'NYC Pals'.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "30 Filter by tag.png"
+  },
+  {
+   "src": "031.webp",
+   "title": "Favorites",
+   "caption": "Your favourite people.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "31 Favorites.png"
+  },
+  {
+   "src": "032.webp",
+   "title": "Select",
+   "caption": "Choose several contacts at once.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "32 Select.png"
+  },
+  {
+   "src": "033.webp",
+   "title": "Bulk actions",
+   "caption": "Tag, log, text or delete in one go.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "33 Bulk actions.png"
+  },
+  {
+   "src": "034.webp",
+   "title": "Delete safely",
+   "caption": "A clear warning that deletes also apply in Apple Contacts.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "34 Delete safely.png"
+  },
+  {
+   "src": "035.webp",
+   "title": "Quick view",
+   "caption": "A contact's tags, goal and last catch-up, with one-tap actions.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "35 Quick view.png"
+  },
+  {
+   "src": "036.webp",
+   "title": "Calls log themselves",
+   "caption": "Call from Kyn and it's added to your log.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "36 Calls log themselves.png"
+  },
+  {
+   "src": "037.webp",
+   "title": "Make a tag",
+   "caption": "Pick an emoji and colour.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "37 Make a tag.png"
+  },
+  {
+   "src": "038.webp",
+   "title": "Besties",
+   "caption": "A custom tag.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "38 Besties.png"
+  },
+  {
+   "src": "039.webp",
+   "title": "Smart Tags",
+   "caption": "Tags that fill themselves by location or keyword.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "39 Smart Tags.png"
+  },
+  {
+   "src": "040.webp",
+   "title": "Smart tag by keyword",
+   "caption": "Search what's in your contacts' cards.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "40 Smart tag by keyword.png"
+  },
+  {
+   "src": "041.webp",
+   "title": "Hinge",
+   "caption": "Everyone with 'Hinge' in their card, tagged automatically.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "41 Hinge.png"
+  },
+  {
+   "src": "042.webp",
+   "title": "Smart tag by location",
+   "caption": "Search where your contacts live.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "42 Smart tag by location.png"
+  },
+  {
+   "src": "043.webp",
+   "title": "nyc pals",
+   "caption": "Everyone in New York, tagged automatically.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "43 nyc pals.png"
+  },
+  {
+   "src": "044.webp",
+   "title": "A contact, in full",
+   "caption": "Tags, goal, birthday, upcoming events, associated people and info.",
+   "notes": "Info copied from Alexis's card; 'Adison' x3",
+   "kind": "tall",
+   "w": 700,
+   "h": 3412,
+   "orig": "44 A contact, in full.png"
+  },
+  {
+   "src": "045.webp",
+   "title": "Edit or delete a goal",
+   "caption": "Goal options.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "45 Edit or delete a goal.png"
+  },
+  {
+   "src": "046.webp",
+   "title": "Copied",
+   "caption": "Tap any field to copy it.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "46 Copied.png"
+  },
+  {
+   "src": "047.webp",
+   "title": "A new contact",
+   "caption": "Nothing set yet, with clear places to add a goal or birthday.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2707,
+   "orig": "47 A new contact.png"
+  },
+  {
+   "src": "048.webp",
+   "title": "Edit contact",
+   "caption": "Details, tags and links.",
+   "notes": "Email typo 'astandton'",
+   "kind": "tall",
+   "w": 700,
+   "h": 2094,
+   "orig": "48 Edit contact.png"
+  },
+  {
+   "src": "049.webp",
+   "title": "Their log",
+   "caption": "Every interaction with this person.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "49 Their log.png"
+  },
+  {
+   "src": "050.webp",
+   "title": "Add a note",
+   "caption": "Write a private note to your log.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "50 Add a note.png"
+  },
+  {
+   "src": "051.webp",
+   "title": "My goals",
+   "caption": "Each person's progress and days until you're due.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "51 My goals.png"
+  },
+  {
+   "src": "052.webp",
+   "title": "Set a goal",
+   "caption": "How often you want to catch up.",
+   "notes": "Picker 4x vs caption 2x",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "52 Set a goal.png"
+  },
+  {
+   "src": "053.webp",
+   "title": "Goal created",
+   "caption": "Log your last catch-up to start the clock.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "53 Goal created.png"
+  },
+  {
+   "src": "054.webp",
+   "title": "Goal created",
+   "caption": "Confirmation with confetti.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "54 Goal created.png"
+  },
+  {
+   "src": "055.webp",
+   "title": "Reminder created",
+   "caption": "Reminders grouped by month with seasonal illustrations.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "55 Reminder created.png"
+  },
+  {
+   "src": "056.webp",
+   "title": "Reminders",
+   "caption": "Birthdays and events by month, with missed ones flagged.",
+   "notes": "Oct 7 vs Oct 2",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "56 Reminders.png"
+  },
+  {
+   "src": "057.webp",
+   "title": "My log",
+   "caption": "Every catch-up, by month.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "57 My log.png"
+  },
+  {
+   "src": "058.webp",
+   "title": "My log",
+   "caption": "Interaction history.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "58 My log.png"
+  },
+  {
+   "src": "059.webp",
+   "title": "Nothing yet",
+   "caption": "An empty log that explains what will appear.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "59 Nothing yet.png"
+  },
+  {
+   "src": "060.webp",
+   "title": "Your profile",
+   "caption": "Your Kyn Card, badges, tags and invites.",
+   "notes": "391 vs 582 contacts",
+   "kind": "tall",
+   "w": 700,
+   "h": 2447,
+   "orig": "60 Your profile.png"
+  },
+  {
+   "src": "061.webp",
+   "title": "Your Kyn Card",
+   "caption": "Choose exactly what you share.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "61 Your Kyn Card.png"
+  },
+  {
+   "src": "062.webp",
+   "title": "Edit your details",
+   "caption": "Your own card.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 1893,
+   "orig": "62 Edit your details.png",
+   "alpha": true
+  },
+  {
+   "src": "063.webp",
+   "title": "Invite friends",
+   "caption": "Kynnect with people already on Kyn, or invite them.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "63 Invite friends.png"
+  },
+  {
+   "src": "064.webp",
+   "title": "Background texture",
+   "caption": "Abstract background used in marketing images.",
+   "notes": "Not a screen; 38MB",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1423,
+   "orig": "64 Background texture.png"
+  }
+ ],
+ "monstro": [
+  {
+   "src": "001.webp",
+   "title": "Good morning, James",
+   "caption": "A Wealth Score and four colour-coded quadrants \u2014 assets, liabilities, expenses, income \u2014 on one home screen, designed to sit inside a bank's own app.",
+   "notes": "Hero candidate",
+   "kind": "tall",
+   "w": 700,
+   "h": 1654,
+   "orig": "01 Good morning, James.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "Your Wealth Score",
+   "caption": "One number out of 100 for your whole financial life, with monthly history, action items and the reasons it moved.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2266,
+   "orig": "02 Your Wealth Score.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "A month at a glance",
+   "caption": "Tap a month to see its score and what changed.",
+   "notes": "'Down 10' doesn't match the bars",
+   "kind": "tall",
+   "w": 700,
+   "h": 1779,
+   "orig": "03 A month at a glance.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "Monstro Score",
+   "caption": "An earlier version of the score, out of 900.",
+   "notes": "0\u2013900 version",
+   "kind": "tall",
+   "w": 700,
+   "h": 2253,
+   "orig": "04 Monstro Score.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "Past 30 days",
+   "caption": "Score history by period, with impacts tagged by quadrant.",
+   "notes": "0\u2013900 version",
+   "kind": "tall",
+   "w": 700,
+   "h": 1751,
+   "orig": "05 Past 30 days.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "What moved your score",
+   "caption": "Every change to the score, with sources.",
+   "notes": "Placeholder text",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "06 What moved your score.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "Your finances on a radar",
+   "caption": "Five areas on one chart show strengths and gaps at a glance, with goals and a breakdown below.",
+   "notes": "Bank of America branding is a placeholder (white-label); add the disclaimer near this image",
+   "kind": "tall",
+   "w": 700,
+   "h": 3911,
+   "orig": "07 Your finances on a radar.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "Filter by area",
+   "caption": "The radar narrowed to one area, with confidence and trend.",
+   "notes": "Placeholder [METRIC]",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "08 Filter by area.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "Income, in depth",
+   "caption": "Insights, what changed, and every related account with how confident the app is in each figure.",
+   "notes": "Shows confidence + Improve",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "09 Income, in depth.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "Income summary",
+   "caption": "Total income with confidence, insights and related accounts.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "10 Income summary.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "Expenses summary",
+   "caption": "Total expenses with a profile question to sharpen the numbers.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "11 Expenses summary.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "Assets summary",
+   "caption": "Total assets, medium confidence, and an AI search bar on every page.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "12 Assets summary.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "A better rate, flagged",
+   "caption": "The app spots a partner offer on your mortgage and invites you to talk it through.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 4004,
+   "orig": "14 A better rate, flagged.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "A rental property, in full",
+   "caption": "Value, mortgage, net equity, rent vs cost and photos for one holding.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 4237,
+   "orig": "15 A rental property, in full.png"
+  },
+  {
+   "src": "015.webp",
+   "title": "A stock holding",
+   "caption": "Price history, purchase info and dividends, plus a nudge to link it to other holdings.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 3815,
+   "orig": "17 A stock holding.png"
+  },
+  {
+   "src": "016.webp",
+   "title": "An insurance policy",
+   "caption": "Deductible, premium, payments and linked holdings.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 3453,
+   "orig": "18 An insurance policy.png"
+  },
+  {
+   "src": "017.webp",
+   "title": "Almost there",
+   "caption": "A completeness meter encourages users to link holdings for 'a more complete wealth story'.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2916,
+   "orig": "19 Almost there.png"
+  },
+  {
+   "src": "018.webp",
+   "title": "My holdings",
+   "caption": "Every asset, liability and insurance policy, tagged personal, household or business.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 3717,
+   "orig": "20 My holdings.png"
+  },
+  {
+   "src": "019.webp",
+   "title": "Personal holdings",
+   "caption": "Filtered to what belongs to you personally.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2068,
+   "orig": "22 Personal holdings.png"
+  },
+  {
+   "src": "020.webp",
+   "title": "Household holdings",
+   "caption": "Shared family assets, debts and policies.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 1820,
+   "orig": "24 Household holdings.png"
+  },
+  {
+   "src": "021.webp",
+   "title": "Business holdings",
+   "caption": "Assets and debts held by your companies, shown separately.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1631,
+   "orig": "26 Business holdings.png"
+  },
+  {
+   "src": "022.webp",
+   "title": "Liabilities by owner",
+   "caption": "Every debt tagged by who holds it.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2582,
+   "orig": "28 Liabilities by owner.png"
+  },
+  {
+   "src": "023.webp",
+   "title": "Choose a category",
+   "caption": "Narrow a list by type of liability.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "30 Choose a category.png"
+  },
+  {
+   "src": "024.webp",
+   "title": "How can I help?",
+   "caption": "An AI financial advisor with suggested questions and your past advice.",
+   "notes": "Typo 'DIve'",
+   "kind": "tall",
+   "w": 700,
+   "h": 2029,
+   "orig": "32 How can I help.png"
+  },
+  {
+   "src": "025.webp",
+   "title": "What shall we talk about today?",
+   "caption": "One tap to ask the questions people actually have.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "33 What shall we talk about today.png"
+  },
+  {
+   "src": "026.webp",
+   "title": "Thinking",
+   "caption": "The advisor working on your answer.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "34 Thinking.png"
+  },
+  {
+   "src": "027.webp",
+   "title": "Thinking",
+   "caption": "Loading state.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "35 Thinking.png"
+  },
+  {
+   "src": "028.webp",
+   "title": "Advice with your numbers in it",
+   "caption": "'You're leaving $3,300 a year on the table' \u2014 with a 10-year chart and sources.",
+   "notes": "Typo 'contibution'",
+   "kind": "tall",
+   "w": 700,
+   "h": 3737,
+   "orig": "36 Advice with your numbers in it.png"
+  },
+  {
+   "src": "029.webp",
+   "title": "Your returns are too low",
+   "caption": "A plain-language answer backed by your portfolio's figures.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 3121,
+   "orig": "37 Your returns are too low.png"
+  },
+  {
+   "src": "030.webp",
+   "title": "Answer card",
+   "caption": "An advisor answer in a simple layout.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "38 Answer card.png",
+   "alpha": true
+  },
+  {
+   "src": "031.webp",
+   "title": "Answer card, editorial",
+   "caption": "The same answer as a bold editorial card with save, react, snooze and share.",
+   "notes": "Exploration \u2014 confirm which won",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "39 Answer card, editorial.png",
+   "alpha": true
+  },
+  {
+   "src": "032.webp",
+   "title": "From advice to action",
+   "caption": "Action items show progress and the expected gain in score and dollars before you commit.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "Goals/40 From advice to action.png"
+  },
+  {
+   "src": "033.webp",
+   "title": "Do you have a job?",
+   "caption": "One question at a time, with Skip, Snooze and 'Why ask?'.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "41 Do you have a job.png"
+  },
+  {
+   "src": "034.webp",
+   "title": "Do you have kids?",
+   "caption": "Short profile questions make the advice more accurate.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "42 Do you have kids.png"
+  }
+ ],
+ "transforce": [
+  {
+   "src": "001.webp",
+   "title": "The driver's front door",
+   "caption": "Mobile homepage: search by ZIP with Class A/B, home-daily and OTR chips, trending searches, city hubs, top-paying states and top carriers.",
+   "notes": "Website, mobile",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "001 The driver's front door.png",
+   "alpha": true
+  },
+  {
+   "src": "002.webp",
+   "title": "The driver's front door",
+   "caption": "Homepage variant with the full benefits package and pay highlights.",
+   "notes": "Website, mobile [confirm which version shipped]",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "002 The driver's front door.png",
+   "alpha": true
+  },
+  {
+   "src": "003.webp",
+   "title": "Results near you",
+   "caption": "'CDL A jobs near 37027' with active filters shown as one removable chip.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "003 Results near you.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "Every listing, the same shape",
+   "caption": "Results mixing TransForce, partner and carrier jobs. Each card shows pay, distance, experience and how you'll apply.",
+   "notes": "Website, mobile",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "004 Every listing, the same shape.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "Location search",
+   "caption": "Autocomplete for cities, states and regions.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "005 Location search.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "Use my location",
+   "caption": "One tap to search near where you are.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "006 Use my location.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "Filter by experience",
+   "caption": "Experience bands written the way drivers talk about them.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "007 Filter by experience.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "Filters that speak trucker",
+   "caption": "Route type, experience, endorsements, equipment and handling, with a live result count before you commit.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "008 Filters that speak trucker.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "Filters, cleared",
+   "caption": "The filter list with nothing applied.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "009 Filters, cleared.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "A job page drivers can decide from",
+   "caption": "Pay vs market, hours, equipment, requirements, benefits and similar jobs, with Apply fixed to the bottom.",
+   "notes": "Website, mobile",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "010 A job page drivers can decide from.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "Know your worth",
+   "caption": "National CDL salary guide: compare states, CDL class, route type, pay by years of experience and endorsements.",
+   "notes": "Website, mobile; 'Class C covers all' copy error",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "011 Know your worth.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "Know your worth, locally",
+   "caption": "The salary guide for Washington, with its busiest hubs.",
+   "notes": "Website, mobile",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "012 Know your worth, locally.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "Carrier profile",
+   "caption": "Hawk Logistics: verified and veteran-ready badges, benefits, cargo types, salary range, openings by endorsement and FMCSA safety rating.",
+   "notes": "Website, mobile; 'Palo Alto, TX' to fix",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "013 Carrier profile.png",
+   "alpha": true
+  },
+  {
+   "src": "014.webp",
+   "title": "Top-paying states",
+   "caption": "Ranked states with job counts, each linking straight to search.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1389,
+   "orig": "014 Top-paying states.png",
+   "alpha": true
+  },
+  {
+   "src": "015.webp",
+   "title": "Busiest hubs",
+   "caption": "Where the jobs are, city by city.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1389,
+   "orig": "015 Busiest hubs.png",
+   "alpha": true
+  },
+  {
+   "src": "016.webp",
+   "title": "What an endorsement is worth",
+   "caption": "A Hazmat endorsement pays 21% above market \u2014 about $1,650 more \u2014 and only 25% of drivers have it.",
+   "notes": "Website, mobile",
+   "kind": "phone",
+   "w": 700,
+   "h": 1604,
+   "orig": "016 What an endorsement is worth.png",
+   "alpha": true
+  },
+  {
+   "src": "017.webp",
+   "title": "Carrier at a glance",
+   "caption": "A carrier's bio, fleet size, safety inspections and out-of-service rate in one drawer.",
+   "notes": "Website, mobile",
+   "kind": "tall",
+   "w": 700,
+   "h": 2509,
+   "orig": "017 Carrier at a glance.png",
+   "alpha": true
+  },
+  {
+   "src": "018.webp",
+   "title": "Drive with honor",
+   "caption": "Mobile landing page for veterans, defining what 'veteran-ready' means and featuring carriers that qualify.",
+   "notes": "Website, mobile; typo 'finding a the right carrier'",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "018 Drive with honor.png",
+   "alpha": true
+  },
+  {
+   "src": "019.webp",
+   "title": "Menu, logged out",
+   "caption": "Paths for drivers with a CDL, drivers who need one, and veterans, plus driver resources.",
+   "notes": "Website, mobile",
+   "kind": "tall",
+   "w": 672,
+   "h": 2878,
+   "orig": "019 Menu, logged out.png"
+  },
+  {
+   "src": "020.webp",
+   "title": "Menu, logged in",
+   "caption": "Claims, availability, preferences, benefits, applications, incidents, training and support in one place.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 672,
+   "h": 1624,
+   "orig": "021 Menu, logged in.png"
+  },
+  {
+   "src": "021.webp",
+   "title": "TransForce.com",
+   "caption": "Desktop homepage: job search front and centre for drivers, a 'Get Drivers' path for carriers.",
+   "notes": "Website, desktop",
+   "kind": "tall",
+   "w": 1600,
+   "h": 5311,
+   "orig": "022 TransForce.com.png"
+  },
+  {
+   "src": "022.webp",
+   "title": "Browse without losing your place",
+   "caption": "Results on the left, full job on the right, with Previous / Next through 3,000+ listings.",
+   "notes": "Website, desktop",
+   "kind": "tall",
+   "w": 1600,
+   "h": 6054,
+   "orig": "023 Browse without losing your place.png"
+  },
+  {
+   "src": "023.webp",
+   "title": "Browse without losing your place",
+   "caption": "The two-pane view while scrolling.",
+   "notes": "Website, desktop",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "desktop/024 Browse without losing your place.png"
+  },
+  {
+   "src": "024.webp",
+   "title": "Search by ZIP",
+   "caption": "Results for a ZIP code with the TransForce Jobs filter on.",
+   "notes": "Website, desktop; breadcrumb says Atlanta",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "desktop/025 Search by ZIP.png"
+  },
+  {
+   "src": "025.webp",
+   "title": "Filters in a side sheet",
+   "caption": "Refine without leaving the results.",
+   "notes": "Website, desktop",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "desktop/026 Filters in a side sheet.png"
+  },
+  {
+   "src": "026.webp",
+   "title": "Job detail, desktop",
+   "caption": "Pay vs market, map, tags and a recruiter contact form beside the listing.",
+   "notes": "Website, desktop",
+   "kind": "tall",
+   "w": 1600,
+   "h": 3797,
+   "orig": "desktop/027 Job detail, desktop.png"
+  },
+  {
+   "src": "027.webp",
+   "title": "Carrier page",
+   "caption": "Rating, veteran-ready badge, bio, photos and a direct path to the carrier's jobs.",
+   "notes": "Website, desktop",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1323,
+   "orig": "desktop/028 Carrier page.png",
+   "alpha": true
+  },
+  {
+   "src": "028.webp",
+   "title": "What does veteran-ready mean?",
+   "caption": "Tap the badge and a drawer explains it: training, support, recognition, flexibility, mentorship, benefits.",
+   "notes": "Website, desktop",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1323,
+   "orig": "desktop/029 What does veteran-ready mean.png",
+   "alpha": true
+  },
+  {
+   "src": "029.webp",
+   "title": "Drive with honor",
+   "caption": "Desktop landing page for veterans with featured veteran-ready carriers.",
+   "notes": "Website, desktop",
+   "kind": "tall",
+   "w": 1600,
+   "h": 4406,
+   "orig": "desktop/030 Drive with honor.png",
+   "alpha": true
+  },
+  {
+   "src": "030.webp",
+   "title": "Find great CDL jobs, easier",
+   "caption": "App splash.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "031 Find great CDL jobs, easier.png"
+  },
+  {
+   "src": "031.webp",
+   "title": "Sign up with a phone number",
+   "caption": "No password: a phone number and a code.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "032 Sign up with a phone number.png"
+  },
+  {
+   "src": "032.webp",
+   "title": "Sign up your way",
+   "caption": "Phone, Apple, Google or continue as a guest.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "033 Sign up your way.png"
+  },
+  {
+   "src": "033.webp",
+   "title": "Sign up in a sheet",
+   "caption": "Sign-up as a bottom sheet over the splash.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "034 Sign up in a sheet.png"
+  },
+  {
+   "src": "034.webp",
+   "title": "Sign up in a sheet",
+   "caption": "Empty state of the sign-up sheet.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "035 Sign up in a sheet.png"
+  },
+  {
+   "src": "035.webp",
+   "title": "Enter the code",
+   "caption": "SMS verification, with 'Not Dave?' for shared phones.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "036 Enter the code.png"
+  },
+  {
+   "src": "036.webp",
+   "title": "Enter the code",
+   "caption": "Code screen, empty.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "037 Enter the code.png"
+  },
+  {
+   "src": "037.webp",
+   "title": "Jobs near home",
+   "caption": "Set a home address and see '304 jobs in your area' straight away.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "038 Jobs near home.png"
+  },
+  {
+   "src": "038.webp",
+   "title": "A quiz instead of a r\u00e9sum\u00e9",
+   "caption": "Four questions \u2014 home time, CDL class, touching freight, experience \u2014 to start matching.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 2921,
+   "orig": "039 A quiz instead of a r\u00e9sum\u00e9.png"
+  },
+  {
+   "src": "039.webp",
+   "title": "Welcome to the network",
+   "caption": "Your driver card appears, in processing, with a prompt to add a photo.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "040 Welcome to the network.png"
+  },
+  {
+   "src": "040.webp",
+   "title": "Let's make this shine",
+   "caption": "Adding a profile photo to your driver card.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "041 Let's make this shine.png"
+  },
+  {
+   "src": "041.webp",
+   "title": "Welcome, active driver",
+   "caption": "The driver card once placed with a carrier.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "042 Welcome, active driver.png"
+  },
+  {
+   "src": "042.webp",
+   "title": "Your to-do list",
+   "caption": "The driver card shows your status; tasks like the I-9 and safety training show days left.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 1872,
+   "orig": "043 Your to-do list.png"
+  },
+  {
+   "src": "043.webp",
+   "title": "Your to-do list, while active",
+   "caption": "Includes 'Find next assignment' before the current one ends.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 1953,
+   "orig": "044 Your to-do list, while active.png"
+  },
+  {
+   "src": "044.webp",
+   "title": "Your to-do list",
+   "caption": "Two tasks due.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 2208,
+   "orig": "045 Your to-do list.png"
+  },
+  {
+   "src": "045.webp",
+   "title": "Not currently assigned",
+   "caption": "New matches appear right away, and past carriers can be rated.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 2257,
+   "orig": "046 Not currently assigned.png"
+  },
+  {
+   "src": "046.webp",
+   "title": "Application processing",
+   "caption": "Step 2 of 5, 'Checking references', with I'm interested / no longer available / not interested.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 1857,
+   "orig": "047 Application processing.png"
+  },
+  {
+   "src": "047.webp",
+   "title": "Rescind an application",
+   "caption": "A confirmation before withdrawing, since it cannot be undone.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "048 Rescind an application.png"
+  },
+  {
+   "src": "048.webp",
+   "title": "Open to work",
+   "caption": "A status drivers set themselves, with matches below.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 2296,
+   "orig": "049 Open to work.png"
+  },
+  {
+   "src": "049.webp",
+   "title": "Rate this carrier",
+   "caption": "A private thumbs up or down that helps other drivers and is never sent to the carrier.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "050 Rate this carrier.png"
+  },
+  {
+   "src": "050.webp",
+   "title": "Still working here?",
+   "caption": "A one-tap check-in that keeps the platform current.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 2087,
+   "orig": "051 Still working here.png"
+  },
+  {
+   "src": "051.webp",
+   "title": "Tell us more",
+   "caption": "Anonymous ratings for safety, training, culture, management and transparency.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 1710,
+   "orig": "052 Tell us more.png",
+   "alpha": true
+  },
+  {
+   "src": "052.webp",
+   "title": "You've been offered a job",
+   "caption": "'Congratulations, Dave!' \u2014 and about five minutes to get set up.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "053 You've been offered a job.png"
+  },
+  {
+   "src": "053.webp",
+   "title": "Accept your assignment",
+   "caption": "Verify your identity to accept, with plain-language reassurance about how your SSN is stored.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "054 Accept your assignment.png"
+  },
+  {
+   "src": "054.webp",
+   "title": "Accept your assignment",
+   "caption": "Identity step, empty.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "055 Accept your assignment.png"
+  },
+  {
+   "src": "055.webp",
+   "title": "Accept your assignment",
+   "caption": "Identity step, entering SSN.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "056 Accept your assignment.png"
+  },
+  {
+   "src": "056.webp",
+   "title": "Verify to continue",
+   "caption": "Identity step during processing.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "058 Verify to continue.png"
+  },
+  {
+   "src": "057.webp",
+   "title": "Application processing",
+   "caption": "Progress and 'expect to hear back in 3\u20135 business days'.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "059 Application processing.png"
+  },
+  {
+   "src": "058.webp",
+   "title": "Profile and safety bonus",
+   "caption": "Safety streaks and bonuses earned sit at the top of the driver's profile.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 1842,
+   "orig": "060 Profile and safety bonus.png"
+  },
+  {
+   "src": "059.webp",
+   "title": "Copilot, in the job list",
+   "caption": "The AI assistant offers to match you, right inside search results.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "061 Copilot, in the job list.png"
+  },
+  {
+   "src": "060.webp",
+   "title": "CDL A jobs",
+   "caption": "In-app job list with filters as chips.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "062 CDL A jobs.png"
+  },
+  {
+   "src": "061.webp",
+   "title": "CDL A jobs",
+   "caption": "Job list with the Copilot button.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "063 CDL A jobs.png"
+  },
+  {
+   "src": "062.webp",
+   "title": "Jobs near Vancouver",
+   "caption": "Job list for a city.",
+   "notes": "App",
+   "kind": "tall",
+   "w": 700,
+   "h": 2486,
+   "orig": "064 Jobs near Vancouver.png"
+  },
+  {
+   "src": "063.webp",
+   "title": "Timesheets",
+   "caption": "Active and approved timesheets by week.",
+   "notes": "App",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "065 Timesheets.png"
+  },
+  {
+   "src": "064.webp",
+   "title": "Notifications",
+   "caption": "Messages, resolved requests and badges.",
+   "notes": "App; placeholder text",
+   "kind": "tall",
+   "w": 700,
+   "h": 1729,
+   "orig": "066 Notifications.png"
+  },
+  {
+   "src": "065.webp",
+   "title": "Your driving record",
+   "caption": "Dark direction: a driver card styled like a payment card, with miles driven and days employed as percentiles.",
+   "notes": "App, dark direction",
+   "kind": "tall",
+   "w": 700,
+   "h": 3035,
+   "orig": "067 Your driving record.png"
+  },
+  {
+   "src": "066.webp",
+   "title": "Line up your next gig",
+   "caption": "'Your assignment ends in 12 days.' A nudge before drivers fall out of work.",
+   "notes": "App, dark direction",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "068 Line up your next gig.png"
+  },
+  {
+   "src": "067.webp",
+   "title": "Pre-drive checklist",
+   "caption": "'Ready to drive' unlocks once the checks are done.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "069 Pre-drive checklist.png"
+  },
+  {
+   "src": "068.webp",
+   "title": "Pre-drive checklist",
+   "caption": "Checklist incomplete; start is disabled.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "070 Pre-drive checklist.png"
+  },
+  {
+   "src": "069.webp",
+   "title": "On the road",
+   "caption": "Timer, distance, pause and end over a live map.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "071 On the road.png"
+  },
+  {
+   "src": "070.webp",
+   "title": "Help without stopping",
+   "caption": "Search along the route, submit a claim or report a mechanical problem from the drive screen.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "072 Help without stopping.png"
+  },
+  {
+   "src": "071.webp",
+   "title": "My drives",
+   "caption": "Past drives as a list with route maps.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "073 My drives.png"
+  },
+  {
+   "src": "072.webp",
+   "title": "My drives",
+   "caption": "Upcoming drives to confirm.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "074 My drives.png"
+  },
+  {
+   "src": "073.webp",
+   "title": "My drives, on the map",
+   "caption": "The map takes more of the screen.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "075 My drives, on the map.png"
+  },
+  {
+   "src": "074.webp",
+   "title": "My drives, on the map",
+   "caption": "Upcoming drives over the map.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "076 My drives, on the map.png"
+  },
+  {
+   "src": "075.webp",
+   "title": "My drives, on the map",
+   "caption": "Past drives over the map.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "077 My drives, on the map.png"
+  },
+  {
+   "src": "076.webp",
+   "title": "Good morning, Dave",
+   "caption": "A processing driver's home: the job, what's next, and actions.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "078 Good morning, Dave.png"
+  },
+  {
+   "src": "077.webp",
+   "title": "Trip summary",
+   "caption": "Billable time, miles, stops and incidents as a timeline, submitted as a timesheet in one tap.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "079 Trip summary.png"
+  },
+  {
+   "src": "078.webp",
+   "title": "Trip summary, with map",
+   "caption": "The same summary with the route.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "080 Trip summary, with map.png"
+  },
+  {
+   "src": "079.webp",
+   "title": "Trip summary, full map",
+   "caption": "The route with stops and incidents marked.",
+   "notes": "App, telematics",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "081 Trip summary, full map.png"
+  },
+  {
+   "src": "080.webp",
+   "title": "Your profile is elite",
+   "caption": "A collectible driver card and a nudge to finish the application.",
+   "notes": "TF1 app",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "082 Your profile is elite.png"
+  },
+  {
+   "src": "081.webp",
+   "title": "Get a verified profile",
+   "caption": "Scan your CDL to verify and unlock one-tap apply.",
+   "notes": "TF1 app",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "083 Get a verified profile.png"
+  },
+  {
+   "src": "082.webp",
+   "title": "Confirm your information",
+   "caption": "Pre-filled from your CDL. The bar shows your salary estimate, not a percentage.",
+   "notes": "TF1 app",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "084 Confirm your information.png"
+  },
+  {
+   "src": "083.webp",
+   "title": "Your experience, in toggles",
+   "caption": "Handling types with years of experience for each; the salary estimate rises as you answer.",
+   "notes": "TF1 app",
+   "kind": "tall",
+   "w": 700,
+   "h": 2083,
+   "orig": "085 Your experience, in toggles.png"
+  },
+  {
+   "src": "084.webp",
+   "title": "Years of experience",
+   "caption": "One question, one slider.",
+   "notes": "TF1 app",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "086 Years of experience.png"
+  },
+  {
+   "src": "085.webp",
+   "title": "Verifying your profile",
+   "caption": "Scanning the CDL.",
+   "notes": "TF1 app",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "087 Verifying your profile.png"
+  },
+  {
+   "src": "086.webp",
+   "title": "Get noticed with an elite profile",
+   "caption": "Verified, with a path to elite status and priority access.",
+   "notes": "TF1 app",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "088 Get noticed with an elite profile.png"
+  },
+  {
+   "src": "087.webp",
+   "title": "Elite profile",
+   "caption": "A gold card and a $115,000+ salary estimate.",
+   "notes": "TF1 app",
+   "kind": "tall",
+   "w": 700,
+   "h": 1764,
+   "orig": "089 Elite profile.png"
+  },
+  {
+   "src": "088.webp",
+   "title": "Verified profile",
+   "caption": "A salary range and a prompt to go elite, with questions left.",
+   "notes": "TF1 app",
+   "kind": "tall",
+   "w": 700,
+   "h": 2227,
+   "orig": "090 Verified profile.png"
+  },
+  {
+   "src": "089.webp",
+   "title": "Get verified",
+   "caption": "For drivers without a CDL yet, a separate path.",
+   "notes": "TF1 app",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "091 Get verified.png"
+  },
+  {
+   "src": "090.webp",
+   "title": "For CDL students",
+   "caption": "Classroom and behind-the-wheel hours left before qualifying, with a graduation date and entry-level jobs.",
+   "notes": "TF1 app",
+   "kind": "phone",
+   "w": 700,
+   "h": 1583,
+   "orig": "092 For CDL students.png"
+  },
+  {
+   "src": "091.webp",
+   "title": "Verify your experience",
+   "caption": "A scanned CDL pre-fills endorsements; drivers confirm years for each.",
+   "notes": "TF1 app",
+   "kind": "tall",
+   "w": 700,
+   "h": 2399,
+   "orig": "093 Verify your experience.png"
+  },
+  {
+   "src": "092.webp",
+   "title": "Meet Copilot",
+   "caption": "An AI assistant that matches drivers with jobs or helps start a trucking career.",
+   "notes": "Copilot; typo 'Tranforce'",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "094 Meet Copilot.png"
+  },
+  {
+   "src": "093.webp",
+   "title": "Meet Copilot",
+   "caption": "The greeting before suggestions load.",
+   "notes": "Copilot",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "095 Meet Copilot.png"
+  },
+  {
+   "src": "094.webp",
+   "title": "Four questions to a match",
+   "caption": "Copilot asks about experience and home time with tap-to-answer chips.",
+   "notes": "Copilot",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "096 Four questions to a match.png"
+  },
+  {
+   "src": "095.webp",
+   "title": "Four questions to a match",
+   "caption": "Then CDL class.",
+   "notes": "Copilot",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "097 Four questions to a match.png"
+  },
+  {
+   "src": "096.webp",
+   "title": "A match, then feedback",
+   "caption": "After a ZIP code, a real job, with 'Show more like this' and 'Show less like this' to refine.",
+   "notes": "Copilot",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "098 A match, then feedback.png"
+  },
+  {
+   "src": "097.webp",
+   "title": "Walmart, for veterans",
+   "caption": "A veteran-first Walmart page: their record of hiring veterans, pay, benefits and 'See if you qualify'.",
+   "notes": "Walmart pitch",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "099 Walmart, for veterans.png"
+  },
+  {
+   "src": "098.webp",
+   "title": "Walmart carrier page",
+   "caption": "Benefits, cargo, salary range, openings by type, safety rating and available jobs.",
+   "notes": "Walmart pitch",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "100 Walmart carrier page.png"
+  },
+  {
+   "src": "099.webp",
+   "title": "Why be a Walmart driver?",
+   "caption": "Up to $100,000 in the first year, benefits from day one, and a one-tap profile check.",
+   "notes": "Walmart pitch",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "101 Why be a Walmart driver.png"
+  },
+  {
+   "src": "100.webp",
+   "title": "Let's see if you're the right fit",
+   "caption": "Checking your profile against Walmart's requirements.",
+   "notes": "Walmart pitch",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "102 Let's see if you're the right fit.png"
+  },
+  {
+   "src": "101.webp",
+   "title": "You qualify",
+   "caption": "Top 10% of applicants, with priority placement.",
+   "notes": "Walmart pitch",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "103 You qualify.png"
+  },
+  {
+   "src": "102.webp",
+   "title": "Not quite ready",
+   "caption": "Shows the requirement (30 months' experience) and lets drivers follow Walmart until they qualify.",
+   "notes": "Walmart pitch",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "104 Not quite ready.png"
+  },
+  {
+   "src": "103.webp",
+   "title": "Not a fit, but not a dead end",
+   "caption": "Alternatives chosen for the driver.",
+   "notes": "Walmart pitch",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "105 Not a fit, but not a dead end.png"
+  },
+  {
+   "src": "104.webp",
+   "title": "Walmart in Explore",
+   "caption": "The partnership featured at the top of the TF1 job feed.",
+   "notes": "Walmart pitch; mobile screen in desktop folder",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "desktop/106 Walmart in Explore.png"
+  }
+ ],
+ "upclose": [
+  {
+   "src": "001.webp",
+   "title": "Soft-Cancel",
+   "caption": "Cancel without being the bad guy: the plan only ends if both people secretly tap Soft-Cancel. Users' favourite feature.",
+   "notes": "Animated; lead with this",
+   "kind": "wide",
+   "w": 750,
+   "h": 750,
+   "orig": "04 Soft-Cancel.gif"
+  },
+  {
+   "src": "002.webp",
+   "title": "The friendly way to plan",
+   "caption": "UpClose's marketing site.",
+   "notes": "Hero candidate",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1090,
+   "orig": "06 The friendly way to plan.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "Who do you want to make plans with?",
+   "caption": "Welcome screen and the first step of making a plan.",
+   "notes": "Presentation board",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "07 Who do you want to make plans with.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "Your calendar, and a bot that books it",
+   "caption": "The calendar with 'Did you meet up?' beside the chatbot offering times.",
+   "notes": "Presentation board",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "08 Your calendar, and a bot that books it.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "Trophies, interests and personality",
+   "caption": "Achievements that reward completing your profile and inviting friends; interests and personality as emoji grids.",
+   "notes": "Presentation board",
+   "kind": "wide",
+   "w": 1800,
+   "h": 2323,
+   "orig": "09 Trophies, interests and personality.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "Meeting someone new",
+   "caption": "Another user's profile with an icebreaker you have in common, private categories, and block or mute controls.",
+   "notes": "Presentation board",
+   "kind": "wide",
+   "w": 1800,
+   "h": 2323,
+   "orig": "10 Meeting someone new.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "Your connections",
+   "caption": "An inviting empty state, then friends sorted into private categories.",
+   "notes": "Presentation board",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "11 Your connections.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "What and where",
+   "caption": "Pick an activity, then an area on the map to get venue suggestions.",
+   "notes": "Presentation board",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "12 What and where.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "Pick a place",
+   "caption": "Search venues, save favourites, and name the plan.",
+   "notes": "Presentation board",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "13 Pick a place.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "Live on the App Store",
+   "caption": "UpClose \u2013 Make Plans, rated 5.0.",
+   "notes": "Proof of launch",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1511,
+   "orig": "14 Live on the App Store.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "UpClose",
+   "caption": "Splash screen.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "15 UpClose.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "The friendly way to plan",
+   "caption": "Welcome screen.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "16 The friendly way to plan.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "Find people you know",
+   "caption": "Connect contacts or Facebook to find friends already on UpClose.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "17 Find people you know.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "Make plans, without the planning",
+   "caption": "Onboarding: pick a friend, choose an activity, say when you're free.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "18 Make plans, without the planning.png"
+  },
+  {
+   "src": "015.webp",
+   "title": "Show up and log off",
+   "caption": "Onboarding: less time planning, more time together.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "19 Show up and log off.png"
+  },
+  {
+   "src": "016.webp",
+   "title": "Did you meet up?",
+   "caption": "Past plans ask whether they happened, closing the loop.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "20 Did you meet up.png"
+  },
+  {
+   "src": "017.webp",
+   "title": "It's a plan",
+   "caption": "The chatbot confirms the details and offers to add them to your calendar.",
+   "notes": "42 is an identical copy",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "21 It's a plan.png"
+  },
+  {
+   "src": "018.webp",
+   "title": "Choose an area, get suggestions",
+   "caption": "Draw a radius on the map and UpClose suggests venues inside it.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "22 Choose an area, get suggestions.png"
+  },
+  {
+   "src": "019.webp",
+   "title": "We do chat a little differently",
+   "caption": "The bot explains itself, then asks 'Are you free Friday night?' with one-tap answers.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "23 We do chat a little differently.png"
+  },
+  {
+   "src": "020.webp",
+   "title": "Who's invited?",
+   "caption": "Add people or groups, choose a VIP guest, and send by Messages, WhatsApp, Messenger, link or email.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 1927,
+   "orig": "24 Who's invited.png",
+   "alpha": true
+  },
+  {
+   "src": "021.webp",
+   "title": "Flexible by design",
+   "caption": "A first and second choice of day, an ideal start time and how flexible you are, so the app can find a match.",
+   "notes": "'1ST CHOICE' label clipped",
+   "kind": "tall",
+   "w": 700,
+   "h": 2275,
+   "orig": "25 Flexible by design.png"
+  },
+  {
+   "src": "022.webp",
+   "title": "Settings",
+   "caption": "Account, categories, favourites, notifications and support.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "26 Settings.png"
+  },
+  {
+   "src": "023.webp",
+   "title": "You're free!",
+   "caption": "Empty days invite you to make a plan instead of looking blank.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2401,
+   "orig": "27 You're free!.png"
+  },
+  {
+   "src": "024.webp",
+   "title": "Something in common",
+   "caption": "A friend's profile with an icebreaker, interests and personality.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 3003,
+   "orig": "28 Something in common.png"
+  },
+  {
+   "src": "025.webp",
+   "title": "Notifications you want",
+   "caption": "Choose which invitations, cancellations and reminders reach you.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1512,
+   "orig": "29 Notifications you want.png"
+  },
+  {
+   "src": "026.webp",
+   "title": "Month view",
+   "caption": "Pull down for the whole month.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "30 Month view.png"
+  },
+  {
+   "src": "027.webp",
+   "title": "Find people you know",
+   "caption": "Empty state for connections.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "31 Find people you know.png"
+  },
+  {
+   "src": "028.webp",
+   "title": "Your history goes here",
+   "caption": "Empty state for plan history, shareable privately or publicly.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "32 Your history goes here.png"
+  },
+  {
+   "src": "029.webp",
+   "title": "Sign up",
+   "caption": "A short sign-up form.",
+   "notes": "Shows your real name, email and phone \u2014 replace or blur",
+   "kind": "tall",
+   "w": 700,
+   "h": 2044,
+   "orig": "33 Sign up.png",
+   "alpha": true
+  },
+  {
+   "src": "030.webp",
+   "title": "Edit details",
+   "caption": "Update your profile; birthdate is locked.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 1919,
+   "orig": "34 Edit details.png"
+  },
+  {
+   "src": "031.webp",
+   "title": "I am...",
+   "caption": "Pick personality traits with emoji.",
+   "notes": "Includes DGAF, Dope, Creepy \u2014 decide if you want these shown",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "35 I am.png"
+  },
+  {
+   "src": "032.webp",
+   "title": "Trophies and Pro",
+   "caption": "Progress toward each trophy, with an UpClose Pro upsell.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2199,
+   "orig": "36 Trophies and Pro.png"
+  },
+  {
+   "src": "033.webp",
+   "title": "Recurring plans",
+   "caption": "UpClose Pro: see a favourite person twice a month, alternating between your favourite places.",
+   "notes": "Pro tier",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "37 Recurring plans.png"
+  },
+  {
+   "src": "034.webp",
+   "title": "Invitations",
+   "caption": "Confirmations, cancellations, responses and a prompt to share the plan afterwards.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "38 Invitations.png"
+  },
+  {
+   "src": "035.webp",
+   "title": "Set location",
+   "caption": "Search for a specific place, with sponsored results and saved favourites.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "39 Set location.png"
+  },
+  {
+   "src": "036.webp",
+   "title": "What do you want to do?",
+   "caption": "Coffee, drinks, a meal, a call, a walk, a workout or something else.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 2886,
+   "orig": "40 What do you want to do.png"
+  },
+  {
+   "src": "037.webp",
+   "title": "Pick a time",
+   "caption": "The bot offers times; one tap to answer.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1516,
+   "orig": "41 Pick a time.png"
+  }
+ ],
+ "wherei": [
+  {
+   "src": "001.webp",
+   "title": "Meet Remi, your AI biographer",
+   "caption": "Remi greets you by name and asks where to begin. Surprise Me and Select a Prompt remove the blank-page problem that stops most people recording their lives.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "01 Meet Remi, your AI biographer.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "Ready to listen",
+   "caption": "An open composer with voice and text. Remi speaks in a large serif, so the biographer reads as a narrator rather than another chat bubble.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "02 Ready to listen.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "Room for a real story",
+   "caption": "The composer grows to fit a long answer. Built for storytelling, not one-line replies.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "03 Room for a real story.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "Long answers fold away",
+   "caption": "Sent messages collapse to four lines so the conversation stays scannable and the next question is always the biggest thing on screen.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "04 Long answers fold away.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "Talking builds the map",
+   "caption": "When Remi recognises a place in your answer, a 'New place logged' marker appears, showing that the conversation is quietly building your map.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "05 Talking builds the map.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "Answering the follow-up",
+   "caption": "Mid-reply to Remi's next question. The thread reads like an interview, not a form.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "06 Answering the follow-up.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "The interview continues",
+   "caption": "Earlier exchanges blur behind the header as the conversation moves forward.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "07 The interview continues.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "Voice mode with real follow-ups",
+   "caption": "Remi asks contextual questions ('Is that when you moved to Bed-Stuy?'), drawing out detail the way a good journalist would.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "08 Voice mode with real follow-ups.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "A map of the people you love",
+   "caption": "Home is a shared map of your circle's memories. Tap a pin to see where Sam had his first job; new memories show as a ring on each person.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "10 A map of the people you love.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "Memories pinned in place",
+   "caption": "A pin with a photo thumbnail: 'where Sam met his wife'. Every memory title completes the product name.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "11 Memories pinned in place.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "Ask everyone's lives a question",
+   "caption": "Search reads 'remember'. A query like 'went to college' returns pins from several people at once, with Remi one tap away.",
+   "notes": "Alternative tab bar with oversized Remi orb [confirm whether exploration or state]",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "12 Ask everyone's lives a question.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "One person's life, on a map",
+   "caption": "Filtered to Sam: his pins plus a carousel of memory cards with 3D map thumbnails and a Map / Timeline toggle.",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1522,
+   "orig": "13 One person's life, on a map.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "From conversation to keepsake",
+   "caption": "Remi turns raw answers into a finished, illustrated story. By Remi / By Sam tabs, 'See original input' and image sources show exactly who wrote what.",
+   "notes": "Best screen for the AI-trust story",
+   "kind": "tall",
+   "w": 700,
+   "h": 5000,
+   "orig": "15 From conversation to keepsake.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "Your life at a glance",
+   "caption": "A globe of every place you've logged and an age dial around your photo. The timeline groups years by age, with Remi's summary of each year.",
+   "notes": "",
+   "kind": "tall",
+   "w": 700,
+   "h": 3552,
+   "orig": "17 Your life at a glance.png"
+  }
+ ],
+ "adecco": [
+  {
+   "src": "001.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web1",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "01-natalie rose taylor ux designer product design portfolio ad direct web1@2x.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web10",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "02-natalie rose taylor ux designer product design portfolio ad direct web10@2x.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web8",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "03-natalie rose taylor ux designer product design portfolio ad direct web8@2x.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web7",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "04-natalie rose taylor ux designer product design portfolio ad direct web7@2x.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web13",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 2010,
+   "orig": "05-natalie rose taylor ux designer product design portfolio ad direct web13@2x.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web11",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "06-natalie rose taylor ux designer product design portfolio ad direct web11@2x.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web12",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "07-natalie rose taylor ux designer product design portfolio ad direct web12@2x.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web6",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "08-natalie rose taylor ux designer product design portfolio ad direct web6@2x.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web9",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "09-natalie rose taylor ux designer product design portfolio ad direct web9@2x.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web5",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "10-natalie rose taylor ux designer product design portfolio ad direct web5@2x.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "natalie rose taylor ux designer product design portfolio ad direct web4",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "11-natalie rose taylor ux designer product design portfolio ad direct web4@2x.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "mobile-designer-portfolio-adeccoApp",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1282,
+   "orig": "12-mobile-designer-portfolio-adeccoApp@2x.png",
+   "alpha": true
+  }
+ ],
+ "monster": [
+  {
+   "src": "001.webp",
+   "title": "monsterPortfolioScene",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1333,
+   "orig": "01-monsterPortfolioScene.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "monster-referrals-ux-designer-Portfolio-Scene",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1333,
+   "orig": "02-monster-referrals-ux-designer-Portfolio-Scene.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "3 Monster Vision GIF - Fit Score",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 928,
+   "h": 1080,
+   "orig": "03-3 Monster Vision GIF - Fit Score.gif"
+  },
+  {
+   "src": "004.webp",
+   "title": "monster native app vignette",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "04-monster native app vignette@2x.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "natalie rose taylor monster ux designer portfolio vignette 4",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "05-natalie rose taylor monster ux designer portfolio vignette 4@2x.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "natalie rose taylor monster ux designer portfolio vignette 3",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "06-natalie rose taylor monster ux designer portfolio vignette 3@2x.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "natalie rose taylor monster ux designer portfolio vignette 2",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "07-natalie rose taylor monster ux designer portfolio vignette 2@2x.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-web-monster-portfolio-5",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "08-natalie-rose-taylor-ux-designer-product-web-monster-portfolio-5@2x.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-web-monster-portfolio-6",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "09-natalie-rose-taylor-ux-designer-product-web-monster-portfolio-6@2x.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-web-monster-portfolio-1",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "10-natalie-rose-taylor-ux-designer-product-web-monster-portfolio-1@2x.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-web-monster-portfolio-2",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "11-natalie-rose-taylor-ux-designer-product-web-monster-portfolio-2@2x.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-web-monster-portfolio-3",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "12-natalie-rose-taylor-ux-designer-product-web-monster-portfolio-3@2x.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-web-monster-portfolio-4",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1280,
+   "orig": "13-natalie-rose-taylor-ux-designer-product-web-monster-portfolio-4@2x.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-1",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1440,
+   "h": 1024,
+   "orig": "14-natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-1.png"
+  },
+  {
+   "src": "015.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-4",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1440,
+   "h": 1024,
+   "orig": "15-natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-4.png"
+  },
+  {
+   "src": "016.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-2",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1440,
+   "h": 1024,
+   "orig": "16-natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-2.png"
+  },
+  {
+   "src": "017.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-5",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1440,
+   "h": 1024,
+   "orig": "17-natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-5.png"
+  },
+  {
+   "src": "018.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-3",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1440,
+   "h": 1024,
+   "orig": "18-natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-3.png"
+  },
+  {
+   "src": "019.webp",
+   "title": "natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-6",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1440,
+   "h": 1024,
+   "orig": "19-natalie-rose-taylor-ux-designer-product-designer-monster-onboarding-web-purple-ui-6.png"
+  }
+ ],
+ "candle": [
+  {
+   "src": "001.webp",
+   "title": "Notifications modal03",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1331,
+   "orig": "Notifications modal03@2x.png",
+   "alpha": true
+  },
+  {
+   "src": "002.webp",
+   "title": "hamburger menu open, in situ (for reference)04",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "hamburger menu open, in situ (for reference)04@2x.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "home - candle active more than 1 hour less than 2 hours07",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - candle active more than 1 hour less than 2 hours07@2x.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "home - candle active more than three hours05",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - candle active more than three hours05@2x.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "home - candle active more than three hours",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - candle active more than three hours@2x.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "home - candle active more than two hours, less than three hours06",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - candle active more than two hours, less than three hours06@2x.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "home - candle active under one hour-notifications not allowed02",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - candle active under one hour-notifications not allowed02@2x.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "home - candle active under one hour10",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - candle active under one hour10@2x.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "home - inactive candle-notifications not allowed01",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - inactive candle-notifications not allowed01@2x.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "home - inactive candle09",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - inactive candle09@2x.png"
+  },
+  {
+   "src": "011.webp",
+   "title": "home - user taps _i blew it out_08",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "home - user taps _i blew it out_08@2x.png"
+  },
+  {
+   "src": "012.webp",
+   "title": "onboarding - notifications are on confirmation. Load homepage in 3 seconds11",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "onboarding - notifications are on confirmation. Load homepage in 3 seconds11@2x.png"
+  },
+  {
+   "src": "013.webp",
+   "title": "onboarding - turn on notifications12",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "onboarding - turn on notifications12@2x.png"
+  },
+  {
+   "src": "014.webp",
+   "title": "splash13",
+   "caption": "",
+   "notes": "",
+   "kind": "phone",
+   "w": 700,
+   "h": 1518,
+   "orig": "splash13@2x.png"
+  }
+ ],
+ "gigmo": [
+  {
+   "src": "001.webp",
+   "title": "Employer-Home",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "01-Employer-Home@2x.png"
+  },
+  {
+   "src": "002.webp",
+   "title": "calendar",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "02-calendar@2x.png"
+  },
+  {
+   "src": "003.webp",
+   "title": "discovery",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "03-discovery@2x.png"
+  },
+  {
+   "src": "004.webp",
+   "title": "Employer-ManageEmployees",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "04-Employer-ManageEmployees@2x.png"
+  },
+  {
+   "src": "005.webp",
+   "title": "timecards-chain",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "05-timecards-chain@2x.png"
+  },
+  {
+   "src": "006.webp",
+   "title": "chain",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "06-chain@2x.png"
+  },
+  {
+   "src": "007.webp",
+   "title": "savings",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "07-savings@2x.png"
+  },
+  {
+   "src": "008.webp",
+   "title": "balance",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "08-balance@2x.png"
+  },
+  {
+   "src": "009.webp",
+   "title": "loans",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "09-loans@2x.png"
+  },
+  {
+   "src": "010.webp",
+   "title": "getPaid",
+   "caption": "",
+   "notes": "",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1020,
+   "orig": "10-getPaid@2x.png"
+  }
+ ]
+}
