@@ -66,7 +66,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .loader.done{opacity:0;visibility:hidden;transition:opacity .6s ease .1s,visibility 0s .7s}
 
 /* ---------- stage (hero + phones + case study teasers) ---------- */
-.stage{position:relative;height:100vh;height:100svh;overflow:hidden;overflow:clip}
+.stage{position:relative;height:100vh;height:100lvh;overflow:hidden;overflow:clip}
 .stage .bg{position:absolute;inset:0}
 .bg--hero{background:var(--hero-bg)}
 .bg--saturn{background:radial-gradient(120% 120% at 73% 54%,#4525c3 0%,#2e1c86 38%,#221868 66%,#16134a 100%);opacity:0}
@@ -100,7 +100,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 
 /* ---------- about me ---------- */
-.about{position:relative;height:100vh;height:100svh;overflow:hidden;overflow:clip;color:var(--off);background:linear-gradient(0deg,#230016 5.4%,#4f000c 100%)}
+.about{position:relative;height:100vh;height:100lvh;overflow:hidden;overflow:clip;color:var(--off);background:linear-gradient(0deg,#230016 5.4%,#4f000c 100%)}
 .ab-pink{position:absolute;inset:0;background:linear-gradient(246deg,#e32a9f 0%,#f52c5e 49%,#f32b4a 100%);opacity:0}
 .ab-board{position:absolute;left:0;top:0;transform-origin:0 0}
 .ab-board>*{position:absolute}
@@ -129,9 +129,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .about[data-mode="mob"] .ab-t1{left:20px;top:120px;width:390px;font-size:31px}
 .about[data-mode="mob"] .ab-t2{left:30px;top:220px;width:370px;font-size:17px}
 .about[data-mode="mob"] .ab-lab{font-size:20px}
-.about[data-mode="mob"] .ab-slash{left:28px;top:120px;width:380px}
-.about[data-mode="mob"] .ab-slash span{font-size:18px}
-.about[data-mode="mob"] .ab-slash strong{font-size:52px}
+.about[data-mode="mob"] .ab-slash{left:0;top:170px;width:430px;text-align:center;color:var(--off)}
+.about[data-mode="mob"] .ab-slash span{font-size:21px}
+.about[data-mode="mob"] .ab-slash strong{font-size:56px}
 
 
 /* placeholder for sections still to build */
