@@ -291,6 +291,25 @@ function setupScroll() {
   }));
 }
 
+/* ---------------- browser chrome colour ----------------
+   iOS Safari leaves the strip behind its bottom toolbar uncovered by pinned (fixed) sections and
+   fills it with the page background, so keep that background matched to the scene on screen. */
+const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
+const C = { hero: hex('#ffd4ee'), saturn: hex('#16134a'), trovy: hex('#fb8438'), upclose: hex('#c3a6ff'), about: hex('#230016'), pink: hex('#f32b4a'), page: hex('#f9f5f7') };
+let lastChrome = '';
+function paintChrome(ap) {
+  let c;
+  if (ap >= 1) c = C.page;
+  else if (ap > 0) c = mix(C.about, C.pink, +($('.ab-pink').style.opacity || 0));
+  else {
+    c = C.hero;
+    for (const k of ['saturn', 'trovy', 'upclose']) c = mix(c, C[k], +(bgs[k].style.opacity || 0));
+  }
+  const css = `rgb(${c.join(',')})`;
+  if (css !== lastChrome) { lastChrome = css; document.documentElement.style.backgroundColor = css; document.body.style.backgroundColor = css; }
+}
+
 /* ---------------- loop ---------------- */
 // only re-render when something moved (keeps laptops cool when the page is idle)
 let lastKey = '', kick = 0, lastQ = -1;
@@ -303,6 +322,7 @@ function frame() {
   const ap = aboutST ? aboutST.progress : 0;
   const light = ap >= 1 ? false : (ap > 0 ? about.light(Q) : stageLight);
   nav.classList.toggle('nav--light', light);
+  paintChrome(ap);
   requestAnimationFrame(frame);
 }
 
