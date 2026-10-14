@@ -123,9 +123,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ab-slash span{display:block;font:400 30px/1.25 var(--f-body)}
 .ab-slash strong{display:inline-block;font:600 80px/1.3 var(--f-head)}
 .ab-hint{color:var(--off)}
-.about[data-mode="mob"] .ab-hello{top:110px}
-.about[data-mode="mob"] .ab-hello h2{font-size:44px}
-.about[data-mode="mob"] .ab-btn{margin-top:18px;height:48px;padding:0 22px}
+.about[data-mode="mob"] .ab-hello{top:148px}
+.about[data-mode="mob"] .ab-hello h2{font-size:39px}
+.about[data-mode="mob"] .ab-btn{margin-top:36px;height:46px;padding:0 26px;font-size:13px}
 .about[data-mode="mob"] .ab-t1{left:20px;top:120px;width:390px;font-size:31px}
 .about[data-mode="mob"] .ab-t2{left:30px;top:220px;width:370px;font-size:17px}
 .about[data-mode="mob"] .ab-lab{font-size:20px}

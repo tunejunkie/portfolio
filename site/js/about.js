@@ -40,8 +40,8 @@ const L = {
   },
   mob: {
     W: 430, H: 932,
-    circle: [[1, [215, 610, 380]], [2, [215, 930, 560]], [5.9, [215, 930, 560]], [6.8, [215, 720, 1900]]],
-    portrait: [[1, [20, 400, 390]], [2, [-45, 660, 520]], [5.9, [-45, 660, 520]], [6.8, [-20, 491, 425]]],
+    circle: [[1, [215, 612, 563]], [2, [215, 930, 560]], [5.9, [215, 930, 560]], [6.8, [215, 720, 1900]]],
+    portrait: [[1, [-121, 307, 580]], [2, [-45, 660, 520]], [5.9, [-45, 660, 520]], [6.8, [-20, 491, 425]]],
     dots: { sea: [74, 360], ny: [356, 400], sf: [70, 560] }, outScale: 0.42,
     labels: { sea: [-56, -12], ny: [14, -12], sf: [14, -12] },
     lines: ['M74,360 C140,270 300,270 356,400', 'M356,400 C330,500 200,560 70,560', 'M70,560 C180,630 350,560 356,400'],
@@ -61,7 +61,7 @@ export function initAbout() {
   };
   let mode = null, S = 1, drop = 0;
   function fit() {
-    const vw = window.innerWidth, vh = window.innerHeight;
+    const vw = window.innerWidth, vh = sec.clientHeight || window.innerHeight;
     const m = vw <= 820 && vh > vw ? 'mob' : 'desk';
     const B = L[m];
     S = Math.min(vw / B.W, vh / B.H);
