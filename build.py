@@ -196,7 +196,11 @@ def gallery_page(slug, manifest):
         if plat == 'o':
             frame = f'<div class="l3-frame l3-frame--o{crop}"><img src="{base}assets/galleries/{slug}/{it["src"]}" alt="{esc(it["title"])}" loading="lazy" width="{it["w"]}" height="{it["h"]}"></div>'
         else:
-            frame = f'<div class="l3-frame l3-frame--{plat}{crop}"><div class="l3-view"><img src="{base}assets/galleries/{slug}/{it["src"]}" alt="{esc(it["title"])}" loading="lazy" width="{it["w"]}" height="{it["h"]}"></div></div>'
+            # a screen designed to fit one viewport gets a frame of its own proportions (no scrolling for
+            # a sliver); only genuinely long screens keep the standard device frame and scroll inside it
+            std = 812 / 375 if plat == 'm' else 812 / 1281
+            ar = f' style="--ar:{it["w"] / it["h"]:.4f}"' if it['h'] / it['w'] <= std * 1.35 else ''
+            frame = f'<div class="l3-frame l3-frame--{plat}{crop}"{ar}><div class="l3-view"><img src="{base}assets/galleries/{slug}/{it["src"]}" alt="{esc(it["title"])}" loading="lazy" width="{it["w"]}" height="{it["h"]}"></div></div>'
         cap = f'<span>{esc(it["caption"])}</span>' if it['caption'] else ''
         return f'<figure class="l3-fig">{frame}<figcaption><strong>{esc(it["title"])}</strong>{cap}</figcaption></figure>'
     secs = []
