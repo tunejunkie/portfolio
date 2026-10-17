@@ -177,3 +177,6 @@ def groups_for(slug, manifest_items):
     out = [(name, plat, [n for n in _seq(spec) if n in nums]) for name, plat, spec in GROUPS[slug]]
     ctx = [n for n in _seq(IN_CONTEXT.get(slug, '')) if n in nums]
     return out, ctx
+
+# the catch-all section's heading where 'In Context' doesn't fit (Gigmo was a seed pitch deck)
+CTX_LABEL = {'gigmo': ('Slides', 'slide')}

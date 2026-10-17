@@ -168,7 +168,7 @@ def index():
 <script type="module" src="js/home.js"></script>
 </body></html>'''
 
-from gallery_data import GAL, CAPTIONS, groups_for, BORDERED
+from gallery_data import GAL, CAPTIONS, groups_for, BORDERED, CTX_LABEL
 CHEV_L = '<svg viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 CHEV_R = '<svg viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
@@ -229,7 +229,7 @@ def gallery_page(slug, manifest):
         secs.append(f'''<section class="l3-sec"><div class="l3-label"><h2>{html.escape(name)}</h2><span>{len(nums)} screen{'s' if len(nums) > 1 else ''}</span></div>
       <div class="l3-grid l3-grid--{plat}">{''.join(fig(n, plat) for n in nums)}</div></section>''')
     if ctx:
-        secs.append(f'''<section class="l3-sec"><div class="l3-label"><h2>In Context</h2><span>{len(ctx)} image{'s' if len(ctx) > 1 else ''}</span></div>
+        secs.append(f'''<section class="l3-sec"><div class="l3-label"><h2>{CTX_LABEL.get(slug, ('In Context', 'image'))[0]}</h2><span>{len(ctx)} {CTX_LABEL.get(slug, ('In Context', 'image'))[1]}{'s' if len(ctx) > 1 else ''}</span></div>
       <div class="l3-grid l3-grid--o">{''.join(fig(n, 'o') for n in ctx)}</div></section>''')
     meta = ''.join(f'<div><dt>{a}</dt><dd>{b}</dd></div>' for a, b in g['meta'])
     return head(f"{g['name']} Screenshots — Natalie Rose Taylor", base, g['sum']) + f'''
