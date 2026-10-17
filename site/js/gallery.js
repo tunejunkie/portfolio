@@ -48,7 +48,7 @@ const nav = $('.nav'), top = $('.l3-top'), foot = $('.l3-foot');
 const tone = () => {
   if (!foot) return;
   const overTop = false; // light header now: dark nav over it
-  const overFoot = foot.getBoundingClientRect().top < 70;
+  const overFoot = false; // light footer now too
   nav.classList.toggle('nav--light', overTop || overFoot);
 };
 addEventListener('scroll', tone, { passive: true }); tone();

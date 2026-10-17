@@ -246,11 +246,10 @@ def gallery_page(slug, manifest):
   <div class="l3-body">
     {''.join(secs)}
   </div>
-  {WAVE_BOT}
   <footer class="l3-foot"><div class="l3-foot-in">
-    <a class="btn btn--stroke" href="{base}screenshots/{prev[0]}/">{CHEV_L}{prev[1]}</a>
+    <a class="btn btn--stroke-dark" href="{base}screenshots/{prev[0]}/">{CHEV_L}{prev[1]}</a>
     <p>I’m the sole designer on all screens displayed unless explicitly noted.</p>
-    <a class="btn btn--stroke" href="{base}screenshots/{nxt[0]}/">{nxt[1]}{CHEV_R}</a>
+    <a class="btn btn--stroke-dark" href="{base}screenshots/{nxt[0]}/">{nxt[1]}{CHEV_R}</a>
   </div></footer>
 </main>
 {SITE_FOOTER}
