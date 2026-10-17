@@ -163,7 +163,7 @@ GROUPS = {
 IN_CONTEXT = {'trovy': '003 014 015', 'saturn': '027 038 039', 'honored': '008', 'kyn': '001', 'upclose': '001-010',
               'monster': '001-007', 'gigmo': '001-010', 'adecco': '012', 'candle': '001'}
 # images with a baked-in white border (cropped in the frame)
-BORDERED = {'saturn': _r('052 057')}
+BORDERED = {'saturn': _r('057')}
 
 def _seq(spec):
     out = []
