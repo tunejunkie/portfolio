@@ -179,6 +179,18 @@ def lum(h):
 WAVE_TOP = '<svg class="l3-wave l3-wave--top" viewBox="0 0 1728 124" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46 C 360 -8, 760 -6, 1100 40 C 1380 78, 1600 70, 1728 52 L1728 0 L0 0 Z"/></svg>'
 WAVE_BOT = '<svg class="l3-wave l3-wave--bot" viewBox="0 0 1728 124" preserveAspectRatio="none" aria-hidden="true"><path d="M0 64 C 300 6, 760 10, 1080 48 C 1360 82, 1580 84, 1728 58 L1728 124 L0 124 Z"/></svg>'
 
+_BC = {}
+def bottom_colour(slug, src):
+    """Median colour of a screen's bottom rows, so a taller phone frame can extend it seamlessly."""
+    k = (slug, src)
+    if k not in _BC:
+        from PIL import Image
+        im = Image.open(f'site/assets/galleries/{slug}/{src}').convert('RGB')
+        w, h = im.size
+        px = sorted(list(im.crop((0, h - 3, w, h)).get_flattened_data() if hasattr(im, "get_flattened_data") else im.crop((0, h - 3, w, h)).getdata()), key=sum)
+        _BC[k] = '#%02x%02x%02x' % px[len(px) // 2]
+    return _BC[k]
+
 def gallery_page(slug, manifest):
     g = GAL[slug]; base = '../../'
     order = [x[0] for x in GALLERIES]; k = order.index(slug)
@@ -198,8 +210,13 @@ def gallery_page(slug, manifest):
         else:
             # a screen designed to fit one viewport gets a frame of its own proportions (no scrolling for
             # a sliver); only genuinely long screens keep the standard device frame and scroll inside it
-            std = 812 / 375 if plat == 'm' else 812 / 1281
-            ar = f' style="--ar:{it["w"] / it["h"]:.4f}"' if it['h'] / it['w'] <= std * 1.35 else ''
+            if plat == 'm':
+                # one frame shape for every phone, a little taller than 375x812 so screens drawn slightly
+                # long still fit; shorter screens sit at the top and the frame continues their bottom colour
+                ar = f' style="--fill:{bottom_colour(slug, it["src"])}"' if not it.get('alpha') else ''
+            else:
+                # desktop screens come in many proportions: each frame takes its screen's own shape
+                ar = f' style="--ar:{it["w"] / it["h"]:.4f}"' if it['h'] / it['w'] <= (812 / 1281) * 1.35 else ''
             frame = f'<div class="l3-frame l3-frame--{plat}{crop}"{ar}><div class="l3-view"><img src="{base}assets/galleries/{slug}/{it["src"]}" alt="{esc(it["title"])}" loading="lazy" width="{it["w"]}" height="{it["h"]}"></div></div>'
         cap = f'<span>{esc(it["caption"])}</span>' if it['caption'] else ''
         return f'<figure class="l3-fig">{frame}<figcaption><strong>{esc(it["title"])}</strong>{cap}</figcaption></figure>'
