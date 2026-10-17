@@ -181,14 +181,17 @@ WAVE_BOT = '<svg class="l3-wave l3-wave--bot" viewBox="0 0 1728 124" preserveAsp
 
 _BC = {}
 def bottom_colour(slug, src):
-    """Median colour of a screen's bottom rows, so a taller phone frame can extend it seamlessly."""
+    """The screen's bottom row, squeezed to a tiny image: the frame stretches it down below a shorter
+    screen so it continues seamlessly (including side panels or bands of different colours)."""
     k = (slug, src)
     if k not in _BC:
+        import base64, io
         from PIL import Image
         im = Image.open(f'site/assets/galleries/{slug}/{src}').convert('RGB')
         w, h = im.size
-        px = sorted(list(im.crop((0, h - 3, w, h)).get_flattened_data() if hasattr(im, "get_flattened_data") else im.crop((0, h - 3, w, h)).getdata()), key=sum)
-        _BC[k] = '#%02x%02x%02x' % px[len(px) // 2]
+        row = im.crop((0, h - 2, w, h - 1)).resize((80, 1), Image.BOX)
+        buf = io.BytesIO(); row.save(buf, 'PNG', optimize=True)
+        _BC[k] = "url(data:image/png;base64,%s)" % base64.b64encode(buf.getvalue()).decode()
     return _BC[k]
 
 def gallery_page(slug, manifest):

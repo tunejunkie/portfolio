@@ -120,7 +120,7 @@ DESKTOP = {k: _r(v) for k, v in {
     'trovy': '004-005 007-013 016-027 029-036', 'honored': '059-076', 'transforce': '021-029',
     'adecco': '001-011', 'monster': '008-019'}.items()}
 # phone-shaped images that are really mockups / bordered artwork
-NOT_MOBILE = {k: _r(v) for k, v in {'saturn': '027 038 039 052 057', 'candle': '001'}.items()}
+NOT_MOBILE = {k: _r(v) for k, v in {'saturn': '027 038 039 052 057'}.items()}
 
 def section(slug, num, kind):
     if num in DESKTOP.get(slug, ()): return 'desktop'
@@ -155,13 +155,13 @@ GROUPS = {
           ('Goals & Reminders', 'm', '051-059'), ('Profile', 'm', '060-063')],
   'trovy': [('Marketing Site', 'd', '004 005'), ('Mobile', 'm', '006 028'), ('Application', 'd', '007-013 016 017'),
             ('Onboarding', 'd', '018-020'), ('Account', 'd', '021-027 029-036')],
-  'monstro': [('Mobile', 'm', '001-030 032-034')], 'wherei': [('Mobile', 'm', '001-014')], 'candle': [('Mobile', 'm', '002-014')],
+  'monstro': [('Mobile', 'm', '001-030 032-034')], 'wherei': [('Mobile', 'm', '001-014')], 'candle': [('Mobile', 'm', '001-014')],
   'upclose': [('Mobile', 'm', '011-037')], 'adecco': [('Desktop', 'd', '001-011')], 'monster': [('Desktop', 'd', '008-019')],
   'gigmo': [],
 }
 # UI shown in context (device mockups, composites, store pages) -> the last section
 IN_CONTEXT = {'trovy': '003 014 015', 'saturn': '027 038 039', 'honored': '008', 'kyn': '001', 'upclose': '001-010',
-              'monster': '001-007', 'gigmo': '001-010', 'adecco': '012', 'candle': '001'}
+              'monster': '001-007', 'gigmo': '001-010', 'adecco': '012'}
 # images with a baked-in white border (cropped in the frame)
 BORDERED = {'saturn': _r('057')}
 

@@ -278,7 +278,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .l3-grid--o .l3-fig{break-inside:avoid;margin-bottom:calc(60px * var(--s))}
 .l3-fig{margin:0;min-width:0}
 .l3-frame{position:relative;overflow:hidden;background:#e9e9ec;box-shadow:0 1px 2px rgba(0,11,34,.06),0 18px 40px -22px rgba(0,11,34,.28)}
-.l3-frame--m{--ar:.4223;aspect-ratio:var(--ar);background:var(--fill, #e9e9ec);border-radius:clamp(18px, 9.5%, 36px) / clamp(18px, 4.4%, 36px)}
+.l3-frame--m{--ar:.4223;aspect-ratio:var(--ar);background:#e9e9ec var(--fill, none) 0 0/100% 100% no-repeat;border-radius:clamp(18px, 9.5%, 36px) / clamp(18px, 4.4%, 36px)}
 .l3-frame--d{--ar:1.5776;aspect-ratio:var(--ar);border-radius:clamp(12px, 1.6vw, 21px)}
 /* on larger screens a frame is never taller than the window: it narrows instead (phones stay centred
    in their column, desktop screens stay left-aligned with their caption) */
