@@ -2,14 +2,14 @@
 import html
 
 ANECDOTES = [
+    ('nike', 'Saturn partners with Nike; gets acquired by Snap',
+     'As lead product designer at Saturn from 2022 until the acquisition by Snap in 2025, I designed the work that awarded Saturn its first sponsored partnership, with Nike.'),
     ('upclose', 'UpClose hits the App Store',
      'I created, designed, PM’d, deployed, marketed my own app, UpClose. UpClose is the friendly way to make plans! The app was ultimately retired after this project caught the attention of Saturn, the social calendar company, where I became the design lead.'),
     ('yc', 'I interviewed for Y-Combinator',
      'In 2019, I got as far as the in-person interview stage for Y Combinator for my IRL dating app, Radar. Based on the advice from the panel, I pivoted the app into what I later renamed UpClose. Both apps shipped to the App Store and had their own organic user base.'),
     ('candle', 'Adventures in vibe-coding',
      'I Lit A Candle App is my first foray into shipping an app without an engineering partner. Like most “vibe-coded” projects, it solves a highly personal problem: forgetting about a candle you’ve lit in your home! Try it out.'),
-    ('nike', 'Saturn partners with Nike; gets acquired by Snap',
-     'As lead product designer at Saturn from 2022 until the acquisition by Snap in 2025, I designed the work that awarded Saturn its first sponsored partnership, with Nike.'),
     ('honored', 'HonorEd raises 35MM Series A',
      'As the first design hire (contract), I designed the MVP for Honor Education’s pilot program and their initial product concepts – making remote education just as engaging and equitable as in-person learning. Congrats to the team!'),
     ('transforce', 'TransForce lands partnership with Walmart',
