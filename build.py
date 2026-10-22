@@ -144,6 +144,7 @@ def index():
     </div>
     <div class="scroll-hint is-light ab-hint">Scroll<i></i></div>
   </section>
+  {anecdotes_section()}
   <section class="galleries" id="galleries" aria-labelledby="galleries-title">
     <div class="gal-head">
       <h2 id="galleries-title">Screenshot Galleries</h2>
@@ -151,7 +152,6 @@ def index():
     </div>
     <ul class="gal-grid">{gallery_cards()}</ul>
   </section>
-  {anecdotes_section()}
   <section class="summary" id="summary" aria-label="Professional summary">
     <div class="summary-inner">
       <p class="summary-lede">Natalie Rose Taylor is a player-coach design leader experienced in shipping practical, delightful, and well-crafted design for startups and public companies alike. Currently transitioning to design engineering.</p>
