@@ -372,7 +372,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ---------- career anecdotes (homepage) ---------- */
 .anecdotes{background:linear-gradient(180deg,#f8f8f8 0%,#fff 100%);color:var(--dark);display:grid;grid-template-columns:minmax(220px,315px) minmax(0,1fr);column-gap:clamp(40px, 7vw, 120px);
-  padding:calc(40px * var(--s) + 20px) clamp(16px, 3.5vw, 60px) calc(120px * var(--s))}
+  padding:120px clamp(16px, 3.5vw, 60px) calc(120px * var(--s))}
 .an-head{position:sticky;top:130px;align-self:start}
 .an-head h2{font:600 clamp(40px, calc(64px * var(--s)), 64px)/1.15 var(--f-head);letter-spacing:-.01em}
 .an-head p{margin-top:12px;font:400 16px/1.4 var(--f-body);max-width:315px}
