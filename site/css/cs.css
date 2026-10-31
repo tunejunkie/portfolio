@@ -27,7 +27,6 @@
 .cs-slide{position:absolute;left:60px;width:1608px;top:var(--top);height:var(--h);visibility:hidden;opacity:0}
 .cs-slide.on{visibility:visible;opacity:1}
 .cs-fit{position:absolute;left:0;top:50%;width:100%;transform-origin:50% 50%;transform:translateY(-50%) scale(var(--k,1))}
-.cs-hero .cs-fit{top:0;transform:none;padding-top:40px}
 .cs-page h1,.cs-page h2,.cs-page h3{font-weight:inherit}
 .cs-pill{display:inline-flex;align-self:flex-start;padding:8px 10px;border-radius:40px;background:var(--ink);font:700 12px/1 var(--f-head);text-transform:uppercase;letter-spacing:.02em}
 .cs-head{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
@@ -46,7 +45,14 @@
 .cs-w570{width:570px;flex:none}
 
 /* hero */
-.cs-hero h1{font:600 80px/1.3 var(--f-head)}
+.cs-title{font:600 80px/1.3 var(--f-head)}
+/* scroll mode opens with this normal-scrolling intro (title, facts, video); slides mode uses the title slide */
+.cs-intro{position:relative;overflow:hidden}
+.cs-intro-board{position:absolute;left:0;top:0;width:1728px;padding:0 60px 140px;transform-origin:0 0}
+.cs-hud--intro{position:relative;margin-bottom:58px}
+.cs-intro .cs-video{margin-top:58px}
+.is-slides .cs-intro{display:none}
+.is-scroll .cs-hero{display:none}
 .cs-lede{margin-top:40px;font:400 24px/1.4 var(--f-body);max-width:1208px}
 .cs-meta{display:flex;justify-content:space-between;margin-top:58px}
 .cs-meta dt{font:400 16px/1.25 var(--f-body)}
@@ -80,18 +86,16 @@
 .cs-horse{position:absolute;left:11px;top:3px;width:419px;height:419px}
 .cs-horse i{position:absolute;display:block}
 .cs-horse img{position:absolute;inset:0;width:100%;height:100%;display:block}
-.cs-bubble{position:absolute;z-index:1;padding:22px 34px;border-radius:84px;background:#eb5757;font:400 22px/1.5 var(--f-body);text-align:center}
-.cs-bubble.is-dark{background:#cf3d40}
-.cs-bubble .tail{position:absolute;left:50px}
-.cs-bubble .tail--long{bottom:-50.5px;width:26px;height:52px}
-.cs-bubble .tail--short{bottom:-16.5px;width:27px;height:17.5px}
-.cs-march{position:absolute;left:420px;top:297.5px;width:1175px;height:61px;overflow:hidden;
-  -webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
-.cs-march-in{display:flex;gap:5px;width:max-content;animation:cs-march 1.1s linear infinite}
-.cs-march-in img{width:29.284px;height:60.908px;flex:none;animation:cs-bob .55s ease-in-out infinite alternate}
-.cs-march-in img:nth-child(2n){animation-delay:-.27s}
-@keyframes cs-march{from{transform:translateX(-34.284px)}to{transform:none}}
-@keyframes cs-bob{to{transform:translateY(-3px)}}
+/* a little drawbridge on the horse's front leg drops open and the soldiers pour out of it (cs.js drives the army) */
+.cs-hatch{position:absolute;left:280px;top:295px;width:20px;height:50px;border-radius:3px 3px 0 0;background:#27231e}
+.cs-bridge{position:absolute;left:292px;top:295px;width:8px;height:50px;border-radius:2px 2px 0 0;transform-origin:100% 100%;
+  background:repeating-linear-gradient(0deg,#6c554f 0 8px,#58443f 8px 10px)}
+.cs-horse-btn{position:absolute;left:11px;top:3px;width:419px;height:419px;border-radius:30px;cursor:pointer;z-index:2}
+.cs-horse-btn:focus-visible{outline:3px solid var(--lilac);outline-offset:4px}
+.cs-horse-hint{position:absolute;left:11px;top:400px;width:419px;text-align:center;font:600 15px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;opacity:.65;transition:opacity .4s;pointer-events:none}
+.cs-horse-hint.off{opacity:0}
+.cs-horse.nudge{animation:cs-nudge 2.6s ease-in-out infinite}
+@keyframes cs-nudge{0%,80%,100%{transform:none}86%{transform:rotate(-2deg)}92%{transform:rotate(1.5deg)}}
 
 /* research + lessons cards */
 .cs-research .cs-fit,.cs-lessons .cs-fit,.cs-results .cs-fit{display:flex;flex-direction:column;gap:58px}
@@ -159,11 +163,13 @@
 .is-stack .cs-gl,.is-stack .cs-hud,.is-stack .cs-ctrl,.is-stack .cs-progress,.is-stack .cs-hint{display:none}
 .is-stack .cs-board{position:static;width:auto;height:auto;transform:none!important}
 .is-stack .cs-slide{position:relative;left:auto;top:auto;width:auto;height:auto;visibility:visible;opacity:1;padding:56px 16px}
-.is-stack .cs-hero{padding-top:104px}
+.is-stack .cs-intro{height:auto!important;padding:104px 16px 8px}
+.is-stack .cs-intro-board{position:static;width:auto;transform:none!important;padding:0!important}
+.is-stack .cs-hud--intro{display:none}
 .is-stack .cs-fit{position:static;transform:none;display:flex!important;flex-direction:column;align-items:stretch!important;gap:28px!important}
 .is-stack .cs-row,.is-stack .cs-top,.is-stack .cs-checks,.is-stack .cs-checks ul,.is-stack .cs-stats{flex-direction:column;align-items:stretch;gap:20px}
 .is-stack .cs-col{gap:24px}
-.is-stack .cs-hero h1{font-size:44px}
+.is-stack .cs-title{font-size:44px}
 .is-stack .cs-lede{margin-top:16px;font-size:18px;max-width:none}
 .is-stack .cs-meta{flex-wrap:wrap;gap:18px 28px;justify-content:flex-start;margin-top:28px}
 .is-stack .cs-meta dd{font-size:18px}
@@ -192,5 +198,19 @@
 .is-stack .cs-phone-slot--row .cs-flat > *{width:100%;aspect-ratio:16/10}
 .is-stack [data-a]{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 .is-stack .in [data-a]{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.cs-march-in,.cs-march-in img,.cs-hint i{animation:none}}
+@media (prefers-reduced-motion:reduce){.cs-army img,.cs-hint i{animation:none}}
 .is-stack .nav{background:rgba(7,5,29,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.is-stack .cs-bridge{transform:rotate(90deg)}
+.cs-army{position:absolute;left:300px;top:0;width:1295px;height:426px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.cs-army img{position:absolute;top:284px;left:0;width:29.284px;height:60.908px;animation:cs-bob .5s ease-in-out infinite alternate;will-change:transform}
+@keyframes cs-bob{to{margin-top:-3px}}
+/* speech bubble pinned above one soldier */
+.cs-say{position:absolute;left:0;top:0;padding:12px 18px;border-radius:18px;background:var(--off);color:var(--ink);
+  font:500 19px/1.3 var(--f-body);white-space:nowrap;box-shadow:0 14px 30px -14px rgba(0,0,0,.55);will-change:transform,opacity;pointer-events:none}
+.cs-say::after{content:"";position:absolute;left:22px;bottom:-6px;width:14px;height:14px;background:inherit;border-radius:0 0 3px 0;transform:rotate(45deg)}
+/* the site nav slides up out of the way while reading, and back down when scrolling up */
+.cs-page .nav{transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .35s ease,background .3s,color .3s}
+.cs-page.nav-hidden .nav{transform:translateY(-130%);opacity:0;pointer-events:none}
+.cs-deck .cs-hud{transform:translateY(var(--navdrop,0px));transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.nav-hidden .cs-deck .cs-hud{transform:none}

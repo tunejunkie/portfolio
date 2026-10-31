@@ -46,17 +46,24 @@ def phone_slot(screens, label):
     return f'<div class="cs-phone-slot" data-screens="{data}" aria-label="{E(label)}"><div class="cs-flat">{flat}</div></div>'
 
 
+META = [('Role', 'Lead Designer'), ('Industry', 'Social'), ('Designs circa', '2022–2025'),
+        ('Employment type', 'Full-time'), ('Exit', 'Acquired by Snap')]
+TITLE = 'Saturn: A new home tab'
+LEDE = 'A case study in turning a beloved single-purpose utility for high-school students into a calendar platform teenagers actually use — and the company’s first revenue.'
+
+
+def hero_copy(heading='h1'):
+    a = ' data-a' if heading != 'h1' else ''
+    return f'''<div class="cs-hero-copy">
+        <{heading} class="cs-title"{a}>{E(TITLE)}</{heading}>
+        <p class="cs-lede"{a}>{E(LEDE)}</p>
+        <dl class="cs-meta">{''.join(f'<div{a}><dt>{x}</dt><dd>{y}</dd></div>' for x, y in META)}</dl>
+      </div>'''
+
+
 def slides():
-    meta = [('Role', 'Lead Designer'), ('Industry', 'Social'), ('Designs circa', '2022–2025'),
-            ('Employment type', 'Full-time'), ('Exit', 'Acquired by Snap')]
-    hero = slide('hero', 0, f'''
-      <div class="cs-hero-copy">
-        <h1 data-a>Saturn: A new home tab</h1>
-        <p class="cs-lede" data-a>A case study in turning a beloved single-purpose utility for high-school students into a calendar platform teenagers actually use — and the company’s first revenue.</p>
-        <dl class="cs-meta">{''.join(f'<div data-a><dt>{a}</dt><dd>{b}</dd></div>' for a, b in meta)}</dl>
-      </div>
-      <div data-a><div class="cs-video"><video src="{{base}}{ASSET}teaser.mp4" poster="{{base}}{ASSET}teaser-poster.jpg" muted loop playsinline preload="metadata"></video></div></div>''',
-                 steps=2)
+    # slides mode only: the title slide (no video). Scroll mode opens with the normal-scrolling intro instead.
+    hero = slide('hero', 0, hero_copy(heading='h2'))
 
     context = slide('context', 0, f'''
       <div class="cs-col cs-col--text">
@@ -81,7 +88,6 @@ def slides():
                                     'Highly retentive class timer feature drove DAU/WAU',
                                     'Onboarding flywheel with right incentives and timing'], '#3feaac')}''')
 
-    students = ''.join('<img src="{base}' + ASSET + 'horse/student.svg" alt="">' for _ in range(37))
     H = '{base}' + ASSET + 'horse/'
     horse = f'''<div class="cs-horse" data-a aria-hidden="true">
           <i style="inset:8.33% 20.83% 68.75% 52.08%"><img src="{H}v0.svg" alt=""></i>
@@ -102,9 +108,6 @@ def slides():
           <i style="inset:43.44% 46.06% 39.62% 42%"><img src="{H}door.svg" alt=""></i>
         </div>'''
 
-    def bubble(text, x, y, w, dark, tail):
-        t = f'<img class="tail tail--{tail}" src="{H}tail-{tail}.svg" alt="">'
-        return f'<p class="cs-bubble{" is-dark" if dark else ""}" data-pop style="left:{x}px;top:{y}px;width:{w}px">{text}{t}</p>'
 
     problem = slide('problem', 1, f'''
       <div class="cs-head">{pill('the problem')}<h2 class="t56" data-a>Complacency was not an option.</h2></div>
@@ -112,13 +115,12 @@ def slides():
       {checks('What wasn’t working?', ['Once students memorized their schedule, there was nothing left to do.',
                                       'The schedule was a list, as smart as a piece of paper. Friending had no clear purpose.',
                                       'The current UI made it difficult to promote other features or actions that could help the app evolve'], '#f42c50')}
-      <div class="cs-trojan" role="img" aria-label="A Trojan horse with a line of students marching toward it, saying: It’s just a timer. It’s just my class list. Why would I add a friend? It’s not a social network.">
+      <div class="cs-trojan" role="img" aria-label="A Trojan horse; a drawbridge on its front leg drops open and students march out of it, saying: It’s just a timer. It’s just my class list. Why would I add a friend? It’s not a social network.">
         {horse}
-        {bubble('👎&ensp;“It’s just a timer.”', 438, 98, 198, True, 'long')}
-        {bubble('👎&ensp;“It’s just my class list.”', 603, 163, 237, False, 'short')}
-        {bubble('👎 “Why would I add a friend?”', 867, 98, 276, True, 'long')}
-        {bubble('👎 “It’s not a social network.”', 1085, 163, 266, False, 'short')}
-        <div class="cs-march"><div class="cs-march-in">{students}</div></div>
+        <i class="cs-hatch" aria-hidden="true"></i><i class="cs-bridge" aria-hidden="true"></i>
+        <button class="cs-horse-btn" aria-label="Open the Trojan horse"></button><span class="cs-horse-hint" aria-hidden="true">Tap the horse</span>
+        <div class="cs-army" aria-hidden="true" data-student="{H}student.svg"
+             data-quotes="👎 “It’s just a timer.”|👎 “It’s just my class list.”|👎 “Why would I add a friend?”|👎 “It’s not a social network.”"></div>
       </div>''')
 
     cards = [('Nobody taps away from home.', 'No banner, badge or notification moved users to other tabs. If it wasn’t above the fold, it didn’t exist.'),
@@ -179,21 +181,30 @@ def case_study_saturn():
     base = '../../'
     body = ''.join(slides()).replace('{base}', base)
     outline = '<span class="cs-line"></span>'.join(f'<button data-chapter="{i}">{c}</button>' for i, c in enumerate(CHAPTERS))
+    toggle = '''<div class="cs-mode" role="radiogroup" aria-label="How to read this case study">
+          <button role="radio" data-mode="scroll" aria-checked="true">Scroll</button>
+          <button role="radio" data-mode="slides" aria-checked="false">Slides</button>
+        </div>'''
+    intro = f'''<section class="cs-intro" aria-label="{E(TITLE)}">
+    <div class="cs-intro-board">
+      <div class="cs-hud cs-hud--intro">{toggle}<nav class="cs-outline" aria-label="Chapters">{outline}</nav></div>
+      {hero_copy()}
+      <div class="cs-video"><video src="{base}{ASSET}teaser.mp4" poster="{base}{ASSET}teaser-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+    </div>
+  </section>'''
     return head('Saturn: A new home tab — Natalie Rose Taylor', base,
                 'Saturn: A new home tab. How a beloved single-purpose class timer for high schoolers got a true home screen.') .replace(
         '</head>', f'<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="{base}css/cs.css"><meta name="robots" content="noindex"></head>') + f'''
 <body class="cs-page is-scroll" data-base="{base}">
 {nav(base, light=True)}
 <main class="cs" id="top">
+  {intro}
   <div class="cs-track">
     <div class="cs-deck">
       <canvas class="cs-gl" aria-hidden="true"></canvas>
       <div class="cs-board">{body}
         <div class="cs-hud">
-        <div class="cs-mode" role="radiogroup" aria-label="How to read this case study">
-          <button role="radio" data-mode="scroll" aria-checked="true">Scroll</button>
-          <button role="radio" data-mode="slides" aria-checked="false">Slides</button>
-        </div>
+        {toggle}
         <nav class="cs-outline" aria-label="Chapters">{outline}</nav>
       </div>
       </div>

@@ -30,16 +30,28 @@
   <h3>About</h3><a href="../../#about" data-about>About me</a><a href="../../#anecdotes" data-jump="anecdotes">Anecdotes</a><a href="../../work-history/">Work History</a><a href="https://www.linkedin.com/in/natalierosetaylor/" target="_blank" rel="noopener">Contact</a><a href="https://github.com/tunejunkie" target="_blank" rel="noopener">GitHub</a>
 </nav>
 <main class="cs" id="top">
+  <section class="cs-intro" aria-label="Saturn: A new home tab">
+    <div class="cs-intro-board">
+      <div class="cs-hud cs-hud--intro"><div class="cs-mode" role="radiogroup" aria-label="How to read this case study">
+          <button role="radio" data-mode="scroll" aria-checked="true">Scroll</button>
+          <button role="radio" data-mode="slides" aria-checked="false">Slides</button>
+        </div><nav class="cs-outline" aria-label="Chapters"><button data-chapter="0">Context</button><span class="cs-line"></span><button data-chapter="1">Problem</button><span class="cs-line"></span><button data-chapter="2">Solution</button><span class="cs-line"></span><button data-chapter="3">Impact</button></nav></div>
+      <div class="cs-hero-copy">
+        <h1 class="cs-title">Saturn: A new home tab</h1>
+        <p class="cs-lede">A case study in turning a beloved single-purpose utility for high-school students into a calendar platform teenagers actually use — and the company’s first revenue.</p>
+        <dl class="cs-meta"><div><dt>Role</dt><dd>Lead Designer</dd></div><div><dt>Industry</dt><dd>Social</dd></div><div><dt>Designs circa</dt><dd>2022–2025</dd></div><div><dt>Employment type</dt><dd>Full-time</dd></div><div><dt>Exit</dt><dd>Acquired by Snap</dd></div></dl>
+      </div>
+      <div class="cs-video"><video src="../../assets/cs/saturn/teaser.mp4" poster="../../assets/cs/saturn/teaser-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+    </div>
+  </section>
   <div class="cs-track">
     <div class="cs-deck">
       <canvas class="cs-gl" aria-hidden="true"></canvas>
-      <div class="cs-board"><section class="cs-slide cs-hero " data-key="hero" data-chapter="0" data-steps="2" data-bg="#15082e" aria-label="hero"><div class="cs-fit">
-      <div class="cs-hero-copy">
-        <h1 data-a>Saturn: A new home tab</h1>
+      <div class="cs-board"><section class="cs-slide cs-hero " data-key="hero" data-chapter="0" data-steps="1" data-bg="#15082e" aria-label="hero"><div class="cs-fit"><div class="cs-hero-copy">
+        <h2 class="cs-title" data-a>Saturn: A new home tab</h2>
         <p class="cs-lede" data-a>A case study in turning a beloved single-purpose utility for high-school students into a calendar platform teenagers actually use — and the company’s first revenue.</p>
         <dl class="cs-meta"><div data-a><dt>Role</dt><dd>Lead Designer</dd></div><div data-a><dt>Industry</dt><dd>Social</dd></div><div data-a><dt>Designs circa</dt><dd>2022–2025</dd></div><div data-a><dt>Employment type</dt><dd>Full-time</dd></div><div data-a><dt>Exit</dt><dd>Acquired by Snap</dd></div></dl>
-      </div>
-      <div data-a><div class="cs-video"><video src="../../assets/cs/saturn/teaser.mp4" poster="../../assets/cs/saturn/teaser-poster.jpg" muted loop playsinline preload="metadata"></video></div></div></div></section><section class="cs-slide cs-context " data-key="context" data-chapter="0" data-steps="1" data-bg="#191239" aria-label="context"><div class="cs-fit">
+      </div></div></section><section class="cs-slide cs-context " data-key="context" data-chapter="0" data-steps="1" data-bg="#191239" aria-label="context"><div class="cs-fit">
       <div class="cs-col cs-col--text">
         <div class="cs-head"><span class="cs-pill">Context</span><h2 class="t64" data-a>Saturn exists because of this.</h2></div>
         <div class="cs-body" data-a>
@@ -60,7 +72,7 @@
       <div class="cs-head"><span class="cs-pill">the problem</span><h2 class="t56" data-a>Complacency was not an option.</h2></div>
       <p class="cs-body cs-body--wide" data-a>Saturn was a beloved app for what it was designed to do. But, <b>usage fell off a cliff after October</b> and stayed flat until July. Years of hacked-together UI with non-standard conventions threatened the strategy of competing with productivity tools. Without a second act, it wasn’t a venture-worthy product.</p>
       <div class="cs-checks" style="--bar:#f42c50"><p class="cs-checks-h" data-a>What wasn’t working?</p><ul><li data-a>Once students memorized their schedule, there was nothing left to do.</li><li data-a>The schedule was a list, as smart as a piece of paper. Friending had no clear purpose.</li><li data-a>The current UI made it difficult to promote other features or actions that could help the app evolve</li></ul></div>
-      <div class="cs-trojan" role="img" aria-label="A Trojan horse with a line of students marching toward it, saying: It’s just a timer. It’s just my class list. Why would I add a friend? It’s not a social network.">
+      <div class="cs-trojan" role="img" aria-label="A Trojan horse; a drawbridge on its front leg drops open and students march out of it, saying: It’s just a timer. It’s just my class list. Why would I add a friend? It’s not a social network.">
         <div class="cs-horse" data-a aria-hidden="true">
           <i style="inset:8.33% 20.83% 68.75% 52.08%"><img src="../../assets/cs/saturn/horse/v0.svg" alt=""></i>
           <i style="inset:39.58% 75% 33.33% 6.25%"><img src="../../assets/cs/saturn/horse/v1.svg" alt=""></i>
@@ -79,11 +91,10 @@
           <i style="inset:82.58% 47.81% 14.32% 43.36%"><img src="../../assets/cs/saturn/horse/v9.svg" alt=""></i>
           <i style="inset:43.44% 46.06% 39.62% 42%"><img src="../../assets/cs/saturn/horse/door.svg" alt=""></i>
         </div>
-        <p class="cs-bubble is-dark" data-pop style="left:438px;top:98px;width:198px">👎&ensp;“It’s just a timer.”<img class="tail tail--long" src="../../assets/cs/saturn/horse/tail-long.svg" alt=""></p>
-        <p class="cs-bubble" data-pop style="left:603px;top:163px;width:237px">👎&ensp;“It’s just my class list.”<img class="tail tail--short" src="../../assets/cs/saturn/horse/tail-short.svg" alt=""></p>
-        <p class="cs-bubble is-dark" data-pop style="left:867px;top:98px;width:276px">👎 “Why would I add a friend?”<img class="tail tail--long" src="../../assets/cs/saturn/horse/tail-long.svg" alt=""></p>
-        <p class="cs-bubble" data-pop style="left:1085px;top:163px;width:266px">👎 “It’s not a social network.”<img class="tail tail--short" src="../../assets/cs/saturn/horse/tail-short.svg" alt=""></p>
-        <div class="cs-march"><div class="cs-march-in"><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""><img src="../../assets/cs/saturn/horse/student.svg" alt=""></div></div>
+        <i class="cs-hatch" aria-hidden="true"></i><i class="cs-bridge" aria-hidden="true"></i>
+        <button class="cs-horse-btn" aria-label="Open the Trojan horse"></button><span class="cs-horse-hint" aria-hidden="true">Tap the horse</span>
+        <div class="cs-army" aria-hidden="true" data-student="../../assets/cs/saturn/horse/student.svg"
+             data-quotes="👎 “It’s just a timer.”|👎 “It’s just my class list.”|👎 “Why would I add a friend?”|👎 “It’s not a social network.”"></div>
       </div></div></section><section class="cs-slide cs-research " data-key="research" data-chapter="1" data-steps="1" data-bg="#232b52" aria-label="research"><div class="cs-fit">
       <h2 class="t56" data-a>What students told us (and what the data confirmed)</h2>
       <div class="cs-cards"><div class="cs-card" data-a><span class="cs-num">1</span><h3>Nobody taps away from home.</h3><p>No banner, badge or notification moved users to other tabs. If it wasn’t above the fold, it didn’t exist.</p></div><div class="cs-card" data-a><span class="cs-num">2</span><h3>After Oct 1, the timer is the whole app.</h3><p>Every other screen was decoration. Any new bet had to live where the timer lived.</p></div><div class="cs-card" data-a><span class="cs-num">3</span><h3>One friend changes everything.</h3><p>Students with ≥1 friend who compared schedules retained far better — [METRIC: retention lift]. Social wasn’t a nice-to-have; it was the retention lever.</p></div><div class="cs-card" data-a><span class="cs-num">4</span><h3>After-school life is busy — and unrecorded.</h3><p>Sports, clubs, jobs. They “just remember.” We risked being a hammer looking for a nail.</p></div></div></div></section><section class="cs-slide cs-hunch " data-key="hunch" data-chapter="2" data-steps="3" data-bg="#253159" aria-label="hunch"><div class="cs-fit">
