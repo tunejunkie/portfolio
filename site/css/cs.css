@@ -90,7 +90,7 @@
 .cs-march-in{display:flex;gap:5px;width:max-content;animation:cs-march 1.1s linear infinite}
 .cs-march-in img{width:29.284px;height:60.908px;flex:none;animation:cs-bob .55s ease-in-out infinite alternate}
 .cs-march-in img:nth-child(2n){animation-delay:-.27s}
-@keyframes cs-march{to{transform:translateX(-34.284px)}}
+@keyframes cs-march{from{transform:translateX(-34.284px)}to{transform:none}}
 @keyframes cs-bob{to{transform:translateY(-3px)}}
 
 /* research + lessons cards */
