@@ -51,3 +51,8 @@
 [[redirects]]
   from = "/gigmo-screenshots"
   to = "/screenshots/gigmo/"
+
+[[redirects]]
+  from = "/case-studies/saturn/*"
+  to = "/case-studies/saturn-home/"
+  status = 301

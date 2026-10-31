@@ -1,4 +1,4 @@
-"""Saturn case study (/case-studies/saturn/): a deck of full-screen "slides".
+"""Saturn case study #1, the Now tab (/case-studies/saturn-home/; the Nike/ads story will be its own page): a deck of full-screen "slides".
 
 Desktop: every slide is laid out on a fixed 1728×1117 art board (the Figma frame) that is scaled to the
 window, and the deck runs in one of two modes, switched with the toggle at the top:
@@ -51,7 +51,7 @@ def slides():
             ('Employment type', 'Full-time'), ('Exit', 'Acquired by Snap')]
     hero = slide('hero', 0, f'''
       <div class="cs-hero-copy">
-        <h1 data-a>Saturn</h1>
+        <h1 data-a>Saturn: A new home tab</h1>
         <p class="cs-lede" data-a>A case study in turning a beloved single-purpose utility for high-school students into a calendar platform teenagers actually use — and the company’s first revenue.</p>
         <dl class="cs-meta">{''.join(f'<div data-a><dt>{a}</dt><dd>{b}</dd></div>' for a, b in meta)}</dl>
       </div>
@@ -179,8 +179,8 @@ def case_study_saturn():
     base = '../../'
     body = ''.join(slides()).replace('{base}', base)
     outline = '<span class="cs-line"></span>'.join(f'<button data-chapter="{i}">{c}</button>' for i, c in enumerate(CHAPTERS))
-    return head('Saturn case study — Natalie Rose Taylor', base,
-                'Saturn: turning a beloved single-purpose class timer for high schoolers into a calendar platform teenagers actually use — and the company’s first revenue.') .replace(
+    return head('Saturn: A new home tab — Natalie Rose Taylor', base,
+                'Saturn: A new home tab. How a beloved single-purpose class timer for high schoolers got a true home screen.') .replace(
         '</head>', f'<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="{base}css/cs.css"><meta name="robots" content="noindex"></head>') + f'''
 <body class="cs-page is-scroll" data-base="{base}">
 {nav(base, light=True)}

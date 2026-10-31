@@ -276,5 +276,5 @@ if __name__ == '__main__':
         write(f'screenshots/{slug}/index.html', gallery_page(slug, manifest))
     write('work-history/index.html', work_history())
     from case_study import case_study_saturn
-    write('case-studies/saturn/index.html', case_study_saturn())
+    write('case-studies/saturn-home/index.html', case_study_saturn())
     print('built')
