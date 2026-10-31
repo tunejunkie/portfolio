@@ -49,7 +49,7 @@
 /* scroll mode opens with this normal-scrolling intro (title, facts, video); slides mode uses the title slide */
 .cs-intro{position:relative;overflow:hidden}
 .cs-intro-board{position:absolute;left:0;top:0;width:1728px;padding:0 60px 140px;transform-origin:0 0}
-.cs-hud--intro{position:relative;margin-bottom:58px}
+.cs-hud--intro{position:relative;margin-bottom:58px;justify-content:flex-end}
 .cs-intro .cs-video{margin-top:58px}
 .is-slides .cs-intro{display:none}
 .is-scroll .cs-hero{display:none}
@@ -209,13 +209,16 @@
 .cs-say{position:absolute;left:0;top:0;padding:12px 18px;border-radius:18px;background:var(--off);color:var(--ink);
   font:500 19px/1.3 var(--f-body);white-space:nowrap;box-shadow:0 14px 30px -14px rgba(0,0,0,.55);will-change:transform,opacity;pointer-events:none}
 .cs-say::after{content:"";position:absolute;left:22px;bottom:-6px;width:14px;height:14px;background:inherit;border-radius:0 0 3px 0;transform:rotate(45deg)}
-/* the site nav slides up out of the way while reading, and back down when scrolling up */
-.cs-page .nav{transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .35s ease,background .3s,color .3s}
-.cs-page.nav-hidden .nav{transform:translateY(-130%);opacity:0;pointer-events:none}
-.cs-deck .cs-hud{transform:translateY(var(--navdrop,0px));transition:transform .45s cubic-bezier(.2,.7,.2,1)}
-.nav-hidden .cs-deck .cs-hud{transform:none}
-.cs-outline{transition:opacity .4s}
-.on-hero .cs-deck .cs-outline{opacity:0;pointer-events:none}
-/* chapter outline on the left, Scroll/Slides toggle on the right (the intro only has the toggle) */
-.cs-hud .cs-outline{order:-1}
-.cs-hud--intro{justify-content:flex-end}
+/* site nav only at the very top; after that, the slim case-study bar (Figma 1476:14770) */
+.cs-page .nav{transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .35s ease}
+.cs-compact .nav{transform:translateY(-130%);opacity:0;pointer-events:none}
+.cs-bar{position:fixed;z-index:49;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:48px;
+  padding:12px 56px 12px 72px;color:var(--off);opacity:0;transform:translateY(-100%);pointer-events:none;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .35s ease;
+  background:linear-gradient(180deg,rgba(19,3,41,.92),rgba(19,3,41,.6));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.cs-compact .cs-bar{opacity:1;transform:none;pointer-events:auto}
+.cs-bar .cs-outline{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.cs-bar .cs-mode{padding:2px;border:0;background:rgba(255,255,255,.1);border-radius:36px}
+.cs-bar .cs-mode button{font:600 20px/1.4 var(--f-body);padding:8px 16px;border-radius:31px;opacity:1}
+@media (max-width:1240px){.cs-bar{padding:10px 32px}.cs-bar .cs-outline button{font-size:22px}.cs-bar .cs-line{width:28px}.cs-bar .cs-mode button{font-size:16px;padding:7px 13px}}
+.is-stack .cs-bar{display:none}

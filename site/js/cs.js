@@ -134,18 +134,14 @@ function layout() {
   S = Math.min(vw / BW, vh / BH);
   const tx = (vw - BW * S) / 2, ty = Math.max(0, (vh - BH * S) / 2);
   board.style.transform = `translate(${tx}px,${ty}px) scale(${S})`;
-  // the site nav hides while reading, so the HUD sits near the top; when the nav comes back the HUD
-  // drops down below it (--navdrop) instead of the slides giving up that space for good
-  const hud = Math.max(36, (24 - ty) / S), navDrop = Math.max(0, (20 + 96 + 12 - ty) / S - hud);
-  const top = hud + 92, h = BH - top - (mode === 'slides' ? 128 : 60);
-  board.style.setProperty('--navdrop', navDrop + 'px');
-  Object.assign(board.style, { '--hud': hud + 'px', '--top': top + 'px', '--h': h + 'px' });
-  board.style.setProperty('--hud', hud + 'px'); board.style.setProperty('--top', top + 'px'); board.style.setProperty('--h', h + 'px');
-  const hudEl = $('.cs-deck .cs-hud'); Object.assign(hudEl.style, { left: '60px', right: '60px', top: hud + 'px', width: 'auto' });
+  // while reading, the slim case-study bar (logo · chapters · Scroll/Slides) replaces the site nav; slides start under it
+  const barH = $('.cs-bar').offsetHeight || 81;
+  const top = Math.max(60, (barH + 36 - ty) / S), h = BH - top - (mode === 'slides' ? 128 : 60);
+  board.style.setProperty('--top', top + 'px'); board.style.setProperty('--h', h + 'px');
   // intro (scroll mode): same scale and margins as the slides, but in the normal page flow
   if (intro) {
     introBoard.style.transform = `translate(${tx}px,0) scale(${S})`;
-    introBoard.style.paddingTop = (hud + navDrop) + 'px';
+    introBoard.style.paddingTop = Math.max(60, (20 + 96 + 28 - ty) / S) + 'px';   // under the full site nav
     intro.style.height = mode === 'scroll' ? Math.ceil(introBoard.offsetHeight * S) + 'px' : '0px';
   }
   // shrink any slide whose content is taller than the space under the HUD
@@ -250,9 +246,8 @@ function goTo(i, instant = false) {
   phoneTo(si, sub, dir, instant);
   if (changeSlide) rowTo(si, dir, instant);
   cur = i;
-  if (mode === 'slides' && !stack) setNav(dir > 0 && i > 0);
+  updateBar();
   outlineBtns.forEach(b => b.classList.toggle('on', +b.dataset.chapter === +sl.dataset.chapter));
-  body.classList.toggle('on-hero', sl.dataset.key === 'hero');               // no chapter outline on the title
   $('.cs-count').textContent = `${i + 1} / ${N}`;
   $('.cs-prev').disabled = i === 0; $('.cs-next').disabled = i === N - 1;
   $('.cs-progress i').style.width = (i / (N - 1) * 100) + '%';
@@ -364,22 +359,12 @@ function stackLayout() {
   }
 }
 
-/* ---------------- site nav: hides while reading forward, comes back when going back ---------------- */
-const siteNav = $('.nav');
-let navHidden = false;
-function setNav(hide) {
-  if (sheet && sheet.classList.contains('open')) hide = false;
-  if (hide === navHidden) return;
-  navHidden = hide; body.classList.toggle('nav-hidden', hide);
+/* ---------------- site nav at the very top; the slim case-study bar everywhere else ---------------- */
+function updateBar() {
+  const compact = !stack && (mode === 'slides' ? cur > 0 : scrollY > 60);
+  body.classList.toggle('cs-compact', compact);
 }
-addEventListener('scroll', () => {
-  if (mode === 'slides' && !stack) return;
-  const y = scrollY, d = y - (setNav.y ?? y); setNav.y = y;
-  if (y < 60) setNav(false); else if (d > 4) setNav(true); else if (d < -4) setNav(false);
-}, { passive: true });
-// pointer at the very top of the window brings it back too (desktop)
-addEventListener('mousemove', e => { if (e.clientY < 70) setNav(false); }, { passive: true });
-siteNav && siteNav.addEventListener('focusin', () => setNav(false));
+addEventListener('scroll', updateBar, { passive: true });
 
 /* ---------------- nav (mobile sheet) ---------------- */
 const sheet = $('.sheet');

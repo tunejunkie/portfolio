@@ -187,7 +187,6 @@ def case_study_saturn():
         </div>'''
     intro = f'''<section class="cs-intro" aria-label="{E(TITLE)}">
     <div class="cs-intro-board">
-      <div class="cs-hud cs-hud--intro">{toggle}</div>
       {hero_copy()}
       <div class="cs-video"><video src="{base}{ASSET}teaser.mp4" poster="{base}{ASSET}teaser-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
     </div>
@@ -197,16 +196,18 @@ def case_study_saturn():
         '</head>', f'<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="{base}css/cs.css"><meta name="robots" content="noindex"></head>') + f'''
 <body class="cs-page is-scroll" data-base="{base}">
 {nav(base, light=True)}
+<div class="cs-bar">
+  <a class="logo" href="{base}" aria-label="Natalie Rose Taylor, home"><img src="{base}assets/svg/flower-light.svg" alt=""><span>Natalie<br>Rose Taylor</span></a>
+  <nav class="cs-outline" aria-label="Chapters">{outline}</nav>
+  {toggle}
+</div>
 <main class="cs" id="top">
   {intro}
   <div class="cs-track">
     <div class="cs-deck">
       <canvas class="cs-gl" aria-hidden="true"></canvas>
       <div class="cs-board">{body}
-        <div class="cs-hud">
-        {toggle}
-        <nav class="cs-outline" aria-label="Chapters">{outline}</nav>
-      </div>
+
       </div>
       <div class="cs-ctrl" aria-label="Slide controls">
         <button class="cs-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24"><path d="M15 18L9 12L15 6"/></svg></button>
