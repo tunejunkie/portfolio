@@ -161,7 +161,7 @@ const army = (() => {
   const el = $('.cs-army'), bridge = $('.cs-bridge'), btn = $('.cs-horse-btn'), hint = $('.cs-horse-hint'), horse = $('.cs-horse');
   if (!el) return { ready() {}, stop() {} };
   const src = el.dataset.student, quotes = el.dataset.quotes.split('|');
-  const SPEED = 120, GAP = 0.3, COUNT = 18, W = 1295, FEET = 284;
+  const SPEED = 120, GAP = 0.3, COUNT = 18, W = 1272, FEET = 284;
   const SPEAKERS = [1, 5, 9, 13];                                // which soldiers say something, in order
   let running = false, raf = 0, men = [], says = [], t0 = 0, last = 0, spawned = 0, timers = [];
   const spawn = (x, i) => {
