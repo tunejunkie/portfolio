@@ -218,7 +218,7 @@
   background:linear-gradient(180deg,rgba(19,3,41,.92),rgba(19,3,41,.6));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .cs-compact .cs-bar{opacity:1;transform:none;pointer-events:auto}
 .cs-bar .cs-outline{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
-.cs-bar .cs-mode{padding:2px;border:0;background:rgba(255,255,255,.1);border-radius:36px}
-.cs-bar .cs-mode button{font:600 20px/1.4 var(--f-body);padding:8px 16px;border-radius:31px;opacity:1}
-@media (max-width:1240px){.cs-bar{padding:10px 32px}.cs-bar .cs-outline button{font-size:22px}.cs-bar .cs-line{width:28px}.cs-bar .cs-mode button{font-size:16px;padding:7px 13px}}
+@media (max-width:1240px){.cs-bar{padding:10px 32px}.cs-bar .cs-outline button{font-size:22px}.cs-bar .cs-line{width:28px}}
 .is-stack .cs-bar{display:none}
+.cs-say::before{content:"";position:absolute;left:28px;top:100%;width:2px;height:var(--lift,0px);background:rgba(248,248,248,.55)}
+.cs-bar .cs-mode button{font-size:16px;padding:9px 18px}

@@ -162,16 +162,19 @@ const army = (() => {
   if (!el) return { ready() {}, stop() {} };
   const src = el.dataset.student, quotes = el.dataset.quotes.split('|');
   const SPEED = 120, GAP = 0.3, COUNT = 18, W = 1295, FEET = 284;
-  const SPEAKERS = [2, 6, 10, 14];                                // which soldiers say something, in order
+  const SPEAKERS = [1, 5, 9, 13];                                // which soldiers say something, in order
   let running = false, raf = 0, men = [], says = [], t0 = 0, last = 0, spawned = 0, timers = [];
   const spawn = (x, i) => {
     const img = new Image(); img.src = src; img.alt = ''; img.style.animationDelay = (-Math.random() * 0.5).toFixed(2) + 's';
     el.appendChild(img); const m = { img, x, i }; img.style.transform = `translateX(${x}px)`; men.push(m); return m;
   };
-  const place = s => { s.b.style.left = (s.m.x - 14) + 'px'; s.b.style.top = (FEET - s.b.offsetHeight - 14) + 'px'; };
+  // bubbles sit at staggered heights (a little stalk down to their soldier) so neighbours never overlap
+  const LIFT = [0, 74, 148, 37];
+  const place = s => { s.b.style.left = (s.m.x - 14) + 'px'; s.b.style.top = (FEET - s.b.offsetHeight - 14 - s.lift) + 'px'; };
   function say(m, text) {
     const b = document.createElement('p'); b.className = 'cs-say'; b.textContent = text;
-    el.appendChild(b); const s = { m, b }; m.said = true; says.push(s); place(s);
+    b.style.setProperty('--lift', LIFT[SPEAKERS.indexOf(m.i) % LIFT.length] + 'px');
+    el.appendChild(b); const s = { m, b, lift: LIFT[SPEAKERS.indexOf(m.i) % LIFT.length] }; m.said = true; says.push(s); place(s);
     gsap.fromTo(b, { autoAlpha: 0, scale: 0.6, transformOrigin: '29px 100%' }, { autoAlpha: 1, scale: 1, duration: 0.45, ease: 'back.out(2.2)' });
     gsap.to(b, { autoAlpha: 0, y: -16, duration: 0.7, delay: 2.6, ease: 'power1.in', onComplete() { b.remove(); says = says.filter(x => x !== s); } });
   }

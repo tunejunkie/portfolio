@@ -67,7 +67,7 @@ def slides():
 
     context = slide('context', 0, f'''
       <div class="cs-col cs-col--text">
-        <div class="cs-head">{pill('Context')}<h2 class="t64" data-a>Saturn exists because of this.</h2></div>
+        <div class="cs-head"><h2 class="t64" data-a>Saturn exists because of this.</h2></div>
         <div class="cs-body" data-a>
           <p>The average American high-schooler’s schedule is a mess of conditional class order (“A-day / B-day”), rotating bell schedules, early releases and assemblies. Kids never know what today looks like.</p>
           <p>Saturn solved one thing super well: enter your school and classes once, and it tells you what class you’re in and how many minutes are left. That simple feature made it a viral back-to-school app — and a venture-backed company.</p>
@@ -79,7 +79,7 @@ def slides():
     before = slide('before', 0, f'''
       <div class="cs-row">
         <div class="cs-col cs-col--text cs-w434">
-          <div class="cs-head">{pill('Before')}<h2 class="t64" data-a>The app I inherited</h2></div>
+          <div class="cs-head"><h2 class="t64" data-a>The app I inherited</h2></div>
           <p class="cs-body" data-a>Saturn was a class timer with a friends list. Students opened it between periods to see how long until the bell, and that habit made it a top back-to-school download every August.</p>
         </div>
         <div class="cs-screens">{''.join(f'<img data-a src="{{base}}{ASSET}before-{i}.webp" alt="" width="298" height="648">' for i in (1, 2, 3))}</div>
@@ -110,7 +110,7 @@ def slides():
 
 
     problem = slide('problem', 1, f'''
-      <div class="cs-head">{pill('the problem')}<h2 class="t56" data-a>Complacency was not an option.</h2></div>
+      <div class="cs-head"><h2 class="t56" data-a>Complacency was not an option.</h2></div>
       <p class="cs-body cs-body--wide" data-a>Saturn was a beloved app for what it was designed to do. But, <b>usage fell off a cliff after October</b> and stayed flat until July. Years of hacked-together UI with non-standard conventions threatened the strategy of competing with productivity tools. Without a second act, it wasn’t a venture-worthy product.</p>
       {checks('What wasn’t working?', ['Once students memorized their schedule, there was nothing left to do.',
                                       'The schedule was a list, as smart as a piece of paper. Friending had no clear purpose.',
@@ -139,7 +139,7 @@ def slides():
     G = 'assets/galleries/saturn/'
     hunch = slide('hunch', 2, f'''
       <div class="cs-col cs-col--text cs-w647">
-        <div class="cs-head">{pill('solutioning')}<h2 class="t80" data-a>My <em>hunches</em>, &amp; the pitch</h2></div>
+        <div class="cs-head"><h2 class="t80" data-a>My <em>hunches</em>, &amp; the pitch</h2></div>
         <div class="cs-swap" data-a>{''.join(f'<div class="cs-card cs-card--hunch" data-sub="{i}"><h3>{E(h)}</h3><p>{E(p)}</p></div>' for i, (h, p) in enumerate(hunches))}</div>
         <p class="cs-body" data-a>I pitched <b>separating the timer from the schedule</b> and giving the app a true home screen — a bento of live modules answering “what’s happening right now?”</p>
       </div>
@@ -147,14 +147,14 @@ def slides():
 
     build = slide('build', 2, f'''
       <div class="cs-col cs-col--text cs-w647">
-        <div class="cs-head">{pill('section title')}<h2 class="t80" data-a>Some kind of short headline</h2></div>
+        <div class="cs-head"><h2 class="t80" data-a>Some kind of short headline</h2></div>
         <p class="cs-body" data-a>[Summary Lorem ipsum dolor sit amet consectetur. Adipiscing nisi pharetra pellentesque arcu erat elit donec leo donec. Nibh faucibus amet ultricies ut faucibus enim pharetra est. Curabitur ut tempus nisl vel. Ut nec vitae auctor blandit. Risus arcu quis scelerisque mattis libero. Mattis ullamcorper elementum suspendisse fusce. Aenean tellus tortor nunc aliquet arcu morbi at semper urna.]</p>
       </div>
       {phone_slot([None, None, None], 'Placeholder phone')}''', steps=3)
 
     gallery = slide('gallery', 2, f'''
       <div class="cs-top">
-        <div class="cs-head">{pill('section title')}<h2 class="t80" data-a>Some kind of short headline</h2></div>
+        <div class="cs-head"><h2 class="t80" data-a>Some kind of short headline</h2></div>
         <p class="cs-body cs-w570" data-a>[Curabitur ut tempus nisl vel. Ut nec vitae auctor blandit. Risus arcu quis scelerisque mattis libero. Mattis ullamcorper elementum suspendisse fusce. Aenean tellus tortor nunc aliquet arcu morbi at semper urna.]</p>
       </div>
       <div class="cs-phones4" data-a aria-label="Four placeholder phones">{''.join(f'<div class="cs-phone-slot cs-phone-slot--row" data-screens="" data-row="{i}"><div class="cs-flat"><span class="cs-gray">Screen needed</span></div></div>' for i in range(4))}</div>''')
