@@ -214,3 +214,5 @@
 .cs-page.nav-hidden .nav{transform:translateY(-130%);opacity:0;pointer-events:none}
 .cs-deck .cs-hud{transform:translateY(var(--navdrop,0px));transition:transform .45s cubic-bezier(.2,.7,.2,1)}
 .nav-hidden .cs-deck .cs-hud{transform:none}
+.cs-outline{transition:opacity .4s}
+.on-hero .cs-deck .cs-outline{opacity:0;pointer-events:none}

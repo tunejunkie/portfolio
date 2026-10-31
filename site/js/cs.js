@@ -252,6 +252,7 @@ function goTo(i, instant = false) {
   cur = i;
   if (mode === 'slides' && !stack) setNav(dir > 0 && i > 0);
   outlineBtns.forEach(b => b.classList.toggle('on', +b.dataset.chapter === +sl.dataset.chapter));
+  body.classList.toggle('on-hero', sl.dataset.key === 'hero');               // no chapter outline on the title
   $('.cs-count').textContent = `${i + 1} / ${N}`;
   $('.cs-prev').disabled = i === 0; $('.cs-next').disabled = i === N - 1;
   $('.cs-progress i').style.width = (i / (N - 1) * 100) + '%';

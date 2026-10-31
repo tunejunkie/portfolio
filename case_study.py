@@ -187,7 +187,7 @@ def case_study_saturn():
         </div>'''
     intro = f'''<section class="cs-intro" aria-label="{E(TITLE)}">
     <div class="cs-intro-board">
-      <div class="cs-hud cs-hud--intro">{toggle}<nav class="cs-outline" aria-label="Chapters">{outline}</nav></div>
+      <div class="cs-hud cs-hud--intro">{toggle}</div>
       {hero_copy()}
       <div class="cs-video"><video src="{base}{ASSET}teaser.mp4" poster="{base}{ASSET}teaser-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
     </div>
