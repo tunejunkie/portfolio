@@ -275,4 +275,6 @@ if __name__ == '__main__':
     for slug, _, _ in GALLERIES:
         write(f'screenshots/{slug}/index.html', gallery_page(slug, manifest))
     write('work-history/index.html', work_history())
+    from case_study import case_study_saturn
+    write('case-studies/saturn/index.html', case_study_saturn())
     print('built')
