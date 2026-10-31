@@ -105,7 +105,6 @@ def slides():
           <i style="inset:70.7% 47.81% 26.19% 43.36%"><img src="{H}v9.svg" alt=""></i>
           <i style="inset:76.67% 47.81% 20.23% 43.36%"><img src="{H}v9.svg" alt=""></i>
           <i style="inset:82.58% 47.81% 14.32% 43.36%"><img src="{H}v9.svg" alt=""></i>
-          <i style="inset:43.44% 46.06% 39.62% 42%"><img src="{H}door.svg" alt=""></i>
         </div>'''
 
 
@@ -119,7 +118,8 @@ def slides():
         {horse}
         <i class="cs-hatch" aria-hidden="true"></i><i class="cs-bridge" aria-hidden="true"></i>
         <button class="cs-horse-btn" aria-label="Open the Trojan horse"></button><span class="cs-horse-hint" aria-hidden="true">Tap the horse</span>
-        <div class="cs-army" aria-hidden="true" data-student="{H}student.svg"
+        <div class="cs-army" aria-hidden="true"><p class="cs-pushed">What was hiding behind our users’ good will?</p></div>
+        <div class="cs-army cs-army--men" aria-hidden="true" data-student="{H}student.svg"
              data-quotes="👎 “It’s just a timer.”|👎 “It’s just my class list.”|👎 “Why would I add a friend?”|👎 “It’s not a social network.”"></div>
       </div>''')
 

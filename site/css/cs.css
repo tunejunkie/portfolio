@@ -222,3 +222,6 @@
 .is-stack .cs-bar{display:none}
 .cs-say::before{content:"";position:absolute;left:28px;top:100%;width:2px;height:var(--lift,0px);background:rgba(248,248,248,.55)}
 .cs-bar .cs-mode button{font-size:16px;padding:9px 18px}
+.cs-army--men{z-index:1}
+/* a line of text the procession shoves off to the right */
+.cs-pushed{position:absolute;left:0;top:296px;font:400 28px/1.3 var(--f-head);white-space:nowrap;will-change:transform}

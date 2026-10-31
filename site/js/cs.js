@@ -158,12 +158,12 @@ function layout() {
    Tap the horse: a drawbridge on its front leg drops open, a line of students marches out, and four of them
    say a complaint (the bubble rides along above them, then fades). Once the last one is gone, tap to replay. */
 const army = (() => {
-  const el = $('.cs-army'), bridge = $('.cs-bridge'), btn = $('.cs-horse-btn'), hint = $('.cs-horse-hint'), horse = $('.cs-horse');
+  const el = $('.cs-army--men'), pushed = $('.cs-pushed'), bridge = $('.cs-bridge'), btn = $('.cs-horse-btn'), hint = $('.cs-horse-hint'), horse = $('.cs-horse');
   if (!el) return { ready() {}, stop() {} };
   const src = el.dataset.student, quotes = el.dataset.quotes.split('|');
   const SPEED = 120, GAP = 0.3, COUNT = 18, W = 1272, FEET = 284;
   const SPEAKERS = [1, 5, 9, 13];                                // which soldiers say something, in order
-  let running = false, raf = 0, men = [], says = [], t0 = 0, last = 0, spawned = 0, timers = [];
+  let pushX = 0, PUSH0 = 0, running = false, raf = 0, men = [], says = [], t0 = 0, last = 0, spawned = 0, timers = [];
   const spawn = (x, i) => {
     const img = new Image(); img.src = src; img.alt = ''; img.style.animationDelay = (-Math.random() * 0.5).toFixed(2) + 's';
     el.appendChild(img); const m = { img, x, i }; img.style.transform = `translateX(${x}px)`; men.push(m); return m;
@@ -188,12 +188,16 @@ const army = (() => {
       const k = SPEAKERS.indexOf(m.i);
       if (k >= 0 && !m.said && m.x > 90) say(m, quotes[k % quotes.length]);
     }
+    // the lead soldier shoves the line of text along ahead of the procession
+    const lead = men.reduce((a, m) => Math.max(a, m.x), -1e9);
+    if (pushed) { pushX = Math.max(pushX, lead + 38); pushed.style.transform = `translateX(${pushX.toFixed(1)}px)`; }
     men = men.filter(m => (m.x < W + 10) || (m.img.remove(), false));
     says.forEach(place);
     if (spawned === COUNT && !men.length && !says.length) { finish(); return; }
     raf = requestAnimationFrame(frame);
   }
-  function finish() { running = false; hint.classList.remove('off'); horse.classList.add('nudge'); }
+  function resetText(fade) { if (!pushed) return; PUSH0 = PUSH0 || 190; pushX = PUSH0; gsap.killTweensOf(pushed); pushed.style.transform = `translateX(${PUSH0}px)`; if (fade) gsap.fromTo(pushed, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.8 }); else gsap.set(pushed, { autoAlpha: 1 }); }
+  function finish() { resetText(true); running = false; hint.classList.remove('off'); horse.classList.add('nudge'); }
   function go() {
     if (running) return;
     stop(); running = true; hint.classList.add('off'); horse.classList.remove('nudge');
@@ -207,6 +211,7 @@ const army = (() => {
     gsap.killTweensOf(bridge); gsap.set(bridge, { rotation: 0 });
     says.forEach(s => { gsap.killTweensOf(s.b); s.b.remove(); }); says = [];
     men.forEach(m => m.img.remove()); men = [];
+    if (!running) resetText(false);
   }
   btn.addEventListener('click', go);
   return {
