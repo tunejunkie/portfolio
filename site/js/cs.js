@@ -25,7 +25,7 @@ try { mode = localStorage.getItem('cs-mode') === 'slides' ? 'slides' : 'scroll';
 const qp = new URLSearchParams(location.search).get('mode'); if (qp === 'slides' || qp === 'scroll') mode = qp;
 
 /* ---------------- background ---------------- */
-const paint = c => { gsap.to([document.documentElement, body], { backgroundColor: c, duration: 0.9 * D, ease: 'power1.out', overwrite: 'auto' }); };
+// background: one gradient pinned to the viewport (css), the same behind every slide
 
 /* ---------------- 3D phones ---------------- */
 let stage = null;
@@ -183,7 +183,6 @@ function goTo(i, instant = false) {
       gsap.fromTo($$('[data-pop]', sl), { autoAlpha: 0, scale: 0.6, transformOrigin: '20% 100%' },
         { autoAlpha: 1, scale: 1, duration: 0.55 * D, delay: (instant ? 0 : 0.9) * D, stagger: 0.32 * D, ease: 'back.out(2)' });
     }
-    paint(sl.dataset.bg);
     // jump this slide's own sub-state into place, then animate to the target sub
     setSub(sl, dir > 0 ? 0 : sub, dir, true);
     if (sub && dir > 0) setSub(sl, sub, dir, instant); else if (dir < 0) setSub(sl, sub, dir, true);
@@ -280,7 +279,7 @@ modeBtns.forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode))
 let io = null;
 function stackLayout() {
   track.style.height = '';
-  slides.forEach(s => { s.style.setProperty('--sbg', s.dataset.bg); gsap.set(s, { clearProps: 'all' }); $$('[data-a],[data-sub],.cs-pill,[data-pop]', s).forEach(el => gsap.set(el, { clearProps: 'all' })); });
+  slides.forEach(s => { gsap.set(s, { clearProps: 'all' }); $$('[data-a],[data-sub],.cs-pill,[data-pop]', s).forEach(el => gsap.set(el, { clearProps: 'all' })); });
   const tro = $('.cs-trojan'); if (tro) { tro.style.zoom = ''; tro.style.width = '1595px'; tro.style.height = '426px'; tro.style.aspectRatio = 'auto'; tro.style.zoom = (tro.parentElement.clientWidth / 1595).toFixed(4); }
   const vid = $('.cs-hero video'); vid && vid.play().catch(() => {});
   if (!io) {

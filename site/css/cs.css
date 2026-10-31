@@ -1,6 +1,8 @@
 /* Case study deck (Saturn first). Desktop slides live on a 1728×1117 art board (the Figma frame), scaled
    to the window by cs.js; every size below is in art-board px. Phones get a stacked page (.is-stack). */
-.cs-page{--off:#f8f8f8;--ink:#000b22;--lilac:#e3a7ff;background:#15082e;color:var(--off);transition:background-color .9s ease}
+.cs-page{--off:#f8f8f8;--ink:#000b22;--lilac:#e3a7ff;background:#130329;color:var(--off)}
+/* one fixed gradient filling the viewport (Figma 1471:13524), not stretched down the page */
+.cs-page::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(0deg,#304e76 5.416%,#130329 100%);pointer-events:none}
 .cs-page .site-foot{position:relative;z-index:2}
 .cs-track{position:relative}
 .cs-deck{position:sticky;top:0;height:100vh;height:100lvh;overflow:hidden}
@@ -156,7 +158,7 @@
 .is-stack .cs-deck{position:static;height:auto;overflow:visible}
 .is-stack .cs-gl,.is-stack .cs-hud,.is-stack .cs-ctrl,.is-stack .cs-progress,.is-stack .cs-hint{display:none}
 .is-stack .cs-board{position:static;width:auto;height:auto;transform:none!important}
-.is-stack .cs-slide{position:relative;left:auto;top:auto;width:auto;height:auto;visibility:visible;opacity:1;padding:56px 16px;background:var(--sbg)}
+.is-stack .cs-slide{position:relative;left:auto;top:auto;width:auto;height:auto;visibility:visible;opacity:1;padding:56px 16px}
 .is-stack .cs-hero{padding-top:104px}
 .is-stack .cs-fit{position:static;transform:none;display:flex!important;flex-direction:column;align-items:stretch!important;gap:28px!important}
 .is-stack .cs-row,.is-stack .cs-top,.is-stack .cs-checks,.is-stack .cs-checks ul,.is-stack .cs-stats{flex-direction:column;align-items:stretch;gap:20px}
