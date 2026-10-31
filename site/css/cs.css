@@ -216,3 +216,6 @@
 .nav-hidden .cs-deck .cs-hud{transform:none}
 .cs-outline{transition:opacity .4s}
 .on-hero .cs-deck .cs-outline{opacity:0;pointer-events:none}
+/* chapter outline on the left, Scroll/Slides toggle on the right (the intro only has the toggle) */
+.cs-hud .cs-outline{order:-1}
+.cs-hud--intro{justify-content:flex-end}
