@@ -3,7 +3,7 @@ const $ = s => document.querySelector(s), D = 394.56 - 74.88;   // sheet travel 
 const aDrawer = $('#A-drawer'), aContent = $('#A-drawer-content'), aTitle = $('#A-title');
 const bSheet = [$('[data-node-id="1479:29583"]'), $('#Bbtn'), $('#Brect')];
 const bPill = $('[data-node-id="1479:29575"]'), tap = $('#tap');
-const LOOP = 5.0;
+const LOOP = 8.0;
 const big = $('#big'), mini = $('#mini'), morph = $('#morph'), phone = $('#phone');
 const pillBox = $('[data-node-id="1479:29576"]');
 const ringArt = [...document.querySelectorAll('#A > div:first-child > :not(:nth-child(3))')];   // ring, beaker, share (not the digits)
@@ -24,7 +24,9 @@ function tapAt(t, t0, x, y) {                     // finger tap: press in, then 
 window.setT = t => {
   t = ((t % LOOP) + LOOP) % LOOP;
   if (!C0) { C0 = centre(big); C1 = centre(mini); }
-  const p = seg(t, 1.25, 1.75) - seg(t, 3.55, 4.05);      // 0 collapsed → 1 expanded → 0
+  // twice per loop: up, hold, down, rest
+  let p = 0;
+  for (const o of [0, 4]) p += seg(t, o + 0.85, o + 1.35) - seg(t, o + 2.55, o + 3.05);
   aDrawer.style.transform = `translateY(${-D * p}px)`;
   aContent.style.opacity = clamp(1 - p * 2.2);
   aDrawer.style.visibility = p > 0.999 ? 'hidden' : 'visible';
@@ -44,13 +46,13 @@ window.setT = t => {
   }
   pillBox.style.borderColor = `rgba(255,255,255,${0.2 * clamp((m - 0.7) / 0.3)})`;
   ringArt.forEach(el => { if (el._o == null) el._o = parseFloat(getComputedStyle(el).opacity); el.style.opacity = el._o * clamp(1 - m * 1.6); });
-  // time passes: the countdown ticks down a second at a time. The loop's 4-second rewind is hidden in the
-  // middle of the downward morph (t = 3.8 s), when the digits are small and moving.
-  const left = 15 * 60 + 27 - Math.floor(((t - 3.8) % LOOP + LOOP) % LOOP);
+  // time passes: the countdown ticks down a second at a time. The loop's 8-second rewind is hidden in the
+  // middle of the second downward morph (t = 6.8 s), when the digits are small and moving.
+  const left = 15 * 60 + 27 - Math.floor(((t - 6.8) % LOOP + LOOP) % LOOP);
   const txt = Math.floor(left / 60) + ':' + String(left % 60).padStart(2, '0');
   if (big.textContent !== txt) { big.textContent = mini.textContent = morph.textContent = txt; }
   // taps: the up arrow on the collapsed sheet, then the down arrow on the open one
-  const o = Math.max(tapAt(t, 0.95, 135.36, 394.56), tapAt(t, 3.25, 135.36, 79.2));
+  const o = Math.max(...[0, 4].flatMap(k => [tapAt(t, k + 0.55, 135.36, 394.56), tapAt(t, k + 2.25, 135.36, 79.2)]));
   tap.style.opacity = o;
 };
 setT(0);

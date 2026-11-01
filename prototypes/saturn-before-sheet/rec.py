@@ -1,6 +1,6 @@
 import asyncio, subprocess
 from playwright.async_api import async_playwright
-FPS=60; LOOP=5.0
+FPS=60; LOOP=8.0
 async def main():
     async with async_playwright() as p:
         b=await p.chromium.launch(); pg=await b.new_page(viewport={'width':375,'height':812},device_scale_factor=2)
