@@ -16,6 +16,7 @@ html,body{margin:0;background:#000;overflow:hidden}
 [data-node-id="1479:29566"],[data-node-id="1479:29568"],[data-node-id="1479:29573"],[data-node-id="1479:29574"]{visibility:hidden}
 .col-1{grid-column:1/2}.row-1{grid-row:1/2}
 #statusbar img[src*="Notch"],[data-node-id="1479:29568"] img[src*="Notch"]{display:none}
+#morph{position:absolute;left:0;top:0;margin:0;font-family:SM;font-weight:700;color:#fff;white-space:nowrap;z-index:8;transform-origin:50% 50%;pointer-events:none}
 #tap{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1.5px rgba(0,0,0,.12);opacity:0;pointer-events:none;z-index:9}
 </style></head><body>
 <div id="phone">
@@ -23,7 +24,7 @@ html,body{margin:0;background:#000;overflow:hidden}
   <div class="absolute left-[43.2px] size-[184.32px] top-[86.4px]">
     <img alt="" class="absolute block inset-0 max-w-none size-full" src="a/ring/imgRing.svg">
     <div class="absolute inset-[15.63%_42.19%_68.75%_42.19%]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="a/ring/imgScienceBeaker.svg"></div>
-    <div class="absolute flex flex-col f-moderat-mono_bold inset-[37.5%_17.19%_40.63%_17.19%] justify-center leading-[0] text-[40.32px] text-center text-white whitespace-nowrap"><p class="leading-[40.32px]">15:27</p></div>
+    <div class="absolute flex flex-col f-moderat-mono_bold inset-[37.5%_17.19%_40.63%_17.19%] justify-center leading-[0] text-[40.32px] text-center text-white whitespace-nowrap"><p class="leading-[40.32px]" id="big">15:27</p></div>
     <div class="absolute bg-white inset-[65.63%_30.08%_18.75%_30.08%] opacity-20 rounded-[14.4px] shadow-[0px_2.88px_14.4px_0px_rgba(0,0,0,0.05)]"></div>
     <div class="absolute left-[58.32px] size-[23.04px] top-[123.84px]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="a/ring/imgEllipse393.svg"></div>
     <div class="absolute inset-[69.53%_58.2%_22.66%_33.98%]"><img alt="" class="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src="a/ring/imgGhostLogoForLightBackgrounds1.png"></div>
@@ -210,7 +211,7 @@ html,body{margin:0;background:#000;overflow:hidden}
           <div class="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[5.76px] items-center left-[calc(50%-0.36px)] top-1/2" data-node-id="1479:29575">
             <div class="border-[0.72px] border-[rgba(255,255,255,0.2)] border-solid content-stretch drop-shadow-[0px_2.88px_7.2px_rgba(0,0,0,0.05)] flex items-start px-[8.64px] py-[5.76px] relative rounded-[14.4px] shrink-0" data-node-id="1479:29576">
               <div class="[word-break:break-word] flex flex-col f-moderat-mono_black justify-center leading-[0] not-italic relative shrink-0 text-[11.52px] text-center text-white tracking-[-0.72px] whitespace-nowrap" data-node-id="1479:29577">
-                <p class="leading-[11.52px]">29:15</p>
+                <p class="leading-[11.52px]" id="mini">15:27</p>
               </div>
             </div>
             <div class="content-stretch flex gap-[2.88px] items-center leading-[0] relative shrink-0" data-node-id="1479:29578">
@@ -1015,7 +1016,7 @@ The tool output was truncated. If this MCP server provides pagination or filteri
     <div class="h-[43.2px] relative shrink-0 w-[41.76px]"><div class="-translate-x-1/2 -translate-y-1/2 absolute flex flex-col gap-[2.074px] items-center justify-center left-[calc(50%-0.36px)] top-1/2"><div class="relative shrink-0 size-[17.28px]"><img alt="" class="absolute block inset-0 max-w-none size-full" src="a/ring/imgIconDefault10.svg"></div><div class="flex flex-col f-poppins-medium justify-center leading-[0] relative shrink-0 text-[#b6bfc9] text-[8.64px] text-center whitespace-nowrap"><p class="leading-[normal]">Profile</p></div></div></div>
   </div>
 </div>
-<div id="tap"></div>
+<p id="morph">15:27</p><div id="tap"></div>
 </div>
 <script src="anim.js"></script>
 </body></html>
