@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ring">
+<mask id="stroke0_0_705" maskUnits="userSpaceOnUse" x="0" y="0" width="52" height="52" fill="black">
+<rect fill="white" width="52" height="52"/>
+<path d="M50 26C50 39.2548 39.2548 50 26 50C12.7452 50 2 39.2548 2 26C2 12.7452 12.7452 2 26 2C39.2548 2 50 12.7452 50 26Z"/>
+</mask>
+<path id="Ellipse 3.4" d="M50 26C50 39.2548 39.2548 50 26 50C12.7452 50 2 39.2548 2 26C2 12.7452 12.7452 2 26 2C39.2548 2 50 12.7452 50 26Z" stroke-width="4" stroke-linecap="round" stroke="#F1F2F4" mask="url(#stroke0_0_705)"/>
+<path id="Ellipse 3.4_2" d="M2 26C2 39.2548 12.7452 50 26 50C39.2548 50 50 39.2548 50 26C50 12.7452 39.2548 2 26 2" stroke-width="3" stroke-linecap="round" stroke="url(#paint0_linear_0_705)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_705" x1="2" y1="26" x2="50" y2="26" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3FEAAC"/>
+<stop offset="1" stop-color="#21D192"/>
+</linearGradient>
+</defs>
+</svg>
