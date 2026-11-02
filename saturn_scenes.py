@@ -225,9 +225,9 @@ def slides():
     # 12 (Figma "scene11") — why this design
     add('why', 2,
         ab(0, 101, 1728, h('Why this design?'), 'tc')
-        + ab(93, 243, 739, '<div class="cs-why" data-a><h3>Experimentation</h3><p>The product team wanted to try lots of features to find new avenues for growth. We needed an interface that was adaptable for experimentation.</p></div>')
-        + ab(897, 243, 739, '<div class="cs-why" data-a><h3>Calendar hadn’t earned it</h3><p>Calendar was unproven as a feature, and inherently complicated. To reach parity or even table stakes with others, it needed its own space to grow.</p></div>')
-        + ab(115, 434, 1498, img('why-collage.webp', 'The Now tab’s modular widgets: favorites, later, today, tomorrow, classmates, share your schedule'), 'cs-collage', h=590))
+        + ab(93, 243, 739, '<div class="cs-whycol" data-a><h3>Experimentation</h3><p>The product team wanted to try lots of features to find new avenues for growth. We needed an interface that was adaptable for experimentation.</p></div>')
+        + ab(897, 243, 739, '<div class="cs-whycol" data-a><h3>Calendar hadn’t earned it</h3><p>Calendar was unproven as a feature, and inherently complicated. To reach parity or even table stakes with others, it needed its own space to grow.</p></div>')
+        + ab(115, 420, 1498, img('why-widgets.webp', 'The Now tab’s modular widgets: later, today, the class timer, favorites, tomorrow, share your schedule, and classmates'), 'cs-collage', h=583))
 
     # 13 (Figma "scene12") — back-to-school 2022: the chart draws out to the peak
     add('bts', 2,
