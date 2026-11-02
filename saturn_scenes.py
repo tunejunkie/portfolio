@@ -198,7 +198,7 @@ def slides():
     add('first', 2,
         ab(212, 62, 1304, h('My first attempt that shipped'), 'tc')
         + ab(212, 151, 1304, p('Live for the last 2 months of the 21–22 school year, this version attempted to make Calendar the star.<br>Kids missed the big timer, and the onboarding question wasn’t solved.'), 'tc')
-        + ab(53, 275, 1623, img('first-attempt.webp', 'Four screens of the first shipped redesign: a calendar-first home, class detail, a red final-minute state, and friends'), 'cs-row4', h=746))
+        + ab(128, 285, 1472, '<div class="cs-first4">' + img('first-now.webp', 'Calendar-first home during class, with the current class highlighted') + img('first-class.webp', 'Class detail with the big timer ring, chat, new task and classmates') + img('first-next.webp', 'The red final-minute state: 0:59 until the next class') + img('first-friends.webp', 'Friends list showing what each friend is doing now') + '</div>', 'cs-firstrow', h=700))
 
     # 10 (Figma "scene09") — the homepage needed a fresh start
     wants_u = ['to know what bell schedule today and tomorrow are, at a glance', 'to know how much time until class ends or starts', 'know what class their friend is in now/next',
@@ -215,11 +215,11 @@ def slides():
     metrics = ['Setup completion: students who add every class', 'Sessions that touch something other than the timer', 'Students with at least one friend on Saturn',
                'Opens after October 1st, when the novelty wears off']
     add('pitch', 2,
-        ab(80, 131, 701, tag('my pitch'))
-        + ab(80, 200, 701, h('Separate calendar from timer, creating the “Now Tab.”'))
-        + ab(80, 459, 701, p('I proposed a new home tab that could shape-shift, in the course of one summer, from an onboarding page, to an excitement-building page, to the time-tracking, schedule-knowing hub Saturn was known for.'))
-        + ab(80, 667, 701, f'<p class="cs-label" data-a>Metrics I wanted to move</p><ul class="sb cs-dots" data-a>{"".join(f"<li>{guess(E(m))}</li>" for m in metrics)}</ul>')
-        + ab(1098, 52, 375, iphone('proto/now-tab/', 'Interactive prototype of the Now tab')
+        ab(286, 150, 640, '<div class="cs-pitchtxt">' + tag('my pitch')
+           + h('Separate calendar from timer, creating the “Now Tab.”')
+           + p('I proposed a new home tab that could shape-shift, in the course of one summer, from an onboarding page, to an excitement-building page, to the time-tracking, schedule-knowing hub Saturn was known for.')
+           + f'<div><p class="cs-label" data-a>Metrics I wanted to move</p><ul class="sb cs-dots" data-a>{"".join(f"<li>{E(m)}</li>" for m in metrics)}</ul></div></div>', h=760)
+        + ab(1066, 52, 375, iphone('proto/now-tab/', 'Interactive prototype of the Now tab')
              + chips([(1, 'In class'), (4, 'Passing time'), (10, 'After school'), (15, 'Before day 1')], 1, 'Now tab states'), 'cs-phslot cs-proto2', h=900))
 
     # 12 (Figma "scene11") — why this design
