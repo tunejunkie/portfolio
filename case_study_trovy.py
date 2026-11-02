@@ -161,7 +161,7 @@ def slides():
       <div class="cs-stats">{''.join(f'<div data-a><h3>{E(h)}</h3><p>{E(p)}</p></div>' for h, p in takeaways_)}</div>
       <p class="cs-body tv-next" data-a><b>Next for Renovate:</b> contractor quotes, a contractor marketplace and a home-value calculator for each project.</p>''')
 
-    return [hero, context, shift, home_before, home_after, home_live, brief, flow, desktop, detail, process, takeaways]
+    return [hero, context, shift, home_before, home_live, brief, flow, desktop, detail, process, takeaways]
 
 
 def case_study_trovy():
