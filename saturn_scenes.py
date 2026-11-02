@@ -256,19 +256,25 @@ def slides():
         out = []
         for it in items:
             if it.startswith('v'):
-                out.append(f'<video class="cs-scr" data-src="{{base}}{C}{it}.mp4" poster="{{base}}{C}{it}.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>')
+                out.append(f'<video class="cs-shot" data-src="{{base}}{C}{it}.mp4" poster="{{base}}{C}{it}.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>')
             else:
-                out.append(f'<img class="cs-scr" src="{{base}}{C}{it}" alt="" loading="lazy">')
-        return f'<div class="cs-screens" data-a role="img" aria-label="{E(alt)}" style="--n:{len(items)}">{"".join(out)}</div>'
+                out.append(f'<img class="cs-shot" src="{{base}}{C}{it}" alt="" loading="lazy">')
+        return f'<div class="cs-shots" data-a role="img" aria-label="{E(alt)}" style="--n:{len(items)}">{"".join(out)}</div>'
 
     def cal(key, pill, title, body, pics=None, alt='', wide=False, extra=''):
-        if wide:
+        if wide:  # text on top, a full-width row of screens filling the rest of the slide
+            long = len(title) > 60
+            body_y = 250 if long else 180
+            row_y = body_y + 125
             return scene(key, 3,
-                         ab(212, 40, 1304, tag(pill), 'tc') + ab(212, 96, 1304, h(title), 'tc') + ab(262, 260 if len(title) > 60 else 196, 1204, body, 'tc')
-                         + (ab(60, 400, 1608, screens(pics, alt), 'cs-calrow', h=590) if pics else '') + extra)
+                         ab(162, 20, 1404, tag(pill), 'tc') + ab(162, 70, 1404, h(title), 'tc') + ab(262, body_y, 1204, body, 'tc')
+                         + (ab(30, row_y, 1668, screens(pics, alt), 'cs-calrow', h=1010 - row_y) if pics else '') + extra)
+        # text on the left, vertically centred; the screens take the whole right side, top to bottom
+        n = len(pics or [])
+        sx = 880 if n > 1 else 1020
         return scene(key, 3,
-                     ab(80, 140, 760, tag(pill)) + ab(80, 200, 760, h(title)) + ab(80, 470 if len(title) > 44 else 400, 760, body)
-                     + (ab(940, 80, 740, screens(pics, alt), 'cs-calside', h=860) if pics else '') + extra)
+                     ab(80, 30, sx - 160, f'<div class="cs-pitchtxt">{tag(pill)}{h(title)}{body}</div>', h=960)
+                     + (ab(sx, 25, 1700 - sx, screens(pics, alt), 'cs-calside', h=970) if pics else '') + extra)
 
     out.append(scene('reframe', 3,
                      ab(212, 230, 1304, tag('the reframe'), 'tc')
@@ -321,8 +327,6 @@ def slides():
 
     # thank you
     out.append(scene('thanks', 3,
-                     ab(212, 250, 1304, '<h2 class="sh96" data-a>Thanks for reading.</h2>', 'tc')
-                     + ab(312, 420, 1104, p('Up next: Saturn × Nike, the ad format that felt like a feature.'), 'tc')
-                     + ab(564, 560, 600, '<div class="cs-end" data-a><a href="#top" class="cs-endbtn">Back to the top</a>'
-                       '<a href="https://www.linkedin.com/in/natalierosetaylor/" target="_blank" rel="noopener" class="cs-endbtn cs-endbtn--o">Say hi on LinkedIn</a></div>', 'tc')))
+                     ab(212, 330, 1304, '<h2 class="sh96" data-a>Questions?</h2>', 'tc')
+                     + ab(564, 520, 600, '<div class="cs-end" data-a><a href="{base}case-studies/trovy-design-engineer/" class="cs-endbtn">Next: Trovy</a></div>', 'tc')))
     return out
