@@ -159,7 +159,7 @@ def slides():
 
     process = slide('process', 2, f'''
       <div class="cs-head"><h2 class="t56" data-a>How it was built</h2></div>
-      {cards([('Code as the design tool', 'Layouts, states and motion were designed in the running app with AI coding agents, not in Figma first.'),
+      {cards([('Figma first, then code', 'Direction and key screens start in Figma. Layouts, states and motion get refined in the running app with Claude Code.'),
               ('Desktop and mobile together', 'Every change was checked at 1440 and 390 in the same pass, so neither size is a port of the other.'),
               ('A visual-QA rig', 'A test setup with a sample bathroom project renders every screen at both sizes after each change. The screenshots on this page come from it.'),
               ('Behind a release flag', 'Shipped to cardholders behind a flag, so Trovy controls rollout, and the redesign goes through review before it reaches everyone.')], 'cs-cards--lessons')}''')
