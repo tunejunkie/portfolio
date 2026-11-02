@@ -135,8 +135,10 @@ def slides():
              ('m-design-ready', 'See your new room', 'Drawn on your own photo, with a before/after slider.'),
              ('m-ready-shop', 'Price it and shop it', 'Materials and labor, each product pinned and linked.')]
     flow = slide('flow', 2, f'''
-      <div class="cs-head"><h2 class="t56" data-a>Five steps, one chat.</h2></div>
-      <ol class="tv-steps">{''.join(f'<li data-a><img src="{A}{f}.webp" alt="" loading="lazy" width="280" height="606"><h3><span>{i}</span>{E(h)}</h3><p>{E(p)}</p></li>' for i, (f, h, p) in enumerate(steps, 1))}</ol>''')
+      <div class="cs-head"><h2 class="t56" data-a>See the renovation of your dreams in minutes.</h2></div>
+      <figure class="tv-shot tv-shot--hero" data-a>
+        <img src="{A}d-design-ready.webp" alt="Renovate on desktop: a before/after slider over a bathroom redesign, a column of saved versions, Renault’s chat and a $24,900 estimate next to Take Out Cash" width="1600" height="1111">
+      </figure>''')
 
     desktop = slide('desktop', 2, f'''
       <div class="cs-col cs-col--text tv-w434">
@@ -183,10 +185,9 @@ def slides():
                   ('The queue is gone.', 'Marketing and Toolkit work no longer waits for engineering time. The lending product still does, and that is the right split.')]
     takeaways = slide('takeaways', 3, f'''
       <h2 class="t64" data-a>What changed in how I work</h2>
-      <div class="cs-stats">{''.join(f'<div data-a><h3>{E(h)}</h3><p>{E(p)}</p></div>' for h, p in takeaways_)}</div>
-      <p class="cs-body tv-next" data-a><b>Next for Renovate:</b> contractor quotes, a contractor marketplace and a home-value calculator for each project.</p>''')
+      <div class="cs-stats">{''.join(f'<div data-a><h3>{E(h)}</h3><p>{E(p)}</p></div>' for h, p in takeaways_)}</div>''')
 
-    return [hero, context, apply, home_live, shift, brief, flow, desktop, detail, process, myprocess, takeaways]
+    return [hero, context, apply, home_live, shift, brief, flow, process, myprocess, takeaways]
 
 
 def case_study_trovy():

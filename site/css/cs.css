@@ -545,3 +545,9 @@
 .tv-process .tv-process-k{font:500 14px/1.3 var(--f-body);letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-bottom:4px}
 .tv-process h3{font:600 24px/1.3 var(--f-body);margin-bottom:6px}
 .tv-shot--process img{border-radius:28px}
+/* Trovy: Renovate desktop screen under the headline, sized to the slide height */
+.cs-flow .tv-shot--hero{flex:none;align-self:flex-start;height:calc(var(--h) - 130px);aspect-ratio:1600/1111;width:auto;max-width:100%}
+.cs-flow .tv-shot--hero img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:28px}
+.is-stack .cs-flow .tv-shot--hero{height:auto;width:100%}
+.is-stack .cs-flow .tv-shot--hero img{height:auto}
+.cs-flow .cs-fit{gap:32px!important}
