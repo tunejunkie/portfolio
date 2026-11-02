@@ -72,7 +72,7 @@ def slides():
         <p class="cs-proto-hint">Live prototype · tap through it</p>
       </div>''')
 
-    shift = slide('shift', 0, f'''
+    shift = slide('shift', 1, f'''
       <div class="cs-head"><h2 class="t56" data-a>One designer, one engineering team, one queue.</h2></div>
       <p class="cs-body cs-body--wide" data-a>Trovy’s engineers work on the lending product: application, underwriting, servicing, compliance. Everything else, the marketing site and new homeowner features, waited behind it. In [month] 2025 I started building those myself with AI coding agents and handing engineering working code instead of mockups.</p>
       {cards([('The deliverable changed.', 'Figma files became running code. The prototype is the spec; engineering reviews a build, not a redline.'),
@@ -103,9 +103,9 @@ def slides():
 
     home_live = slide('home-live', 1, f'''
       <div class="cs-col cs-col--text tv-w434">
-        <div class="cs-head"><span class="cs-pill">Project 1</span><h2 class="t56" data-a>Built in code, not Figma.</h2></div>
+        <div class="cs-head"><span class="cs-pill">Project 1</span><h2 class="t56" data-a>Ideate in Figma, polish in code.</h2></div>
         <div class="cs-body" data-a>
-          <p>The new Trovy homepage, designed directly in HTML, CSS and JavaScript: scroll-scrubbed timelines, a 3D card in three.js, a video hero and the responsive layout, in one file.</p>
+          <p>A designer’s superpower is the ability to describe visual ideas succinctly that humans innately understand. I always start in Figma, but 80% of my time is spent tweaking and reacting in Claude Code.</p>
         </div>
         <a class="tv-link" data-a href="{{base}}proto/trovy-home/" target="_blank" rel="noopener">Open the build full size ↗</a>
       </div>
@@ -186,7 +186,7 @@ def slides():
       <div class="cs-stats">{''.join(f'<div data-a><h3>{E(h)}</h3><p>{E(p)}</p></div>' for h, p in takeaways_)}</div>
       <p class="cs-body tv-next" data-a><b>Next for Renovate:</b> contractor quotes, a contractor marketplace and a home-value calculator for each project.</p>''')
 
-    return [hero, context, apply, shift, home_live, brief, flow, desktop, detail, process, myprocess, takeaways]
+    return [hero, context, apply, home_live, shift, brief, flow, desktop, detail, process, myprocess, takeaways]
 
 
 def case_study_trovy():
