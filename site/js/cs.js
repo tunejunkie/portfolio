@@ -160,7 +160,8 @@ const fire = (s, t) => { if (s) s.dispatchEvent(new CustomEvent('cs:' + t)); };
 
 /* ---------------- problems slide: the Trojan horse ----------------
    Tap the horse: students climb down its ladder and march off to the right, six of them saying a complaint
-   (the bubble rides along above them, then fades). As their numbers grow the horse rolls back to the left. */
+   (the bubble rides along above them, then fades). As their numbers grow the horse rolls back to the left,
+   and when the last one is out it rolls after them, back to where it started. */
 const army = (() => {
   const el = $('.cs-army--men'), btn = $('.cs-horse-btn'), hint = $('.cs-horse-hint'), horse = $('.cs-trojan .cs-horse');
   if (!el) return;
@@ -169,7 +170,7 @@ const army = (() => {
   const SPEED = 118, GAP = 0.34, COUNT = 22, W = 1760, FEET = 376, LADDER = 868, ROLL = -300;
   const SPEAKERS = [1, 4, 7, 10, 13, 16];
   const LIFT = [0, 80, 160, 40, 120, 20];
-  let running = false, raf = 0, men = [], says = [], t0 = 0, last = 0, spawned = 0, shift = 0;
+  let running = false, raf = 0, men = [], says = [], t0 = 0, last = 0, spawned = 0, shift = 0, vel = 0;
   const spawn = i => {
     const img = new Image(); img.src = src; img.alt = ''; img.style.animationDelay = (-Math.random() * 0.5).toFixed(2) + 's';
     el.appendChild(img); const m = { img, x: LADDER + shift - 14, i, born: performance.now() };
@@ -187,9 +188,15 @@ const army = (() => {
     if (!running) return;
     const t = (now - t0) / 1000, dt = Math.min(0.05, (now - (last || now)) / 1000); last = now;
     if (t > 0 && spawned < COUNT && t > spawned * GAP) spawn(spawned++);
-    // the horse rolls back as the line grows
-    const target = ROLL * Math.min(1, spawned / COUNT);
-    shift += (target - shift) * Math.min(1, dt * 2.2);
+    // the horse rolls back as the line grows; once the last student is out, it follows them back to where it started
+    const out = spawned === COUNT && t > COUNT * GAP + 0.7;
+    if (out) {  // walk after them: ease up to marching speed, ease in to a stop at the start
+      vel = Math.min(SPEED, vel + SPEED * 1.5 * dt);
+      shift = Math.min(0, shift + Math.min(vel, Math.max(30, -shift * 2.2)) * dt);
+    } else {
+      const target = ROLL * Math.min(1, spawned / COUNT);
+      shift += (target - shift) * Math.min(1, dt * 2.2);
+    }
     horse.style.transform = `translateX(${shift.toFixed(1)}px)`;
     for (const m of men) {
       m.x += SPEED * dt; m.img.style.transform = `translateX(${m.x.toFixed(1)}px)`;
@@ -207,7 +214,7 @@ const army = (() => {
     if (running) return;
     stop(); running = true; hint.classList.add('off'); horse.classList.remove('nudge');
     if (reduced) { for (let i = 0; i < 10; i++) { const m = spawn(i); m.x += 40 + i * 70; m.img.style.opacity = 1; m.img.style.transform = `translateX(${m.x}px)`; } running = false; return; }
-    t0 = performance.now() + 250; last = 0; spawned = 0;
+    t0 = performance.now() + 250; last = 0; spawned = 0; vel = 0;
     raf = requestAnimationFrame(frame);
   }
   function stop() {
