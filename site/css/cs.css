@@ -643,3 +643,5 @@
 .cs-renovate .ab[style*="--w:234"] img{mix-blend-mode:multiply}
 .tv2 .tv-link{display:inline-block}
 .is-stack .tv-process p{font-size:16px}.is-stack .tv-process h3{font-size:19px}.is-stack .tv-proctext .tv-process{margin-top:24px}
+/* Trovy: scenes are fitted to their content by cs.js (fillScenes → --tf) */
+body:not(.is-stack) .tv2 .cs-fit{top:0;left:0;transform-origin:0 0;transform:var(--tf,none)}

@@ -21,8 +21,9 @@ INK = '#000b22'
 CREAM = 'linear-gradient(180deg,#fef0d4 0%,#fdf3df 45%,#f8f8f8 100%)'
 BG = {
     # title: the row of houses sits on the bottom edge of the screen, with its note, as part of the background
-    'hero': ('url({base}' + V2 + 'note-title.webp) left 61.28vw bottom 24.94vw / 10.42vw auto no-repeat,'
-             'url({base}' + V2 + 'houses.webp) center bottom -0.87vw / 100vw auto no-repeat,'
+    # (W = the houses' width: the full window, or wider on short windows; they start 54% down and crop at the bottom)
+    'hero': ('url({base}' + V2 + 'note-title.webp) left calc(50vw + max(100vw,150vh) * .1128) top calc(54vh + max(100vw,150vh) * .0515) / calc(max(100vw,150vh) * .1042) auto no-repeat,'
+             'url({base}' + V2 + 'houses.webp) center top 54vh / max(100vw,150vh) auto no-repeat,'
              'linear-gradient(180deg,#a8d3ff 0%,#fff1d2 68.65%)'),
     'context': 'linear-gradient(180deg,#fdba1f 0%,#fb793a 50%,#9079ff 100%)',
     'apply': 'linear-gradient(180deg,#9079ff 0%,#fb793a 100%)',
@@ -106,11 +107,11 @@ def slides():
     brand = scene('brand', 0,
         ab(60, 82, 1608, '''<div class="tv-split"><h2 class="sh64" data-a>Who’s that brand?</h2>
           <p class="tv-b24 tr" data-a>I wanted to break out of the fintech blue/green palette and develop a memorable fintech brand with a provocative signature color. Trovy Gold was reminiscent of sunshine in your backyard, or, a treasure trove.</p></div>''')
-        + ab(-89, 269, 1906, f'<div class="tv-brandgrid" role="img" aria-label="Twelve Trovy brand pieces: logos, the gold palette, the card, ads and a billboard">{brand_imgs}</div>'))
+        + ab(-89, 269, 1906, f'<div class="tv-brandgrid" role="img" aria-label="Twelve Trovy brand pieces: logos, the gold palette, the card, ads and a billboard">{brand_imgs}</div>', 'tv-bleed'))
 
     home = scene('home', 1,
         ab(60, 188, 434, '''<h2 class="sh48" data-a>Code without Figma? That’s not the vibe.</h2>
-          <p class="tv-b22 tv-mt56" data-a>A designer’s superpower is the ability to succinctly communicate ideas visually. LLMs reach for wordiness and don’t quite understand the adage “A picture says a thousand words.”</p>
+          <p class="tv-b22 tv-mt56" data-a>A designer’s superpower is the ability to succinctly communicate ideas visually. LLMs’ domain is words, and they don’t quite understand the adage “A picture says a thousand words.”</p>
           <p class="tv-b22 tv-mt33" data-a>I always start in Figma, but 75% of my time is spent tweaking and reacting in Claude Code. Here’s my first project: a new marketing site.</p>
           <a class="tv-link tv-mt56" data-a href="{base}proto/trovy-home/" target="_blank" rel="noopener">Open the build full size ↗</a>''')
         + ab(552, 123, 1116, '''<div class="tv-browser2" data-a>

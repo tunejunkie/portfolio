@@ -157,9 +157,31 @@ function layout() {
     const f = $('.cs-fit', s); f.style.setProperty('--k', 1);
     const k = Math.min(1, h / f.offsetHeight); f.style.setProperty('--k', k.toFixed(4));
   });
+  if (bgLayers) fillScenes(vw, vh, tx, ty, barH, top);
   U = innerHeight;
   track.style.height = mode === 'scroll' ? ((N - 1) * U + innerHeight) + 'px' : innerHeight + 'px';
   if (stage) stage.resize();
+}
+
+// Decks with per-slide backgrounds (Trovy) scale each scene to its content, not to the Figma frame: the union of
+// its blocks is fitted into the whole window under the bar (side margins match the bar), so nothing is smaller
+// than it needs to be. Blocks marked .tv-bleed (the brand grid) count as the frame width, so they still run off the sides.
+function fillScenes(vw, vh, tx, ty, barH, top) {
+  const M = 56, bottom = mode === 'slides' ? 104 : 40;
+  const aL = (M - tx) / S, aT = (barH + 24 - ty) / S, aW = (vw - 2 * M) / S, aH = (vh - barH - 24 - bottom) / S;
+  slides.forEach(s => {
+    const f = $('.cs-fit', s), sc = $('.cs-scene', s); if (!sc) return;
+    let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+    [...sc.children].forEach(b => {
+      const bl = b.classList.contains('tv-bleed');   // full-bleed: counts as the frame width
+      x0 = Math.min(x0, bl ? Math.max(0, b.offsetLeft) : b.offsetLeft); x1 = Math.max(x1, bl ? Math.min(1728, b.offsetLeft + b.offsetWidth) : b.offsetLeft + b.offsetWidth);
+      y0 = Math.min(y0, b.offsetTop); y1 = Math.max(y1, b.offsetTop + b.offsetHeight);
+    });
+    if (x1 < x0) return;
+    const K = Math.min(1.5, aW / (x1 - x0), aH / (y1 - y0));
+    const X = aL + (aW - (x1 - x0) * K) / 2 - x0 * K - 60, Y = aT + (aH - (y1 - y0) * K) / 2 - y0 * K - top;
+    f.style.setProperty('--tf', `translate(${X.toFixed(1)}px,${Y.toFixed(1)}px) scale(${K.toFixed(4)})`);
+  });
 }
 
 /* ---------------- slide lifecycle: scenes listen for cs:enter / cs:leave ---------------- */
