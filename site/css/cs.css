@@ -264,9 +264,9 @@
 /* intro: Trovy logo + lede, meta row, then the hero image (its rounded corners are in the PNG) */
 .tv-hero-top{display:flex;align-items:center;justify-content:space-between;gap:48px}
 .tv-title{margin:0;line-height:0}
-.tv-logo{display:inline-flex;align-items:flex-end;gap:9px;padding:15px 10px 12px}
-.tv-logo img:first-child{width:74px;height:67px}
-.tv-logo img:last-child{width:179px;height:61px}
+.tv-logo{display:inline-flex;align-items:flex-end;gap:7px;padding:12px 0 10px}
+.tv-logo img:first-child{width:56px;height:51px}
+.tv-logo img:last-child{width:135px;height:46px}
 .tv-lede{margin:0;width:549px;flex:none}
 .tv-hero-copy .cs-meta{margin-top:64px}
 .tv-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
