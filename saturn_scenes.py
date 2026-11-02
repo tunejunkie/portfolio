@@ -240,7 +240,7 @@ def slides():
 
     # 14 (Figma "scene10") — after school remained unsolved: tap the phone to change the time of day
     add('afterschool', 2,
-        ab(80, 177, 701, tag('my pitch'))
+        ab(80, 177, 701, tag('results'))
         + ab(80, 246, 701, h('After-school remained unsolved.'))
         + ab(80, 432, 701, p('A product disagreement about what belonged there, plus an over-committed engineering roadmap, left the most valuable real estate in the app fallow from 3pm to 8am.')
              + p('Also, students reported loving the new design but said things like, “I do wish I could see my whole schedule though” 🤦‍♀️😑')
