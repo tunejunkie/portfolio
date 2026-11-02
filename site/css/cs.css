@@ -380,8 +380,8 @@
 .cs-stabs{position:absolute;left:0;right:0;top:20px;display:flex;justify-content:center;gap:16px;opacity:0;pointer-events:none}
 .cs-stab{font:700 17px/1 var(--f-body);color:rgba(255,255,255,.7);background:rgba(255,255,255,.1);border-radius:6px;padding:16px 26px;cursor:pointer;transition:background .2s,color .2s}
 .cs-stab[data-set=obs].on{background:#a9dcff;color:#0e1b33}.cs-stab[data-set=ins].on{background:#e4b4ff;color:#2a0d3b}.cs-stab[data-set=hmw].on{background:#ffe9a6;color:#3a2a00}
-.cs-notes{position:absolute;left:0;right:0;top:110px;display:flex;justify-content:center;gap:22px;pointer-events:none}
-.cs-note{width:170px;height:170px;padding:16px 16px;font:500 15px/1.4 var(--f-body);color:#1e2433;opacity:0;box-shadow:0 18px 30px -18px rgba(0,0,0,.6)}
+.cs-notes{position:absolute;left:0;right:0;top:100px;display:flex;justify-content:center;gap:20px;pointer-events:none}
+.cs-note{width:250px;height:250px;padding:22px 22px;font:500 20px/1.38 var(--f-body);overflow-wrap:break-word;color:#1e2433;opacity:0;box-shadow:0 18px 30px -18px rgba(0,0,0,.6)}
 .cs-notes[data-set=obs] .cs-note{background:#a9dcff}.cs-notes[data-set=ins] .cs-note{background:#e4b4ff}.cs-notes[data-set=hmw] .cs-note{background:#ffe9a6}
 .cs-sticky.open .cs-stabs{opacity:1;pointer-events:auto;transition:opacity .4s .2s}
 .cs-sticky.open .cs-stacks,.cs-sticky.open .cs-sticky-hint{opacity:0;pointer-events:none;transition:opacity .3s}

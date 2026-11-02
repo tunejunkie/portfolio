@@ -187,7 +187,7 @@ def slides():
     names = {'obs': 'Observations', 'ins': 'Insights', 'hmw': 'How Might We'}
     stacks = ''.join(f'<button type="button" class="cs-stack" data-set="{k}" aria-label="{names[k]}: show the notes"><img src="{{base}}{V}stack-{k}.webp" alt=""></button>' for k in names)
     tabs = ''.join(f'<button type="button" class="cs-stab" data-set="{k}">{names[k]}</button>' for k in names)
-    sets = ''.join(f'<div class="cs-notes" data-set="{k}" data-label="{names[k]}">{"".join(f"<p class=cs-note>{E(n)}</p>" for n in v)}</div>' for k, v in notes.items())
+    sets = ''.join(f'<div class="cs-notes" data-set="{k}" data-label="{names[k]}">{"".join(f"<p class=cs-note>{E(n).replace(chr(47), chr(47)+chr(8203))}</p>" for n in v)}</div>' for k, v in notes.items())
     add('thinking', 1,
         ab(227, 133, 1275, h('What guided my thinking?'), 'tc')
         + ab(481, 246, 767, p('With the benefit of fresh eyes, and aided by user interviews, I collated my thoughts in the following ways.'), 'tc')
