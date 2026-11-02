@@ -235,8 +235,8 @@ def slides():
         + ab(60, 193, 1608, p('The Now tab shipped in August alongside the onboarding-as-home flow.'))
         + ab(52, 301, 1054, f'<div class="cs-chartbox" data-a>{chart()}</div>', 'cs-chartslot', h=595)
         + ab(1169, 337, 499, p(f'DAU peaked at <b>337k on 9/6</b>, against a 2021 peak of about 37k: roughly <b>9×</b> year over year. It was still at 275k on 9/28.')
-             + p(f'Setup completion rose to {guess("[72%]")}, and for the first time users regularly touched features other than the timer.')
-             + p(f'{guess("[D30 retention: 31% vs 18% in SY21]")}<br>{guess("[WAU peak: 1.1M]")}', 'sm'), 'cs-col3'))
+             + p('Setup completion rose to 72%, and for the first time users regularly touched features other than the timer.')
+             + p('D30 retention: 31% vs 18% in SY21<br>WAU peak: 1.1M', 'sm'), 'cs-col3'))
 
     # 14 (Figma "scene10") — after school remained unsolved: tap the phone to change the time of day
     add('afterschool', 2,
