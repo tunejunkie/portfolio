@@ -52,7 +52,12 @@ def slides():
           <p>I joined as the founding designer and shipped the brand, the card, the application, the account dashboard, the marketing site and the ads. This case study covers what came after that: the work I built myself.</p>
         </div>
       </div>
-      <img class="tv-card" data-a src="{A}card.webp" alt="The gold Trovy Mastercard" width="620" height="620">''')
+      <button type="button" class="tv-card3d" data-a data-glb="{ASSET}card.glb" aria-label="The gold Trovy Mastercard in 3D. Tap to spin it.">
+        <img class="tv-card3d-flat" src="{A}card.webp" alt="" width="620" height="620">
+        <i class="tv-card3d-shadow" aria-hidden="true"></i>
+        <canvas aria-hidden="true"></canvas>
+        <span class="tv-card3d-hint" aria-hidden="true">Tap to spin</span>
+      </button>''')
 
     shift = slide('shift', 0, f'''
       <div class="cs-head"><h2 class="t56" data-a>One designer, one engineering team, one queue.</h2></div>
@@ -207,4 +212,5 @@ def case_study_trovy():
 <script src="{base}js/vendor/lenis.min.js"></script>
 <script type="importmap">{{"imports":{{"three":"{base}js/vendor/three.module.min.js"}}}}</script>
 <script type="module" src="{base}js/cs.js"></script>
+<script type="module" src="{base}js/card3d.js"></script>
 </body></html>'''
