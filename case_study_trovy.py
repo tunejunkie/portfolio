@@ -49,7 +49,7 @@ def slides():
 
     context = slide('context', 0, f'''
       <div class="cs-col cs-col--text">
-        <div class="cs-head"><h2 class="t64" data-a>Trovy puts home equity on a Mastercard.</h2></div>
+        <div class="cs-head"><h2 class="t64" data-a>Your home equity, in your wallet.<sup class="tv-tm">™</sup></h2></div>
         <div class="cs-body" data-a>
           <p>A HELOC is one of the cheapest ways to borrow, but it usually means weeks of paperwork and a draw request every time you need money. Trovy is a fully online HELOC, $25k to $250k, with the line on a card: swipe it, move cash to your bank, or lock a balance into a fixed-rate FixedPay plan. Approval in as little as 4 minutes, funding in as few as 4 business days.</p>
           <p>I joined as the founding designer and shipped the brand, the card, the application, the account dashboard, the marketing site and the ads.</p>
@@ -125,8 +125,7 @@ def slides():
         </div>
       </div>
       <figure class="tv-shot tv-shot--wide" data-a>
-        <img src="{A}d-projects-all.webp" alt="Renovate with Trovy: ‘Get a rendering, cost estimate, and shopping list for your renovation project’, with two projects listed" width="1000" height="694">
-        <figcaption>Project list · desktop</figcaption>
+        <img src="{A}d-design-ready.webp" alt="Renovate on desktop: a before/after slider over a bathroom redesign, a column of saved versions, Renault’s chat and a $24,900 estimate next to Take Out Cash" width="1600" height="1111">
       </figure>''')
 
     steps = [('m-upload-photo', 'Start with your room', 'Add a photo and say what should change.'),
@@ -136,9 +135,7 @@ def slides():
              ('m-ready-shop', 'Price it and shop it', 'Materials and labor, each product pinned and linked.')]
     flow = slide('flow', 2, f'''
       <div class="cs-head"><h2 class="t56" data-a>See the renovation of your dreams in minutes.</h2></div>
-      <figure class="tv-shot tv-shot--hero" data-a>
-        <img src="{A}d-design-ready.webp" alt="Renovate on desktop: a before/after slider over a bathroom redesign, a column of saved versions, Renault’s chat and a $24,900 estimate next to Take Out Cash" width="1600" height="1111">
-      </figure>''')
+      <ol class="tv-steps">{''.join(f'<li data-a><img src="{A}{f}.webp" alt="" loading="lazy" width="280" height="606"><h3><span>{i}</span>{E(h)}</h3><p>{E(p)}</p></li>' for i, (f, h, p) in enumerate(steps, 1))}</ol>''')
 
     desktop = slide('desktop', 2, f'''
       <div class="cs-col cs-col--text tv-w434">
