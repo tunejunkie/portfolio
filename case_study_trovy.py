@@ -62,6 +62,16 @@ def slides():
         <span class="tv-card3d-hint" aria-hidden="true">Tap to spin</span>
       </button>''')
 
+    apply = slide('apply', 0, f'''
+      <div class="cs-col cs-col--text tv-w780">
+        <div class="cs-head"><h2 class="t64" data-a>Preapproved in 2 minutes</h2></div>
+        <p class="cs-body" data-a>Trovy went from 0–100MM PMV in one year of operation, from relentlessly alleviating friction in the application flow.</p>
+      </div>
+      <div class="cs-proto" data-a>
+        <div class="cs-proto-phone"><iframe data-src="{{base}}proto/trovy-apply/" title="Interactive prototype of the Trovy application" tabindex="-1"></iframe></div>
+        <p class="cs-proto-hint">Live prototype · tap through it</p>
+      </div>''')
+
     shift = slide('shift', 0, f'''
       <div class="cs-head"><h2 class="t56" data-a>One designer, one engineering team, one queue.</h2></div>
       <p class="cs-body cs-body--wide" data-a>Trovy’s engineers work on the lending product: application, underwriting, servicing, compliance. Everything else, the marketing site and new homeowner features, waited behind it. In [month] 2025 I started building those myself with AI coding agents and handing engineering working code instead of mockups.</p>
@@ -163,7 +173,7 @@ def slides():
       <div class="cs-stats">{''.join(f'<div data-a><h3>{E(h)}</h3><p>{E(p)}</p></div>' for h, p in takeaways_)}</div>
       <p class="cs-body tv-next" data-a><b>Next for Renovate:</b> contractor quotes, a contractor marketplace and a home-value calculator for each project.</p>''')
 
-    return [hero, context, shift, home_live, brief, flow, desktop, detail, process, takeaways]
+    return [hero, context, apply, shift, home_live, brief, flow, desktop, detail, process, takeaways]
 
 
 def case_study_trovy():
