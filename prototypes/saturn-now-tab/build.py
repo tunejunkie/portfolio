@@ -21,6 +21,16 @@ for t,g,s,l,bg in DORM:
     h=h.replace('✨ Good evening, Alex!',g).replace('Tomorrow is a B-Day',s).replace('>tomorrow</p>',f'>{l}</p>')
     src.append(h)
 src+= [open(f'f{i}.html').read() for i in range(7,13)]
+
+def light_options(h):
+    """First-time setup screens: Figma had two of the four option buttons in the dark style by accident. Make them all light."""
+    for t in ('Invite friends to Saturn<', 'Edit school schedule<'):
+        i = h.find(t)
+        if i < 0: continue
+        j = h.rfind('bg-[rgba(0,0,0,0.2)]', 0, i)
+        if j < 0 or i - j > 600: continue
+        h = h[:j] + 'bg-[rgba(129,166,255,0.2)]' + h[j + len('bg-[rgba(0,0,0,0.2)]'):]
+    return h
 layers=[]
 for i,h in enumerate(src,1):
     h=re.sub(r'<div class="', f'<div id="L{i}" class="layer ', h, count=1)
@@ -30,6 +40,7 @@ for i,h in enumerate(src,1):
     for n in HERO2: h=h.replace(f'data-node-id="{n}"', f'data-node-id="{n}" data-hero="2"')
     h=re.sub(r'<img([^>]*?)src="(a/[^"]*imgCountdownRingTimer\.svg)"', r'<img data-ring="1"\1src="\2"', h)
     h=re.sub(r'<img([^>]*?)src="(a/[^"]*imgNotch\.svg)"', r'<img data-notch="1"\1src="\2"', h)
+    if i >= 12: h = light_options(h)
     layers.append(h)
 page=f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=375">
 <title>Saturn Now Tab</title>
