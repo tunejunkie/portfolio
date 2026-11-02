@@ -22,7 +22,7 @@ const HOVER = ['saturn-009', 'kyn-019', 'candle-003', 'upclose-012', 'monstro-01
 // procession order: phone 0 is the hero phone, last phone becomes the Saturn teaser phone
 const PROC = ['wherei-001', 'kyn-019', 'candle-003', 'monstro-010', 'honored-020', 'abbott-015', 'transforce-069', 'saturn-052', 'upclose-012', 'saturn-009'];
 // teaser easter egg: tap the phone to flip through that project's screens (first = the teaser's default screen)
-const TAP = { saturn: 10, trovy: 3, upclose: 10 };
+const TAP = { saturn: 10, trovy: 9, upclose: 10 };
 const SLUGS = ['saturn', 'trovy', 'upclose'];
 const tapName = (slug, i) => `tap/${slug}-${String(i + 1).padStart(2, '0')}`;
 const tapIdx = [0, 0, 0];

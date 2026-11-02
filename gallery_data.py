@@ -153,7 +153,7 @@ GROUPS = {
              ('My Data & Stories', 'm', '048-058'), ('Care Team', 'm', '059-069')],
   'kyn': [('Onboarding', 'm', '002-018'), ('Reaching Out', 'm', '019-024'), ('Contacts & Tags', 'm', '025-050'),
           ('Goals & Reminders', 'm', '051-059'), ('Profile', 'm', '060-063')],
-  'trovy': [('Marketing Site', 'd', '004 005'), ('Mobile', 'm', '006 028'), ('Application', 'd', '007-013 016 017'),
+  'trovy': [('Marketing Site', 'd', '004 005'), ('Mobile', 'm', '006 028'), ('Renovate with Trovy', 'm', '037-047'), ('Application', 'd', '007-013 016 017'),
             ('Onboarding', 'd', '018-020'), ('Account', 'd', '021-027 029-036')],
   'monstro': [('Mobile', 'm', '001-030 032-034')], 'wherei': [('Mobile', 'm', '001-014')], 'candle': [('Mobile', 'm', '001-014')],
   'upclose': [('Mobile', 'm', '011-037')], 'adecco': [('Desktop', 'd', '001-011')], 'monster': [('Desktop', 'd', '008-019')],

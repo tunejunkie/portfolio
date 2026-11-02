@@ -1018,6 +1018,116 @@
    "w": 1800,
    "h": 1164,
    "orig": "screenshots/49 Profile and Settings.png"
+  },
+  {
+   "src": "037.webp",
+   "title": "Renovate - Start a Project",
+   "caption": "Renovate’s front door: describe the room or add a photo, with recent projects below.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/upload-empty.png"
+  },
+  {
+   "src": "038.webp",
+   "title": "Chat - What Do You Want to Do?",
+   "caption": "Renault, the Renovate assistant, asks what the homeowner wants: refresh the look, fix what’s worn or remodel the room.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/chat-intent.png"
+  },
+  {
+   "src": "039.webp",
+   "title": "Chat - Pick a Style",
+   "caption": "Style options as small mood photos, with a free-text answer always available.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/chat-style.png"
+  },
+  {
+   "src": "040.webp",
+   "title": "Chat - Project Plan",
+   "caption": "Renault sums the project up as a plan. Review and approve it, or generate the design right away.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/chat-plan-summary.png"
+  },
+  {
+   "src": "041.webp",
+   "title": "Making Your Design",
+   "caption": "The homeowner’s own photo stays on screen while the design renders and the estimate loads.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/generating.png"
+  },
+  {
+   "src": "042.webp",
+   "title": "Design Ready",
+   "caption": "The new room drawn on the homeowner’s photo, with a before/after slider and Compare, Comment and Shop.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/design-ready.png"
+  },
+  {
+   "src": "043.webp",
+   "title": "Comment on the Design",
+   "caption": "Tap anywhere on the photo to pin a change for the next version.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/ready-comment.png"
+  },
+  {
+   "src": "044.webp",
+   "title": "Cost Estimate",
+   "caption": "A price range with labor and components split out, and the assumptions one tap away.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/ready-plan.png"
+  },
+  {
+   "src": "045.webp",
+   "title": "Shop the Design",
+   "caption": "Each product is pinned on the photo, with its price, materials and installation, and a link to buy it.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/ready-shop-sheet.png"
+  },
+  {
+   "src": "046.webp",
+   "title": "Next Steps",
+   "caption": "A checklist for making the design real: measure the room, check for permits, and ask Renault about any step.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/ready-next-steps.png"
+  },
+  {
+   "src": "047.webp",
+   "title": "All Projects",
+   "caption": "Every project with its latest version and estimate.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1688,
+   "orig": "renovate-screenshots-2026-11-02/mobile/projects-all.png"
   }
  ],
  "honored": [

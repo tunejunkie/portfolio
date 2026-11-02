@@ -645,3 +645,7 @@
 .is-stack .tv-process p{font-size:16px}.is-stack .tv-process h3{font-size:19px}.is-stack .tv-proctext .tv-process{margin-top:24px}
 /* Trovy: scenes are fitted to their content by cs.js (fillScenes → --tf) */
 body:not(.is-stack) .tv2 .cs-fit{top:0;left:0;transform-origin:0 0;transform:var(--tf,none)}
+/* Trovy: the "Scroll" cue sits bottom-left so it never collides with slide content (e.g. "Tap to spin") */
+.cs-page--trovy .cs-hint{left:56px;bottom:32px;transform:none;align-items:flex-start}
+.cs-page--trovy .cs-hint i{margin-left:2px}
+.tv2 .tv-card3d-hint{bottom:auto;top:86%}
