@@ -37,7 +37,7 @@ const qp = new URLSearchParams(location.search).get('mode'); if (qp === 'slides'
 
 /* ---------------- 3D phones ---------------- */
 let stage = null;
-try { const glc = $('.cs-gl'); stage = glc ? new Stage(glc) : null; } catch (e) { body.classList.add('no-gl'); }   // pages without 3D phones have no canvas
+{ const glc = $('.cs-gl'); if (glc && $('.cs-phone-slot')) { try { stage = new Stage(glc); } catch (e) { body.classList.add('no-gl'); } } }   // only pages/slides that ask for the 3D phone get one
 const texCache = {};
 function grayTex(label) {
   const c = document.createElement('canvas'); c.width = 375 * 2; c.height = 812 * 2;
@@ -155,70 +155,124 @@ function layout() {
   if (stage) stage.resize();
 }
 
-/* ---------------- problem slide: the Trojan horse army ----------------
-   Tap the horse: a drawbridge on its front leg drops open, a line of students marches out, and four of them
-   say a complaint (the bubble rides along above them, then fades). Once the last one is gone, tap to replay. */
+/* ---------------- slide lifecycle: scenes listen for cs:enter / cs:leave ---------------- */
+const fire = (s, t) => { if (s) s.dispatchEvent(new CustomEvent('cs:' + t)); };
+
+/* ---------------- problems slide: the Trojan horse ----------------
+   Tap the horse: students climb down its ladder and march off to the right, six of them saying a complaint
+   (the bubble rides along above them, then fades). As their numbers grow the horse rolls back to the left. */
 const army = (() => {
-  const el = $('.cs-army--men'), pushed = $('.cs-pushed'), bridge = $('.cs-bridge'), btn = $('.cs-horse-btn'), hint = $('.cs-horse-hint'), horse = $('.cs-horse');
-  if (!el) return { ready() {}, stop() {} };
+  const el = $('.cs-army--men'), btn = $('.cs-horse-btn'), hint = $('.cs-horse-hint'), horse = $('.cs-trojan .cs-horse');
+  if (!el) return;
+  const slide = el.closest('.cs-slide');
   const src = el.dataset.student, quotes = el.dataset.quotes.split('|');
-  const SPEED = 120, GAP = 0.3, COUNT = 18, W = 1272, FEET = 284;
-  const SPEAKERS = [1, 5, 9, 13];                                // which soldiers say something, in order
-  let pushX = 0, PUSH0 = 0, running = false, raf = 0, men = [], says = [], t0 = 0, last = 0, spawned = 0, timers = [];
-  const spawn = (x, i) => {
+  const SPEED = 118, GAP = 0.34, COUNT = 22, W = 1760, FEET = 376, LADDER = 868, ROLL = -300;
+  const SPEAKERS = [1, 4, 7, 10, 13, 16];
+  const LIFT = [0, 80, 160, 40, 120, 20];
+  let running = false, raf = 0, men = [], says = [], t0 = 0, last = 0, spawned = 0, shift = 0;
+  const spawn = i => {
     const img = new Image(); img.src = src; img.alt = ''; img.style.animationDelay = (-Math.random() * 0.5).toFixed(2) + 's';
-    el.appendChild(img); const m = { img, x, i }; img.style.transform = `translateX(${x}px)`; men.push(m); return m;
+    el.appendChild(img); const m = { img, x: LADDER + shift - 14, i, born: performance.now() };
+    img.style.opacity = 0; img.style.transform = `translateX(${m.x}px)`; men.push(m); return m;
   };
-  // bubbles sit at staggered heights (a little stalk down to their soldier) so neighbours never overlap
-  const LIFT = [0, 74, 148, 37];
   const place = s => { s.b.style.left = (s.m.x - 14) + 'px'; s.b.style.top = (FEET - s.b.offsetHeight - 14 - s.lift) + 'px'; };
   function say(m, text) {
-    const b = document.createElement('p'); b.className = 'cs-say'; b.textContent = text;
-    b.style.setProperty('--lift', LIFT[SPEAKERS.indexOf(m.i) % LIFT.length] + 'px');
-    el.appendChild(b); const s = { m, b, lift: LIFT[SPEAKERS.indexOf(m.i) % LIFT.length] }; m.said = true; says.push(s); place(s);
+    const k = SPEAKERS.indexOf(m.i), lift = LIFT[k % LIFT.length];
+    const b = document.createElement('p'); b.className = 'cs-say'; b.textContent = text; b.style.setProperty('--lift', lift + 'px');
+    el.appendChild(b); const s = { m, b, lift }; m.said = true; says.push(s); place(s);
     gsap.fromTo(b, { autoAlpha: 0, scale: 0.6, transformOrigin: '29px 100%' }, { autoAlpha: 1, scale: 1, duration: 0.45, ease: 'back.out(2.2)' });
-    gsap.to(b, { autoAlpha: 0, y: -16, duration: 0.7, delay: 2.6, ease: 'power1.in', onComplete() { b.remove(); says = says.filter(x => x !== s); } });
+    gsap.to(b, { autoAlpha: 0, y: -16, duration: 0.7, delay: 2.8, ease: 'power1.in', onComplete() { b.remove(); says = says.filter(x => x !== s); } });
   }
   function frame(now) {
     if (!running) return;
     const t = (now - t0) / 1000, dt = Math.min(0.05, (now - (last || now)) / 1000); last = now;
-    if (t > 0 && spawned < COUNT && t > spawned * GAP) { spawn(-30, spawned); spawned++;
-      if (spawned === COUNT) timers.push(gsap.delayedCall(0.9, () => gsap.to(bridge, { rotation: 0, duration: 0.6, ease: 'power2.inOut' }))); }
+    if (t > 0 && spawned < COUNT && t > spawned * GAP) spawn(spawned++);
+    // the horse rolls back as the line grows
+    const target = ROLL * Math.min(1, spawned / COUNT);
+    shift += (target - shift) * Math.min(1, dt * 2.2);
+    horse.style.transform = `translateX(${shift.toFixed(1)}px)`;
     for (const m of men) {
       m.x += SPEED * dt; m.img.style.transform = `translateX(${m.x.toFixed(1)}px)`;
+      m.img.style.opacity = Math.min(1, (now - m.born) / 260);
       const k = SPEAKERS.indexOf(m.i);
-      if (k >= 0 && !m.said && m.x > 90) say(m, quotes[k % quotes.length]);
+      if (k >= 0 && !m.said && m.x > LADDER + shift + 70) say(m, quotes[k % quotes.length]);
     }
-    // the lead soldier shoves the line of text along ahead of the procession
-    const lead = men.reduce((a, m) => Math.max(a, m.x), -1e9);
-    if (pushed) { pushX = Math.max(pushX, lead + 38); pushed.style.transform = `translateX(${pushX.toFixed(1)}px)`; }
-    men = men.filter(m => (m.x < W + 10) || (m.img.remove(), false));
+    men = men.filter(m => (m.x < W) || (m.img.remove(), false));
     says.forEach(place);
     if (spawned === COUNT && !men.length && !says.length) { finish(); return; }
     raf = requestAnimationFrame(frame);
   }
-  function resetText(fade) { if (!pushed) return; PUSH0 = PUSH0 || 190; pushX = PUSH0; gsap.killTweensOf(pushed); pushed.style.transform = `translateX(${PUSH0}px)`; if (fade) gsap.fromTo(pushed, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.8 }); else gsap.set(pushed, { autoAlpha: 1 }); }
-  function finish() { resetText(true); running = false; hint.classList.remove('off'); horse.classList.add('nudge'); }
+  function finish() { running = false; gsap.to(horse, { x: 0, duration: 1.4, ease: 'power2.inOut', onUpdate() { shift = gsap.getProperty(horse, 'x'); } }); hint.classList.remove('off'); horse.classList.add('nudge'); }
   function go() {
     if (running) return;
     stop(); running = true; hint.classList.add('off'); horse.classList.remove('nudge');
-    if (reduced) { gsap.set(bridge, { rotation: 90 }); for (let i = 0; i < COUNT; i++) spawn(20 + i * 34, i); running = false; return; }
-    gsap.to(bridge, { rotation: 90, duration: 0.8, ease: 'bounce.out' });
-    t0 = performance.now() + 550; last = 0; spawned = 0;
+    if (reduced) { for (let i = 0; i < 10; i++) { const m = spawn(i); m.x += 40 + i * 70; m.img.style.opacity = 1; m.img.style.transform = `translateX(${m.x}px)`; } running = false; return; }
+    t0 = performance.now() + 250; last = 0; spawned = 0;
     raf = requestAnimationFrame(frame);
   }
   function stop() {
-    running = false; cancelAnimationFrame(raf); timers.forEach(t => t.kill()); timers = [];
-    gsap.killTweensOf(bridge); gsap.set(bridge, { rotation: 0 });
+    running = false; cancelAnimationFrame(raf);
+    gsap.killTweensOf(horse); shift = 0; gsap.set(horse, { x: 0, clearProps: 'transform' });
     says.forEach(s => { gsap.killTweensOf(s.b); s.b.remove(); }); says = [];
     men.forEach(m => m.img.remove()); men = [];
-    if (!running) resetText(false);
   }
   btn.addEventListener('click', go);
-  return {
-    ready() { stop(); hint.classList.remove('off'); horse.classList.add('nudge'); },   // waiting for a tap
-    stop() { stop(); horse.classList.remove('nudge'); },
-  };
+  slide.addEventListener('cs:enter', () => { stop(); hint.classList.remove('off'); horse.classList.add('nudge'); });
+  slide.addEventListener('cs:leave', () => { stop(); horse.classList.remove('nudge'); });
+})();
+
+/* ---------------- media: videos play only while their slide is up; prototypes load when first needed ---------------- */
+slides.forEach((s, i) => {
+  const vids = $$('video[data-src]', s), frames = $$('iframe[data-src]', s);
+  if (!vids.length && !frames.length) return;
+  const load = () => { vids.forEach(v => { if (!v.src) v.src = v.canPlayType('video/mp4; codecs="avc1.42E01E"') ? v.dataset.src : v.dataset.src.replace(/\.mp4$/, '.webm'); }); frames.forEach(f => { if (!f.src) f.src = f.dataset.src; }); };
+  s.addEventListener('cs:enter', () => { load(); vids.forEach(v => { v.currentTime = 0; v.play().catch(() => {}); }); });
+  s.addEventListener('cs:leave', () => vids.forEach(v => v.pause()));
+  s.addEventListener('cs:near', load);
+});
+// warm up the next slide's media so it's ready when you arrive
+const near = i => { if (slides[i]) fire(slides[i], 'near'); };
+
+/* ---------------- prototypes with a row of state chips beside them ---------------- */
+$$('.cs-proto2').forEach(box => {
+  const frame = $('iframe', box), btns = $$('.cs-chip', box);
+  let ready = false, pending = null;
+  const mark = n => btns.forEach(b => { const on = +b.dataset.state === n; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on); });
+  const send = n => frame.contentWindow.postMessage({ nowState: n }, '*');
+  btns.forEach(b => b.addEventListener('click', () => {
+    const n = +b.dataset.state; mark(n);
+    if (ready) send(n); else { pending = n; if (!frame.src) frame.src = frame.dataset.src; }
+  }));
+  addEventListener('message', e => {
+    if (e.source !== frame.contentWindow || !e.data) return;
+    if (e.data.nowReady) { ready = true; if (pending) { send(pending); pending = null; } }
+    else if (e.data.nowStateChanged && !pending) mark(e.data.nowStateChanged);
+  });
+});
+
+/* ---------------- sticky stacks: tap a stack and its notes burst out into a row ---------------- */
+(() => {
+  const box = $('.cs-sticky'); if (!box) return;
+  const slide = box.closest('.cs-slide'), stacks = $$('.cs-stack', box), tabs = $$('.cs-stab', box);
+  const sets = Object.fromEntries($$('.cs-notes', box).map(n => [n.dataset.set, n]));
+  let cur = null;
+  const centre = el => { const r = el.getBoundingClientRect(), b = box.getBoundingClientRect(), k = b.width / box.offsetWidth; return { x: (r.left - b.left + r.width / 2) / k, y: (r.top - b.top + r.height / 2) / k }; };
+  function show(k, from) {
+    if (stack) return;
+    box.classList.add('open'); tabs.forEach(t => t.classList.toggle('on', t.dataset.set === k));
+    Object.entries(sets).forEach(([kk, n]) => { if (kk !== k) gsap.to($$('.cs-note', n), { autoAlpha: 0, y: 20, duration: 0.25, stagger: 0.02, overwrite: true }); });
+    const notes = $$('.cs-note', sets[k]), o = centre(from);
+    gsap.set(notes, { x: 0, y: 0, rotation: 0, autoAlpha: 0 });
+    notes.forEach((n, i) => {
+      const c = centre(n);
+      gsap.fromTo(n, { x: o.x - c.x, y: o.y - c.y, rotation: (i % 2 ? 7 : -7) * (1 + i * 0.2), scale: 0.6, autoAlpha: 1 },
+        { x: 0, y: 0, rotation: (i % 2 ? 1.2 : -1.2), scale: 1, duration: 0.75, delay: 0.05 + i * 0.06, ease: 'back.out(1.3)', overwrite: true });
+    });
+    cur = k;
+  }
+  stacks.forEach(s => s.addEventListener('click', () => show(s.dataset.set, s)));
+  tabs.forEach(t => t.addEventListener('click', () => { if (t.dataset.set !== cur) show(t.dataset.set, t); }));
+  slide.addEventListener('cs:enter', () => { if (stack) return; box.classList.remove('open'); gsap.set($$('.cs-note', box), { autoAlpha: 0 }); cur = null; });
 })();
 
 // embedded live builds (iframe[data-src]) load the first time their slide is shown
@@ -244,10 +298,9 @@ function goTo(i, instant = false) {
       const old = slides[prev[0]];
       gsap.killTweensOf(old);
       gsap.to(old, { autoAlpha: 0, y: -50 * dir, duration: (instant ? 0.01 : 0.45) * D, ease: 'power2.in', onComplete: () => old.classList.remove('on') });
+      fire(old, 'leave');
     }
-    if (prev && slides[prev[0]].dataset.key === 'problem') army.stop();
-    if (sl.dataset.key === 'problem') army.ready();
-    sl.classList.add('on'); gsap.killTweensOf(sl);
+    sl.classList.add('on'); gsap.killTweensOf(sl); fire(sl, 'enter'); near(si + 1);
     gsap.set(sl, { autoAlpha: 1, y: 0 });
     loadFrames(sl);
     const parts = $$('[data-a], .cs-pill', sl);
@@ -270,7 +323,7 @@ function goTo(i, instant = false) {
 /* ---------------- scroll mode ---------------- */
 let snapT = 0, programmatic = false;
 const trackTop = () => track.offsetTop;
-function hideAll() { army.stop(); slides.forEach(s => { gsap.killTweensOf(s); gsap.set(s, { autoAlpha: 0 }); s.classList.remove('on'); }); phoneTo(0, 0, -1, true); rowTo(0, -1, true); cur = -1; }
+function hideAll() { slides.forEach(s => { gsap.killTweensOf(s); gsap.set(s, { autoAlpha: 0 }); if (s.classList.contains('on')) fire(s, 'leave'); s.classList.remove('on'); }); phoneTo(0, 0, -1, true); rowTo(0, -1, true); cur = -1; }
 function scrollToStep(i, immediate) {
   i = Math.min(N - 1, i);
   const y = i < 0 ? 0 : trackTop() + i * U;
@@ -362,11 +415,12 @@ let io = null;
 function stackLayout() {
   track.style.height = '';
   slides.forEach(s => { gsap.set(s, { clearProps: 'all' }); $$('[data-a],[data-sub],.cs-pill,[data-pop]', s).forEach(el => gsap.set(el, { clearProps: 'all' })); });
-  const tro = $('.cs-trojan'); if (tro) { tro.style.zoom = ''; tro.style.width = '1595px'; tro.style.height = '426px'; tro.style.aspectRatio = 'auto'; tro.style.zoom = (tro.parentElement.clientWidth / 1595).toFixed(4); }
+  const tro = $('.cs-trojanbox'); if (tro) tro.style.setProperty('--tz', (tro.clientWidth / 1728).toFixed(4));
   if (!io) {
     io = new IntersectionObserver(es => es.forEach(en => {
-      if (en.isIntersecting) { en.target.classList.add('in'); loadFrames(en.target); }
-      if (en.target.dataset.key === 'problem' && stack && !en.isIntersecting) army.stop();
+      if (!stack) return;
+      if (en.isIntersecting && !en.target.classList.contains('in')) { en.target.classList.add('in'); loadFrames(en.target); fire(en.target, 'enter'); }
+      else if (!en.isIntersecting && en.target.classList.contains('in')) { en.target.classList.remove('in'); fire(en.target, 'leave'); }
     }), { threshold: 0.12 });
     slides.forEach(s => io.observe(s));
   }

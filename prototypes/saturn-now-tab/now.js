@@ -113,6 +113,12 @@
   const row = document.querySelector('[data-node-id="2:81744"]');
   if (row) { const w = row.scrollWidth; row.innerHTML += row.innerHTML; row.style.setProperty('--loop', -(w + 8) + 'px'); }
 
+  // ?cycle=dormant: tap the big clock to move through the times of day
+  if (q.get('cycle') === 'dormant') {
+    document.documentElement.classList.add('cycle');
+    addEventListener('click', e => { if (cur >= 6 && cur <= 11 && e.target.closest('[data-hero="1"]')) setNowState(cur === 11 ? 6 : cur + 1); });
+  }
+
   measure();
   setNowState(+(q.get('s') || 1), true);
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(measure);

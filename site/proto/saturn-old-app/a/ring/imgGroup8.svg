@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="5.76128" height="4.9532" viewBox="0 0 5.76128 4.9532" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group">
+<path id="Vector" d="M1.57136 4.90336C1.302 4.84848 1.06232 4.78856 0.85792 4.73368L0 0L1.24208 0.0296797L1.57136 4.90336Z" fill="url(#paint0_linear_0_680)"/>
+<path id="Vector_2" d="M5.76128 0.13496L4.91848 4.77344C4.68384 4.85352 4.44472 4.90784 4.21008 4.9532L4.53936 0.10528L5.76128 0.13496Z" fill="url(#paint1_linear_0_680)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_680" x1="0.786072" y1="0.891016" x2="0.786072" y2="2.69063" gradientUnits="userSpaceOnUse">
+<stop stop-color="#72C4DC"/>
+<stop offset="1" stop-color="#2669AD"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_680" x1="4.98574" y1="0.891016" x2="4.98574" y2="2.69063" gradientUnits="userSpaceOnUse">
+<stop stop-color="#72C4DC"/>
+<stop offset="1" stop-color="#2669AD"/>
+</linearGradient>
+</defs>
+</svg>

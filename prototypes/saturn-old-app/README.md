@@ -1,0 +1,1 @@
+Tappable version of the 'before me' prototype (Video 1). Published copy: site/proto/saturn-old-app/ (index.html from prototypes/saturn-before-me-video-1-sheet-interaction + directory overlay, live.js instead of anim.js).

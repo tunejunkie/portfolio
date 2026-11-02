@@ -297,3 +297,178 @@
 .is-stack .tv-steps h3{font-size:18px}
 .is-stack .tv-steps p,.is-stack .tv-frames figcaption,.is-stack .tv-shot figcaption{font-size:15px}
 .is-stack .tv-browser iframe{height:70vh}
+
+/* ================= v4 scenes (Figma "natalie's new case study so far") =================
+   Each scene is a 1728×1021 board of absolutely placed blocks (.ab, Figma coordinates); on phones they flow. */
+.cs-v4 .cs-fit{left:-60px;width:1728px}
+.cs-scene{position:relative;width:1728px;height:1021px}
+.ab{position:absolute;left:calc(var(--x) * 1px);top:calc(var(--y) * 1px);width:calc(var(--w) * 1px)}
+.ab[style*="--h"]{height:calc(var(--h) * 1px)}
+.tc{text-align:center}
+.sh56{font:600 56px/1.2 var(--f-head)}
+.sh64{font:600 64px/1.2 var(--f-head)}
+.sh96{font:600 112px/1.1 var(--f-head)}
+.sb{font:400 28px/1.42 var(--f-body)}
+.sb.sm{font-size:22px;margin-top:28px}
+.sb + .sb{margin-top:26px}
+.sb b{font-weight:700}
+.cs-tag{display:inline-block;padding:8px 12px;border-radius:8px;background:rgba(0,11,34,.55);border:1px solid rgba(248,248,248,.12);font:700 16px/1 var(--f-head);text-transform:uppercase;letter-spacing:.04em}
+.cs-label{font:700 16px/1 var(--f-head);text-transform:uppercase;letter-spacing:.04em;opacity:.75;margin-bottom:22px}
+.cs-inv{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:16px 44px;font:400 22px/1.3 var(--f-body);white-space:nowrap}
+.cs-dots{padding-left:1.1em}
+.cs-dots li{list-style:disc;margin-bottom:6px}
+.cs-dots li::marker{color:rgba(248,248,248,.6)}
+.cs-guess{color:inherit;background:rgba(255,214,102,.16);border-bottom:2px dashed #ffd666;border-radius:3px;padding:0 4px}
+.cs-hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:80px}
+.cs-hero .cs-title img,.cs-intro .cs-title img{display:block;height:92px;width:auto}
+.cs-hero-top .cs-lede{margin-top:0;max-width:549px;font-size:24px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cs-satlogo img{height:32px;width:auto;display:block}
+
+/* phones: video or live prototype in a frameless rounded screen */
+.cs-ph{width:375px;height:812px;border-radius:44px;overflow:hidden;background:#0d0726;transform:scale(var(--s,1));transform-origin:50% 0;
+  box-shadow:0 0 0 1.5px rgba(255,255,255,.1),0 50px 90px -40px rgba(0,0,0,.85)}
+.cs-ph video,.cs-ph iframe{display:block;width:375px;height:812px;border:0;object-fit:cover}
+.cs-shot{display:block;width:375px;height:812px;border-radius:44px;box-shadow:0 0 0 1.5px rgba(255,255,255,.1),0 50px 90px -40px rgba(0,0,0,.85)}
+.cs-proto-tip{margin-top:16px;text-align:center;font:400 17px/1 var(--f-body);opacity:.6}
+.cs-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px}
+.cs-proto2 .cs-chips{width:560px;margin-left:-92px}
+.cs-chip{font:500 16px/1 var(--f-body);color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:10px 16px;cursor:pointer;transition:background .2s,color .2s}
+.cs-chip:hover{background:rgba(255,255,255,.2)}
+.cs-chip.is-on{background:#fff;color:#1b1f4a;border-color:#fff}
+.cs-chip:focus-visible,.cs-stack:focus-visible,.cs-stab:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* 01 intercom: a perspective crawl that recedes away from the camera, plus a pulsing sound wave */
+.cs-mega img{width:100%;height:100%;object-fit:contain;object-position:0 100%}
+.cs-wavebox{transform:rotate(30deg);transform-origin:0 50%}
+.cs-wave{width:100%;height:100%;object-fit:contain;transform-origin:0 50%}
+.cs-intercom.on .cs-wave,.cs-intercom.in .cs-wave{animation:cs-wave .9s ease-in-out infinite}
+@keyframes cs-wave{0%,100%{transform:scaleX(.82) scaleY(.7);opacity:.65}35%{transform:scaleX(1.05) scaleY(1.08);opacity:1}60%{transform:scaleX(.92) scaleY(.86);opacity:.85}}
+.cs-crawlbox{perspective:560px;perspective-origin:50% 0;overflow:hidden;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 26%,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 26%,#000 78%,transparent 100%)}
+.cs-crawl{position:absolute;inset:0;transform-origin:50% 100%;transform:rotateX(24deg)}
+.cs-crawl p{position:absolute;left:0;right:0;top:100%;font:400 38px/1.5 var(--f-body);text-align:justify;transform:translateY(-62%)}
+.cs-intercom.on .cs-crawl p,.cs-intercom.in .cs-crawl p{animation:cs-crawl 62s linear -14s infinite}
+@keyframes cs-crawl{from{transform:translateY(-18%)}to{transform:translateY(calc(-100% - 760px))}}
+@media (prefers-reduced-motion:reduce){.cs-intercom .cs-crawl p{animation:none!important;transform:translateY(-62%)}.cs-wave{animation:none!important}}
+
+/* 02 bell schedules */
+.cs-bellimg img{width:100%;height:100%;object-fit:cover;object-position:50% 0;border-radius:6px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+
+/* 06/07 annotation lines draw out from the labels */
+.cs-lines{position:absolute;left:0;top:0;width:1728px;height:1021px;overflow:visible;pointer-events:none;z-index:2}
+.cs-lines path{fill:none;stroke:#f58ec8;stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1s cubic-bezier(.6,0,.2,1)}
+.cs-lines circle{fill:#f58ec8;transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.on .cs-lines path,.in .cs-lines path{stroke-dashoffset:0;transition-delay:calc(var(--i) * .12s + .5s)}
+.on .cs-lines circle,.in .cs-lines circle{transform:scale(1);transition-delay:calc(var(--i) * .12s + .4s)}
+.on .cs-lines circle.end,.in .cs-lines circle.end{transition-delay:calc(var(--i) * .12s + 1.35s)}
+.cs-ann{font:400 20px/1.5 var(--f-body)}
+.cs-ann.r{text-align:right}
+
+/* 05 trojan horse */
+.cs-v4 .cs-trojan{position:absolute;inset:0;width:auto;height:auto;overflow:hidden}
+.cs-v4 .cs-horse{position:absolute;left:655px;top:52px;width:419px;height:419px;will-change:transform}
+.cs-v4 .cs-horse-btn{left:655px;top:52px}
+.cs-v4 .cs-horse-hint{left:655px;top:486px}
+.cs-v4 .cs-army{left:0;top:0;width:1728px;height:560px;overflow:visible}
+.cs-v4 .cs-army img{top:376px}
+
+/* 08 sticky stacks */
+.cs-sticky{position:absolute;inset:0}
+.cs-stacks{position:absolute;left:384px;top:63px;width:959px;height:266px}
+.cs-stack{position:absolute;top:0;width:262px;height:266px;cursor:pointer;transition:transform .25s}
+.cs-stack:nth-child(1){left:0}.cs-stack:nth-child(2){left:345px}.cs-stack:nth-child(3){left:692px}
+.cs-stack:hover{transform:translateY(-6px) rotate(-1deg)}
+.cs-stack img{width:100%;height:100%;object-fit:contain}
+.cs-sticky-hint{position:absolute;left:0;right:0;top:441px;text-align:center;font:600 18px/1 var(--f-body);text-decoration:underline;text-underline-offset:4px;opacity:.8}
+.cs-stabs{position:absolute;left:0;right:0;top:20px;display:flex;justify-content:center;gap:16px;opacity:0;pointer-events:none}
+.cs-stab{font:700 17px/1 var(--f-body);color:rgba(255,255,255,.7);background:rgba(255,255,255,.1);border-radius:6px;padding:16px 26px;cursor:pointer;transition:background .2s,color .2s}
+.cs-stab[data-set=obs].on{background:#a9dcff;color:#0e1b33}.cs-stab[data-set=ins].on{background:#e4b4ff;color:#2a0d3b}.cs-stab[data-set=hmw].on{background:#ffe9a6;color:#3a2a00}
+.cs-notes{position:absolute;left:0;right:0;top:110px;display:flex;justify-content:center;gap:22px;pointer-events:none}
+.cs-note{width:170px;height:170px;padding:16px 16px;font:500 15px/1.4 var(--f-body);color:#1e2433;opacity:0;box-shadow:0 18px 30px -18px rgba(0,0,0,.6)}
+.cs-notes[data-set=obs] .cs-note{background:#a9dcff}.cs-notes[data-set=ins] .cs-note{background:#e4b4ff}.cs-notes[data-set=hmw] .cs-note{background:#ffe9a6}
+.cs-sticky.open .cs-stabs{opacity:1;pointer-events:auto;transition:opacity .4s .2s}
+.cs-sticky.open .cs-stacks,.cs-sticky.open .cs-sticky-hint{opacity:0;pointer-events:none;transition:opacity .3s}
+
+/* 09/12 wide images */
+.cs-row4 img,.cs-collage img{width:100%;height:100%;object-fit:contain;object-position:50% 0}
+.cs-wants h3{font:600 32px/1.2 var(--f-body);margin-bottom:28px}
+.cs-wantbox{border-left:1.5px solid rgba(248,248,248,.25);padding-left:52px;height:640px}
+.cs-why h3{font:700 28px/1.3 var(--f-body);margin-bottom:12px}
+.cs-why p{font:400 20px/1.5 var(--f-body);opacity:.9}
+.cs-why{border-left:1.5px solid rgba(248,248,248,.25);padding-left:24px}
+
+/* 13 chart: dark UI, lines draw out to the peak */
+.cs-chartbox{width:100%;height:100%;border-radius:24px;background:rgba(5,8,28,.55);border:1px solid rgba(248,248,248,.1);padding:18px 18px 0}
+.cs-chart{width:100%;height:100%;overflow:visible;font-family:var(--f-body)}
+.cs-chart-grid line{stroke:rgba(248,248,248,.1)}
+.cs-chart-grid text,.cs-chart-key text{fill:rgba(248,248,248,.6);font-size:16px}
+.cs-chart-key .ttl{fill:rgba(248,248,248,.85);font-weight:600}
+.cs-chart-key .k22{fill:#5aa2ff}.cs-chart-key .k21{fill:#ff6b6b}
+.cs-chart-l{fill:none;stroke-width:3;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+.cs-chart-l--22{stroke:#5aa2ff;filter:drop-shadow(0 0 8px rgba(90,162,255,.55))}
+.cs-chart-l--21{stroke:#ff6b6b;stroke-width:2.5}
+.on .cs-chart-l,.in .cs-chart-l{stroke-dashoffset:0;transition:stroke-dashoffset 3.2s cubic-bezier(.45,0,.2,1) .5s}
+.on .cs-chart-l--21,.in .cs-chart-l--21{transition-duration:2.6s}
+.cs-chart-pk{opacity:0;transition:opacity .5s 3.4s}
+.cs-chart-pk circle{fill:#fff;stroke:#5aa2ff;stroke-width:3}
+.cs-chart-pk text{fill:#fff;font:700 20px/1 var(--f-body)}
+.cs-chart-pk--end{transition-delay:3.7s}
+.on .cs-chart-pk,.in .cs-chart-pk{opacity:1}
+.cs-col3 .sb{font-size:26px}
+
+/* calendar act */
+.cs-calimg{width:100%;height:100%;object-fit:contain}
+.cs-rules{margin-top:34px;display:flex;flex-direction:column;gap:14px}
+.cs-rules div{display:flex;gap:24px;border-top:1px solid rgba(248,248,248,.14);padding-top:14px}
+.cs-rules dt{width:250px;flex:none;font:700 20px/1.4 var(--f-body)}
+.cs-rules dd{font:400 20px/1.4 var(--f-body);opacity:.85}
+.cs-big{margin-top:40px;font:700 96px/1 var(--f-head);color:#7cf0c5}
+.cs-big span{display:block;margin-top:10px;font:400 22px/1.3 var(--f-body);color:var(--off)}
+.cs-kpis{display:flex;gap:44px;margin-top:40px}
+.cs-kpis p{font:400 18px/1.3 var(--f-body);opacity:.9;max-width:180px}
+.cs-kpis b{display:block;font:700 48px/1.1 var(--f-head);margin-bottom:6px}
+.cs-end{display:flex;gap:16px;justify-content:center}
+.cs-endbtn{font:600 20px/1 var(--f-body);padding:18px 28px;border-radius:999px;background:var(--off);color:var(--ink)}
+.cs-endbtn--o{background:transparent;color:var(--off);border:1.5px solid rgba(248,248,248,.4)}
+
+/* phones: v4 scenes stack in source order */
+.is-stack .cs-v4 .cs-fit{left:0;width:auto}
+.is-stack .cs-scene{width:auto;height:auto;display:flex;flex-direction:column;gap:22px}
+.is-stack .ab{position:relative;left:auto;top:auto;width:auto!important;height:auto!important;transform:none!important}
+.is-stack .sh56,.is-stack .sh64{font-size:32px;line-height:1.18}
+.is-stack .sh96{font-size:52px}
+.is-stack .sb{font-size:18px}
+.is-stack .sb.sm{font-size:16px}
+.is-stack .cs-lines,.is-stack .cs-annbox,.is-stack .cs-wavebox{display:none}
+.is-stack .cs-phslot{display:flex;flex-direction:column;align-items:center}
+.is-stack .cs-ph{transform:none!important;zoom:var(--ps-stack,.9)}
+.is-stack .cs-proto2 .cs-chips{width:auto;margin-left:0}
+.is-stack .cs-shot{width:min(375px,100%);height:auto}
+.is-stack .cs-mega{height:220px!important}
+.is-stack .cs-crawlbox{height:420px!important}
+.is-stack .cs-crawl p{font-size:22px}
+.is-stack .cs-bellimg{height:auto!important}
+.is-stack .cs-bellimg img{height:auto}
+.is-stack .cs-inv{grid-template-columns:repeat(2,auto)}
+.is-stack .cs-trojanbox{height:auto!important;aspect-ratio:1728/560;overflow:hidden}
+.is-stack .cs-trojanbox .cs-trojan{width:1728px;height:560px;transform-origin:0 0;transform:scale(var(--tz,.2))}
+.is-stack .cs-stickybox{height:auto!important}
+.is-stack .cs-sticky{position:relative;inset:auto}
+.is-stack .cs-stacks,.is-stack .cs-stabs,.is-stack .cs-sticky-hint{display:none}
+.is-stack .cs-notes{position:static;flex-direction:column;gap:8px;margin-top:14px;pointer-events:auto}
+.is-stack .cs-notes::before{content:attr(data-label);font:700 14px/1 var(--f-head);text-transform:uppercase;letter-spacing:.04em;opacity:.7;margin:10px 0 4px}
+.is-stack .cs-note{width:auto;height:auto;opacity:1}
+.is-stack .cs-wantbox{height:auto!important;padding-left:18px}
+.is-stack .cs-chartbox{height:auto;padding:10px}
+.is-stack .cs-calside,.is-stack .cs-calrow,.is-stack .cs-collage,.is-stack .cs-row4{height:auto!important}
+.is-stack .cs-calimg,.is-stack .cs-row4 img,.is-stack .cs-collage img{height:auto}
+.is-stack .cs-rules div{flex-direction:column;gap:2px}
+.is-stack .cs-rules dt{width:auto}
+.is-stack .cs-big{font-size:56px}
+.is-stack .cs-kpis{flex-wrap:wrap;gap:20px}
+.is-stack .cs-hero-top{flex-direction:column;gap:24px}
+.is-stack .cs-hero .cs-title img,.is-stack .cs-intro .cs-title img{height:52px}
+/* calendar-act images were cut from slides with a darker backdrop: feather their edges into the page */
+.cs-calimg{-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);mask-composite:intersect}
