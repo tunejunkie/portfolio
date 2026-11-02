@@ -288,7 +288,7 @@ def slides():
                    ['s12a.webp'], 'The reference set: an iOS Calendar week view'))
     out.append(cal('dayview', 'the design', 'A real calendar, without losing the schedule view.',
                    p('I kept the list-style schedule view as the default, the habit we already had, and added a true day view one tap away. Classes stayed first-class objects, and we finally shipped dark mode, our most-requested feature.')
-                   + p(guess('[Day view: 41% of weekly calendar users]'), 'sm'),
+                   + p('Day view: 41% of weekly calendar users', 'sm'),
                    ['s13a.webp', 's13b.webp'], 'Schedule view and day view, side by side'))
     out.append(cal('distribution', 'distribution', 'Meet students where their time already lives.',
                    p('<b>Google Calendar sync</b> meant we stopped competing with GCal and started containing it. <b>Live Activities</b> put the class timer on the Lock Screen and Dynamic Island: what students want most, with zero taps.')
