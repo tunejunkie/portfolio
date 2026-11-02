@@ -129,7 +129,7 @@ function layout() {
   body.classList.toggle('is-stack', stack);
   body.classList.toggle('is-slides', !stack && mode === 'slides');
   body.classList.toggle('is-scroll', stack || mode === 'scroll');
-  if (stack) { stackLayout(); return; }
+  if (stack) { document.documentElement.style.setProperty('--ps-stack', Math.min(1, (innerWidth - 32) / 399).toFixed(4)); stackLayout(); return; }
   const vw = deck.clientWidth || innerWidth, vh = deck.clientHeight || innerHeight;
   S = Math.min(vw / BW, vh / BH);
   const tx = (vw - BW * S) / 2, ty = Math.max(0, (vh - BH * S) / 2);
@@ -138,6 +138,7 @@ function layout() {
   const barH = $('.cs-bar').offsetHeight || 81;
   const top = Math.max(60, (barH + 36 - ty) / S), h = BH - top - (mode === 'slides' ? 128 : 60);
   board.style.setProperty('--top', top + 'px'); board.style.setProperty('--h', h + 'px');
+  board.style.setProperty('--ps', Math.min(1.15, (h - 40) / 836).toFixed(4));   // live Now-tab prototype phone
   // intro (scroll mode): same scale and margins as the slides, but in the normal page flow
   if (intro) {
     introBoard.style.transform = `translate(${tx}px,0) scale(${S})`;
@@ -403,3 +404,24 @@ addEventListener('resize', () => {
 });
 document.fonts && document.fonts.ready.then(() => { if (!stack) { layout(); placePhones(); } });
 window.__cs = { goTo, get steps() { return steps; }, setMode, get cur() { return cur; } };
+
+/* ---------------- build slide: live Now-tab prototype + state picker ---------------- */
+(() => {
+  const frame = $('.cs-proto iframe'), btns = $$('.cs-state');
+  if (!frame || !btns.length) return;
+  // load it once the page has settled (it's ~1 MB of screens), or right away if someone reaches for it
+  let pending = null, ready = false;
+  const load = () => { if (!frame.src) frame.src = frame.dataset.src; };
+  if (document.readyState === 'complete') setTimeout(load, 1200); else addEventListener('load', () => setTimeout(load, 1200));
+  const mark = n => btns.forEach(b => { const on = +b.dataset.state === n; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on); });
+  const send = n => frame.contentWindow.postMessage({ nowState: n }, '*');
+  btns.forEach(b => b.addEventListener('click', () => {
+    const n = +b.dataset.state; mark(n);
+    if (ready) send(n); else { pending = n; load(); }
+  }));
+  addEventListener('message', e => {
+    if (e.source !== frame.contentWindow || !e.data) return;
+    if (e.data.nowReady) { ready = true; if (pending) { send(pending); pending = null; } }
+    else if (e.data.nowStateChanged && !pending) mark(e.data.nowStateChanged);
+  });
+})();

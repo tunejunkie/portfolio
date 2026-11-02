@@ -1,0 +1,35 @@
+@font-face{font-family:DMS;src:url(fonts/dm-sans-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:DMS;src:url(fonts/dm-sans-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:DMS;src:url(fonts/dm-sans-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:DMS;src:url(fonts/dm-sans-latin-900-normal.woff2);font-weight:900}
+@font-face{font-family:RM;src:url(fonts/roboto-mono-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:IN;src:url(fonts/inter-latin-600-normal.woff2);font-weight:600}
+html,body{margin:0;background:#0f1627;width:375px;scrollbar-width:none;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::-webkit-scrollbar{display:none}
+.f-moderat-medium{font-family:DMS,'Noto Color Emoji';font-weight:500}
+.f-moderat-semibold{font-family:DMS,'Noto Color Emoji';font-weight:600}
+.f-moderat-bold{font-family:DMS,'Noto Color Emoji';font-weight:700}
+.f-moderat-black{font-family:DMS;font-weight:900}
+.f-moderat-mono_black{font-family:RM;font-weight:700}
+.f-sf_pro_text-semibold{font-family:IN;font-weight:600}
+.col-1{grid-column:1/2}.row-1{grid-row:1/2}
+#stage{position:relative;width:375px;overflow:hidden}
+.layer{position:absolute!important;left:0;top:0;width:375px!important;height:100%!important;opacity:0;pointer-events:none;transition:opacity .55s cubic-bezier(.4,0,.2,1);z-index:0;overflow:hidden}
+.layer.on{opacity:1;pointer-events:auto;z-index:2}
+.layer.out{z-index:1}
+#stage.instant .layer{transition:none!important}
+img[data-notch]{display:none}
+/* nav + tab bar stay put while the content scrolls */
+[data-fix=nav]{position:fixed!important;top:0!important;left:0!important;z-index:20;width:375px!important;transform:none!important;transition:background .25s}
+[data-fix=tab]{position:fixed!important;top:auto!important;bottom:0!important;left:0!important;z-index:20;width:375px!important;transform:none!important}
+.scrolled [data-fix=nav]{background:var(--tint);-webkit-backdrop-filter:blur(20px) saturate(1.4);backdrop-filter:blur(20px) saturate(1.4)}
+/* entering state: the hero settles in */
+.enter [data-hero="1"]{animation:heroIn .7s cubic-bezier(.2,.8,.2,1)}
+.enter [data-hero="2"]{animation:heroIn2 .7s .06s cubic-bezier(.2,.8,.2,1) both}
+@keyframes heroIn{from{scale:.92;opacity:.2}to{scale:1;opacity:1}}
+@keyframes heroIn2{from{translate:0 10px;opacity:0}to{translate:0 0;opacity:1}}
+/* FTUX "who's in your class" animations */
+[data-node-id="2:81744"]{animation:people 14s linear infinite}
+@keyframes people{to{transform:translateX(var(--loop,-50%))}}
+[data-node-id="2:81735"]{animation:think 3.2s ease-in-out infinite;transform-origin:50% 60%}
+@keyframes think{0%,100%{rotate:-10deg}50%{rotate:10deg}}

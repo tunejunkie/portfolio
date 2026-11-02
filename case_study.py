@@ -145,12 +145,24 @@ def slides():
       </div>
       {phone_slot([G + '053.webp', G + '030.webp', G + '011.webp'], 'Saturn’s Now tab')}''', steps=3)
 
+    # live, coded prototype of the Now tab (site/proto/now-tab/, built from Figma) with a picker for every state
+    groups = [('School day', [(1, 'In class'), (2, 'Final minute'), (3, 'Missing period'), (4, 'Passing time'), (5, 'Passing, final minute')]),
+              ('No class for an hour+', [(6, 'Midnight–4am'), (7, '4–8am'), (8, '8am–noon'), (9, 'Noon–4pm'), (10, '4–8pm'), (11, '8pm–midnight')]),
+              ('First-time setup', [(12, 'School not built'), (13, 'On the waitlist'), (14, 'Not built, has contacts'), (15, 'No classes'), (16, 'Classes partly added'), (17, 'Schedule not shared')])]
+    picker = ''.join(
+        f'<div class="cs-states-g" data-a><p class="cs-states-h">{E(g)}</p><div class="cs-states-row">'
+        + ''.join(f'<button type="button" class="cs-state{" is-on" if n == 1 else ""}" data-state="{n}" aria-pressed="{"true" if n == 1 else "false"}">{E(t)}</button>' for n, t in items)
+        + '</div></div>' for g, items in groups)
     build = slide('build', 2, f'''
       <div class="cs-col cs-col--text cs-w647">
         <div class="cs-head"><h2 class="t80" data-a>Some kind of short headline</h2></div>
-        <p class="cs-body" data-a>[Summary Lorem ipsum dolor sit amet consectetur. Adipiscing nisi pharetra pellentesque arcu erat elit donec leo donec. Nibh faucibus amet ultricies ut faucibus enim pharetra est. Curabitur ut tempus nisl vel. Ut nec vitae auctor blandit. Risus arcu quis scelerisque mattis libero. Mattis ullamcorper elementum suspendisse fusce. Aenean tellus tortor nunc aliquet arcu morbi at semper urna.]</p>
+        <p class="cs-body" data-a>[Summary Lorem ipsum dolor sit amet consectetur. Adipiscing nisi pharetra pellentesque arcu erat elit donec leo donec. Nibh faucibus amet ultricies ut faucibus enim.]</p>
+        <div class="cs-states" role="group" aria-label="Now tab states">{picker}</div>
       </div>
-      {phone_slot([None, None, None], 'Placeholder phone')}''', steps=3)
+      <div class="cs-proto" data-a>
+        <div class="cs-proto-phone"><iframe data-src="{{base}}proto/now-tab/" title="Interactive prototype of Saturn’s Now tab" tabindex="-1"></iframe></div>
+        <p class="cs-proto-hint">Live prototype · scroll inside the phone</p>
+      </div>''')
 
     gallery = slide('gallery', 2, f'''
       <div class="cs-top">

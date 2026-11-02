@@ -225,3 +225,21 @@
 .cs-army--men{z-index:1}
 /* a line of text the procession shoves off to the right */
 .cs-pushed{position:absolute;left:0;top:296px;font:400 28px/1.3 var(--f-head);white-space:nowrap;will-change:transform}
+
+/* build slide: live Now-tab prototype (an iframe in a phone frame) + a picker for its states */
+.cs-states{display:flex;flex-direction:column;gap:22px;margin-top:8px}
+.cs-states-h{font:600 15px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 10px}
+.cs-states-row{display:flex;flex-wrap:wrap;gap:8px}
+.cs-state{font:500 17px/1 var(--f-body);color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:10px 16px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.cs-state:hover{background:rgba(255,255,255,.18)}
+.cs-state:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.cs-state.is-on{background:#fff;color:#1b1f4a;border-color:#fff}
+.cs-proto{flex:none;display:flex;flex-direction:column;align-items:center;gap:14px;width:calc(399px * var(--ps, 1))}
+.cs-proto-phone{width:399px;height:836px;transform:scale(var(--ps, 1));transform-origin:50% 0;margin-bottom:calc(836px * (var(--ps, 1) - 1));
+  border:12px solid #0b0b0f;border-radius:58px;background:#0b0b0f;overflow:hidden;box-shadow:0 0 0 1.5px rgba(255,255,255,.12),0 50px 90px -40px rgba(0,0,0,.85)}
+.cs-proto-phone iframe{display:block;width:375px;height:812px;border:0;border-radius:46px;background:#0f1627}
+.cs-proto-hint{font:400 15px/1 var(--f-body);color:rgba(255,255,255,.55);margin:0}
+.is-stack .cs-states-row{gap:6px}
+.is-stack .cs-state{font-size:15px;padding:9px 13px}
+.is-stack .cs-proto{width:100%;--ps:var(--ps-stack, .9)}
+.is-stack .cs-proto-phone{transform-origin:50% 0}
