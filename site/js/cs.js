@@ -142,7 +142,7 @@ function layout() {
   // intro (scroll mode): same scale and margins as the slides, but in the normal page flow
   if (intro) {
     introBoard.style.transform = `translate(${tx}px,0) scale(${S})`;
-    introBoard.style.paddingTop = Math.max(60, (20 + 96 + 28 - ty) / S) + 'px';   // under the full site nav
+    introBoard.style.paddingTop = Math.max(60, (20 + 96 + 28 - ty) / S) + 80 + 'px';   // under the full site nav, plus breathing room above the logo + summary
     intro.style.height = mode === 'scroll' ? Math.ceil(introBoard.offsetHeight * S) + 'px' : '0px';
   }
   // shrink any slide whose content is taller than the space under the HUD

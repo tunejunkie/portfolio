@@ -344,7 +344,7 @@
 .cs-dots li::marker{color:rgba(248,248,248,.6)}
 .cs-guess{color:inherit;background:rgba(255,214,102,.16);border-bottom:2px dashed #ffd666;border-radius:3px;padding:0 4px}
 .cs-hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:80px}
-.cs-hero .cs-title img,.cs-intro .cs-title img{display:block;height:92px;width:auto}
+.cs-hero .cs-title img,.cs-intro .cs-title img{display:block;height:70px;width:auto}
 .cs-hero-top .cs-lede{margin-top:0;max-width:549px;font-size:24px}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .cs-satlogo img{height:32px;width:auto;display:block}
@@ -488,7 +488,7 @@
 .is-stack .cs-big{font-size:56px}
 .is-stack .cs-kpis{flex-wrap:wrap;gap:20px}
 .is-stack .cs-hero-top{flex-direction:column;gap:24px}
-.is-stack .cs-hero .cs-title img,.is-stack .cs-intro .cs-title img{height:52px}
+.is-stack .cs-hero .cs-title img,.is-stack .cs-intro .cs-title img{height:42px}
 /* calendar-act images were cut from slides with a darker backdrop: feather their edges into the page */
 .cs-calimg{-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);
   -webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);mask-composite:intersect}
