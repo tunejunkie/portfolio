@@ -1,6 +1,6 @@
 // 3D Trovy card (Trovy case study, Context slide). Loads the GLB into .tv-card3d over a CSS gradient tile.
 // Floats gently and leans toward the pointer; a tap/click (or Enter/Space) spins it a full turn so the back shows.
-// Renders only while its slide is on screen. Until the model is ready (or without WebGL) the flat PNG shows.
+// Renders only while its slide is on screen. Without WebGL the flat PNG shows instead.
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { RoomEnvironment } from './vendor/RoomEnvironment.js';
@@ -12,7 +12,7 @@ function init(slot) {
   const canvas = slot.querySelector('canvas');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let renderer;
-  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); } catch (e) { return; }
+  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); } catch (e) { slot.classList.add('no-3d'); return; }
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   // no filmic tone mapping: it washes the gold out to cream
   renderer.toneMapping = THREE.NoToneMapping;
@@ -40,7 +40,7 @@ function init(slot) {
     spin.add(card);
     slot.classList.add('is-3d');
     dirty = true;
-  });
+  }, undefined, () => slot.classList.add('no-3d'));
 
   // sizing: the slot sits inside a scaled art board, so measure its real pixels
   let dirty = true;
