@@ -244,14 +244,38 @@
 .is-stack .cs-proto{width:100%;--ps:var(--ps-stack, .9)}
 .is-stack .cs-proto-phone{transform-origin:50% 0}
 
-/* ======== Trovy case study (case_study_trovy.py): Trovy's midnight + gold, and the `tv-` layouts ======== */
-.cs-page--trovy{--lilac:#f5c75a;--ink:#000b22;background:#000b22}
-.cs-page--trovy::before{background:linear-gradient(0deg,#17325f 5.416%,#000b22 100%)}
-.cs-page--trovy .cs-bar{background:linear-gradient(180deg,rgba(0,11,34,.92),rgba(0,11,34,.6))}
-.cs-page--trovy .cs-ctrl{background:rgba(0,11,34,.6)}
-.cs-page--trovy .cs-pill{background:var(--lilac);color:var(--ink)}
-.cs-page--trovy .cs-state.is-on{color:var(--ink)}
-.cs-page--trovy.is-stack .nav{background:rgba(0,11,34,.85)}
+/* ======== Trovy case study (case_study_trovy.py): a LIGHT page (Figma 1510:103734) — cream to off-white, navy ink, Trovy gold accent.
+   --off/--ink are swapped so the shared deck styles (text, Scroll/Slides toggle) flip to dark-on-light. ======== */
+.cs-page--trovy{--off:#000b22;--ink:#f8f8f8;--lilac:#f5c75a;--navy:#000b22;--line:rgba(0,11,34,.1);background:#f8f8f8;color:#000b22}
+.cs-page--trovy::before{background:linear-gradient(180deg,#fef0d4 0%,#fdf3df 45%,#f8f8f8 100%)}
+.cs-page--trovy .cs-bar{background:linear-gradient(180deg,rgba(254,240,212,.94),rgba(254,240,212,.7))}
+.cs-page--trovy .cs-mode{background:rgba(0,11,34,.05);border-color:var(--line)}
+.cs-page--trovy .cs-line{background:rgba(0,11,34,.25)}
+.cs-page--trovy .cs-outline button{opacity:.25}
+.cs-page--trovy .cs-outline button:hover{opacity:.55}
+.cs-page--trovy .cs-outline button.on{opacity:1}
+.cs-page--trovy .cs-ctrl{background:rgba(255,255,255,.75);border-color:var(--line)}
+.cs-page--trovy .cs-ctrl button:hover{background:rgba(0,11,34,.08)}
+.cs-page--trovy .cs-progress{background:rgba(0,11,34,.08)}
+.cs-page--trovy .cs-pill{background:var(--lilac);color:var(--navy)}
+.cs-page--trovy .cs-card{background:#fff;border-color:var(--line);box-shadow:0 18px 40px -30px rgba(0,11,34,.35)}
+.cs-page--trovy .cs-cards--lessons p{color:inherit;opacity:.8}
+.cs-page--trovy.is-stack .nav{background:rgba(254,240,212,.9)}
+/* intro: Trovy logo + lede, meta row, then the hero image (its rounded corners are in the PNG) */
+.tv-hero-top{display:flex;align-items:center;justify-content:space-between;gap:48px}
+.tv-title{margin:0;line-height:0}
+.tv-logo{display:inline-flex;align-items:flex-end;gap:9px;padding:15px 10px 12px}
+.tv-logo img:first-child{width:74px;height:67px}
+.tv-logo img:last-child{width:179px;height:61px}
+.tv-lede{margin:0;width:549px;flex:none}
+.tv-hero-copy .cs-meta{margin-top:64px}
+.tv-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tv-hero-img{height:900px;border-radius:0;background:none;overflow:visible;margin-top:64px}
+.tv-hero-img img{object-fit:contain}
+.is-stack .tv-hero-top{flex-direction:column;align-items:flex-start;gap:16px}
+.is-stack .tv-lede{width:auto}
+.is-stack .tv-logo{padding:0;transform:scale(.7);transform-origin:0 50%}
+.is-stack .tv-hero-img{height:auto;aspect-ratio:16/9;margin-top:24px}
 .cs-video img{display:block;width:100%;height:100%;object-fit:cover}
 /* two-column slides: copy left, picture right */
 .cs-home-before .cs-fit,.cs-home-live .cs-fit,.cs-brief .cs-fit,.cs-desktop .cs-fit{display:flex;align-items:center;gap:58px}
@@ -261,7 +285,7 @@
 .tv-cards3{grid-template-columns:repeat(3,1fr)}
 .tv-cards3 .cs-card{padding-bottom:40px}
 .tv-shot{flex:1;min-width:0;margin:0}
-.tv-shot img{display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.tv-shot img{display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 30px 70px -40px rgba(0,11,34,.45);border:1px solid rgba(0,11,34,.06)}
 .tv-shot figcaption{margin-top:16px;font:400 18px/1.3 var(--f-body);opacity:.6}
 /* homepage frames: 3 × 2 stills from the scroll story */
 .tv-frames{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
@@ -270,23 +294,23 @@
 .tv-frames figcaption{margin-top:12px;font:400 18px/1.3 var(--f-body);opacity:.7}
 /* the live homepage build in a browser frame */
 .tv-browser{flex:1;min-width:0}
-.tv-browser-bar{height:44px;display:flex;align-items:center;gap:8px;padding:0 18px;background:#1b2340;border-radius:16px 16px 0 0}
-.tv-browser-bar i{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.22)}
+.tv-browser-bar{height:44px;display:flex;align-items:center;gap:8px;padding:0 18px;background:#ebe7df;border-radius:16px 16px 0 0}
+.tv-browser-bar i{width:12px;height:12px;border-radius:50%;background:rgba(0,11,34,.18)}
 .tv-browser-bar span{margin:0 auto;font:400 14px/1 var(--f-body);opacity:.55;transform:translateX(-24px)}
-.tv-browser iframe{display:block;width:100%;height:690px;border:0;background:#f9f9fb;border-radius:0 0 16px 16px}
+.tv-browser iframe{display:block;width:100%;height:690px;border:0;background:#f9f9fb;border-radius:0 0 16px 16px;box-shadow:0 30px 70px -40px rgba(0,11,34,.45)}
 .tv-browser-hint{margin:14px 0 0;text-align:center;font:400 15px/1 var(--f-body);opacity:.55}
-.tv-link{font:600 20px/1 var(--f-body);color:var(--lilac);text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:3px}
+.tv-link{font:600 20px/1 var(--f-body);color:#000b22;text-decoration:none;border-bottom:3px solid var(--lilac);align-self:flex-start;padding-bottom:3px}
 /* Renovate: five phones with numbered steps */
 .tv-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:40px}
-.tv-steps img{display:block;width:100%;height:auto;border-radius:28px;box-shadow:0 40px 70px -40px rgba(0,0,0,.7)}
+.tv-steps img{display:block;width:100%;height:auto;border-radius:28px;box-shadow:0 30px 60px -36px rgba(0,11,34,.45);border:1px solid rgba(0,11,34,.06)}
 .tv-steps h3{margin-top:22px;display:flex;align-items:center;gap:10px;font:600 23px/1.25 var(--f-body)}
-.tv-steps h3 span{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--lilac);color:var(--ink);font:700 15px/1 Poppins,var(--f-head)}
+.tv-steps h3 span{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--lilac);color:#000b22;font:700 15px/1 Poppins,var(--f-head)}
 .tv-steps p{margin-top:8px;font:400 18px/1.4 var(--f-body);opacity:.75}
 .tv-shot--desk img{border-radius:20px}
 /* three detail cards with a crop on top */
 .tv-details{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .tv-details .cs-card{padding:20px 20px 34px;gap:14px}
-.tv-details img{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:8px}
+.tv-details img{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:8px;border:1px solid rgba(0,11,34,.06)}
 .tv-details h3{font-size:28px}
 .tv-next{opacity:.8}
 /* phones */

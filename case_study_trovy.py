@@ -27,15 +27,18 @@ def cards(items, cls=''):
 META = [('Role', 'Founding Designer'), ('Industry', 'Fintech · Home equity'), ('Designs circa', '2025–2026'),
         ('Employment type', 'Full-time'), ('Built with', 'HTML/CSS/JS, AI coding agents [+ stack]')]
 TITLE = 'Trovy: From designer to design engineer'
-LEDE = ('How I went from handing engineering Figma files to shipping production code at a fintech startup: '
-        'first the marketing homepage, then Renovate with Trovy, an AI renovation planner for homeowners.')
+LEDE = 'How I went from handing engineering Figma files to shipping production code at a fintech startup.'
 
 
 def hero_copy(heading='h1'):
     a = ' data-a' if heading != 'h1' else ''
-    return f'''<div class="cs-hero-copy">
-        <{heading} class="cs-title"{a}>{E(TITLE)}</{heading}>
-        <p class="cs-lede"{a}>{E(LEDE)}</p>
+    logo = (f'<span class="tv-logo"{a}><img src="{{base}}{ASSET}trovy-icon.svg" alt="" width="74" height="67">'
+            f'<img src="{{base}}{ASSET}trovy-wordmark.svg" alt="" width="179" height="61"></span>')
+    return f'''<div class="cs-hero-copy tv-hero-copy">
+        <div class="tv-hero-top">
+          <{heading} class="cs-title tv-title">{logo}<span class="tv-sr">{E(TITLE)}</span></{heading}>
+          <p class="cs-lede tv-lede"{a}>{E(LEDE)}</p>
+        </div>
         <dl class="cs-meta">{''.join(f'<div{a}><dt>{x}</dt><dd>{y}</dd></div>' for x, y in META)}</dl>
       </div>'''
 
@@ -93,7 +96,6 @@ def slides():
         <div class="cs-head"><h2 class="t56" data-a>Built in code, not Figma.</h2></div>
         <div class="cs-body" data-a>
           <p>Designed directly in HTML, CSS and JavaScript: scroll-scrubbed timelines, a 3D card in three.js, a video hero and the responsive layout, in one file.</p>
-          <p>[Status: in review with Trovy / launched in ____.]</p>
         </div>
         <a class="tv-link" data-a href="{{base}}proto/trovy-home/" target="_blank" rel="noopener">Open the build full size ↗</a>
       </div>
@@ -168,6 +170,7 @@ def case_study_trovy():
     from build import head, nav, SITE_FOOTER
     base = '../../'
     body = ''.join(slides()).replace('{base}', base)
+    intro_copy = hero_copy().replace('{base}', base)
     outline = '<span class="cs-line"></span>'.join(f'<button data-chapter="{i}">{c}</button>' for i, c in enumerate(CHAPTERS))
     toggle = '''<div class="cs-mode" role="radiogroup" aria-label="How to read this case study">
           <button role="radio" data-mode="scroll" aria-checked="true">Scroll</button>
@@ -175,17 +178,17 @@ def case_study_trovy():
         </div>'''
     intro = f'''<section class="cs-intro" aria-label="{E(TITLE)}">
     <div class="cs-intro-board">
-      {hero_copy()}
-      <div class="cs-video"><img src="{base}{ASSET}intro.webp" alt="The redesigned Trovy homepage: ‘Let your home take you higher’, a house carried by balloons" width="1600" height="1000"></div>
+      {intro_copy}
+      <div class="cs-video tv-hero-img"><img src="{base}{ASSET}hero.webp" alt="The redesigned Trovy homepage: ‘Let your home take you higher’, a house carried by balloons" width="1600" height="900"></div>
     </div>
   </section>'''
     return head(f'{TITLE} — Natalie Rose Taylor', base,
                 'How I went from Figma handoffs to shipping production code at Trovy: the homepage redesign and Renovate with Trovy.').replace(
         '</head>', f'<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="{base}css/cs.css"><meta name="robots" content="noindex"></head>') + f'''
 <body class="cs-page cs-page--trovy is-scroll" data-base="{base}">
-{nav(base, light=True)}
+{nav(base)}
 <div class="cs-bar">
-  <a class="logo" href="{base}" aria-label="Natalie Rose Taylor, home"><img src="{base}assets/svg/flower-light.svg" alt=""><span>Natalie<br>Rose Taylor</span></a>
+  <a class="logo" href="{base}" aria-label="Natalie Rose Taylor, home"><img src="{base}assets/svg/flower.svg" alt=""><span>Natalie<br>Rose Taylor</span></a>
   <nav class="cs-outline" aria-label="Chapters">{outline}</nav>
   {toggle}
 </div>
