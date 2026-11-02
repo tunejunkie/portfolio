@@ -73,11 +73,11 @@ def slides():
       </div>''')
 
     shift = slide('shift', 1, f'''
-      <div class="cs-head"><h2 class="t56" data-a>One designer, one engineering team, one queue.</h2></div>
-      <p class="cs-body cs-body--wide" data-a>Trovy’s engineers work on the lending product: application, underwriting, servicing, compliance. Everything else, the marketing site and new homeowner features, waited behind it. In [month] 2025 I started building those myself with AI coding agents and handing engineering working code instead of mockups.</p>
-      {cards([('The deliverable changed.', 'Figma files became running code. The prototype is the spec; engineering reviews a build, not a redline.'),
-              ('The loop got shorter.', 'Design, build and test happen in the browser in the same session. Motion and states are designed where they run.'),
-              ('The split is deliberate.', 'I own the marketing site and the Homeowner Toolkit end to end. The core lending product stays with engineering.')], 'tv-cards3')}''')
+      <div class="cs-head"><h2 class="t56" data-a>What I’ve learned so far about design engineering</h2></div>
+      <p class="cs-body tv-w1300" data-a>I was onboarded into the engineering team over the summer of 2026. I started small, playing with marketing concepts and pitching small interaction changes in the product. Now, after getting Renovate with Trovy out in one week, I have a few things I’ve learned.</p>
+      {cards([('Design input makes the difference.', 'A picture is worth a thousand words. Say less, and send a Figma link.'),
+              ('Sweat the small stuff?', 'I used to sweat it in Figma, now I sweat it in code. Figma gives direction, code gives it clarity.'),
+              ('Source of truth is the kicker.', 'Is it Figma? Is it code? Is it somewhere else? This has been the main friction point.')], 'tv-cards3')}''')
 
     home_before = slide('home-before', 1, f'''
       <div class="cs-col cs-col--text tv-w520">
