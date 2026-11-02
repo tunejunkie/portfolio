@@ -93,9 +93,9 @@ def slides():
 
     home_live = slide('home-live', 1, f'''
       <div class="cs-col cs-col--text tv-w434">
-        <div class="cs-head"><h2 class="t56" data-a>Built in code, not Figma.</h2></div>
+        <div class="cs-head"><span class="cs-pill">Project 1</span><h2 class="t56" data-a>Built in code, not Figma.</h2></div>
         <div class="cs-body" data-a>
-          <p>Designed directly in HTML, CSS and JavaScript: scroll-scrubbed timelines, a 3D card in three.js, a video hero and the responsive layout, in one file.</p>
+          <p>The new Trovy homepage, designed directly in HTML, CSS and JavaScript: scroll-scrubbed timelines, a 3D card in three.js, a video hero and the responsive layout, in one file.</p>
         </div>
         <a class="tv-link" data-a href="{{base}}proto/trovy-home/" target="_blank" rel="noopener">Open the build full size ↗</a>
       </div>
@@ -163,7 +163,7 @@ def slides():
       <div class="cs-stats">{''.join(f'<div data-a><h3>{E(h)}</h3><p>{E(p)}</p></div>' for h, p in takeaways_)}</div>
       <p class="cs-body tv-next" data-a><b>Next for Renovate:</b> contractor quotes, a contractor marketplace and a home-value calculator for each project.</p>''')
 
-    return [hero, context, shift, home_before, home_live, brief, flow, desktop, detail, process, takeaways]
+    return [hero, context, shift, home_live, brief, flow, desktop, detail, process, takeaways]
 
 
 def case_study_trovy():
