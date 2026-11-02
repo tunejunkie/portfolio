@@ -249,14 +249,26 @@ def slides():
              + chips([(6, '1am'), (7, '5am'), (8, '8am'), (9, 'Noon'), (10, '6pm'), (11, '10pm')], 10, 'Time of day'), 'cs-phslot cs-proto2', h=900))
 
     # ---- the calendar act (rewritten from the V3 slides, shorter) ----
-    def cal(key, pill, title, body, pic=None, alt='', wide=False, extra=''):
+    C = 'assets/cs/saturn/cal/'
+
+    def screens(items, alt):
+        """Real screens from Natalie's Saturn folder: 'name.webp' is a still, 'vNN' is a looping screen recording."""
+        out = []
+        for it in items:
+            if it.startswith('v'):
+                out.append(f'<video class="cs-scr" data-src="{{base}}{C}{it}.mp4" poster="{{base}}{C}{it}.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>')
+            else:
+                out.append(f'<img class="cs-scr" src="{{base}}{C}{it}" alt="" loading="lazy">')
+        return f'<div class="cs-screens" data-a role="img" aria-label="{E(alt)}" style="--n:{len(items)}">{"".join(out)}</div>'
+
+    def cal(key, pill, title, body, pics=None, alt='', wide=False, extra=''):
         if wide:
             return scene(key, 3,
                          ab(212, 40, 1304, tag(pill), 'tc') + ab(212, 96, 1304, h(title), 'tc') + ab(262, 260 if len(title) > 60 else 196, 1204, body, 'tc')
-                         + (ab(60, 380, 1608, img(pic, alt, 'cs-calimg'), 'cs-calrow', h=600) if pic else '') + extra)
+                         + (ab(60, 400, 1608, screens(pics, alt), 'cs-calrow', h=590) if pics else '') + extra)
         return scene(key, 3,
                      ab(80, 140, 760, tag(pill)) + ab(80, 200, 760, h(title)) + ab(80, 470 if len(title) > 44 else 400, 760, body)
-                     + (ab(980, 60, 680, img(pic, alt, 'cs-calimg'), 'cs-calside', h=900) if pic else '') + extra)
+                     + (ab(940, 80, 740, screens(pics, alt), 'cs-calside', h=860) if pics else '') + extra)
 
     out.append(scene('reframe', 3,
                      ab(212, 230, 1304, tag('the reframe'), 'tc')
@@ -267,46 +279,45 @@ def slides():
     out.append(cal('constraints', 'design principles', 'Why do all calendars look the same?',
                    p('Before drawing anything, I wrote down why the category converges, so we’d know which conventions to keep and which we could break.')
                    + f'<dl class="cs-rules" data-a>{"".join(f"<div><dt>{E(a)}</dt><dd>{E(b)}</dd></div>" for a, b in rows)}</dl>',
-                   'cal12.webp', 'The reference set: an iOS Calendar week view'))
+                   ['s12a.webp'], 'The reference set: an iOS Calendar week view'))
     out.append(cal('dayview', 'the design', 'A real calendar, without losing the schedule view.',
                    p('I kept the list-style schedule view as the default, the habit we already had, and added a true day view one tap away. Classes stayed first-class objects, and we finally shipped dark mode, our most-requested feature.')
                    + p(guess('[Day view: 41% of weekly calendar users]'), 'sm'),
-                   'cal13.webp', 'Schedule view and day view, side by side'))
+                   ['s13a.webp', 's13b.webp'], 'Schedule view and day view, side by side'))
     out.append(cal('distribution', 'distribution', 'Meet students where their time already lives.',
                    p('<b>Google Calendar sync</b> meant we stopped competing with GCal and started containing it. <b>Live Activities</b> put the class timer on the Lock Screen and Dynamic Island: what students want most, with zero taps.')
                    + '<p class="cs-big" data-a>+150%<span>app opens after Live Activities launched</span></p>',
-                   'cal14.webp', 'A shared event in Saturn, and the class timer as a Live Activity on the Lock Screen'))
+                   ['s14a.webp', 's14b.webp'], 'A shared event in Saturn, and the class timer as a Live Activity on the Lock Screen'))
     out.append(cal('identity', 'what we learned', 'The metrics moved. The identity didn’t.',
                    p('Setup completion and early retention rose, yet students still called Saturn “the timer app.” We had built two good products that didn’t know they were one.')
                    + p('<b>How might we marry the Now tab and the calendar, and tell one coherent story?</b>'),
-                   'cal15.webp', 'An exploration of Now and Calendar as one surface'))
+                   ['v15a', 'v15b'], 'An exploration of Now and Calendar as one surface'))
     out.append(cal('compare', 'the unlock', 'Day view unlocked the feature Saturn was always meant to have: Calendar Compare.',
                    p('With a real, time-based day for every student, we could lay two side by side. Compare answers the question students actually ask each other: “when are you free?”'),
-                   'cal16.webp', 'Now with friends’ status up top; your day; your day beside a friend’s', wide=True))
+                   ['s16a.webp', 'v16b', 'v16c'], 'Now with friends’ status up top; your day; your day beside a friend’s', wide=True))
     out.append(cal('states', 'craft', 'Designing Compare for the awkward states.',
                    p('Shared free time is the hero. Overlap recedes but never hides. A friend’s classes stay legible without revealing more than they chose to share.'),
-                   'cal17.webp', 'Five Compare states: both free, friend busy, starting from a profile, make a plan, and suggested times for a group', wide=True))
+                   ['s17a.webp', 's17b.webp', 's17c.webp', 's17d.webp', 's17e.webp'], 'Five Compare states: both free, friend busy, starting from a profile, make a plan, and suggested times for a group', wide=True))
     out.append(cal('result', 'result', 'Fall 2024: #1 Productivity app on the App Store.',
                    p('Ahead of ChatGPT, Gmail and Microsoft during back-to-school. Compare and Live Activities were the features students cited most in reviews.')
                    + f'<div class="cs-kpis" data-a><p><b>610k</b>peak DAU, fall 2024</p><p><b>62%</b>of students with ≥1 friend</p><p><b>4.8★</b>App Store rating</p></div>',
-                   'cal18.webp', 'The App Store’s Top Charts for Productivity, with Saturn Calendar at number one'))
+                   ['s18a.webp'], 'The App Store’s Top Charts for Productivity, with Saturn Calendar at number one'))
     out.append(cal('inventory', 'the next ceiling', 'An empty calendar is useless.',
                    p('Compare exposed the next constraint: outside of classes, most calendars were nearly empty. First I removed friction, rebuilding event creation to be title-first and invite-first. Students care who’s going, not the end time.'),
-                   'cal19.webp', 'Event creation before and after the rebuild'))
+                   ['s19a.webp', 's19b.webp'], 'Event creation before and after the rebuild'))
     out.append(cal('ai', 'the ai bet', 'Could students just say what they’re doing, and let Saturn do the rest?',
                    p('“Chat to create” sits where the timer lives: rattle off “soccer tues 4pm, chem test friday” and an LLM turns it into events, with friends attached. Before scaling it, I pushed us to answer: habit or novelty? And what does a wrong parse cost?')
                    + p('18% of new events created via chat', 'sm'),
-                   'cal20.webp', 'Chat to create, on the calendar home screen'))
+                   ['v20a'], 'Chat to create, on the calendar home screen'))
     out.append(cal('shipped', 'concept → reality', 'From prototype to production.',
                    p('I prototyped AI capture end to end, then worked with engineering to cut it down to what we could ship and measure. '
-                     + guess('[The conversational home and the Ringo onboarding were cut; chat-to-create on the calendar shipped.]')),
-                   'cal21.webp', 'Onboarding concept, conversational home concept, and the shipped chat-to-create calendar', wide=True))
+                     + 'The conversational home and the Ringo onboarding were cut; chat-to-create on the calendar shipped.'),
+                   ['v21a', 'v21b', 'v21c'], 'Onboarding concept, conversational home concept, and the shipped chat-to-create calendar', wide=True))
     out.append(scene('explore', 3,
-                     ab(80, 120, 760, tag('breadth'))
-                     + ab(80, 180, 760, h('Reasons to open Saturn on an empty day.'))
-                     + ab(80, 370, 760, p('Alongside the roadmap, I ran a stream of lightweight, shareable concepts aimed at daily habit. <b>Digest</b> is a morning story: your greeting, the weather, today’s bell schedule, your day, what friends are up to, and how the school is feeling.'))
-                     + ab(80, 640, 780, img('cal22.webp', 'Six concepts: Daily Digest, School mood, Mood check-in, Superlatives, Chilling with…, and Status', 'cs-calimg'), 'cs-calrow', h=270)
-                     + ab(1150, 52, 375, vphone(P + 'digest.mp4', 'Digest, a morning story: good morning, the forecast, today is an A Day, you’re busy for 8.5 hours, events, a mood check-in, the school’s biggest mood, and the 6AM Club'), 'cs-phslot', h=812)))
+                     ab(216, 250, 760, tag('breadth'))
+                     + ab(216, 310, 760, h('Reasons to open Saturn on an empty day.'))
+                     + ab(216, 500, 760, p('Alongside the roadmap, I ran a stream of lightweight, shareable concepts aimed at daily habit. <b>Digest</b> is a morning story: your greeting, the weather, today’s bell schedule, your day, what friends are up to, and how the school is feeling.'))
+                     + ab(1136, 52, 375, vphone(P + 'digest.mp4', 'Digest, a morning story: good morning, the forecast, today is an A Day, you’re busy for 8.5 hours, events, a mood check-in, the school’s biggest mood, and the 6AM Club'), 'cs-phslot', h=812)))
 
     # thank you
     out.append(scene('thanks', 3,

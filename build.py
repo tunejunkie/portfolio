@@ -10,7 +10,9 @@ CASE_URL = {
     'saturn': 'https://www.figma.com/proto/TfLHs6KosHbqvohQuOCKrF/Saturn-Case-Study?node-id=11-2804&viewport=1147%2C248%2C0.1&t=kBngw21bYzdQaSPf-1&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A2804&page-id=0%3A1&show-proto-sidebar=1',
     'upclose': 'https://docs.google.com/presentation/d/1EhMxjJ5FQsxnl-vreup7qm2kCwr8z8IQObILE_G_XuQ/edit?usp=sharing',
 }
-def case_attrs(slug):
+CASE_PAGE = {'saturn': 'case-studies/saturn-home/'}  # case studies that live on this site
+def case_attrs(slug, base=''):
+    if slug in CASE_PAGE: return f'href="{base}{CASE_PAGE[slug]}"'
     u = CASE_URL.get(slug)
     return f'href="{u}" target="_blank" rel="noopener"' if u else 'href="#" data-dud aria-disabled="true"'
 GALLERIES = [  # slug, name, years  (grid order; gigmo is menu-only)
@@ -25,7 +27,7 @@ GITHUB = 'https://github.com/tunejunkie'
 CHEV = '<svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
 def nav(base, light=False):
-    cs = ''.join(f'<a {case_attrs(s)}>{n}<small>{y}</small></a>' for s, n, y in CASES)
+    cs = ''.join(f'<a {case_attrs(s, base)}>{n}<small>{y}</small></a>' for s, n, y in CASES)
     gl = ''.join(f'<a href="{base}screenshots/{s}/">{n}<small>{y}</small></a>' for s, n, y in GALLERIES)
     a = f'{base}assets/svg/'
     ab = (f'<a href="{base}#about" data-about>About me</a>'
@@ -49,7 +51,7 @@ def nav(base, light=False):
 </header>
 <nav class="sheet" aria-label="Mobile menu">
   <button class="sheet-close" aria-label="Close menu">×</button>
-  <h3>Case studies</h3>{''.join(f'<a {case_attrs(s)}>{n}</a>' for s, n, y in CASES)}
+  <h3>Case studies</h3>{''.join(f'<a {case_attrs(s, base)}>{n}</a>' for s, n, y in CASES)}
   <h3>Screenshots</h3><div class="grid2">{''.join(f'<a href="{base}screenshots/{s}/">{n}</a>' for s, n, y in GALLERIES)}</div>
   <h3>About</h3><a href="{base}#about" data-about>About me</a><a href="{base}#anecdotes" data-jump="anecdotes">Anecdotes</a><a href="{base}work-history/">Work History</a><a href="{LINKEDIN}" target="_blank" rel="noopener">Contact</a><a href="{GITHUB}" target="_blank" rel="noopener">GitHub</a>
 </nav>'''

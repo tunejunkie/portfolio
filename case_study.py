@@ -85,7 +85,7 @@ def case_study_saturn():
   </section>'''
     return head(f'{TITLE} — Natalie Rose Taylor', base,
                 'Saturn: how a beloved single-purpose class timer for high schoolers got a true home screen, then a calendar students actually use.') .replace(
-        '</head>', f'<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="{base}css/cs.css"><meta name="robots" content="noindex"></head>') + f'''
+        '</head>', f'<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="{base}css/cs.css"></head>') + f'''
 <body class="cs-page is-scroll" data-base="{base}">
 {nav(base, light=True)}
 <div class="cs-bar">
