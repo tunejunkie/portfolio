@@ -124,7 +124,7 @@ def slides():
     add('beforeme', 0,
         ab(80, 200, 701, tag('before me'))
         + ab(80, 269, 701, h('Saturn solved one thing, super&nbsp;well.'))
-        + ab(80, 455, 701, p('Enter your school and classes once, and the app tells you what class you’re in and how many minutes are left. That simple feature made it a viral back-to-school app, and a venture-backed company.'))
+        + ab(80, 455, 701, p('Enter your school and classes once, and the app tells you what your schedule is today and how many minutes are left. That simple feature made it a viral back-to-school app, and a venture-backed company.'))
         + ab(80, 663, 701, f'<p class="cs-label" data-a>Investors</p><ul class="cs-inv" data-a>{"".join(f"<li>{E(x)}</li>" for x in inv)}</ul>')
         + ab(1086, 74, 375, vphone(P + 'before-me-video-1-sheet-interaction.mp4', 'Saturn before the redesign: the class timer, and the schedule sheet sliding up and down'), 'cs-phslot', h=812))
 
