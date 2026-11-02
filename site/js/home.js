@@ -1,3 +1,4 @@
+import * as THREE from 'three';
 import { Stage } from './phone.js';
 import { initAbout } from './about.js';
 import { initMarquee } from './marquee.js';
@@ -176,9 +177,30 @@ function layout(p) {
   stageLight = light;
 }
 
+/* Trovy teaser: its first screen is a looping video (Renovate before/after) instead of a still.
+   It plays only while that screen is up; tapping still flips through the stills. */
+const trovyVid = (() => {
+  const v = document.createElement('video');
+  Object.assign(v, { muted: true, loop: true, playsInline: true, preload: 'auto', crossOrigin: 'anonymous' });
+  v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+  v.src = S + 'video/trovy-renovate.' + (v.canPlayType('video/mp4; codecs="avc1.640028"') ? 'mp4' : 'webm');
+  const o = { v, tex: null, ready: false, on: false };
+  v.addEventListener('loadeddata', () => {
+    if (!stage) return;
+    const t = new THREE.VideoTexture(v);
+    t.colorSpace = THREE.SRGBColorSpace; t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; t.magFilter = THREE.LinearFilter;
+    o.tex = t; o.ready = true; kick = 3;
+  }, { once: true });
+  return o;
+})();
 function showTeaserTex(f, want) {
-  const name = tapName(SLUGS[want], tapIdx[want]), key = want + ':' + tapIdx[want];
-  if (f._t !== key && tex[name]) { f.setTexture(tex[name]); f._t = key; }
+  const vid = want === 1 && tapIdx[1] === 0 && trovyVid.ready;
+  const name = tapName(SLUGS[want], tapIdx[want]), key = vid ? 'trovy-video' : want + ':' + tapIdx[want];
+  if (f._t !== key) {
+    if (vid) { f.setTexture(trovyVid.tex); trovyVid.v.currentTime = 0; f._t = key; }
+    else if (tex[name]) { f.setTexture(tex[name]); f._t = key; }
+  }
+  if (vid !== trovyVid.on) { trovyVid.on = vid; vid ? trovyVid.v.play().catch(() => {}) : trovyVid.v.pause(); }
 }
 
 /* ---------------- teaser tap-through ---------------- */
@@ -312,10 +334,16 @@ function paintChrome(ap) {
 
 /* ---------------- loop ---------------- */
 // only re-render when something moved (keeps laptops cool when the page is idle)
-let lastKey = '', kick = 0, lastQ = -1;
+let lastKey = '', kick = 0, lastQ = -1, stageOnScreen = true;
+if ('IntersectionObserver' in window) new IntersectionObserver(es => {
+  stageOnScreen = es[0].isIntersecting;
+  if (trovyVid.on) stageOnScreen ? trovyVid.v.play().catch(() => {}) : trovyVid.v.pause();
+}).observe(canvas);
 export const invalidate = () => { kick = 3; };
 function frame() {
   const k = [P.toFixed(4), performance.now() - tapT < 500 ? performance.now() : 0, enter.toFixed(3), P < 0.05 ? mouseX.toFixed(3) + mouseY.toFixed(3) : '', phones[0] && phones[0].h.toFixed(1), vw, vh].join();
+  // a playing video screen needs a fresh frame every tick (only while the phone stage is on screen)
+  if (trovyVid.on && stageOnScreen) kick = Math.max(kick, 1);
   if (k !== lastKey || kick > 0) { layout(P); if (stage) stage.render(); lastKey = k; kick = Math.max(0, kick - 1); }
   if (Q !== lastQ) { about.update(Q); lastQ = Q; abHint.style.opacity = 0.6 * (1 - Math.min(1, Math.max(0, (Q - about.end + 0.4) / 0.4))); }
   // nav colour: whichever pinned section owns the screen decides
