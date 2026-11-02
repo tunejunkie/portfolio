@@ -104,12 +104,11 @@ def slides():
     # slides mode only: title slide (scroll mode opens with the normal-scrolling intro instead)
     out.append(f'<section class="cs-slide cs-hero" data-key="hero" data-chapter="0" data-steps="1" aria-label="hero"><div class="cs-fit">{hero_copy(heading="h2")}</div></section>')
 
-    # 01 — the intercom: a Star Wars-style crawl of the most confusing bell-schedule announcement imaginable
+    # 01 — the intercom (megaphone, no sound wave): a Star Wars-style crawl of the most confusing bell-schedule announcement imaginable
     crawl = ('Good morning, Grant High! Quick reminder that today is a B-Day, unless you’re in Flex, in which case it’s a Flex B-Day, which means Period 2 is actually Period 6 and runs 10:41 to 12:07, not 10:09 to 11:45 like on a regular B-Day, and lunch moves to 12:07 except for students attending this morning’s Mandatory Assembly, which runs 9:44 to 10:40, which pushes Period 2/6 to 10:45, which pushes lunch to 12:03 but only until 12:36, and if this were an Early Release Day, which it is not, unless it is, lunch would be at 10:45, and if it were a Late Open Day, which it was yesterday, Period 1 would start at 10:30 and end at 9:32, which we are aware is before it starts, and please note that next week is All 8 Periods, so Period 4 is at 11:01, and Finals Day 2 is January 22nd and also June 5th, which is before Finals Day 1 on June 10th, so plan accordingly, and remember: Flex is not a class, Flex is a state of mind. Have a great day!')
     add('intercom', 0,
         ab(433, 119, 863, h('Saturn exists because of this.', 64), 'tc')
         + ab(0, 332, 576, img('megaphone.webp', 'A school megaphone on a pole'), 'cs-mega', h=689)
-        + ab(461, 460, 154, f'<img class="cs-wave" src="{{base}}{V}wave.webp" alt="">', 'cs-wavebox', h=80)
         + ab(680, 300, 990, f'<div class="cs-crawl" data-a aria-label="{E(crawl)}"><p aria-hidden="true">{E(crawl)}</p></div>', 'cs-crawlbox', h=721))
 
     # 02 — the bell schedules

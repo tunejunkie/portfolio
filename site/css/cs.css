@@ -338,19 +338,15 @@
 .cs-chip.is-on{background:#fff;color:#1b1f4a;border-color:#fff}
 .cs-chip:focus-visible,.cs-stack:focus-visible,.cs-stab:focus-visible{outline:2px solid #fff;outline-offset:3px}
 
-/* 01 intercom: a perspective crawl that recedes away from the camera, plus a pulsing sound wave */
+/* 01 intercom: a perspective crawl that recedes away from the camera */
 .cs-mega img{width:100%;height:100%;object-fit:contain;object-position:0 100%}
-.cs-wavebox{transform:rotate(30deg);transform-origin:0 50%}
-.cs-wave{width:100%;height:100%;object-fit:contain;transform-origin:0 50%}
-.cs-intercom.on .cs-wave,.cs-intercom.in .cs-wave{animation:cs-wave .9s ease-in-out infinite}
-@keyframes cs-wave{0%,100%{transform:scaleX(.82) scaleY(.7);opacity:.65}35%{transform:scaleX(1.05) scaleY(1.08);opacity:1}60%{transform:scaleX(.92) scaleY(.86);opacity:.85}}
 .cs-crawlbox{perspective:560px;perspective-origin:50% 0;overflow:hidden;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 26%,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 26%,#000 78%,transparent 100%)}
 .cs-crawl{position:absolute;inset:0;transform-origin:50% 100%;transform:rotateX(24deg)}
 .cs-crawl p{position:absolute;left:0;right:0;top:100%;font:400 38px/1.5 var(--f-body);text-align:justify;transform:translateY(-62%)}
 .cs-intercom.on .cs-crawl p,.cs-intercom.in .cs-crawl p{animation:cs-crawl 62s linear -14s infinite}
 @keyframes cs-crawl{from{transform:translateY(-18%)}to{transform:translateY(calc(-100% - 760px))}}
-@media (prefers-reduced-motion:reduce){.cs-intercom .cs-crawl p{animation:none!important;transform:translateY(-62%)}.cs-wave{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.cs-intercom .cs-crawl p{animation:none!important;transform:translateY(-62%)}}
 
 /* 02 bell schedules */
 .cs-bellimg img{width:100%;height:100%;object-fit:cover;object-position:50% 0;border-radius:6px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
@@ -440,7 +436,7 @@
 .is-stack .sh96{font-size:52px}
 .is-stack .sb{font-size:18px}
 .is-stack .sb.sm{font-size:16px}
-.is-stack .cs-lines,.is-stack .cs-annbox,.is-stack .cs-wavebox{display:none}
+.is-stack .cs-lines,.is-stack .cs-annbox{display:none}
 .is-stack .cs-phslot{display:flex;flex-direction:column;align-items:center}
 .is-stack .cs-ph{transform:none!important;zoom:var(--ps-stack,.9)}
 .is-stack .cs-proto2 .cs-chips{width:auto;margin-left:0}
