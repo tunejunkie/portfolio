@@ -165,6 +165,19 @@ def slides():
               ('A visual-QA rig', 'A test setup with a sample bathroom project renders every screen at both sizes after each change. The screenshots on this page come from it.'),
               ('Behind a release flag', 'Shipped to cardholders behind a flag, so Trovy controls rollout, and the redesign goes through review before it reaches everyone.')], 'cs-cards--lessons')}''')
 
+    steps_ = [('Design', 'Figma', 'Layouts, type and the key screens start here.'),
+              ('Build', 'Claude Code', 'I move into code early, working in VS Code, the Claude Code app and Claude in the terminal. Most design decisions after that get made in the running build.'),
+              ('Assets', 'ChatGPT and Gemini', 'Where the photo and video assets come from.')]
+    myprocess = slide('myprocess', 2, f'''
+      <div class="cs-col cs-col--text tv-w520">
+        <div class="cs-head"><h2 class="t56" data-a>My process</h2></div>
+        <ol class="tv-process">{''.join(f'<li data-a><p class="tv-process-k">{E(k)}</p><h3>{E(t)}</h3><p>{E(p)}</p></li>' for k, t, p in steps_)}</ol>
+      </div>
+      <figure class="tv-shot tv-shot--process" data-a>
+        <img src="{A}process-vscode.webp" alt="VS Code with Claude Code open on the Trovy frontend: the Homeowner Toolkit chat beside a Renovate visual-QA screenshot of Renault asking for a photo of the kitchen" width="1600" height="1003">
+        <figcaption>Claude Code in VS Code, on the Renovate visual-QA captures</figcaption>
+      </figure>''')
+
     takeaways_ = [('The prototype is the spec.', 'Engineering reviews a build. Fewer handoff questions, and the edge cases are already in the code.'),
                   ('Motion gets designed where it runs.', 'Scroll timelines and transitions were tuned in the browser, not described on a slide.'),
                   ('The queue is gone.', 'Marketing and Toolkit work no longer waits for engineering time. The lending product still does, and that is the right split.')]
@@ -173,7 +186,7 @@ def slides():
       <div class="cs-stats">{''.join(f'<div data-a><h3>{E(h)}</h3><p>{E(p)}</p></div>' for h, p in takeaways_)}</div>
       <p class="cs-body tv-next" data-a><b>Next for Renovate:</b> contractor quotes, a contractor marketplace and a home-value calculator for each project.</p>''')
 
-    return [hero, context, apply, shift, home_live, brief, flow, desktop, detail, process, takeaways]
+    return [hero, context, apply, shift, home_live, brief, flow, desktop, detail, process, myprocess, takeaways]
 
 
 def case_study_trovy():
