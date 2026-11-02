@@ -194,7 +194,7 @@ def case_study_trovy():
   </section>'''
     return head(f'{TITLE} — Natalie Rose Taylor', base,
                 'How I went from Figma handoffs to shipping production code at Trovy: the homepage redesign and Renovate with Trovy.').replace(
-        '</head>', f'<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="{base}css/cs.css"><meta name="robots" content="noindex"></head>') + f'''
+        '</head>', f'<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet"><link rel="stylesheet" href="{base}css/cs.css"></head>') + f'''
 <body class="cs-page cs-page--trovy is-scroll" data-base="{base}">
 {nav(base)}
 <div class="cs-bar">

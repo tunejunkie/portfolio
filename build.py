@@ -5,12 +5,12 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(ROOT, 'site')
 
 CASES = [('saturn', 'Saturn', '2022–25'), ('trovy', 'Trovy', '2025–now'), ('upclose', 'UpClose', '2019–21')]
-# case studies live elsewhere for now (open in a new tab); Trovy's isn't written yet, so its links go nowhere
+# case studies not yet on this site open elsewhere in a new tab
 CASE_URL = {
     'saturn': 'https://www.figma.com/proto/TfLHs6KosHbqvohQuOCKrF/Saturn-Case-Study?node-id=11-2804&viewport=1147%2C248%2C0.1&t=kBngw21bYzdQaSPf-1&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A2804&page-id=0%3A1&show-proto-sidebar=1',
     'upclose': 'https://docs.google.com/presentation/d/1EhMxjJ5FQsxnl-vreup7qm2kCwr8z8IQObILE_G_XuQ/edit?usp=sharing',
 }
-CASE_PAGE = {'saturn': 'case-studies/saturn-home/'}  # case studies that live on this site
+CASE_PAGE = {'saturn': 'case-studies/saturn-home/', 'trovy': 'case-studies/trovy-design-engineer/'}  # case studies that live on this site
 def case_attrs(slug, base=''):
     if slug in CASE_PAGE: return f'href="{base}{CASE_PAGE[slug]}"'
     u = CASE_URL.get(slug)
