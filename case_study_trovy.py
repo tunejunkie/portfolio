@@ -101,7 +101,7 @@ def slides():
     job2 = scene('job2', 0,
         ab(227, 72, 1275, '''<h2 class="sh64" data-a>Job 2: Go beyond table stakes.</h2>
           <p class="tv-b28 tv-w951" data-a>I designed the functionality that’s expected from any fintech product, in order to then build something delightful and distinctive.</p>''', 'tc')
-        + ab(329, 270, 1318, pic(V2 + 'laptop-dash.webp', 'The Trovy account dashboard on a laptop: credit available, quick actions and account setup', 'tv-fill'), h=741))
+        + ab(276, 304, 1176, pic(V2 + 'laptop-dash.webp', 'The Trovy account dashboard on a laptop: credit available, quick actions and account setup', 'tv-fill'), h=707))
 
     brand_imgs = ''.join(f'<img data-a src="{{base}}{V2}brand-{i:02d}.webp" alt="" loading="lazy">' for i in range(1, 13))
     brand = scene('brand', 0,
@@ -121,11 +121,11 @@ def slides():
           <p class="tv-hint" data-a>Live build · scroll inside the frame</p>''', 'tc'))
 
     renovate = scene('renovate', 2,
-        ab(520, 268, 1318, pic(V2 + 'ren-laptop.webp', 'Renovate with Trovy on a laptop: a warm minimalist kitchen design with its versions, estimate and Renault chat', 'tv-fill'), 'tv-behind', h=741)
+        ab(605, 317, 1036, pic(V2 + 'ren-laptop.webp', 'Renovate with Trovy on a laptop: a warm minimalist kitchen design with its versions, estimate and Renault chat', 'tv-fill'), 'tv-behind', h=671)
         + ab(227, 82, 1275, '''<h2 class="sh48" data-a>My first big project: Renovate with Trovy</h2>
           <p class="tv-b28 tv-mt32" data-a>Renovation is the biggest reason homeowners tap their equity, and the point where they are least sure what they want, what it costs and whom to hire.</p>''', 'tc')
-        + ab(139, 389, 234, pic(V2 + 'ren-phone.webp', 'Renovate with Trovy on a phone: the kitchen design with a before/after slider', 'tv-fill'), h=586)
-        + ab(431, 373, 494, f'''<div class="tv-ba" data-a style="--p:43.7%" role="group" aria-label="Before and after: drag to compare">
+        + ab(86, 389, 234, pic(V2 + 'ren-phone.webp', 'Renovate with Trovy on a phone: the kitchen design with a before/after slider', 'tv-fill'), h=586)
+        + ab(378, 373, 494, f'''<div class="tv-ba" data-a style="--p:43.7%" role="group" aria-label="Before and after: drag to compare">
             <img src="{{base}}{V2}ren-before.webp" alt="The kitchen before: oak cabinets and tile floor" draggable="false">
             <div class="tv-ba-after"><img src="{{base}}{V2}ren-after.webp" alt="The kitchen after: sage cabinets, brass hardware and wood floor" draggable="false"></div>
             <span class="tv-ba-pill">Before</span><span class="tv-ba-pill tv-ba-pill--after">After</span>
