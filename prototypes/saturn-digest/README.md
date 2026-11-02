@@ -1,0 +1,1 @@
+Digest stories video: Figma Saturn-Selects 5:130266 frames (exported), stitched with make.py (taps + story push transitions). Most frames were exported at 1x and upscaled; re-export at 2x for a crisper video.

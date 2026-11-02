@@ -303,9 +303,12 @@ def slides():
                    p('I prototyped AI capture end to end, then worked with engineering to cut it down to what we could ship and measure. '
                      + guess('[The conversational home and the Ringo onboarding were cut; chat-to-create on the calendar shipped.]')),
                    'cal21.webp', 'Onboarding concept, conversational home concept, and the shipped chat-to-create calendar', wide=True))
-    out.append(cal('explore', 'breadth', 'Reasons to open Saturn on an empty day.',
-                   p('Alongside the roadmap, I ran a stream of lightweight, shareable concepts aimed at daily habit, each one designed to be screenshotted and posted.'),
-                   'cal22.webp', 'Six concepts: Daily Digest, School mood, Mood check-in, Superlatives, Chilling with…, and Status', wide=True))
+    out.append(scene('explore', 3,
+                     ab(80, 120, 760, tag('breadth'))
+                     + ab(80, 180, 760, h('Reasons to open Saturn on an empty day.'))
+                     + ab(80, 370, 760, p('Alongside the roadmap, I ran a stream of lightweight, shareable concepts aimed at daily habit. <b>Digest</b> is a morning story: your greeting, the weather, today’s bell schedule, your day, what friends are up to, and how the school is feeling.'))
+                     + ab(80, 640, 780, img('cal22.webp', 'Six concepts: Daily Digest, School mood, Mood check-in, Superlatives, Chilling with…, and Status', 'cs-calimg'), 'cs-calrow', h=270)
+                     + ab(1150, 52, 375, vphone(P + 'digest.mp4', 'Digest, a morning story: good morning, the forecast, today is an A Day, you’re busy for 8.5 hours, events, a mood check-in, the school’s biggest mood, and the 6AM Club'), 'cs-phslot', h=812)))
 
     # thank you
     out.append(scene('thanks', 3,
