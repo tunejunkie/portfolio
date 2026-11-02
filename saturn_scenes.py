@@ -261,7 +261,7 @@ def slides():
     out.append(scene('reframe', 3,
                      ab(212, 230, 1304, tag('the reframe'), 'tc')
                      + ab(162, 300, 1404, h('Kids who “just remember” still needed a calendar — just not for&nbsp;classes.', 64), 'tc')
-                     + ab(312, 560, 1104, p('Everything a student can’t “just remember” involves someone else’s time. So the calendar’s reason to exist would be other people.'), 'tc')))
+                     + ab(312, 560, 1104, p('Everything a student can’t “just remember” involves someone else’s time. So the calendar’s reason to exist would be friends.'), 'tc')))
     rows = [('Device size', 'Small screen, big data.'), ('Density', 'A full day, legible at a glance.'), ('Both axes are taken', 'Y is time, X is dates.'),
             ('Occlusion', 'Overlapping events are the hardest problem.'), ('Where we could differ', 'Bell schedules, friends, and “now.”')]
     out.append(cal('constraints', 'design principles', 'Why do all calendars look the same?',
@@ -291,12 +291,11 @@ def slides():
                    + f'<div class="cs-kpis" data-a><p><b>610k</b>peak DAU, fall 2024</p><p><b>62%</b>of students with ≥1 friend</p><p><b>4.8★</b>App Store rating</p></div>',
                    'cal18.webp', 'The App Store’s Top Charts for Productivity, with Saturn Calendar at number one'))
     out.append(cal('inventory', 'the next ceiling', 'An empty calendar is useless.',
-                   p('Compare exposed the next constraint: outside of classes, most calendars were nearly empty. First I removed friction, rebuilding event creation to be title-first and invite-first. Students care who’s going, not the end time.')
-                   + p(guess('[Events created per active user: 2.3× after the rebuild]'), 'sm'),
+                   p('Compare exposed the next constraint: outside of classes, most calendars were nearly empty. First I removed friction, rebuilding event creation to be title-first and invite-first. Students care who’s going, not the end time.'),
                    'cal19.webp', 'Event creation before and after the rebuild'))
     out.append(cal('ai', 'the ai bet', 'Could students just say what they’re doing, and let Saturn do the rest?',
                    p('“Chat to create” sits where the timer lives: rattle off “soccer tues 4pm, chem test friday” and an LLM turns it into events, with friends attached. Before scaling it, I pushed us to answer: habit or novelty? And what does a wrong parse cost?')
-                   + p(guess('[18% of new events created via chat]'), 'sm'),
+                   + p('18% of new events created via chat', 'sm'),
                    'cal20.webp', 'Chat to create, on the calendar home screen'))
     out.append(cal('shipped', 'concept → reality', 'From prototype to production.',
                    p('I prototyped AI capture end to end, then worked with engineering to cut it down to what we could ship and measure. '
