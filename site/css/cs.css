@@ -243,3 +243,57 @@
 .is-stack .cs-state{font-size:15px;padding:9px 13px}
 .is-stack .cs-proto{width:100%;--ps:var(--ps-stack, .9)}
 .is-stack .cs-proto-phone{transform-origin:50% 0}
+
+/* ======== Trovy case study (case_study_trovy.py): Trovy's midnight + gold, and the `tv-` layouts ======== */
+.cs-page--trovy{--lilac:#f5c75a;--ink:#000b22;background:#000b22}
+.cs-page--trovy::before{background:linear-gradient(0deg,#17325f 5.416%,#000b22 100%)}
+.cs-page--trovy .cs-bar{background:linear-gradient(180deg,rgba(0,11,34,.92),rgba(0,11,34,.6))}
+.cs-page--trovy .cs-ctrl{background:rgba(0,11,34,.6)}
+.cs-page--trovy .cs-pill{background:var(--lilac);color:var(--ink)}
+.cs-page--trovy .cs-state.is-on{color:var(--ink)}
+.cs-page--trovy.is-stack .nav{background:rgba(0,11,34,.85)}
+.cs-video img{display:block;width:100%;height:100%;object-fit:cover}
+/* two-column slides: copy left, picture right */
+.cs-home-before .cs-fit,.cs-home-live .cs-fit,.cs-brief .cs-fit,.cs-desktop .cs-fit{display:flex;align-items:center;gap:58px}
+.cs-shift .cs-fit,.cs-home-after .cs-fit,.cs-flow .cs-fit,.cs-detail .cs-fit,.cs-process .cs-fit,.cs-takeaways .cs-fit{display:flex;flex-direction:column;gap:48px}
+.tv-w434{flex:0 0 434px}.tv-w520{flex:0 0 520px}.tv-w620{flex:0 0 620px}
+.tv-card{flex:none;width:620px;height:620px;border-radius:40px;object-fit:cover;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.tv-cards3{grid-template-columns:repeat(3,1fr)}
+.tv-cards3 .cs-card{padding-bottom:40px}
+.tv-shot{flex:1;min-width:0;margin:0}
+.tv-shot img{display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.tv-shot figcaption{margin-top:16px;font:400 18px/1.3 var(--f-body);opacity:.6}
+/* homepage frames: 3 × 2 stills from the scroll story */
+.tv-frames{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
+.tv-frames figure{margin:0}
+.tv-frames img{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.tv-frames figcaption{margin-top:12px;font:400 18px/1.3 var(--f-body);opacity:.7}
+/* the live homepage build in a browser frame */
+.tv-browser{flex:1;min-width:0}
+.tv-browser-bar{height:44px;display:flex;align-items:center;gap:8px;padding:0 18px;background:#1b2340;border-radius:16px 16px 0 0}
+.tv-browser-bar i{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.22)}
+.tv-browser-bar span{margin:0 auto;font:400 14px/1 var(--f-body);opacity:.55;transform:translateX(-24px)}
+.tv-browser iframe{display:block;width:100%;height:690px;border:0;background:#f9f9fb;border-radius:0 0 16px 16px}
+.tv-browser-hint{margin:14px 0 0;text-align:center;font:400 15px/1 var(--f-body);opacity:.55}
+.tv-link{font:600 20px/1 var(--f-body);color:var(--lilac);text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:3px}
+/* Renovate: five phones with numbered steps */
+.tv-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:40px}
+.tv-steps img{display:block;width:100%;height:auto;border-radius:28px;box-shadow:0 40px 70px -40px rgba(0,0,0,.7)}
+.tv-steps h3{margin-top:22px;display:flex;align-items:center;gap:10px;font:600 23px/1.25 var(--f-body)}
+.tv-steps h3 span{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--lilac);color:var(--ink);font:700 15px/1 Poppins,var(--f-head)}
+.tv-steps p{margin-top:8px;font:400 18px/1.4 var(--f-body);opacity:.75}
+.tv-shot--desk img{border-radius:20px}
+/* three detail cards with a crop on top */
+.tv-details{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tv-details .cs-card{padding:20px 20px 34px;gap:14px}
+.tv-details img{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:8px}
+.tv-details h3{font-size:28px}
+.tv-next{opacity:.8}
+/* phones */
+.is-stack .tv-w434,.is-stack .tv-w520,.is-stack .tv-w620{flex:auto}
+.is-stack .tv-card{width:100%;height:auto;border-radius:24px}
+.is-stack .tv-cards3,.is-stack .tv-frames,.is-stack .tv-details{grid-template-columns:1fr;gap:16px}
+.is-stack .tv-steps{grid-template-columns:1fr 1fr;gap:20px 12px}
+.is-stack .tv-steps h3{font-size:18px}
+.is-stack .tv-steps p,.is-stack .tv-frames figcaption,.is-stack .tv-shot figcaption{font-size:15px}
+.is-stack .tv-browser iframe{height:70vh}

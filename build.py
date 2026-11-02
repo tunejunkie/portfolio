@@ -277,4 +277,6 @@ if __name__ == '__main__':
     write('work-history/index.html', work_history())
     from case_study import case_study_saturn
     write('case-studies/saturn-home/index.html', case_study_saturn())
+    from case_study_trovy import case_study_trovy
+    write('case-studies/trovy-design-engineer/index.html', case_study_trovy())
     print('built')

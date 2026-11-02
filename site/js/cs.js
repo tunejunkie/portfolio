@@ -37,7 +37,7 @@ const qp = new URLSearchParams(location.search).get('mode'); if (qp === 'slides'
 
 /* ---------------- 3D phones ---------------- */
 let stage = null;
-try { stage = new Stage($('.cs-gl')); } catch (e) { body.classList.add('no-gl'); }
+try { const glc = $('.cs-gl'); stage = glc ? new Stage(glc) : null; } catch (e) { body.classList.add('no-gl'); }   // pages without 3D phones have no canvas
 const texCache = {};
 function grayTex(label) {
   const c = document.createElement('canvas'); c.width = 375 * 2; c.height = 812 * 2;
@@ -221,6 +221,9 @@ const army = (() => {
   };
 })();
 
+// embedded live builds (iframe[data-src]) load the first time their slide is shown
+function loadFrames(sl) { $$('iframe[data-src]', sl).forEach(f => { if (!f.src) f.src = f.dataset.src; }); }
+
 /* ---------------- stepping ---------------- */
 const outlineBtns = $$('.cs-outline button');
 function setSub(slide, sub, dir, instant) {
@@ -246,6 +249,7 @@ function goTo(i, instant = false) {
     if (sl.dataset.key === 'problem') army.ready();
     sl.classList.add('on'); gsap.killTweensOf(sl);
     gsap.set(sl, { autoAlpha: 1, y: 0 });
+    loadFrames(sl);
     const parts = $$('[data-a], .cs-pill', sl);
     gsap.fromTo(parts, { autoAlpha: 0, y: 56 * dir }, { autoAlpha: 1, y: 0, duration: (instant ? 0.01 : 0.85) * D, delay: instant ? 0 : 0.3 * D, stagger: instant ? 0 : 0.06 * D, ease: 'power3.out', overwrite: true });
     // jump this slide's own sub-state into place, then animate to the target sub
@@ -361,7 +365,7 @@ function stackLayout() {
   const tro = $('.cs-trojan'); if (tro) { tro.style.zoom = ''; tro.style.width = '1595px'; tro.style.height = '426px'; tro.style.aspectRatio = 'auto'; tro.style.zoom = (tro.parentElement.clientWidth / 1595).toFixed(4); }
   if (!io) {
     io = new IntersectionObserver(es => es.forEach(en => {
-      if (en.isIntersecting) en.target.classList.add('in');
+      if (en.isIntersecting) { en.target.classList.add('in'); loadFrames(en.target); }
       if (en.target.dataset.key === 'problem' && stack && !en.isIntersecting) army.stop();
     }), { threshold: 0.12 });
     slides.forEach(s => io.observe(s));
