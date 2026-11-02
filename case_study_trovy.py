@@ -198,7 +198,7 @@ def case_study_trovy():
 <body class="cs-page cs-page--trovy is-scroll" data-base="{base}">
 {nav(base)}
 <div class="cs-bar">
-  <a class="logo" href="{base}" aria-label="Natalie Rose Taylor, home"><img src="{base}assets/svg/flower.svg" alt=""><span>Natalie<br>Rose Taylor</span></a>
+  <a class="logo cs-satlogo tv-barlogo" href="#top" aria-label="Trovy case study, back to the top"><img src="{base}{ASSET}trovy-icon.svg" alt="" width="74" height="67"><img src="{base}{ASSET}trovy-wordmark.svg" alt="Trovy" width="179" height="61"></a>
   <nav class="cs-outline" aria-label="Chapters">{outline}</nav>
   {toggle}
 </div>

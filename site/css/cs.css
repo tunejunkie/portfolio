@@ -528,3 +528,7 @@
 .cs-page--trovy .cs-proto-hint{color:rgba(0,11,34,.55)}
 .cs-page--trovy .cs-proto-phone{box-shadow:0 0 0 1.5px rgba(0,11,34,.08),0 50px 90px -40px rgba(0,11,34,.5)}
 .is-stack .cs-apply .cs-fit{padding-right:0}
+/* Trovy: company logo in the case-study bar (icon + wordmark, same height as Saturn's) */
+.tv-barlogo{display:flex;align-items:flex-end;gap:4px}
+.tv-barlogo img:first-child{height:30px}
+.tv-barlogo img:last-child{height:26px;margin-bottom:1px}
