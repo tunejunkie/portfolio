@@ -288,7 +288,7 @@ def slides():
                    'cal17.webp', 'Five Compare states: both free, friend busy, starting from a profile, make a plan, and suggested times for a group', wide=True))
     out.append(cal('result', 'result', 'Fall 2024: #1 Productivity app on the App Store.',
                    p('Ahead of ChatGPT, Gmail and Microsoft during back-to-school. Compare and Live Activities were the features students cited most in reviews.')
-                   + f'<div class="cs-kpis" data-a><p><b>{guess("[520k]")}</b>peak DAU, fall 2024</p><p><b>{guess("[64%]")}</b>of students with ≥1 friend</p><p><b>{guess("[4.8★]")}</b>App Store rating</p></div>',
+                   + f'<div class="cs-kpis" data-a><p><b>610k</b>peak DAU, fall 2024</p><p><b>62%</b>of students with ≥1 friend</p><p><b>4.8★</b>App Store rating</p></div>',
                    'cal18.webp', 'The App Store’s Top Charts for Productivity, with Saturn Calendar at number one'))
     out.append(cal('inventory', 'the next ceiling', 'An empty calendar is useless.',
                    p('Compare exposed the next constraint: outside of classes, most calendars were nearly empty. First I removed friction, rebuilding event creation to be title-first and invite-first. Students care who’s going, not the end time.')
