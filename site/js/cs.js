@@ -33,7 +33,14 @@ try { mode = localStorage.getItem('cs-mode') === 'slides' ? 'slides' : 'scroll';
 const qp = new URLSearchParams(location.search).get('mode'); if (qp === 'slides' || qp === 'scroll') mode = qp;
 
 /* ---------------- background ---------------- */
-// background: one gradient pinned to the viewport (css), the same behind every slide
+// default: one gradient pinned to the viewport (css), the same behind every slide.
+// Decks with data-bgs (Trovy) give each slide its own background (data-bg): one full-viewport layer per slide,
+// crossfaded in goTo; on the stacked phone page each section just paints its own.
+const bgLayers = deck.hasAttribute('data-bgs') ? slides.map(s => {
+  const l = document.createElement('div'); l.className = 'cs-bgl'; l.style.background = s.dataset.bg || 'none';
+  deck.insertBefore(l, deck.firstChild); return l;
+}) : null;
+function bgTo(si, instant) { if (bgLayers) bgLayers.forEach((l, i) => gsap.to(l, { opacity: i === si ? 1 : 0, duration: instant ? 0 : 0.6 * D, ease: 'power1.inOut', overwrite: true })); }
 
 /* ---------------- 3D phones ---------------- */
 let stage = null;
@@ -283,6 +290,13 @@ $$('.cs-proto2').forEach(box => {
 })();
 
 // embedded live builds (iframe[data-src]) load the first time their slide is shown
+/* before/after sliders (Trovy Renovate): a transparent range input drives --p */
+$$('.tv-ba').forEach(ba => {
+  const r = $('.tv-ba-range', ba);
+  r.addEventListener('input', () => ba.style.setProperty('--p', r.value + '%'));
+  ['pointerdown', 'touchstart', 'wheel'].forEach(t => r.addEventListener(t, e => e.stopPropagation(), { passive: true }));
+});
+
 function loadFrames(sl) { $$('iframe[data-src]', sl).forEach(f => { if (!f.src) f.src = f.dataset.src; }); }
 
 /* ---------------- stepping ---------------- */
@@ -317,7 +331,7 @@ function goTo(i, instant = false) {
     if (sub && dir > 0) setSub(sl, sub, dir, instant); else if (dir < 0) setSub(sl, sub, dir, true);
   } else setSub(sl, sub, dir, instant);
   phoneTo(si, sub, dir, instant);
-  if (changeSlide) rowTo(si, dir, instant);
+  if (changeSlide) { rowTo(si, dir, instant); bgTo(si, instant); }
   cur = i;
   updateBar();
   outlineBtns.forEach(b => b.classList.toggle('on', +b.dataset.chapter === +sl.dataset.chapter));
@@ -330,7 +344,7 @@ function goTo(i, instant = false) {
 /* ---------------- scroll mode ---------------- */
 let snapT = 0, programmatic = false;
 const trackTop = () => track.offsetTop;
-function hideAll() { slides.forEach(s => { gsap.killTweensOf(s); gsap.set(s, { autoAlpha: 0 }); if (s.classList.contains('on')) fire(s, 'leave'); s.classList.remove('on'); }); phoneTo(0, 0, -1, true); rowTo(0, -1, true); cur = -1; }
+function hideAll() { bgTo(-1, true); slides.forEach(s => { gsap.killTweensOf(s); gsap.set(s, { autoAlpha: 0 }); if (s.classList.contains('on')) fire(s, 'leave'); s.classList.remove('on'); }); phoneTo(0, 0, -1, true); rowTo(0, -1, true); cur = -1; }
 function scrollToStep(i, immediate) {
   i = Math.min(N - 1, i);
   const y = i < 0 ? 0 : trackTop() + i * U;
@@ -373,6 +387,7 @@ let tx0 = null, ty0 = null;
 addEventListener('touchstart', e => { tx0 = e.touches[0].clientX; ty0 = e.touches[0].clientY; }, { passive: true });
 addEventListener('touchend', e => {
   if (stack || mode !== 'slides' || tx0 === null) return;
+  if (e.target.closest && e.target.closest('.tv-ba')) { tx0 = null; return; }
   const dx = e.changedTouches[0].clientX - tx0, dy = e.changedTouches[0].clientY - ty0;
   if (Math.max(Math.abs(dx), Math.abs(dy)) > 40) goTo(cur + ((Math.abs(dx) > Math.abs(dy) ? -dx : -dy) > 0 ? 1 : -1));
   tx0 = null;
@@ -421,7 +436,7 @@ modeBtns.forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode))
 let io = null;
 function stackLayout() {
   track.style.height = '';
-  slides.forEach(s => { gsap.set(s, { clearProps: 'all' }); $$('[data-a],[data-sub],.cs-pill,[data-pop]', s).forEach(el => gsap.set(el, { clearProps: 'all' })); });
+  slides.forEach(s => { gsap.set(s, { clearProps: 'all' }); $$('[data-a],[data-sub],.cs-pill,[data-pop]', s).forEach(el => gsap.set(el, { clearProps: 'all' })); if (bgLayers) s.style.setProperty('--sbg', s.dataset.bg); });
   const tro = $('.cs-trojanbox'); if (tro) tro.style.setProperty('--tz', (tro.clientWidth / 1728).toFixed(4));
   if (!io) {
     io = new IntersectionObserver(es => es.forEach(en => {
