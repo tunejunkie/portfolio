@@ -160,8 +160,10 @@ GROUPS = {
   'gigmo': [],
 }
 # UI shown in context (device mockups, composites, store pages) -> the last section
-IN_CONTEXT = {'trovy': '003 014 015', 'saturn': '027 038 039', 'honored': '008', 'kyn': '001', 'upclose': '001-010',
+IN_CONTEXT = {'saturn': '027 038 039', 'honored': '008', 'kyn': '001', 'upclose': '001-010',
               'monster': '001-007', 'gigmo': '001-010', 'adecco': '012'}
+# sections shown as a live, scrollable build instead of screenshots: slug -> {section name: path on this site}
+LIVE = {'trovy': {'Marketing Site': 'proto/trovy-home/'}}
 # images with a baked-in white border (cropped in the frame)
 BORDERED = {'saturn': _r('057')}
 

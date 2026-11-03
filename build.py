@@ -176,7 +176,7 @@ def index():
 <script type="module" src="js/home.js"></script>
 </body></html>'''
 
-from gallery_data import GAL, CAPTIONS, groups_for, BORDERED, CTX_LABEL
+from gallery_data import GAL, CAPTIONS, groups_for, BORDERED, CTX_LABEL, LIVE
 CHEV_L = '<svg viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 CHEV_R = '<svg viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
@@ -233,6 +233,13 @@ def gallery_page(slug, manifest):
         return f'<figure class="l3-fig">{frame}<figcaption><strong>{esc(it["title"])}</strong>{cap}</figcaption></figure>'
     secs = []
     for name, plat, nums in groups:
+        live = LIVE.get(slug, {}).get(name)
+        if live:  # the real coded page, live in a browser frame, in place of its screenshots
+            secs.append(f'''<section class="l3-sec"><div class="l3-label"><h2>{html.escape(name)}</h2><span>Live build</span></div>
+      <div class="l3-grid l3-grid--d"><figure class="l3-fig"><div class="l3-live"><div class="l3-live-bar"><i></i><i></i><i></i><span>{html.escape(g['name'].lower())}.com</span></div>
+        <iframe src="{base}{live}" title="The coded {html.escape(g['name'])} {html.escape(name.lower())}, live" loading="lazy"></iframe></div>
+        <figcaption><strong>Live build</strong><span>Scroll inside the frame · <a href="{base}{live}" target="_blank" rel="noopener">open full size ↗</a></span></figcaption></figure></div></section>''')
+            continue
         if not nums: continue
         secs.append(f'''<section class="l3-sec"><div class="l3-label"><h2>{html.escape(name)}</h2><span>{len(nums)} screen{'s' if len(nums) > 1 else ''}</span></div>
       <div class="l3-grid l3-grid--{plat}">{''.join(fig(n, plat) for n in nums)}</div></section>''')
