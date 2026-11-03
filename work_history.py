@@ -36,7 +36,7 @@ CONTRACTS = [
     ('Adecco', 'Adecco Direct', 'adecco', 't11'),
     ('HonorEd', 'Live online classes', 'honored', 't08'),
     ('DesignMap', None, None, None),
-    ('Gigmo', 'Gig-work concept', 'gigmo', None),
+    ('Gigmo', 'Gig-work concept', None, None),  # gallery taken off the site
 ]
 PERSONAL = [
     ('WhereI', 'Remi, an AI biographer', 'wherei', 't03'),
