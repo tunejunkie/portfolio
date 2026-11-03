@@ -6,7 +6,7 @@ SITE = os.path.join(ROOT, 'site')
 
 ALL_CASES = [('saturn', 'Saturn', '2022–25'), ('trovy', 'Trovy', '2025–now'), ('upclose', 'UpClose', '2019–21')]
 # case studies taken off the menus and the homepage for now (their pages and screenshot galleries stay up)
-HIDDEN_CASES = {'saturn'}
+HIDDEN_CASES = {'upclose'}
 CASES = [c for c in ALL_CASES if c[0] not in HIDDEN_CASES]
 # case studies not yet on this site open elsewhere in a new tab
 CASE_URL = {
