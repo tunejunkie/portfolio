@@ -19,8 +19,8 @@ def case_attrs(slug, base=''):
     u = CASE_URL.get(slug)
     return f'href="{u}" target="_blank" rel="noopener"' if u else 'href="#" data-dud aria-disabled="true"'
 GALLERIES = [  # slug, name, years  (grid order)
-    ('candle', 'I Lit A Candle', '2026'), ('trovy', 'Trovy', '2025–Current'), ('wherei', 'WhereI AI', '2026'),
-    ('monstro', 'Monstro', '2024'), ('saturn', 'Saturn', '2022–25'), ('kyn', 'Kyn', '2024'),
+    ('trovy', 'Trovy', '2025–Current'), ('wherei', 'WhereI AI', '2026'), ('monstro', 'Monstro', '2024'),
+    ('saturn', 'Saturn', '2022–25'), ('kyn', 'Kyn', '2024'), ('candle', 'I Lit A Candle', '2026'),
     ('transforce', 'TransForce', '2024'), ('honored', 'HonorEd', '2021'), ('abbott', 'Abbott', '2020'),
     ('upclose', 'UpClose', '2019–21'), ('adecco', 'Adecco', '2020–21'), ('monster', 'Monster', '2018–22'),
 ]
@@ -87,11 +87,15 @@ TEASERS = [
          meta=[('~1,000', 'users'), ('30k', 'App Store views'), ('5.0★', 'rating')]),
 ]
 
+# each project's grid thumbnail (assets/thumbs/tNN.webp), so the grid order can change freely
+THUMB = {'candle': 't01', 'trovy': 't02', 'wherei': 't03', 'monstro': 't04', 'saturn': 't05', 'kyn': 't06', 'transforce': 't07',
+         'honored': 't08', 'abbott': 't09', 'upclose': 't10', 'adecco': 't11', 'monster': 't12'}
+
 def gallery_cards(base=''):
     out = []
     for i, (slug, name, years) in enumerate(GALLERIES[:12]):
         out.append(f'''<li><a class="gal-card" href="{base}screenshots/{slug}/">
-        <img src="{base}assets/thumbs/t{i+1:02d}.webp" alt="" loading="lazy" width="1000" height="1000">
+        <img src="{base}assets/thumbs/{THUMB[slug]}.webp" alt="" loading="lazy" width="1000" height="1000">
         <span class="gal-over"><strong>{name}</strong><span>{years}</span></span></a></li>''')
     return ''.join(out)
 
