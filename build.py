@@ -4,7 +4,10 @@ import os, json, html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(ROOT, 'site')
 
-CASES = [('saturn', 'Saturn', '2022–25'), ('trovy', 'Trovy', '2025–now'), ('upclose', 'UpClose', '2019–21')]
+ALL_CASES = [('saturn', 'Saturn', '2022–25'), ('trovy', 'Trovy', '2025–now'), ('upclose', 'UpClose', '2019–21')]
+# case studies taken off the menus and the homepage for now (their pages and screenshot galleries stay up)
+HIDDEN_CASES = {'saturn'}
+CASES = [c for c in ALL_CASES if c[0] not in HIDDEN_CASES]
 # case studies not yet on this site open elsewhere in a new tab
 CASE_URL = {
     'saturn': 'https://www.figma.com/proto/TfLHs6KosHbqvohQuOCKrF/Saturn-Case-Study?node-id=11-2804&viewport=1147%2C248%2C0.1&t=kBngw21bYzdQaSPf-1&scaling=contain&content-scaling=fixed&starting-point-node-id=11%3A2804&page-id=0%3A1&show-proto-sidebar=1',
@@ -100,14 +103,14 @@ def index():
       <p>{t['body']}</p>
       <div class="meta">{''.join(f'<div><b>{a}</b><span>{b}</span></div>' for a, b in t['meta'])}</div>
       <a class="btn {'btn--dark' if t['dark'] else 'btn--primary'}" {case_attrs(t['slug'])}>Read Case Study</a>
-    </article>''' for t in TEASERS)
+    </article>''' for t in TEASERS if t['slug'] not in HIDDEN_CASES)
     return head('Natalie Rose Taylor — Product Designer', '') + f'''
 <body class="home">
 <div class="loader" aria-hidden="true">{flower_svg()}</div>
 {nav('')}
 <main>
   <section class="stage" aria-label="Introduction and featured case studies">
-    <div class="bg bg--hero"></div><div class="bg bg--saturn"></div><div class="bg bg--trovy"></div><div class="bg bg--upclose"></div>
+    <div class="bg bg--hero"></div>{"".join(f'<div class="bg bg--{t["slug"]}"></div>' for t in TEASERS if t["slug"] not in HIDDEN_CASES)}
     <canvas id="phones" aria-hidden="true"></canvas>
     <h1 class="hero-copy">
       <span class="line"><span class="w">AI-empowered digital</span></span>

@@ -23,9 +23,11 @@ const HOVER = ['saturn-009', 'kyn-019', 'candle-003', 'upclose-012', 'monstro-01
 const PROC = ['wherei-001', 'kyn-019', 'candle-003', 'monstro-010', 'honored-020', 'abbott-015', 'transforce-069', 'saturn-052', 'upclose-012', 'saturn-009'];
 // teaser easter egg: tap the phone to flip through that project's screens (first = the teaser's default screen)
 const TAP = { saturn: 10, trovy: 9, upclose: 10 };
-const SLUGS = ['saturn', 'trovy', 'upclose'];
+// the teasers on the page, in order (a case study can be left off the homepage in build.py: HIDDEN_CASES)
+const SLUGS = [...document.querySelectorAll('.teaser')].map(t => t.dataset.case);
+const K = SLUGS.length, TROVY = SLUGS.indexOf('trovy'), LIGHT = { saturn: true, upclose: true };
 const tapName = (slug, i) => `tap/${slug}-${String(i + 1).padStart(2, '0')}`;
-const tapIdx = [0, 0, 0];
+const tapIdx = SLUGS.map(() => 0);
 const TEASERS = SLUGS.map(s => tapName(s, 0));
 
 /* ---------------- layout scale ---------------- */
@@ -65,8 +67,8 @@ async function loadTextures() {
    0–1   hero: phone stands up and rises, words slide away
    1–2   fan: more phones fan out from behind the first
    2–6.5 procession moves left; last phone stops at the teaser slot
-   6–6.6 Saturn teaser in    7.4–8.2 → Trovy    9–9.8 → UpClose    10.6+ hold, then page scrolls on */
-const T = 11.2, N = PROC.length;
+   6–6.6 first teaser in, then every STEP a spin to the next teaser; hold, then the page scrolls on */
+const STEP = 1.6, T = 11.2 - STEP * (3 - K), N = PROC.length;
 let P = 0, Q = 0, stageLight = false, enter = 0, mouseX = 0, mouseY = 0, hoverTex = null;
 
 function heroPose(ph) {
@@ -128,10 +130,11 @@ function layout(p) {
       y = lerp(y, tp.y, t); h = lerp(h, tp.h, t); rx = lerp(rx, tp.rx, t); ry = lerp(ry, tp.ry, t); rz = lerp(rz, tp.rz, t);
       if (p > 6.6) {
         // spins between teasers
-        const s1 = seg(p, 7.4, 8.2), s2 = seg(p, 9, 9.8);
-        ry = tp.ry - 360 * (s1 + s2);
-        y = tp.y + Math.sin(Math.PI * s1) * 30 * s + Math.sin(Math.PI * s2) * 30 * s;
-        const want = s2 > 0.5 ? 2 : s1 > 0.5 ? 1 : 0;
+        let want = 0; ry = tp.ry; y = tp.y;
+        for (let k = 1; k < K; k++) {
+          const sk = seg(p, 7.4 + STEP * (k - 1), 8.2 + STEP * (k - 1));
+          ry -= 360 * sk; y += Math.sin(Math.PI * sk) * 30 * s; if (sk > 0.5) want = k;
+        }
         showTeaserTex(f, want);
       } else showTeaserTex(f, 0);
       // little "tap" flick when someone taps through screens
@@ -159,20 +162,25 @@ function layout(p) {
   hint.style.opacity = 0.6 * (1 - lin(p, T - 0.35, T));            // stays through the whole pinned sequence
 
   // --- backgrounds + teasers ---
-  const a1 = seg(p, 5.8, 6.5), a2 = seg(p, 7.5, 8.1), a3 = seg(p, 9.1, 9.7);
+  const as = SLUGS.map((_, k) => k === 0 ? seg(p, 5.8, 6.5) : seg(p, 7.5 + STEP * (k - 1), 8.1 + STEP * (k - 1)));
   const cx = mobile ? '50% 70%' : '73% 52%';
-  [[bgs.saturn, a1], [bgs.trovy, a2], [bgs.upclose, a3]].forEach(([el, a]) => {
+  SLUGS.forEach((sl, k) => {
+    const el = bgs[sl], a = as[k]; if (!el) return;
     el.style.opacity = a > 0 ? 1 : 0; el.style.clipPath = `circle(${(a * 130).toFixed(2)}% at ${cx})`;
   });
-  const ts = [seg(p, 6.1, 6.7) * (1 - seg(p, 7.3, 7.7)), seg(p, 7.9, 8.4) * (1 - seg(p, 8.9, 9.3)), seg(p, 9.5, 10)];
+  const ts = SLUGS.map((_, k) => {
+    const a = k === 0 ? 6.1 : 7.9 + STEP * (k - 1), fadeIn = seg(p, a, a + (k === 0 ? 0.6 : 0.5));
+    return k === K - 1 ? fadeIn : fadeIn * (1 - seg(p, 7.3 + STEP * k, 7.7 + STEP * k));
+  });
   if (phones[N - 1]) placeTap(ts);
   teasers.forEach((t, i) => {
     t.style.opacity = ts[i];
     t.style.transform = `translate3d(0,${(1 - ts[i]) * 40}px,0)`;
     t.style.visibility = ts[i] > 0.02 ? 'visible' : 'hidden';
   });
-  // nav colour: light on Saturn + UpClose, dark on hero + Trovy
-  const light = (a1 > 0.5 && a2 < 0.5) || a3 > 0.5;
+  // nav colour follows whichever background is on top: light on Saturn + UpClose, dark on hero + Trovy
+  let top = -1; as.forEach((a, k) => { if (a > 0.5) top = k; });
+  const light = top >= 0 && !!LIGHT[SLUGS[top]];
   hint.classList.toggle('is-light', light);
   stageLight = light;
 }
@@ -194,7 +202,7 @@ const trovyVid = (() => {
   return o;
 })();
 function showTeaserTex(f, want) {
-  const vid = want === 1 && tapIdx[1] === 0 && trovyVid.ready;
+  const vid = want === TROVY && tapIdx[want] === 0 && trovyVid.ready;
   const name = tapName(SLUGS[want], tapIdx[want]), key = vid ? 'trovy-video' : want + ':' + tapIdx[want];
   if (f._t !== key) {
     if (vid) { f.setTexture(trovyVid.tex); trovyVid.v.currentTime = 0; f._t = key; }
@@ -229,7 +237,7 @@ function placeTap(ts) {
   const i = ts.findIndex(v => v > 0.9);
   if (i !== activeTeaser) {
     activeTeaser = i;
-    if (i >= 0) { tapHint.textContent = hintText(i); tapHint.classList.toggle('is-dark', i === 1); }
+    if (i >= 0) { tapHint.textContent = hintText(i); tapHint.classList.toggle('is-dark', i === TROVY); }
     tapHint.classList.toggle('show', i >= 0 && noHover);
   }
   tapzone.style.display = i >= 0 && stage ? 'block' : 'none';
@@ -241,7 +249,7 @@ function placeTap(ts) {
 
 /* ---------------- DOM refs ---------------- */
 const nav = $('.nav'), procCopy = $('.proc-copy'), heroCopy = $('.hero-copy'), lines = $$('.hero-copy .line'), hint = $('.scroll-hint');
-const teasers = $$('.teaser'), bgs = { saturn: $('.bg--saturn'), trovy: $('.bg--trovy'), upclose: $('.bg--upclose') };
+const teasers = $$('.teaser'), bgs = Object.fromEntries(SLUGS.map(sl => [sl, $('.bg--' + sl)]));
 
 /* ---------------- hover swaps the hero phone screen ---------------- */
 $$('.hero-copy .ch').forEach((c, i) => c.addEventListener('mouseenter', () => {
@@ -326,7 +334,7 @@ function paintChrome(ap) {
   else if (ap > 0) c = mix(C.about, C.pink, +($('.ab-pink').style.opacity || 0));
   else {
     c = C.hero;
-    for (const k of ['saturn', 'trovy', 'upclose']) c = mix(c, C[k], +(bgs[k].style.opacity || 0));
+    for (const k of SLUGS) if (bgs[k] && C[k]) c = mix(c, C[k], +(bgs[k].style.opacity || 0));
   }
   const css = `rgb(${c.join(',')})`;
   if (css !== lastChrome) { lastChrome = css; document.documentElement.style.backgroundColor = css; document.body.style.backgroundColor = css; }
