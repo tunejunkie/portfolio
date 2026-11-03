@@ -15,12 +15,11 @@ def case_attrs(slug, base=''):
     if slug in CASE_PAGE: return f'href="{base}{CASE_PAGE[slug]}"'
     u = CASE_URL.get(slug)
     return f'href="{u}" target="_blank" rel="noopener"' if u else 'href="#" data-dud aria-disabled="true"'
-GALLERIES = [  # slug, name, years  (grid order; gigmo is menu-only)
+GALLERIES = [  # slug, name, years  (grid order)
     ('candle', 'I Lit A Candle', '2026'), ('trovy', 'Trovy', '2025–Current'), ('wherei', 'WhereI AI', '2026'),
     ('monstro', 'Monstro', '2024'), ('saturn', 'Saturn', '2022–25'), ('kyn', 'Kyn', '2024'),
     ('transforce', 'TransForce', '2024'), ('honored', 'HonorEd', '2021'), ('abbott', 'Abbott', '2020'),
     ('upclose', 'UpClose', '2019–21'), ('adecco', 'Adecco', '2020–21'), ('monster', 'Monster', '2018–22'),
-    ('gigmo', 'Gigmo', '2020'),
 ]
 LINKEDIN = 'https://www.linkedin.com/in/natalierosetaylor/'
 GITHUB = 'https://github.com/tunejunkie'
