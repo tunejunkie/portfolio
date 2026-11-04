@@ -179,7 +179,9 @@ function fillScenes(vw, vh, tx, ty, barH, top) {
     });
     if (x1 < x0) return;
     const K = Math.min(1.5, aW / (x1 - x0), aH / (y1 - y0));
-    const X = aL + (aW - (x1 - x0) * K) / 2 - x0 * K - 60, Y = aT + (aH - (y1 - y0) * K) / 2 - y0 * K - top;
+    // the title slide sits near the top (the houses fill the bottom of the window); the rest are centred
+    const lift = s.dataset.key === 'hero' ? Math.max(0, (aH - (y1 - y0) * K) / 2 - 40 / S) * 0.6 : 0;
+    const X = aL + (aW - (x1 - x0) * K) / 2 - x0 * K - 60, Y = aT + (aH - (y1 - y0) * K) / 2 - y0 * K - top - lift;
     f.style.setProperty('--tf', `translate(${X.toFixed(1)}px,${Y.toFixed(1)}px) scale(${K.toFixed(4)})`);
   });
 }

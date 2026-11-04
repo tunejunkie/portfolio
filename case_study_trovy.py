@@ -106,8 +106,8 @@ def slides():
 
     brand_imgs = ''.join(f'<img data-a src="{{base}}{V2}brand-{i:02d}.webp" alt="" loading="lazy">' for i in range(1, 13))
     brand = scene('brand', 0,
-        ab(60, 82, 1608, '''<div class="tv-split"><h2 class="sh64" data-a>Who’s that brand?</h2>
-          <p class="tv-b24 tr" data-a>I wanted to break out of the fintech blue/green palette and develop a memorable fintech brand with a provocative signature color. Trovy Gold was reminiscent of sunshine in your backyard, or, a treasure trove.</p></div>''')
+        ab(-83, 82, 1894, '''<div class="tv-split"><h2 class="sh64" data-a>Who’s that brand?</h2>
+          <p class="tv-b24 tr" data-a>I wanted to break out of the fintech blue/green palette and develop a memorable fintech brand with a provocative signature color. Trovy Gold was reminiscent of sunshine in your backyard, or, a treasure trove.</p></div>''', 'tv-bleed')
         + ab(-89, 269, 1906, f'<div class="tv-brandgrid" role="img" aria-label="Twelve Trovy brand pieces: logos, the gold palette, the card, ads and a billboard">{brand_imgs}</div>', 'tv-bleed'))
 
     # the story ads: rebuilt in HTML with light motion (proto/trovy-ads/), shown as a swipe through Instagram Stories
