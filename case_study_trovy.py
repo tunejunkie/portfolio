@@ -147,8 +147,8 @@ def slides():
              ('m-design-ready', 'See your new room', 'Drawn on your own photo, with a before/after slider.'),
              ('m-ready-shop', 'Price it and shop it', 'Materials and labor, each product pinned and linked.')]
     flow = scene('flow', 2,
-        ab(60, 64, 1608, '''<div class="tv-split tv-split--end tv-gap40"><h2 class="sh48" data-a>0-1 in one week</h2>
-          <p class="tv-b22" data-a>Go from your room’s photo to an AI-generated plan, a rendered design, a cost estimate and a shopping list, with the Trovy line as the way to pay for it.</p></div>''')
+        ab(60, 64, 1608, '''<div class="tv-split"><h2 class="sh48" data-a>0-1 in one week</h2>
+          <p class="tv-b24 tr tv-w760" data-a>Go from your room’s photo to an AI-generated plan, a rendered design, a cost estimate and a shopping list, with the Trovy line as the way to pay for it.</p></div>''')
         + ab(60, 198, 1608, '<ol class="tv-steps2">' + ''.join(
             f'<li data-a><img src="{{base}}{ASSET}{f}.webp" alt="" loading="lazy" width="289" height="626"><h3>{E(h)}</h3><p>{E(p)}</p></li>'
             for f, h, p in steps) + '</ol>'))
