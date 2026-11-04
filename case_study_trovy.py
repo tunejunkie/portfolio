@@ -130,7 +130,7 @@ def slides():
 
     renovate = scene('renovate', 2,
         ab(605, 317, 1036, pic(V2 + 'ren-laptop.webp', 'Renovate with Trovy on a laptop: a warm minimalist kitchen design with its versions, estimate and Renault chat', 'tv-fill'), 'tv-behind', h=671)
-        + ab(227, 82, 1275, '''<h2 class="sh48" data-a>My first big project: Renovate with Trovy</h2>
+        + ab(227, 82, 1275, '''<h2 class="sh48" data-a style="text-wrap:balance">Renovate with Trovy was my first large design engineer project.</h2>
           <p class="tv-b28 tv-mt32" data-a>Renovation is the biggest reason homeowners tap their equity, and the point where they are least sure what they want, what it costs and whom to hire.</p>''', 'tc')
         + ab(86, 389, 234, pic(V2 + 'ren-phone.webp', 'Renovate with Trovy on a phone: the kitchen design with a before/after slider', 'tv-fill'), h=586)
         + ab(378, 373, 494, f'''<div class="tv-ba" data-a style="--p:43.7%" role="group" aria-label="Before and after: drag to compare">
