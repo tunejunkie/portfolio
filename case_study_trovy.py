@@ -100,9 +100,9 @@ def slides():
         + note('apply', 1523, 166, 150, 'Handwritten note: Figma + Claude'))
 
     job2 = scene('job2', 0,
-        ab(227, 72, 1275, '''<h2 class="sh64" data-a>Job 2: Go beyond table stakes.</h2>
-          <p class="tv-b28 tv-w951" data-a>I designed the functionality that’s expected from any fintech product, in order to then build something delightful and distinctive.</p>''', 'tc')
-        + ab(276, 304, 1176, pic(V2 + 'laptop-dash.webp', 'The Trovy account dashboard on a laptop: credit available, quick actions and account setup', 'tv-fill'), h=707))
+        ab(1110, 250, 560, '''<h2 class="sh64" data-a>Job 2: Go beyond table stakes.</h2>
+          <p class="tv-b22 tv-mt56" data-a>I designed the application flow, and all the table-stakes experiences that managing financial product required within weeks, working on a close iteration loop with Operations, Product, and Engineering. From that foundation we were able to launch new features and optimizations quickly.</p>''')
+        + ab(40, 120, 1010, pic(V2 + 'laptop-dash.webp', 'The Trovy account dashboard on a laptop: credit available, quick actions and account setup', 'tv-fill'), h=607))
 
     brand_imgs = ''.join(f'<img data-a src="{{base}}{V2}brand-{i:02d}.webp" alt="" loading="lazy">' for i in range(1, 13))
     brand = scene('brand', 0,
