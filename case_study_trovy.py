@@ -29,6 +29,7 @@ BG = {
     'apply': 'linear-gradient(180deg,#9079ff 0%,#fb793a 100%)',
     'job2': 'linear-gradient(180deg,#fb793a 0%,#fdba1f 100%)',
     'brand': '#ffd435',
+    'ads': 'linear-gradient(180deg,#ffd435 0%,#fb793a 55%,#9079ff 100%)',
     'home': 'linear-gradient(180deg,#fee3a5 0%,#f9f9fb 100%)',
     'renovate': CREAM, 'flow': CREAM, 'process': CREAM,
     'learned': 'linear-gradient(180deg,#fef0d4 0%,#ffcd5c 100%)',
@@ -109,6 +110,14 @@ def slides():
           <p class="tv-b24 tr" data-a>I wanted to break out of the fintech blue/green palette and develop a memorable fintech brand with a provocative signature color. Trovy Gold was reminiscent of sunshine in your backyard, or, a treasure trove.</p></div>''')
         + ab(-89, 269, 1906, f'<div class="tv-brandgrid" role="img" aria-label="Twelve Trovy brand pieces: logos, the gold palette, the card, ads and a billboard">{brand_imgs}</div>', 'tv-bleed'))
 
+    # the story ads: rebuilt in HTML with light motion (proto/trovy-ads/), shown as a swipe through Instagram Stories
+    ads = scene('ads', 0,
+        ab(60, 251, 780, '''<h2 class="sh64" data-a>Ads that stop the thumb.</h2>
+          <p class="tv-b22 tv-mt56" data-a>I designed Trovy’s Instagram story ads: twelve 9:16 spots, each built around the gold card and one plain promise. Here they are with light motion, the way you’d meet them swiping through Stories.</p>
+          <a class="tv-link tv-mt56" data-a href="{base}proto/trovy-ads/" target="_blank" rel="noopener">Tap through them live ↗</a>''')
+        + ab(1109, 77, 399, '''<div class="tv-phone" data-a><video data-src="{base}''' + V2 + '''story-ads.mp4" poster="{base}''' + V2 + '''story-ads-poster.jpg" muted loop playsinline preload="none" aria-label="Twelve Trovy story ads playing one after another in an Instagram Stories screen, swiped through like a viewer would"></video></div>
+          <p class="tv-hint" data-a>Screen recording · Instagram Stories</p>''', 'tc'))
+
     home = scene('home', 1,
         ab(60, 188, 434, '''<h2 class="sh48" data-a>Code without Figma? That’s not the vibe.</h2>
           <p class="tv-b22 tv-mt56" data-a>A designer’s superpower is the ability to succinctly communicate ideas visually. LLMs’ domain is words, and they don’t quite understand the adage “A picture says a thousand words.”</p>
@@ -171,7 +180,7 @@ def slides():
         </div>''', h=870)
         + note('learned', 789, 984, 197, 'Handwritten note: I wrote all this myself, wow'))
 
-    return [hero, context, apply, job2, brand, home, renovate, flow, process, learned]
+    return [hero, context, apply, job2, brand, ads, home, renovate, flow, process, learned]
 
 
 def case_study_trovy():

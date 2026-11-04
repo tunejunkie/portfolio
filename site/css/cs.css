@@ -649,3 +649,6 @@ body:not(.is-stack) .tv2 .cs-fit{top:0;left:0;transform-origin:0 0;transform:var
 .cs-page--trovy .cs-hint{left:56px;bottom:32px;transform:none;align-items:flex-start}
 .cs-page--trovy .cs-hint i{margin-left:2px}
 .tv2 .tv-card3d-hint{bottom:auto;top:86%}
+/* Trovy: the story-ads video sits in the same phone as the application prototype */
+.tv-phone video{display:block;width:375px;height:812px;border-radius:46px;background:#000;object-fit:cover}
+.is-stack .tv-phone video{width:100%;height:100%;border-radius:34px}
