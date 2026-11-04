@@ -112,9 +112,8 @@ def slides():
 
     # the story ads: rebuilt in HTML with light motion (proto/trovy-ads/), shown as a swipe through Instagram Stories
     ads = scene('ads', 0,
-        ab(60, 251, 780, '''<h2 class="sh64" data-a>Ads that stop the thumb.</h2>
-          <p class="tv-b22 tv-mt56" data-a>I designed Trovy’s Instagram story ads: twelve 9:16 spots, each built around the gold card and one plain promise. Here they are with light motion, the way you’d meet them swiping through Stories.</p>
-          <a class="tv-link tv-mt56" data-a href="{base}proto/trovy-ads/" target="_blank" rel="noopener">Tap through them live ↗</a>''')
+        ab(60, 251, 780, '''<h2 class="sh64" data-a>So, now they’re gold. But can regulated ads be bold?</h2>
+          <p class="tv-b22 tv-mt56" data-a>I explored how the new branding manifests in social media with some directional ads for the marketing team. HELOCs are regulated products, and ads require rigorous legal review from external parties. The design process was aided by integrations with Claude and Notion, so nothing was ever misrepresented or not properly footnoted.</p>''')
         + ab(1109, 77, 399, '''<div class="tv-phone" data-a><video data-src="{base}''' + V2 + '''story-ads.mp4" poster="{base}''' + V2 + '''story-ads-poster.jpg" muted loop playsinline preload="none" aria-label="Twelve Trovy story ads playing one after another in an Instagram Stories screen, swiped through like a viewer would"></video></div>
           <p class="tv-hint" data-a>Screen recording · Instagram Stories</p>''', 'tc'))
 
