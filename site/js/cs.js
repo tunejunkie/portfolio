@@ -453,6 +453,13 @@ function setMode(m) {
   requestAnimationFrame(placePhones);
 }
 modeBtns.forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+// the company logo in the bar takes you back to the top: the first slide in slide mode, the very top otherwise
+$$('.cs-bar .logo').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  if (!stack && mode === 'slides') { goTo(0); return; }
+  if (lenis && !stack) lenis.scrollTo(0, { duration: 1.1, lock: false });
+  else window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+}));
 
 /* ---------------- phones: stacked page ---------------- */
 let io = null;
