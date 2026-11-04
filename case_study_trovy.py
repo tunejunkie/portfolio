@@ -33,6 +33,7 @@ BG = {
     'home': 'linear-gradient(180deg,#fee3a5 0%,#f9f9fb 100%)',
     'renovate': CREAM, 'flow': CREAM, 'process': CREAM,
     'learned': 'linear-gradient(180deg,#fef0d4 0%,#ffcd5c 100%)',
+    'thanks': 'linear-gradient(180deg,#ffcd5c 0%,#fb793a 100%)',
 }
 
 
@@ -179,7 +180,12 @@ def slides():
         </div>''', h=870)
         + note('learned', 789, 984, 197, 'Handwritten note: I wrote all this myself, wow'))
 
-    return [hero, context, apply, job2, brand, ads, home, renovate, flow, process, learned]
+    # end: same as the Saturn case study's last scene
+    thanks = scene('thanks', 3,
+        ab(212, 330, 1304, '<h2 class="sh96" data-a>Questions?</h2>', 'tc')
+        + ab(564, 520, 600, '<div class="cs-end" data-a><a href="{base}case-studies/saturn-home/" class="cs-endbtn">Next: Saturn</a></div>', 'tc'))
+
+    return [hero, context, apply, job2, brand, ads, home, renovate, flow, process, learned, thanks]
 
 
 def case_study_trovy():
