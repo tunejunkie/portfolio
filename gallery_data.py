@@ -117,7 +117,7 @@ def _r(spec):
         out |= {f'{n:03d}' for n in range(int(a), int(b or a) + 1)}
     return out
 DESKTOP = {k: _r(v) for k, v in {
-    'trovy': '004-005 007-013 016-027 029-036', 'honored': '059-076', 'transforce': '021-029',
+    'trovy': '004-005 007-013 016-027 029-036 048-053', 'honored': '059-076', 'transforce': '021-029',
     'adecco': '001-011', 'monster': '008-019'}.items()}
 # phone-shaped images that are really mockups / bordered artwork
 NOT_MOBILE = {k: _r(v) for k, v in {'saturn': '027 038 039 052 057'}.items()}
@@ -153,8 +153,8 @@ GROUPS = {
              ('My Data & Stories', 'm', '048-058'), ('Care Team', 'm', '059-069')],
   'kyn': [('Onboarding', 'm', '002-018'), ('Reaching Out', 'm', '019-024'), ('Contacts & Tags', 'm', '025-050'),
           ('Goals & Reminders', 'm', '051-059'), ('Profile', 'm', '060-063')],
-  'trovy': [('Marketing Site', 'd', '004 005'), ('Mobile', 'm', '006 028'), ('Renovate with Trovy', 'm', '037-047'), ('Application', 'd', '007-013 016 017'),
-            ('Onboarding', 'd', '018-020'), ('Account', 'd', '021-027 029-036')],
+  'trovy': [('Marketing Site', 'd', '004 005'), ('Mobile', 'm', '006 028'), ('Renovate with Trovy', 'm', '037-042 054 043-047'), ('Application', 'd', '007-013 016 017 048'),
+            ('Onboarding', 'd', '049 050 018-020'), ('Dashboard', 'd', '053 051 052'), ('Account', 'd', '021-027 029-036')],
   'monstro': [('Mobile', 'm', '001-030 032-034')], 'wherei': [('Mobile', 'm', '001-014')], 'candle': [('Mobile', 'm', '001-014')],
   'upclose': [('Mobile', 'm', '011-037')], 'adecco': [('Desktop', 'd', '001-011')], 'monster': [('Desktop', 'd', '008-019')],
   'gigmo': [],

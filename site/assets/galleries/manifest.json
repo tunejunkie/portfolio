@@ -1128,6 +1128,76 @@
    "w": 780,
    "h": 1688,
    "orig": "renovate-screenshots-2026-11-02/mobile/projects-all.png"
+  },
+  {
+   "src": "048.webp",
+   "title": "Applicant Dashboard",
+   "caption": "While the application is in progress: where it stands, the next step (a notary session), documents received, and offers and reviews to keep momentum.",
+   "notes": "Application; dashboard",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1117,
+   "orig": "screenshots/22 Applicant Dashboard.png"
+  },
+  {
+   "src": "049.webp",
+   "title": "Approved - Finish Setup",
+   "caption": "Approved: a setup checklist with progress, a virtual card to use before the physical one arrives, and the document center.",
+   "notes": "Onboarding; dashboard",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1183,
+   "orig": "screenshots/23 Approved - Finish Setup.png"
+  },
+  {
+   "src": "050.webp",
+   "title": "Transfer Your Balances Prompt",
+   "caption": "A one-time prompt after approval to move outside balances onto the line, with the disclosure in plain view.",
+   "notes": "Onboarding; balance transfer",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/24 Transfer Your Balances Prompt.png"
+  },
+  {
+   "src": "051.webp",
+   "title": "Cardholder Dashboard",
+   "caption": "The everyday home screen: quick actions, balance, APR and payment due, credit available on the card, rewards and FixedPay plans in progress.",
+   "notes": "Dashboard",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/28 Cardholder Dashboard.png"
+  },
+  {
+   "src": "052.webp",
+   "title": "Dashboard - Activate Authorized User Card",
+   "caption": "A household member’s card has arrived: activation sits at the top of the dashboard, next to interest saved over time.",
+   "notes": "Dashboard; cards",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/32 Dashboard - Activate Authorized User Card.png"
+  },
+  {
+   "src": "053.webp",
+   "title": "HELOC Dashboard",
+   "caption": "The newer dashboard: My Home and My HELOC side by side, quick actions, and the card-opening progress.",
+   "notes": "Dashboard",
+   "kind": "wide",
+   "w": 1800,
+   "h": 1164,
+   "orig": "screenshots/HELOC Dashboard@2x.png"
+  },
+  {
+   "src": "054.webp",
+   "title": "Design Home",
+   "caption": "A project’s home in Renovate: before/after on the homeowner’s photo, Compare, Comment and Shop, the all-in price, and the chat button pinned to the bottom.",
+   "notes": "Renovate with Trovy; mobile",
+   "kind": "phone",
+   "w": 780,
+   "h": 1696,
+   "orig": "screenshots/design home - viewport - showing chat bubble pinned to bottom@2x.png"
   }
  ],
  "honored": [
