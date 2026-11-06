@@ -468,7 +468,7 @@
 .is-stack .cs-crawl p{font-size:22px}
 .is-stack .cs-bellimg{height:auto!important}
 .is-stack .cs-bellimg img{height:auto}
-.is-stack .cs-inv{grid-template-columns:repeat(2,auto)}
+.is-stack .cs-inv{grid-template-columns:1fr 1fr;gap:8px 16px;font-size:15px;list-style-position:inside;white-space:normal}
 .is-stack .cs-trojanbox{height:auto!important;aspect-ratio:1728/560;overflow:hidden}
 .is-stack .cs-trojanbox .cs-trojan{width:1728px;height:560px;transform-origin:0 0;transform:scale(var(--tz,.2))}
 .is-stack .cs-stickybox{height:auto!important}
