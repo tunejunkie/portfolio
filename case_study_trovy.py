@@ -95,7 +95,7 @@ def slides():
     apply = scene('apply', 0,
         ab(60, 251, 780, '''<h2 class="sh64" data-a>Job 1: Relentlessly alleviate friction.</h2>
           <p class="tv-b22 tv-mt56" data-a>Trovy went from 0–100MM PMV in one year of operation by relentlessly alleviating friction in the application flow. A HELOC is one of the cheapest ways to borrow, but it usually means weeks of paperwork and a draw request every time you need money. Trovy is a fully online HELOC, with your line available on a card. I owned the E2E application flow and the online account.</p>
-          <p class="tv-cta tv-mt56" data-a>Tap through the prequal flow to see for yourself.</p>''')
+          <p class="tv-cta tv-mt56" data-a>Happy-path prequal flow takes 2 minutes or less. Try it yourself.</p>''')
         + ab(1109, 77, 399, '''<div class="tv-phone" data-a><iframe data-src="{base}proto/trovy-apply/" title="Interactive prototype of the Trovy application" tabindex="-1"></iframe></div>
           <p class="tv-hint" data-a>Live prototype · tap through it</p>''', 'tc')
         + note('apply', 1523, 166, 150, 'Handwritten note: Figma + Claude'))
