@@ -102,8 +102,8 @@ def slides():
 
     job2 = scene('job2', 0,
         ab(1110, 250, 560, '''<h2 class="sh64" data-a>Job 2: Go beyond table stakes.</h2>
-          <p class="tv-b22 tv-mt56" data-a>I designed the application flow, and all the table-stakes experiences that managing financial product required within weeks, working on a close iteration loop with Operations, Product, and Engineering. From that foundation we were able to launch new features and optimizations quickly.</p>''')
-        + ab(40, 120, 1010, pic(V2 + 'laptop-dash.webp', 'The Trovy account dashboard on a laptop: credit available, quick actions and account setup', 'tv-fill'), h=607))
+          <p class="tv-b22 tv-mt56" data-a>Working on a close iteration loop with Operations, Product, and Engineering, I shipped all the core experiences that managing a top-tier financial product required, in just a few weeks. With the table stakes in place, we could now focus on differentiation.</p>''')
+        + ab(40, 120, 1010, pic(V2 + 'laptop-dash-2.webp', 'The Trovy account dashboard on a laptop: credit available, quick actions and account setup', 'tv-fill'), h=607))
 
     brand_imgs = ''.join(f'<img data-a src="{{base}}{V2}brand-{i:02d}.webp" alt="" loading="lazy">' for i in range(1, 13))
     brand = scene('brand', 0,
