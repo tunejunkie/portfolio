@@ -460,7 +460,7 @@
 .is-stack .sb.sm{font-size:16px}
 .is-stack .cs-lines,.is-stack .cs-annbox{display:none}
 .is-stack .cs-phslot{display:flex;flex-direction:column;align-items:center}
-.is-stack .cs-ph{transform:none!important;zoom:var(--ps-stack,.9)}
+.is-stack .cs-ph{align-self:flex-start;flex:none;zoom:normal!important;transform:scale(var(--k,.9))!important;transform-origin:0 0;margin-bottom:calc(812px * (var(--k,.9) - 1))}
 .is-stack .cs-proto2 .cs-chips{width:auto;margin-left:0}
 .is-stack .cs-shot{width:min(375px,100%);height:auto}
 .is-stack .cs-mega{height:220px!important}
@@ -624,7 +624,7 @@
 .is-stack .tv-split,.is-stack .tv-procrow,.is-stack .tv-learned{flex-direction:column;align-items:stretch;gap:20px}
 .is-stack .tv-split > p,.is-stack .tv-proctext,.is-stack .tv-procfig{flex:none}
 .is-stack .tv-noteab{display:none}
-.is-stack .tv-phone{width:calc(399px * var(--ps-stack,1));height:auto;aspect-ratio:399/836;padding:10px;border-radius:44px}
+.is-stack .tv-phone{width:min(calc(399px * var(--ps-stack,1)), calc((100svh - 130px) * .4773));height:auto;aspect-ratio:399/836;padding:10px;border-radius:44px}
 .is-stack .tv-phone iframe{width:100%;height:100%;border-radius:34px}
 .is-stack .tv-browser2 iframe{height:70vh}
 .is-stack .tv-brandgrid{grid-template-columns:1fr 1fr;gap:6px}

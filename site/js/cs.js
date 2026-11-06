@@ -131,12 +131,30 @@ function placePhones() {                                          // after a res
 }
 
 /* ---------------- layout ---------------- */
+// phones (stacked page): each phone, and its state buttons if it has them, fits the screen under the site nav.
+// Scaled with a transform: iOS Safari mis-places fixed bars inside a prototype whose frame is shrunk with css zoom.
+function fitPhones() {
+  const nav = $('.nav'), top = nav ? nav.getBoundingClientRect().bottom : 80;
+  const vh = (window.visualViewport && visualViewport.height) || innerHeight;
+  $$('.cs-ph').forEach(ph => {
+    const chips = ph.parentElement.querySelector('.cs-chips');
+    const extra = chips ? chips.offsetHeight + 20 : 0;
+    const k = Math.max(.4, Math.min(1, (innerWidth - 32) / 375, (vh - top - 28 - extra) / 812));
+    ph.style.setProperty('--k', k.toFixed(4));
+    // centre it on the screen (its frame may sit in a narrower box than the phone)
+    ph.style.marginLeft = '0px';
+    const left = ph.parentElement.getBoundingClientRect().left;
+    ph.style.marginLeft = ((innerWidth - 375 * k) / 2 - left).toFixed(1) + 'px';
+  });
+}
 function layout() {
-  stack = innerWidth <= 820 || (innerWidth < 1000 && innerHeight > innerWidth);
+  // phones and small tablets, in either orientation, always get the plain scrolling page (no slides, no scroll-jacking)
+  const touchSmall = matchMedia('(pointer: coarse)').matches && Math.min(innerWidth, innerHeight) <= 820;
+  stack = innerWidth <= 820 || touchSmall || (innerWidth < 1000 && innerHeight > innerWidth);
   body.classList.toggle('is-stack', stack);
   body.classList.toggle('is-slides', !stack && mode === 'slides');
   body.classList.toggle('is-scroll', stack || mode === 'scroll');
-  if (stack) { document.documentElement.style.setProperty('--ps-stack', Math.min(1, (innerWidth - 32) / 399).toFixed(4)); stackLayout(); return; }
+  if (stack) { document.documentElement.style.setProperty('--ps-stack', Math.min(1, (innerWidth - 32) / 399).toFixed(4)); stackLayout(); fitPhones(); return; }
   const vw = deck.clientWidth || innerWidth, vh = deck.clientHeight || innerHeight;
   S = Math.min(vw / BW, vh / BH);
   const tx = (vw - BW * S) / 2, ty = Math.max(0, (vh - BH * S) / 2);
