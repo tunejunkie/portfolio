@@ -598,8 +598,8 @@
 .tv-ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y;-webkit-appearance:none;appearance:none}
 .tv-ba-range::-webkit-slider-thumb{-webkit-appearance:none;width:40px;height:335px}
 /* flow steps */
-.tv-steps2{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,289px);gap:40px}
-.tv-steps2 img{display:block;width:289px;height:626px;object-fit:cover;border-radius:28px;border:1px solid rgba(0,11,34,.06);box-shadow:0 30px 70px -40px rgba(0,11,34,.28)}
+.tv-steps2{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:48px}
+.tv-steps2 img{display:block;width:100%;height:auto;aspect-ratio:289/626;object-fit:cover;border-radius:28px;border:1px solid rgba(0,11,34,.06);box-shadow:0 30px 70px -40px rgba(0,11,34,.28)}
 .tv-steps2 h3{padding-top:14px;font:600 23px/1.25 var(--f-body)}
 .tv-steps2 p{margin-top:8px;font:400 18px/1.4 var(--f-body);opacity:.75}
 /* process */
@@ -652,4 +652,4 @@ body:not(.is-stack) .tv2 .cs-fit{top:0;left:0;transform-origin:0 0;transform:var
 /* Trovy: the story-ads video sits in the same phone as the application prototype */
 .tv-phone video{display:block;width:375px;height:812px;border-radius:46px;background:#000;object-fit:cover}
 .is-stack .tv-phone video{width:100%;height:100%;border-radius:34px}
-.tv-split > p.tv-w760{flex:0 1 760px}
+body:not(.is-stack) .tv-split > p.tv-w760{flex:0 1 760px}

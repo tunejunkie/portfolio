@@ -132,7 +132,7 @@ def slides():
     renovate = scene('renovate', 2,
         ab(605, 317, 1036, pic(V2 + 'ren-laptop.webp', 'Renovate with Trovy on a laptop: a warm minimalist kitchen design with its versions, estimate and Renault chat', 'tv-fill'), 'tv-behind', h=671)
         + ab(227, 82, 1275, '''<h2 class="sh48" data-a>Renovate with Trovy</h2>
-          <p class="tv-b22 tv-mt32" data-a style="text-wrap:balance">Renovate with Trovy was my first large design engineer project. Renovation is the biggest reason homeowners tap their equity, and the point where they are least sure what they want, what it costs and whom to hire.</p>''', 'tc')
+          <p class="tv-b22 tv-mt32" data-a style="text-wrap:balance">Renovate with Trovy was my first project shipping the front end myself. Renovation is the biggest reason homeowners tap their equity, and the point where they are least sure what they want, what it costs and whom to hire.</p>''', 'tc')
         + ab(86, 389, 234, pic(V2 + 'ren-phone.webp', 'Renovate with Trovy on a phone: the kitchen design with a before/after slider', 'tv-fill'), h=586)
         + ab(378, 373, 494, f'''<div class="tv-ba" data-a style="--p:43.7%" role="group" aria-label="Before and after: drag to compare">
             <img src="{{base}}{V2}ren-before.webp" alt="The kitchen before: oak cabinets and tile floor" draggable="false">
@@ -142,14 +142,13 @@ def slides():
             <i class="tv-ba-line" aria-hidden="true"><b><img src="{{base}}{V2}drag.svg" alt=""></b></i>
           </div>''', h=335))
 
-    steps = [('m-upload-photo', 'Start with your room', 'Add a photo and say what should change.'),
-             ('m-chat-intent', 'Plan it with Renault', 'A few quick questions: scope, style, budget.'),
+    steps = [('m-chat-intent', 'Plan it with Renault', 'A few quick questions: scope, style, budget.'),
              ('m-chat-plan-summary', 'Approve the plan', 'Renault writes a project plan. Edit it or generate now.'),
              ('m-design-ready', 'See your new room', 'Drawn on your own photo, with a before/after slider.'),
              ('m-ready-shop', 'Price it and shop it', 'Materials and labor, each product pinned and linked.')]
     flow = scene('flow', 2,
         ab(60, 64, 1608, '''<div class="tv-split"><h2 class="sh48" data-a>0-1 in one week</h2>
-          <p class="tv-b24 tr tv-w760" data-a>Go from your room’s photo to an AI-generated plan, a rendered design, a cost estimate and a shopping list, with the Trovy line as the way to pay for it.</p></div>''')
+          <p class="tv-b22 tv-w760" data-a style="text-wrap:pretty">Go from your room’s photo to an AI-generated plan, a rendered design, a cost estimate and a shopping list, with the Trovy line as the way to pay for it.</p></div>''')
         + ab(60, 198, 1608, '<ol class="tv-steps2">' + ''.join(
             f'<li data-a><img src="{{base}}{ASSET}{f}.webp" alt="" loading="lazy" width="289" height="626"><h3>{E(h)}</h3><p>{E(p)}</p></li>'
             for f, h, p in steps) + '</ol>'))
